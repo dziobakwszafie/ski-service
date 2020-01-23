@@ -12,8 +12,18 @@ code {
     monospace;
 }
 
-/* #FC4445
-#3FEEE6
-#55BCC9
-#97CAEF
-#CAFAFE */
+.navbar {
+  background: #a30000;
+}
+.navbar {
+  background: #3feee6;
+}
+.navbar {
+  background: #55bcc9;
+}
+.navbar {
+  background: #0281db;
+}
+.navbar {
+  background: #e2dede;
+}
