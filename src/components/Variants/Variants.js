@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { Container, Button, Row, Col } from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
 import styled from "styled-components";
 import Order from "./Order/Order";
 

@@ -1,7 +1,9 @@
 import React from "react";
-import { Container, Button, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Field, reduxForm } from "redux-form";
 import styled from "styled-components";
+import sendDataToApi from "./api";
+import Input from "./Input";
 
 const Styles = styled.div`
   .container {
@@ -11,6 +13,15 @@ const Styles = styled.div`
   }
 `;
 
+const validate = formData => {
+  const errors = {};
+
+  if (!formData.firstName) {
+    errors.firstName = "dfgdfgv";
+  }
+  return errors;
+};
+
 const Order = props => {
   const { handleSubmit, pristine, reset, submitting } = props;
   return (
@@ -19,26 +30,15 @@ const Order = props => {
         id="intro"
         className="d-flex justify-content-center align-items-center"
       >
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(sendDataToApi)}>
           <div>
             <label>First Name</label>
             <div>
               <Field
                 name="firstName"
-                component="input"
+                component={Input}
                 type="text"
                 placeholder="First Name"
-              />
-            </div>
-          </div>
-          <div>
-            <label>Last Name</label>
-            <div>
-              <Field
-                name="lastName"
-                component="input"
-                type="text"
-                placeholder="Last Name"
               />
             </div>
           </div>
@@ -54,33 +54,6 @@ const Order = props => {
             </div>
           </div>
           <div>
-            <label>Sex</label>
-            <div>
-              <label>
-                <Field name="sex" component="input" type="radio" value="male" />{" "}
-                Male
-              </label>
-              <label>
-                <Field
-                  name="sex"
-                  component="input"
-                  type="radio"
-                  value="female"
-                />{" "}
-                Female
-              </label>
-              <label>
-                <Field
-                  name="sex"
-                  component="input"
-                  type="radio"
-                  value="other"
-                />{" "}
-                Other
-              </label>
-            </div>
-          </div>
-          <div>
             <label>Favorite Color</label>
             <div>
               <Field name="favoriteColor" component="select">
@@ -92,32 +65,11 @@ const Order = props => {
             </div>
           </div>
           <div>
-            <label htmlFor="employed">Employed</label>
-            <div>
-              <Field
-                name="employed"
-                id="employed"
-                component="input"
-                type="checkbox"
-              />
-            </div>
-          </div>
-          <div>
-            <label>Notes</label>
-            <div>
-              <Field name="notes" component="textarea" />
-            </div>
-          </div>
-          <div>
             <button type="submit" disabled={pristine || submitting}>
               Submit
             </button>
-            <button
-              type="button"
-              disabled={pristine || submitting}
-              onClick={reset}
-            >
-              Clear Values
+            <button type="button" onClick={reset}>
+              Reset
             </button>
           </div>
         </form>
@@ -125,4 +77,8 @@ const Order = props => {
     </Styles>
   );
 };
-export default Order;
+
+export default reduxForm({
+  form: "contact",
+  validate
+})(Order);
