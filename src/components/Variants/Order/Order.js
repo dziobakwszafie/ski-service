@@ -68,7 +68,7 @@ const Order = props => {
             <button type="submit" disabled={pristine || submitting}>
               Submit
             </button>
-            <button type="button" onClick={reset}>
+            <button type="button" onClick={reset} disabled={pristine}>
               Reset
             </button>
           </div>
