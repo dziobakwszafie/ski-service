@@ -9,6 +9,10 @@ Project of ski service app.
 - [Redux](https://redux.js.org/)
 - [styled-components](https://styled-components.com/)
 
+## Design
+
+<img src="./design.png" />
+
 ## Current Status
 
-Designing/Coding in progress
+Coding in progress
