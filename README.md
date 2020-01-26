@@ -11,7 +11,7 @@ Project of ski service app.
 
 ## Design
 
-<img src="./design.png" />
+<img src="https://github.com/dziobakwszafie/ski-service/blob/master/design.PNG" />
 
 ## Current Status
 
