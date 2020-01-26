@@ -2,8 +2,8 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { Field, reduxForm } from "redux-form";
 import styled from "styled-components";
-import sendDataToApi from "./api";
-import Input from "./Input";
+import { sendDataToApi } from "./api";
+// import Input from "./Input";
 
 const Styles = styled.div`
   .container {
@@ -13,14 +13,14 @@ const Styles = styled.div`
   }
 `;
 
-const validate = formData => {
-  const errors = {};
+// const validate = formData => {
+//   const errors = {};
 
-  if (!formData.firstName) {
-    errors.firstName = "dfgdfgv";
-  }
-  return errors;
-};
+//   if (!formData.firstName) {
+//     errors.firstName = "dfgdfgv";
+//   }
+//   return errors;
+// };
 
 const Order = props => {
   const { handleSubmit, pristine, reset, submitting } = props;
@@ -36,7 +36,7 @@ const Order = props => {
             <div>
               <Field
                 name="firstName"
-                component={Input}
+                component="input"
                 type="text"
                 placeholder="First Name"
               />
@@ -79,6 +79,6 @@ const Order = props => {
 };
 
 export default reduxForm({
-  form: "contact",
-  validate
+  form: "contact"
+  // validate
 })(Order);
