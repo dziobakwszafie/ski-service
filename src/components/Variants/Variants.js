@@ -1,12 +1,16 @@
 import React, { PureComponent } from "react";
-import { Container, Col } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 import Order from "./Order/Order";
 
 const Styles = styled.div`
   .container {
-    background: #0281db;
     max-width: 100vw;
+  }
+  h1 {
+    font-family: "Permanent Marker", cursive;
+    font-size: 40px;
+    color: #a9a9a9;
   }
 `;
 
@@ -19,9 +23,12 @@ class Variants extends PureComponent {
           className="d-flex justify-content-center align-items-center"
         >
           <Col>
-            <h1>Zaloguj się</h1>
-            <p>button logowania</p>
-            {/* pokaż okienko z serwisem */}
+            <Row className="d-flex justify-content-center align-items-center">
+              <Col sm={12} md={8}>
+                <h1>PO CO W OGÓLE TEN SERWIS</h1>
+              </Col>
+            </Row>
+
             <Order />
           </Col>
         </Container>

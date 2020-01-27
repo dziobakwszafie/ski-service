@@ -7,9 +7,7 @@ import { sendDataToApi } from "./api";
 
 const Styles = styled.div`
   .container {
-    background: #0281db;
     max-width: 100vw;
-    height: 100vh;
   }
 `;
 

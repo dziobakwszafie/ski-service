@@ -3,10 +3,10 @@ import "./App.css";
 import Intro from "./Intro/Intro";
 import Header from "./Header/Header";
 import Variants from "./Variants/Variants";
-// import Edges from "./Edges/Edges";
-// import Waxing from "./Waxing/Waxing";
-// import Base from "./Base/Base";
-// import Footer from "./Footer/Footer";
+import Divider from "./Divider/Divider";
+import Edges from "./Edges/Edges";
+import Waxing from "./Waxing/Waxing";
+import Footer from "./Footer/Footer";
 
 function App() {
   return (
@@ -14,10 +14,11 @@ function App() {
       <Header />
       <Intro />
       <Variants />
-      {/* <Edges />
+      <Divider />
+      <Edges />
+      <Divider />
       <Waxing />
-      <Base />
-      <Footer /> */}
+      <Footer />
     </React.Fragment>
   );
 }
