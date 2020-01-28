@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/ski-service/static/css/main.d3bc950d.chunk.css",
-    "main.js": "/ski-service/static/js/main.f44e9162.chunk.js",
-    "main.js.map": "/ski-service/static/js/main.f44e9162.chunk.js.map",
+    "main.js": "/ski-service/static/js/main.172fc93b.chunk.js",
+    "main.js.map": "/ski-service/static/js/main.172fc93b.chunk.js.map",
     "runtime-main.js": "/ski-service/static/js/runtime-main.a379b28d.js",
     "runtime-main.js.map": "/ski-service/static/js/runtime-main.a379b28d.js.map",
     "static/css/2.47e06e2e.chunk.css": "/ski-service/static/css/2.47e06e2e.chunk.css",
     "static/js/2.e494f145.chunk.js": "/ski-service/static/js/2.e494f145.chunk.js",
     "static/js/2.e494f145.chunk.js.map": "/ski-service/static/js/2.e494f145.chunk.js.map",
     "index.html": "/ski-service/index.html",
-    "precache-manifest.f054e6195aecb82a7d468db036a78eab.js": "/ski-service/precache-manifest.f054e6195aecb82a7d468db036a78eab.js",
+    "precache-manifest.025fc29c396b1c0bb0652874f4015ca4.js": "/ski-service/precache-manifest.025fc29c396b1c0bb0652874f4015ca4.js",
     "service-worker.js": "/ski-service/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/ski-service/static/css/2.47e06e2e.chunk.css.map",
     "static/css/main.d3bc950d.chunk.css.map": "/ski-service/static/css/main.d3bc950d.chunk.css.map",
     "static/js/2.e494f145.chunk.js.LICENSE": "/ski-service/static/js/2.e494f145.chunk.js.LICENSE",
     "static/media/sms.png": "/ski-service/static/media/sms.8c3ebee5.png",
-    "static/media/whatsapp.png": "/ski-service/static/media/whatsapp.a0ebcc96.png"
+    "static/media/whatsapp.png": "/ski-service/static/media/whatsapp.dae79eea.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a379b28d.js",
     "static/css/2.47e06e2e.chunk.css",
     "static/js/2.e494f145.chunk.js",
     "static/css/main.d3bc950d.chunk.css",
-    "static/js/main.f44e9162.chunk.js"
+    "static/js/main.172fc93b.chunk.js"
   ]
 }

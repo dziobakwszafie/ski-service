@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5993e764ae7aa0167da5caf8832821a7",
+    "revision": "17e218bc3739cce008990252fd5989ae",
     "url": "/ski-service/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ski-service/static/css/2.47e06e2e.chunk.css"
   },
   {
-    "revision": "ee83f0c61575a6d539db",
+    "revision": "00b112e4f7c863a605d4",
     "url": "/ski-service/static/css/main.d3bc950d.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ski-service/static/js/2.e494f145.chunk.js.LICENSE"
   },
   {
-    "revision": "ee83f0c61575a6d539db",
-    "url": "/ski-service/static/js/main.f44e9162.chunk.js"
+    "revision": "00b112e4f7c863a605d4",
+    "url": "/ski-service/static/js/main.172fc93b.chunk.js"
   },
   {
     "revision": "7ca9e32266bd0b458590",
@@ -32,7 +32,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ski-service/static/media/sms.8c3ebee5.png"
   },
   {
-    "revision": "a0ebcc96bbf3257b6458c005bb1141bb",
-    "url": "/ski-service/static/media/whatsapp.a0ebcc96.png"
+    "revision": "dae79eeabf399b1a873acfd0285a5947",
+    "url": "/ski-service/static/media/whatsapp.dae79eea.png"
   }
 ]);
