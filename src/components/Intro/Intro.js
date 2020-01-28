@@ -26,7 +26,19 @@ const Styles = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 22px;
+    @media (max-width: 680px) {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #ff3b3f;
+      font-family: "Bangers", cursive;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+    }
   }
 `;
 
@@ -40,7 +52,7 @@ class Intro extends PureComponent {
         >
           <Col>
             <Row className="d-flex justify-content-center align-items-center">
-              <Col sm={12} md={8}>
+              <Col className="d-flex justify-content-center">
                 <h1>PO CO W OGÓLE TEN SERWIS</h1>
               </Col>
             </Row>
@@ -80,10 +92,10 @@ class Intro extends PureComponent {
             </Row>
             <Row className="d-flex">
               <Col className="d-flex justify-content-center">
-                <div id="circle">PO CO TO WSZYSTKO</div>
+                <div id="circle">SMAROWANIE</div>
               </Col>
               <Col className="d-flex justify-content-center">
-                <div id="circle">PO CO TO WSZYSTKO</div>
+                <div id="circle">OSTRZENIE</div>
               </Col>
             </Row>
           </Col>

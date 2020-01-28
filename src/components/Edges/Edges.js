@@ -4,14 +4,13 @@ import styled from "styled-components";
 
 const Styles = styled.div`
   #intro {
-    background: #55bcc9;
+    /* background: #55bcc9; */
     max-width: 100vw;
-    height: 100vh;
   }
   h1 {
     font-family: "Permanent Marker", cursive;
     font-size: 40px;
-    color: #a9a9a9;
+    color: #ff3b3f;
   }
   p {
     font-family: "Roboto", sans-serif;
@@ -30,8 +29,8 @@ class Edges extends PureComponent {
         >
           <Col>
             <Row className="d-flex justify-content-center align-items-center">
-              <Col sm={12} md={8}>
-                <h1>PO CO W OGÓLE TEN SERWIS</h1>
+              <Col className="d-flex justify-content-center">
+                <h1>OSTRZONKO BEJBEEE</h1>
               </Col>
             </Row>
             <Row className="d-flex justify-content-center">

@@ -1,12 +1,11 @@
 import React from "react";
 import "./App.css";
-import Intro from "./Intro/Intro";
-import Header from "./Header/Header";
-import Variants from "./Variants/Variants";
-import Divider from "./Divider/Divider";
-import Edges from "./Edges/Edges";
-import Waxing from "./Waxing/Waxing";
-import Footer from "./Footer/Footer";
+import Intro from "./components/Intro/Intro";
+import Header from "./components/Header/Header";
+import Variants from "./components/Variants/Variants";
+import Edges from "./components/Edges/Edges";
+import Waxing from "./components/Waxing/Waxing";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -14,9 +13,7 @@ function App() {
       <Header />
       <Intro />
       <Variants />
-      <Divider />
       <Edges />
-      <Divider />
       <Waxing />
       <Footer />
     </React.Fragment>

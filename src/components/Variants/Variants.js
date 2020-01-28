@@ -6,6 +6,7 @@ import Order from "./Order/Order";
 const Styles = styled.div`
   .container {
     max-width: 100vw;
+    min-height: 600px;
   }
   h1 {
     font-family: "Permanent Marker", cursive;
@@ -24,8 +25,8 @@ class Variants extends PureComponent {
         >
           <Col>
             <Row className="d-flex justify-content-center align-items-center">
-              <Col sm={12} md={8}>
-                <h1>PO CO W OGÓLE TEN SERWIS</h1>
+              <Col className="d-flex justify-content-center">
+                <h1>ZAMÓW SERWIS</h1>
               </Col>
             </Row>
 

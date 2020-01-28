@@ -5,7 +5,7 @@ import photo from "./images/IMG_20191127_172900.jpg";
 const Styles = styled.div`
   #image {
     height: auto;
-    width: 1000px;
+    width: 95vw;
     background: linear-gradient(to right, transparent, mistyrose);
   }
 `;
