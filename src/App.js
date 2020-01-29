@@ -22,8 +22,7 @@ function App() {
 
 export default App;
 
-// logowanie przez googla
-// sprawdzenie czy juiz kiedys cos było robione, jak tak to sugerowanie wypełnienia
+// Login przez Googla
+// sprawdzenie historii
 // wypelnienie formularza z kontaktem i czynnosciami serwisu
-// bo zrobieniu drukowanie naklejki
 // przeniesienie do historii

@@ -29,7 +29,6 @@ class Variants extends PureComponent {
                 <h1>ZAMÓW SERWIS</h1>
               </Col>
             </Row>
-
             <Order />
           </Col>
         </Container>

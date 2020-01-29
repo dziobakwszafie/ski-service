@@ -1,24 +1,14 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { Field, reduxForm } from "redux-form";
+import { Field, reduxForm, Form } from "redux-form";
 import styled from "styled-components";
 import { sendDataToApi } from "./api";
-// import Input from "./Input";
 
 const Styles = styled.div`
   .container {
     max-width: 100vw;
   }
 `;
-
-// const validate = formData => {
-//   const errors = {};
-
-//   if (!formData.firstName) {
-//     errors.firstName = "dfgdfgv";
-//   }
-//   return errors;
-// };
 
 const Order = props => {
   const { handleSubmit, pristine, reset, submitting } = props;
@@ -28,38 +18,96 @@ const Order = props => {
         id="intro"
         className="d-flex justify-content-center align-items-center"
       >
-        <form onSubmit={handleSubmit(sendDataToApi)}>
+        <Form onSubmit={handleSubmit(sendDataToApi)}>
           <div>
-            <label>First Name</label>
+            <label>Numer zamówienia</label>
             <div>
               <Field
-                name="firstName"
+                name="orderNumber"
                 component="input"
                 type="text"
-                placeholder="First Name"
+                placeholder="Numer zamówienia"
               />
             </div>
           </div>
           <div>
-            <label>Email</label>
+            <label>Imię i nazwisko</label>
             <div>
               <Field
-                name="email"
+                name="name"
                 component="input"
-                type="email"
-                placeholder="Email"
+                type="text"
+                placeholder="Imię i nazwisko"
               />
             </div>
           </div>
           <div>
-            <label>Favorite Color</label>
+            <label>Numer telefonu</label>
             <div>
-              <Field name="favoriteColor" component="select">
+              <Field
+                name="phone"
+                component="input"
+                type="text"
+                placeholder="Numer telefonu"
+              />
+            </div>
+          </div>
+          <div>
+            <label>Model narty</label>
+            <div>
+              <Field
+                name="model"
+                component="input"
+                type="text"
+                placeholder="Model narty"
+              />
+            </div>
+          </div>
+          <div>
+            <label>Kąt boczny krawędzi</label>
+            <div>
+              <Field name="sideAngle" component="select">
                 <option />
-                <option value="ff0000">Red</option>
-                <option value="00ff00">Green</option>
-                <option value="0000ff">Blue</option>
+                <option value="ff0000">86 stopni</option>
+                <option value="00ff00">87 stopni</option>
+                <option value="ff0000">88 stopni</option>
+                <option value="00ff00">89 stopni</option>
+                <option value="00ff00">90 stopni</option>
               </Field>
+            </div>
+          </div>
+          <div>
+            <label>Podniesienie krawędzi</label>
+            <div>
+              <Field name="slideAngle" component="select">
+                <option />
+                <option value="ff0000">0.0 stopni</option>
+                <option value="ff0000">0.5 stopnia</option>
+                <option value="00ff00">0.75 stopnia</option>
+                <option value="ff0000">1 stopień</option>
+              </Field>
+            </div>
+          </div>
+          <div>
+            <label>Wybierz rodzaj smaru</label>
+            <div>
+              <Field name="wax" component="select">
+                <option />
+                <option value="ff0000">na śnieg mokry</option>
+                <option value="ff0000">na śnieg normalny</option>
+                <option value="00ff00">na śnieg zmrożony</option>
+              </Field>
+            </div>
+          </div>
+          <div>
+            <label htmlFor="fluor">Smar Race z Fluorem</label>
+            <div>
+              <Field
+                name="fluor"
+                id="fluor"
+                component="input"
+                type="checkbox"
+              />
             </div>
           </div>
           <div>
@@ -70,7 +118,7 @@ const Order = props => {
               Reset
             </button>
           </div>
-        </form>
+        </Form>
       </Container>
     </Styles>
   );
@@ -78,5 +126,4 @@ const Order = props => {
 
 export default reduxForm({
   form: "contact"
-  // validate
 })(Order);
