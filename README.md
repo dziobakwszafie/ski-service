@@ -1,6 +1,31 @@
-## Ski service
+# Ski service
 
-Project of ski service app.
+Project of ski service app - still under develope, planned release winter 20/21.
+
+## Design
+
+<img src="https://github.com/dziobakwszafie/ski-service/blob/master/design.PNG" />
+
+## Getting Started 
+
+Live version you can find here: https://dziobakwszafie.github.io/ski-service/
+
+### To run it locally
+
+Get the repo
+```
+git clone https://dziobakwszafie.github.io/ski-service/
+```
+or 
+```
+download ZIP file
+```
+
+Run npm scripts
+```
+npm install 
+npm start
+```
 
 ## Built With
 
@@ -9,10 +34,6 @@ Project of ski service app.
 - [Redux](https://redux.js.org/)
 - [styled-components](https://styled-components.com/)
 
-## Design
-
-<img src="https://github.com/dziobakwszafie/ski-service/blob/master/design.PNG" />
-
 ## Current Status
 
-Coding in progress
+Under develope, planned release winter 20/21.
