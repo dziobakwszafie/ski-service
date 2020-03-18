@@ -36,4 +36,4 @@ npm start
 
 ## Current Status
 
-:heavy_check_mark: under develope - planned release winter 20/21.
+:wavy_dash: under develope - planned release winter 20/21.
