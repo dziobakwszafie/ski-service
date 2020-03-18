@@ -36,4 +36,4 @@ npm start
 
 ## Current Status
 
-Under develope, planned release winter 20/21.
+:heavy_check_mark: under develope - planned release winter 20/21.
