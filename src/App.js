@@ -1,22 +1,32 @@
 import React from "react";
 import "./App.css";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
 import Intro from "./components/Intro/Intro";
 import Header from "./components/Header/Header";
-import Variants from "./components/Variants/Variants";
+import Variants from "./containers/Variants";
 import Edges from "./components/Edges/Edges";
 import Waxing from "./components/Waxing/Waxing";
 import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <React.Fragment>
-      <Header />
-      <Intro />
-      <Variants />
-      <Edges />
-      <Waxing />
-      <Footer />
-    </React.Fragment>
+    <Router>
+      <React.Fragment>
+        <Header />
+        <Intro />
+
+        <Route path="/variants" exact component={Variants} />
+
+        <Edges />
+        <Waxing />
+        <Footer />
+      </React.Fragment>
+    </Router>
   );
 }
 
