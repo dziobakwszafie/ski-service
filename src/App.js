@@ -6,27 +6,21 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-import Intro from "./components/Intro/Intro";
 import Header from "./components/Header/Header";
-import Variants from "./containers/Variants";
-import Edges from "./components/Edges/Edges";
-import Waxing from "./components/Waxing/Waxing";
+import MainPage from "./containers/MainPage/MainPage";
+import OrderPage from "./containers/OrderPage/OrderPage";
 import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <Router>
-      <React.Fragment>
-        <Header />
-        <Intro />
-
-        <Route path="/variants" exact component={Variants} />
-
-        <Edges />
-        <Waxing />
-        <Footer />
-      </React.Fragment>
-    </Router>
+    <React.Fragment>
+      <Header />
+      {/* <Router> */}
+      <MainPage />
+      {/* <OrderPage />
+      </Router> */}
+      <Footer />
+    </React.Fragment>
   );
 }
 

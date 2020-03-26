@@ -2,19 +2,13 @@ import React, { PureComponent } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 
-const Styles = styled.div`
+const HeaderStyles = styled.div`
   #intro {
     height: 100vh;
     max-width: 100vw;
   }
   #first {
     top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-  }
-  #second {
-    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
@@ -40,36 +34,12 @@ const Styles = styled.div`
       font-size: 50px;
     }
   }
-  #circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: #ff3b3f;
-    font-family: "Bangers", cursive;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-    @media (max-width: 680px) {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: #ff3b3f;
-      font-family: "Bangers", cursive;
-      color: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 14px;
-    }
-  }
 `;
 
 class Header extends PureComponent {
   render() {
     return (
-      <Styles>
+      <HeaderStyles>
         <Container id="intro">
           <Container id="first">
             <Col>
@@ -84,21 +54,8 @@ class Header extends PureComponent {
               </Row>
             </Col>
           </Container>
-          <Container id="second">
-            <Row className="d-flex jjustify-content-between">
-              <Col className="d-flex justify-content-center">
-                <div id="circle">PO CO TO WSZYSTKO</div>
-              </Col>
-              <Col className="d-flex justify-content-center">
-                <div id="circle">ZAMÓW SERWIS</div>
-              </Col>
-              <Col className="d-flex justify-content-center">
-                <div id="circle">ZALOGUJ SIĘ</div>
-              </Col>
-            </Row>
-          </Container>
         </Container>
-      </Styles>
+      </HeaderStyles>
     );
   }
 }

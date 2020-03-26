@@ -1,4 +1,4 @@
-import Variants from "./Variants";
+import ProductsList from "./ProductsList";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => {
@@ -7,4 +7,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(Variants);
+export default connect(mapStateToProps)(ProductsList);
