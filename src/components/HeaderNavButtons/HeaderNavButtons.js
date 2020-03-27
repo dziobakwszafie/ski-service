@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 const HeaderNavButtonsStyles = styled.div`
   #intro {
-    height: 100vh;
     max-width: 100vw;
   }
   #second {

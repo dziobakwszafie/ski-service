@@ -13,14 +13,22 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <React.Fragment>
-      <Header />
-      {/* <Router> */}
-      <MainPage />
-      {/* <OrderPage />
-      </Router> */}
-      <Footer />
-    </React.Fragment>
+    <Router>
+      <React.Fragment>
+        <Header />
+
+        <Route path="/" exact>
+          <Redirect to="/main" />
+        </Route>
+
+        <Switch>
+          <Route path="/main" exact component={MainPage} />
+          <Route path="/order" exact component={OrderPage} />
+        </Switch>
+
+        <Footer />
+      </React.Fragment>
+    </Router>
   );
 }
 
