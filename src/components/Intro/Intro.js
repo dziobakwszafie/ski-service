@@ -60,42 +60,41 @@ class Intro extends PureComponent {
               <Col sm={12} md={6} lg={4}>
                 <Row className="p-3">
                   <p>
-                    Bo podczas jazdy tępią się krawędzie. A ślizgi się psują i
-                    podczas jazdy i podczas leżenia w piwnicy.
+                    Bo podczas jazdy tępią się krawędzie. A
+                    ślizgi się psują i podczas jazdy i
+                    podczas leżenia w piwnicy.
                   </p>
                 </Row>
                 <Row className="p-3">
                   <p>
-                    A tak na serio to od krawędzi zależy nie tylko to jak narta
-                    trzyma podczas skrętu (bo to chyba wiadomo powszechnie) ale
-                    też w jaki sposób będzie ona rozpoczynała skręt, wychodziła
-                    z niego oraz czy podczas jazdy na wprost nie będzie zbyt
-                    nerwowa.
+                    A tak na serio to od krawędzi zależy nie
+                    tylko to jak narta trzyma podczas skrętu
+                    (bo to chyba wiadomo powszechnie) ale
+                    też w jaki sposób będzie ona
+                    rozpoczynała skręt, wychodziła z niego
+                    oraz czy podczas jazdy na wprost nie
+                    będzie zbyt nerwowa.
                   </p>
                 </Row>
               </Col>
               <Col sm={12} md={6} lg={4}>
                 <Row className="p-3">
                   <p>
-                    Slizg jest z kolei elementem o który powinniśmy dbać cały
-                    rok, ale bądźmy szczerzy, ja wiem że jak ktoś odda chociaż
-                    raz w roku narty do Decathlonu na serwis, to już jest
-                    sukces. Co się dzieje gdy narta nie jest nasmarowana? Slizg
-                    się utlenia, co uwidacznia się poprzez powstawanie szarego
-                    nalotu, zmniejsza się jego hydrofobowość i zwiększa
-                    szorstkość. Wpływa to nie tylko na to, że pojedziemy wolnej
-                    ale też moze być Ci trudniej zainicjować sam skręt albo
-                    hamowanie.
+                    Slizg jest z kolei elementem o który
+                    powinniśmy dbać cały rok, ale bądźmy
+                    szczerzy, ja wiem że jak ktoś odda
+                    chociaż raz w roku narty do Decathlonu
+                    na serwis, to już jest sukces. Co się
+                    dzieje gdy narta nie jest nasmarowana?
+                    Slizg się utlenia, co uwidacznia się
+                    poprzez powstawanie szarego nalotu,
+                    zmniejsza się jego hydrofobowość i
+                    zwiększa szorstkość. Wpływa to nie tylko
+                    na to, że pojedziemy wolnej ale też moze
+                    być Ci trudniej zainicjować sam skręt
+                    albo hamowanie.
                   </p>
                 </Row>
-              </Col>
-            </Row>
-            <Row className="d-flex">
-              <Col className="d-flex justify-content-center">
-                <div id="circle">SMAROWANIE</div>
-              </Col>
-              <Col className="d-flex justify-content-center">
-                <div id="circle">OSTRZENIE</div>
               </Col>
             </Row>
           </Col>

@@ -39,7 +39,7 @@ const HeaderNavButtonsStyles = styled.div`
   }
 `;
 
-class Header extends PureComponent {
+class HeaderNavButtons extends PureComponent {
   render() {
     return (
       <HeaderNavButtonsStyles>
@@ -63,4 +63,4 @@ class Header extends PureComponent {
   }
 }
 
-export default Header;
+export default HeaderNavButtons;

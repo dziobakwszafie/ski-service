@@ -6,30 +6,30 @@ import {
   Redirect
 } from "react-router-dom";
 import HeaderNavButtons from "../../components/HeaderNavButtons/HeaderNavButtons";
-// import Intro from "./components/Intro/Intro";
-// import IntroNavButtons from "./components/IntroNavButtons/IntroNavButtons";
-// import Order from "./components/Order/Order";
-// import SharpeningIntro from "./components/SharpeningIntro/SharpeningIntro";
-// import WaxingIntro from "./components/WaxingIntro/WaxingIntro";
-// import UpButton from "./components/UpButton/UpButton";
+import Intro from "../../components/Intro/Intro";
+import IntroNavButtons from "../../components/IntroNavButtons/IntroNavButtons";
+import Order from "../Order/Order";
+import SharpeningIntro from "../../components/SharpeningIntro/SharpeningIntro";
+import WaxingIntro from "../../components/WaxingIntro/WaxingIntro";
+import UpButton from "../../components/UpButton/UpButton";
 
-function App() {
+function MainPage() {
   return (
     <Router>
       <React.Fragment>
         <HeaderNavButtons />
-        {/* <Intro />
+        <Intro />
         <IntroNavButtons />
         <Order />
         <SharpeningIntro />
         <WaxingIntro />
-        <UpButton /> */}
+        {/* <UpButton /> */}
       </React.Fragment>
     </Router>
   );
 }
 
-export default App;
+export default MainPage;
 
 // Login przez Googla
 // sprawdzenie historii

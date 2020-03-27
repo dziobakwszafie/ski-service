@@ -15,7 +15,7 @@ const Styles = styled.div`
   }
 `;
 
-class Variants extends PureComponent {
+class Order extends PureComponent {
   render() {
     return (
       <Styles>
@@ -38,4 +38,4 @@ class Variants extends PureComponent {
   }
 }
 
-export default Variants;
+export default Order;
