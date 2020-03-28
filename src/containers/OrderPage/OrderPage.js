@@ -3,12 +3,14 @@ import React from "react";
 // import Footer from "../../components/Footer/Footer";
 import OrderSharpening from "../../components/OrderSharpening/OrderSharpening";
 import OrderWaxing from "../../components/OrderWaxing/OrderWaxing";
+import Summary from "../../components/Summary/Summary";
 
 function OrderPage() {
   return (
     <React.Fragment>
       <OrderSharpening />
       <OrderWaxing />
+      <Summary />
     </React.Fragment>
   );
 }
