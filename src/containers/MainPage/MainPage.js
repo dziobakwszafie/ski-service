@@ -5,8 +5,8 @@ import HeaderNavButtons from "../../components/HeaderNavButtons/HeaderNavButtons
 import Intro from "../../components/Intro/Intro";
 import IntroNavButtons from "../../components/IntroNavButtons/IntroNavButtons";
 import Order from "../Order/Order";
-import SharpeningIntro from "../../components/SharpeningIntro/SharpeningIntro";
-import WaxingIntro from "../../components/WaxingIntro/WaxingIntro";
+import IntroSharp from "../../components/IntroSharp/IntroSharp";
+import IntroWax from "../../components/IntroWax/IntroWax";
 // import UpButton from "../../components/UpButton/UpButton";
 
 function MainPage() {
@@ -16,8 +16,8 @@ function MainPage() {
       <Intro />
       <IntroNavButtons />
       <Order />
-      <SharpeningIntro />
-      <WaxingIntro />
+      <IntroSharp />
+      <IntroWax />
       {/* <UpButton /> */}
     </React.Fragment>
   );

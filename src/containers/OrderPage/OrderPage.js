@@ -1,18 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 // import Header from "../../components/Header/Header";
 // import Footer from "../../components/Footer/Footer";
-import OrderSharpening from "../../components/OrderSharpening/OrderSharpening";
-import OrderWaxing from "../../components/OrderWaxing/OrderWaxing";
+import OrderSharpCont from "../OrderSharpCont";
+import OrderWaxCont from "../OrderWaxCont";
 import Summary from "../../components/Summary/Summary";
 
-function OrderPage() {
-  return (
-    <React.Fragment>
-      <OrderSharpening />
-      <OrderWaxing />
-      <Summary />
-    </React.Fragment>
-  );
+class OrderPage extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <OrderSharpCont />
+        <OrderWaxCont />
+        <Summary />
+      </React.Fragment>
+    );
+  }
 }
 
 export default OrderPage;

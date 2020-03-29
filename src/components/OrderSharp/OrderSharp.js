@@ -1,26 +1,29 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
-import waxing from "./images/waxing.jpg";
+import sharp from "./images/sharp.jpg";
 
-const OrderWaxingStyles = styled.div`
+const OrderSharpeningStyles = styled.div`
   img {
     height: 400px;
   }
   .vars div {
-    width: 33%;
+    width: 25%;
   }
 `;
 
-function OrderWaxing() {
+const WaxingIntro = ({ detailsSharp }) => {
   return (
-    <OrderWaxingStyles>
+    <OrderSharpeningStyles>
       <Container className="p-5 d-flex justify-content-center align-items-center">
         <Col>
           <Row className="d-flex justify-content-center">
-            <h3>SMAROWANIE</h3>
+            <h3>{detailsSharp[0].name}</h3>
           </Row>
           <Row>
+            <Col xs={4}>
+              <img src={sharp} />
+            </Col>
             <Col xs={8}>
               <Row>
                 <Col xs={3}>
@@ -53,24 +56,33 @@ function OrderWaxing() {
                 <Col xs={1}>30,-</Col>
               </Row>
               <Row className="d-flex justify-content-center">
-                <Col xs={6}>
-                  <p>NA JAKI RODZAJ ŚNIEGU</p>
+                <Col xs={2}>
+                  <p>BOK</p>
                 </Col>
                 <Col xs={6} className=" d-flex vars">
-                  <div>mokry</div>
-                  <div>normalny</div>
-                  <div>zmrożony</div>
+                  <div>90</div>
+                  <div>89</div>
+                  <div>88</div>
+                  <div>87</div>
                 </Col>
               </Row>
-            </Col>
-            <Col>
-              <img src={waxing} />
+              <Row className="d-flex justify-content-center">
+                <Col xs={2}>
+                  <p>DÓŁ</p>
+                </Col>
+                <Col xs={6} className=" d-flex vars">
+                  <div>0</div>
+                  <div>.5</div>
+                  <div>.75</div>
+                  <div>1</div>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Col>
       </Container>
-    </OrderWaxingStyles>
+    </OrderSharpeningStyles>
   );
-}
+};
 
-export default OrderWaxing;
+export default WaxingIntro;

@@ -1,10 +1,7 @@
-import { createStore, combineReducers } from "redux";
-import { reducer as formReducer } from "redux-form";
+import data from "../all-data.json";
 
-const rootReducer = combineReducers({
-  form: formReducer
-});
-
-const store = createStore(rootReducer);
+const rootReducer = (state = data) => {
+  return state;
+};
 
 export default rootReducer;
