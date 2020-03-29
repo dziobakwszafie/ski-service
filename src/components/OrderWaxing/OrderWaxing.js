@@ -4,66 +4,63 @@ import styled from "styled-components";
 import waxing from "./images/waxing.jpg";
 
 const OrderWaxingStyles = styled.div`
-  #intro1 {
-    background-color: #e4aee4;
-  }
   img {
     height: 400px;
+  }
+  .vars div {
+    width: 33%;
   }
 `;
 
 function OrderWaxing() {
   return (
     <OrderWaxingStyles>
-      <Container
-        id="intro1"
-        className="p-5 d-flex justify-content-center align-items-center">
+      <Container className="p-5 d-flex justify-content-center align-items-center">
         <Col>
-          <Row>
+          <Row className="d-flex justify-content-center">
             <h3>SMAROWANIE</h3>
           </Row>
           <Row>
-            <Col>
+            <Col xs={8}>
               <Row>
-                <Col>
+                <Col xs={3}>
                   <div>PODSTAWOWE</div>
                 </Col>
-                <Col>
-                  <div>2-krotne smarowanie smarem hydrokarbonowym</div>
+                <Col xs={8}>
+                  <div>ostrzenie pilnikami stalowymi o 2 gradacjach</div>
                 </Col>
-                <Col>30,-</Col>
+                <Col xs={1}>30,-</Col>
               </Row>
               <Row>
-                <Col>
+                <Col xs={3}>
+                  <div>RACE</div>
+                </Col>
+                <Col xs={8}>
+                  <div>
+                    ostrzenie pilnikami stalowymi o 2 gradacjach oraz
+                    polerowanie pilnikami diamentowymi o 3 gradacjach
+                  </div>
+                </Col>
+                <Col xs={1}>30,-</Col>
+              </Row>
+              <Row>
+                <Col xs={3}>
                   <div>PODSTAWOWE</div>
                 </Col>
-                <Col>
+                <Col xs={8}>
                   <div>2-krotne smarowanie smarem hydrokarbonowym</div>
                 </Col>
-                <Col>30,-</Col>
+                <Col xs={1}>30,-</Col>
               </Row>
-              <Row>
-                <Col>
-                  <div>PODSTAWOWE</div>
+              <Row className="d-flex justify-content-center">
+                <Col xs={6}>
+                  <p>NA JAKI RODZAJ ŚNIEGU</p>
                 </Col>
-                <Col>
-                  <div>2-krotne smarowanie smarem hydrokarbonowym</div>
+                <Col xs={6} className=" d-flex vars">
+                  <div>mokry</div>
+                  <div>normalny</div>
+                  <div>zmrożony</div>
                 </Col>
-                <Col>30,-</Col>
-              </Row>
-              <Row>
-                <p>BOK</p>
-                <div>90</div>
-                <div>89</div>
-                <div>88</div>
-                <div>87</div>
-              </Row>
-              <Row>
-                <p>DÓŁ</p>
-                <div>0</div>
-                <div>.5</div>
-                <div>.75</div>
-                <div>1</div>
               </Row>
             </Col>
             <Col>

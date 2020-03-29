@@ -4,22 +4,20 @@ import styled from "styled-components";
 import sharp from "./images/sharp.jpg";
 
 const OrderSharpeningStyles = styled.div`
-  #intro2 {
-    background-color: #e4aee4;
-  }
   img {
     height: 400px;
+  }
+  .vars div {
+    width: 25%;
   }
 `;
 
 function WaxingIntro() {
   return (
     <OrderSharpeningStyles>
-      <Container
-        id="intro2"
-        className="p-5 d-flex justify-content-center align-items-center">
+      <Container className="p-5 d-flex justify-content-center align-items-center">
         <Col>
-          <Row>
+          <Row className="d-flex justify-content-center">
             <h3>OSTRZENIE</h3>
           </Row>
           <Row>
@@ -28,48 +26,56 @@ function WaxingIntro() {
             </Col>
             <Col xs={8}>
               <Row>
-                <Col>
+                <Col xs={3}>
                   <div>PODSTAWOWE</div>
                 </Col>
-                <Col>
+                <Col xs={8}>
                   <div>ostrzenie pilnikami stalowymi o 2 gradacjach</div>
                 </Col>
-                <Col>30,-</Col>
+                <Col xs={1}>30,-</Col>
               </Row>
               <Row>
-                <Col>
+                <Col xs={3}>
                   <div>RACE</div>
                 </Col>
-                <Col>
+                <Col xs={8}>
                   <div>
                     ostrzenie pilnikami stalowymi o 2 gradacjach oraz
                     polerowanie pilnikami diamentowymi o 3 gradacjach
                   </div>
                 </Col>
-                <Col>30,-</Col>
+                <Col xs={1}>30,-</Col>
               </Row>
               <Row>
-                <Col>
+                <Col xs={3}>
                   <div>PODSTAWOWE</div>
                 </Col>
-                <Col>
+                <Col xs={8}>
                   <div>2-krotne smarowanie smarem hydrokarbonowym</div>
                 </Col>
-                <Col>30,-</Col>
+                <Col xs={1}>30,-</Col>
               </Row>
-              <Row>
-                <p>BOK</p>
-                <div>90</div>
-                <div>89</div>
-                <div>88</div>
-                <div>87</div>
+              <Row className="d-flex justify-content-center">
+                <Col xs={2}>
+                  <p>BOK</p>
+                </Col>
+                <Col xs={6} className=" d-flex vars">
+                  <div>90</div>
+                  <div>89</div>
+                  <div>88</div>
+                  <div>87</div>
+                </Col>
               </Row>
-              <Row>
-                <p>DÓŁ</p>
-                <div>0</div>
-                <div>.5</div>
-                <div>.75</div>
-                <div>1</div>
+              <Row className="d-flex justify-content-center">
+                <Col xs={2}>
+                  <p>DÓŁ</p>
+                </Col>
+                <Col xs={6} className=" d-flex vars">
+                  <div>0</div>
+                  <div>.5</div>
+                  <div>.75</div>
+                  <div>1</div>
+                </Col>
               </Row>
             </Col>
           </Row>

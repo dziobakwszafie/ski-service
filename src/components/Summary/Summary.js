@@ -50,7 +50,7 @@ function Summary() {
         </Col>
         <Col xs={4}>
           <div>SUMA:</div>
-          <div id="circle">ZALOGUJ SIĘ</div>
+          <div id="circle">60,-</div>
         </Col>
       </Container>
     </SummaryStyles>
