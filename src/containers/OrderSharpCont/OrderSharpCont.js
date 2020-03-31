@@ -1,11 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import OrderSharp from "../../components/OrderSharp/OrderSharp";
 
-class OrderSharpCont extends Component {
-  render() {
-    const { data } = this.props;
-    return <OrderSharp detailsSharp={data} />;
-  }
-}
+const OrderSharpCont = (data, applySharp) => {
+  const { data } = this.props;
+  return <OrderSharp details={data} applySharp={applySharp} />;
+};
 
 export default OrderSharpCont;

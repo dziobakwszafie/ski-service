@@ -12,13 +12,13 @@ const OrderWaxingStyles = styled.div`
   }
 `;
 
-function OrderWax(detailsWax) {
+function OrderWax({ details }) {
   return (
     <OrderWaxingStyles>
       <Container className="p-5 d-flex justify-content-center align-items-center">
         <Col>
           <Row className="d-flex justify-content-center">
-            <h3>{detailsWax[1].name}</h3>
+            <h3>{details[1].name}</h3>
           </Row>
           <Row>
             <Col xs={8}>

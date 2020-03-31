@@ -34,7 +34,8 @@ function App() {
 
 export default App;
 
-// Login przez Googla
-// sprawdzenie historii
-// wypelnienie formularza z kontaktem i czynnosciami serwisu
-// przeniesienie do historii
+//todo
+//dodanie parametrów z zamówienia do Store'a
+//wyświetlenie na stronie
+//przesłanie ich do bazy danych
+//wyświetlenie poprzednich zamówień na stronie

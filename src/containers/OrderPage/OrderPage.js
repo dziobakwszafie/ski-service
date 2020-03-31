@@ -19,7 +19,10 @@ class OrderPage extends Component {
 
 export default OrderPage;
 
-// Login przez Googla
-// sprawdzenie historii
-// wypelnienie formularza z kontaktem i czynnosciami serwisu
-// przeniesienie do historii
+//Login przez Googla
+//sprawdzenie historii
+//wypelnienie formularza z kontaktem i czynnosciami serwisu
+//przeniesienie do historii
+
+//logowanie oauth2.0 + openidconnect
+//biblioteka ktora umozliwa logowanie w reakcie react-oidc

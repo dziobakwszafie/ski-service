@@ -12,13 +12,23 @@ const OrderSharpeningStyles = styled.div`
   }
 `;
 
-const WaxingIntro = ({ detailsSharp }) => {
+handleApplySharp = () => {
+  const { applySharp } = this.props;
+  applySharp();
+};
+
+//dac listener na diva z kątami
+//po kliknieciu wrzucić do stora wartośc z id wybranego diva
+//na dole strony wyświetlac klikniete opcje na naklejce
+//potem po kliknieciu zamowienia wyslac je do bazy danych
+// z bazy ma wrócic i pokazac sie w historii zamówien
+const WaxingIntro = ({ details }) => {
   return (
     <OrderSharpeningStyles>
       <Container className="p-5 d-flex justify-content-center align-items-center">
         <Col>
           <Row className="d-flex justify-content-center">
-            <h3>{detailsSharp[0].name}</h3>
+            <h3>{details[0].name}</h3>
           </Row>
           <Row>
             <Col xs={4}>
@@ -86,3 +96,4 @@ const WaxingIntro = ({ detailsSharp }) => {
 };
 
 export default WaxingIntro;
+//https://pl.reactjs.org/docs/forms.html
