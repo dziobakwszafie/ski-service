@@ -35,12 +35,13 @@ const SummaryStyles = styled.div`
   }
 `;
 
-function Summary() {
+const Summary = () => {
   return (
     <SummaryStyles>
       <Container
         id="intro2"
-        className="p-5 d-flex justify-content-center align-items-center">
+        className="p-5 d-flex justify-content-center align-items-center"
+      >
         <Col xs={4}>
           <div>model nart i długość</div>
           <div>uwagi</div>
@@ -55,6 +56,6 @@ function Summary() {
       </Container>
     </SummaryStyles>
   );
-}
+};
 
 export default Summary;

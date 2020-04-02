@@ -1,17 +1,7 @@
 import data from "../all-data.json";
-import { APPLY_SHARP } from "../actionTypes/actionTypes";
+//import { APPLY_SHARP } from "../actionTypes/actionTypes";
 
 const rootReducer = (state = data) => {
-  switch (action.type) {
-    case APPLY_SHARP:
-      return orderSharpParam(state);
-
-    default:
-      return state;
-  }
-};
-
-const orderSharpParam = state => {
   return state;
 };
 

@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 
@@ -32,28 +32,26 @@ const IntroNavButtonsStyles = styled.div`
   }
 `;
 
-class IntroNavButtons extends PureComponent {
-  render() {
-    return (
-      <IntroNavButtonsStyles>
-        <Container
-          id="intro"
-          className="p-5 d-flex justify-content-center align-items-center"
-        >
-          <Col>
-            <Row className="d-flex">
-              <Col className="d-flex justify-content-center">
-                <div id="circle">SMAROWANIE</div>
-              </Col>
-              <Col className="d-flex justify-content-center">
-                <div id="circle">OSTRZENIE</div>
-              </Col>
-            </Row>
-          </Col>
-        </Container>
-      </IntroNavButtonsStyles>
-    );
-  }
-}
+const IntroNavButtons = () => {
+  return (
+    <IntroNavButtonsStyles>
+      <Container
+        id="intro"
+        className="p-5 d-flex justify-content-center align-items-center"
+      >
+        <Col>
+          <Row className="d-flex">
+            <Col className="d-flex justify-content-center">
+              <div id="circle">SMAROWANIE</div>
+            </Col>
+            <Col className="d-flex justify-content-center">
+              <div id="circle">OSTRZENIE</div>
+            </Col>
+          </Row>
+        </Col>
+      </Container>
+    </IntroNavButtonsStyles>
+  );
+};
 
 export default IntroNavButtons;

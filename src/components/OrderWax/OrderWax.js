@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import waxing from "./images/waxing.jpg";
 
-const OrderWaxingStyles = styled.div`
+const OrderWaxStyles = styled.div`
   img {
     height: 400px;
   }
@@ -12,9 +12,9 @@ const OrderWaxingStyles = styled.div`
   }
 `;
 
-function OrderWax({ details }) {
+const OrderWax = ({ details }) => {
   return (
-    <OrderWaxingStyles>
+    <OrderWaxStyles>
       <Container className="p-5 d-flex justify-content-center align-items-center">
         <Col>
           <Row className="d-flex justify-content-center">
@@ -27,7 +27,10 @@ function OrderWax({ details }) {
                   <div>PODSTAWOWE</div>
                 </Col>
                 <Col xs={8}>
-                  <div>ostrzenie pilnikami stalowymi o 2 gradacjach</div>
+                  <div>
+                    ostrzenie pilnikami stalowymi o 2
+                    gradacjach
+                  </div>
                 </Col>
                 <Col xs={1}>30,-</Col>
               </Row>
@@ -37,29 +40,30 @@ function OrderWax({ details }) {
                 </Col>
                 <Col xs={8}>
                   <div>
-                    ostrzenie pilnikami stalowymi o 2 gradacjach oraz
-                    polerowanie pilnikami diamentowymi o 3 gradacjach
+                    ostrzenie pilnikami stalowymi o 2
+                    gradacjach oraz polerowanie pilnikami
+                    diamentowymi o 3 gradacjach
                   </div>
                 </Col>
                 <Col xs={1}>30,-</Col>
               </Row>
               <Row>
                 <Col xs={3}>
-                  <div>PODSTAWOWE</div>
+                  <div>NIC</div>
                 </Col>
                 <Col xs={8}>
-                  <div>2-krotne smarowanie smarem hydrokarbonowym</div>
+                  <div>bez ostrzenia</div>
                 </Col>
-                <Col xs={1}>30,-</Col>
+                <Col xs={1}></Col>
               </Row>
               <Row className="d-flex justify-content-center">
                 <Col xs={6}>
                   <p>NA JAKI RODZAJ ŚNIEGU</p>
                 </Col>
                 <Col xs={6} className=" d-flex vars">
-                  <div>mokry</div>
-                  <div>normalny</div>
-                  <div>zmrożony</div>
+                  <button>{details[1].snow1}</button>
+                  <button>{details[1].snow2}</button>
+                  <button>{details[1].snow3}</button>
                 </Col>
               </Row>
             </Col>
@@ -69,8 +73,8 @@ function OrderWax({ details }) {
           </Row>
         </Col>
       </Container>
-    </OrderWaxingStyles>
+    </OrderWaxStyles>
   );
-}
+};
 
 export default OrderWax;

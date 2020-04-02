@@ -22,7 +22,7 @@ const ImgStyles = styled.div`
   }
 `;
 
-function Footer() {
+const Footer = () => {
   return (
     <React.Fragment>
       <Container id="footer">
@@ -108,6 +108,6 @@ function Footer() {
       </Container>
     </React.Fragment>
   );
-}
+};
 
 export default Footer;

@@ -9,7 +9,7 @@ import IntroSharp from "../../components/IntroSharp/IntroSharp";
 import IntroWax from "../../components/IntroWax/IntroWax";
 // import UpButton from "../../components/UpButton/UpButton";
 
-function MainPage() {
+const MainPage = () => {
   return (
     <React.Fragment>
       <HeaderNavButtons />
@@ -21,7 +21,7 @@ function MainPage() {
       {/* <UpButton /> */}
     </React.Fragment>
   );
-}
+};
 
 export default MainPage;
 

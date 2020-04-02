@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 
@@ -36,28 +36,26 @@ const HeaderStyles = styled.div`
   }
 `;
 
-class Header extends PureComponent {
-  render() {
-    return (
-      <HeaderStyles>
-        <Container id="intro">
-          <Container id="first">
-            <Col>
-              <Row className="d-flex justify-content-center">
-                <h1>NIEŚMIALI ROMANTYCY</h1>
-              </Row>
-              <Row className="d-flex justify-content-center">
-                <h1>RACING TEAM</h1>
-              </Row>
-              <Row id="red-text">
-                <p>SERVICE DEPARTMENT</p>
-              </Row>
-            </Col>
-          </Container>
+const Header = () => {
+  return (
+    <HeaderStyles>
+      <Container id="intro">
+        <Container id="first">
+          <Col>
+            <Row className="d-flex justify-content-center">
+              <h1>NIEŚMIALI ROMANTYCY</h1>
+            </Row>
+            <Row className="d-flex justify-content-center">
+              <h1>RACING TEAM</h1>
+            </Row>
+            <Row id="red-text">
+              <p>SERVICE DEPARTMENT</p>
+            </Row>
+          </Col>
         </Container>
-      </HeaderStyles>
-    );
-  }
-}
+      </Container>
+    </HeaderStyles>
+  );
+};
 
 export default Header;

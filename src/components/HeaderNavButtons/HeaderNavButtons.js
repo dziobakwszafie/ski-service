@@ -38,28 +38,26 @@ const HeaderNavButtonsStyles = styled.div`
   }
 `;
 
-class HeaderNavButtons extends PureComponent {
-  render() {
-    return (
-      <HeaderNavButtonsStyles>
-        <Container id="intro">
-          <Container id="second">
-            <Row className="d-flex justify-content-between">
-              <Col className="d-flex justify-content-center">
-                <div id="circle">PO CO TO WSZYSTKO</div>
-              </Col>
-              <Col className="d-flex justify-content-center">
-                <div id="circle">ZAMÓW SERWIS</div>
-              </Col>
-              <Col className="d-flex justify-content-center">
-                <div id="circle">ZALOGUJ SIĘ</div>
-              </Col>
-            </Row>
-          </Container>
+const HeaderNavButtons = () => {
+  return (
+    <HeaderNavButtonsStyles>
+      <Container id="intro">
+        <Container id="second">
+          <Row className="d-flex justify-content-between">
+            <Col className="d-flex justify-content-center">
+              <div id="circle">PO CO TO WSZYSTKO</div>
+            </Col>
+            <Col className="d-flex justify-content-center">
+              <div id="circle">ZAMÓW SERWIS</div>
+            </Col>
+            <Col className="d-flex justify-content-center">
+              <div id="circle">ZALOGUJ SIĘ</div>
+            </Col>
+          </Row>
         </Container>
-      </HeaderNavButtonsStyles>
-    );
-  }
-}
+      </Container>
+    </HeaderNavButtonsStyles>
+  );
+};
 
 export default HeaderNavButtons;
