@@ -39,6 +39,6 @@ npm start
 - [Redux](https://redux.js.org/)
 - [styled-components](https://styled-components.com/)
 
-## Current Status
+## Project Status
 
-:wavy_dash: under develope - planned release winter 20/21.
+:heavy_plus_sign:	under develope - planned release winter 20/21.
