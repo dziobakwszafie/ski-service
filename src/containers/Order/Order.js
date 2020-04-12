@@ -25,7 +25,7 @@ class Order extends PureComponent {
           <Col>
             <Row className="d-flex justify-content-center align-items-center">
               <Col className="d-flex justify-content-center">
-                <Link to={`/order`}>
+                <Link to={`/ski-service/order`}>
                   <h3>ZAMÓW SERWIS</h3>
                 </Link>
               </Col>
