@@ -17,7 +17,7 @@ function App() {
       <React.Fragment>
         <Header />
 
-        <Route path="/ski-service/" component={MainPage} />
+        <Route path="/ski-service/" exact component={MainPage} />
         <Route path="/ski-service/order" exact component={OrderPage} />
 
         <Footer />
