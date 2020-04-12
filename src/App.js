@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
+  Redirect,
 } from "react-router-dom";
 import Header from "./components/Header/Header";
 import MainPage from "./containers/MainPage/MainPage";
@@ -17,14 +17,8 @@ function App() {
       <React.Fragment>
         <Header />
 
-        <Route path="/" exact>
-          <Redirect to="/main" />
-        </Route>
-
-        <Switch>
-          <Route path="/main" exact component={MainPage} />
-          <Route path="/order" exact component={OrderPage} />
-        </Switch>
+        <Route path="/" exact component={MainPage} />
+        <Route path="/order" exact component={OrderPage} />
 
         <Footer />
       </React.Fragment>

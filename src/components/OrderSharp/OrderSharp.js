@@ -32,14 +32,6 @@ const OrderSharpStyles = styled.div`
 // const OrderSharp = ({ details }) => {
 
 class OrderSharp extends Component {
-  constructor() {
-    super();
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handle(event) {
-    const id = event.target.id;
-    console.log(id);
-  }
   render() {
     const { details } = this.props;
     return (
@@ -59,10 +51,7 @@ class OrderSharp extends Component {
                     <div>PODSTAWOWE</div>
                   </Col>
                   <Col xs={8}>
-                    <div>
-                      ostrzenie pilnikami stalowymi o 2
-                      gradacjach
-                    </div>
+                    <div>ostrzenie pilnikami stalowymi o 2 gradacjach</div>
                   </Col>
                   <Col xs={1}>30,-</Col>
                 </Row>
@@ -72,9 +61,8 @@ class OrderSharp extends Component {
                   </Col>
                   <Col xs={8}>
                     <div>
-                      ostrzenie pilnikami stalowymi o 2
-                      gradacjach oraz polerowanie pilnikami
-                      diamentowymi o 3 gradacjach
+                      ostrzenie pilnikami stalowymi o 2 gradacjach oraz
+                      polerowanie pilnikami diamentowymi o 3 gradacjach
                     </div>
                   </Col>
                   <Col xs={1}>30,-</Col>
@@ -93,13 +81,7 @@ class OrderSharp extends Component {
                     <p>BOK</p>
                   </Col>
                   <Col xs={6} className=" d-flex vars">
-                    <button
-                      id="myBtn"
-                      value="sfsd"
-                      onClick={this.handle}
-                    >
-                      {details[0].angle1}
-                    </button>
+                    <button>{details[0].angle1}</button>
 
                     <button>{details[0].angle2}</button>
                     <button>{details[0].angle3}</button>
