@@ -1,12 +1,12 @@
 import React from "react";
 // import Header from "../../components/Header/Header";
 // import Footer from "../../components/Footer/Footer";
-import HeaderNavButtons from "../../components/HeaderNavButtons/HeaderNavButtons";
-import Intro from "../../components/Intro/Intro";
+import HeaderNavButtons from "./HeaderNavButtons/HeaderNavButtons";
+import Intro from "./Intro/Intro";
 import IntroNavButtons from "../../components/IntroNavButtons/IntroNavButtons";
-import Order from "../Order/Order";
-import IntroSharp from "../../components/IntroSharp/IntroSharp";
-import IntroWax from "../../components/IntroWax/IntroWax";
+import Order from "./Order/Order";
+import IntroSharp from "./IntroSharp/IntroSharp";
+import IntroWax from "./IntroWax/IntroWax";
 // import UpButton from "../../components/UpButton/UpButton";
 
 const MainPage = () => {

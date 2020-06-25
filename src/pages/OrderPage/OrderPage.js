@@ -3,7 +3,7 @@ import React, { Component } from "react";
 // import Footer from "../../components/Footer/Footer";
 import OrderSharpCont from "../OrderSharpCont";
 import OrderWaxCont from "../OrderWaxCont";
-import Summary from "../../components/Summary/Summary";
+import Summary from "./Summary/Summary";
 
 class OrderPage extends Component {
   render() {
