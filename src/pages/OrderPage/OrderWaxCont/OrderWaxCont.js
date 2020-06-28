@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import OrderWax from "../../../components/OrderWax/OrderWax";
+import OrderWax from "./OrderWax/OrderWax";
 
 class OrderWaxCont extends Component {
   render() {

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 // import Header from "../../components/Header/Header";
 // import Footer from "../../components/Footer/Footer";
-import OrderSharpCont from "../OrderSharpCont";
-import OrderWaxCont from "../OrderWaxCont";
+import OrderSharpCont from "./OrderSharpCont";
+import OrderWaxCont from "./OrderWaxCont";
 import Summary from "./Summary/Summary";
 
 class OrderPage extends Component {

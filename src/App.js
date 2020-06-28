@@ -7,8 +7,8 @@ import {
   Redirect,
 } from "react-router-dom";
 import Header from "./components/Header/Header";
-import MainPage from "./containers/MainPage/MainPage";
-import OrderPage from "./containers/OrderPage/OrderPage";
+import MainPage from "./pages/MainPage/MainPage";
+import OrderPage from "./pages/OrderPage/OrderPage";
 import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -17,8 +17,8 @@ function App() {
       <React.Fragment>
         <Header />
 
-        <Route path="/ski-service/" exact component={MainPage} />
-        <Route path="/ski-service/order" exact component={OrderPage} />
+        <Route path="/" exact component={MainPage} />
+        <Route path="/order" exact component={OrderPage} />
 
         <Footer />
       </React.Fragment>

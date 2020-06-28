@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import OrderSharp from "../../components/OrderSharp/OrderSharp";
+import OrderSharp from "./OrderSharp/OrderSharp";
 
 class OrderSharpCont extends Component {
   render() {
