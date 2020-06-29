@@ -1,26 +1,26 @@
-import React from "react";
+import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
-import waxing from "./images/waxing.jpg";
 
-const OrderWaxStyles = styled.div`
+const OrderSharpStyles = styled.div`
   img {
     height: 400px;
   }
   .vars div {
-    width: 33%;
+    width: 25%;
   }
 `;
 
-const OrderWax = ({ details }) => {
+const OrderForms = ({ name }) => {
   return (
-    <OrderWaxStyles>
+    <OrderSharpStyles>
       <Container className="p-5 d-flex justify-content-center align-items-center">
         <Col>
           <Row className="d-flex justify-content-center">
-            <h3>{details[1].name}</h3>
+            <h3>{name}</h3>
           </Row>
           <Row>
+            <Col xs={4}></Col>
             <Col xs={8}>
               <Row>
                 <Col xs={3}>
@@ -56,25 +56,12 @@ const OrderWax = ({ details }) => {
                 </Col>
                 <Col xs={1}></Col>
               </Row>
-              <Row className="d-flex justify-content-center">
-                <Col xs={6}>
-                  <p>NA JAKI RODZAJ ŚNIEGU</p>
-                </Col>
-                <Col xs={6} className=" d-flex vars">
-                  <button>{details[1].snow1}</button>
-                  <button>{details[1].snow2}</button>
-                  <button>{details[1].snow3}</button>
-                </Col>
-              </Row>
-            </Col>
-            <Col>
-              <img src={waxing} />
             </Col>
           </Row>
         </Col>
       </Container>
-    </OrderWaxStyles>
+    </OrderSharpStyles>
   );
 };
 
-export default OrderWax;
+export default OrderForms;

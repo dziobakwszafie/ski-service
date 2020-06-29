@@ -1,28 +1,19 @@
-import React, { Component } from "react";
-// import Header from "../../components/Header/Header";
-// import Footer from "../../components/Footer/Footer";
-import OrderSharpCont from "./OrderSharpCont";
-import OrderWaxCont from "./OrderWaxCont";
-import Summary from "./Summary/Summary";
+import React from "react";
+import { connect } from "react-redux";
+import OrderForms from "./components/OrderForms/OrderForms";
 
-class OrderPage extends Component {
-  render() {
-    return (
-      <React.Fragment>
-        <OrderSharpCont />
-        <OrderWaxCont />
-        <Summary />
-      </React.Fragment>
-    );
-  }
-}
+const OrderPage = (props) => {
+  return (
+    <div>
+      {props.params.map(({ id, ...otherProps }) => {
+        return <OrderForms key={id} {...otherProps} />;
+      })}
+    </div>
+  );
+};
 
-export default OrderPage;
+const mapStateToProps = (state) => {
+  return { params: state.params };
+};
 
-//Login przez Googla
-//sprawdzenie historii
-//wypelnienie formularza z kontaktem i czynnosciami serwisu
-//przeniesienie do historii
-
-//logowanie oauth2.0 + openidconnect
-//biblioteka ktora umozliwa logowanie w reakcie react-oidc
+export default connect(mapStateToProps)(OrderPage);

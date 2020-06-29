@@ -21,11 +21,12 @@ class Order extends PureComponent {
       <Styles>
         <Container
           id="intro"
-          className="d-flex justify-content-center align-items-center">
+          className="d-flex justify-content-center align-items-center"
+        >
           <Col>
             <Row className="d-flex justify-content-center align-items-center">
               <Col className="d-flex justify-content-center">
-                <Link to={`/ski-service/order`}>
+                <Link to={`/order`}>
                   <h3>ZAMÓW SERWIS</h3>
                 </Link>
               </Col>

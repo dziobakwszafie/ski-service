@@ -1,6 +1,14 @@
-import { APPLY_SHARP } from "../actionTypes/actionTypes";
+import {
+  ADD_SERVICE,
+  TOGGLE_CART,
+} from "../actionTypes/actionTypes";
 
-export const applySharpAction = () => {
-  return { type: APPLY_SHARP };
+export const addToBasket = (service) => {
+  return { type: ADD_SERVICE, payload: service };
 };
-//tu mi brakuje parametrów
+
+export const toggleCart = () => {
+  return {
+    type: TOGGLE_CART,
+  };
+};
