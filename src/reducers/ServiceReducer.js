@@ -1,7 +1,4 @@
-import {
-  TOGGLE_CART,
-  ADD_SERVICE,
-} from "../actionTypes/actionTypes";
+import { TOGGLE_CART, ADD_SERVICE } from "../actionTypes/actionTypes";
 import _ from "lodash";
 
 const INITIAL_STATE = {
@@ -9,10 +6,7 @@ const INITIAL_STATE = {
   basketItems: [],
 };
 
-export const addItemToBasket = (
-  basketItems,
-  basketItemToAdd
-) => {
+export const addItemToBasket = (basketItems, basketItemToAdd) => {
   const existingCartItem = basketItems.find(
     (basketItem) => basketItem.id === basketItemToAdd.id
   );
@@ -28,10 +22,7 @@ export const addItemToBasket = (
     );
   }
 
-  return [
-    ...basketItems,
-    { ...basketItemToAdd, quantity: 1 },
-  ];
+  return [...basketItems, { ...basketItemToAdd, quantity: 1 }];
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -41,10 +32,7 @@ export default (state = INITIAL_STATE, action) => {
     case ADD_SERVICE:
       return {
         ...state,
-        basketItems: addItemToBasket(
-          state.basketItems,
-          action.payload
-        ),
+        basketItems: addItemToBasket(state.basketItems, action.payload),
       };
 
     default:

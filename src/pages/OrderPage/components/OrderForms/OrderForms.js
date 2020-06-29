@@ -1,6 +1,9 @@
-import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import styled from "styled-components";
+import { connect } from "react-redux";
+import { addToBasket } from "../../../../actions/actions";
+import BasketIcon from "../BasketIcon/BasketIcon";
 
 const OrderSharpStyles = styled.div`
   img {
@@ -11,13 +14,13 @@ const OrderSharpStyles = styled.div`
   }
 `;
 
-const OrderForms = ({ ...otherProps }) => {
+const OrderForms = ({ addToBasket, ...otherProps }) => {
   return (
     <OrderSharpStyles>
       <Container className="p-5 d-flex justify-content-center align-items-center">
         <Col>
           <Row className="d-flex justify-content-center">
-            <h3>{name}</h3>
+            <h3>{otherProps.name}</h3>
           </Row>
           <Row>
             <Col xs={4}></Col>
@@ -27,10 +30,7 @@ const OrderForms = ({ ...otherProps }) => {
                   <div>PODSTAWOWE</div>
                 </Col>
                 <Col xs={8}>
-                  <div>
-                    ostrzenie pilnikami stalowymi o 2
-                    gradacjach
-                  </div>
+                  <div>ostrzenie pilnikami stalowymi o 2 gradacjach</div>
                 </Col>
                 <Col xs={1}>30,-</Col>
               </Row>
@@ -40,9 +40,8 @@ const OrderForms = ({ ...otherProps }) => {
                 </Col>
                 <Col xs={8}>
                   <div>
-                    ostrzenie pilnikami stalowymi o 2
-                    gradacjach oraz polerowanie pilnikami
-                    diamentowymi o 3 gradacjach
+                    ostrzenie pilnikami stalowymi o 2 gradacjach oraz
+                    polerowanie pilnikami diamentowymi o 3 gradacjach
                   </div>
                 </Col>
                 <Col xs={1}>30,-</Col>
@@ -57,6 +56,10 @@ const OrderForms = ({ ...otherProps }) => {
                 <Col xs={1}></Col>
               </Row>
             </Col>
+            <Button onClick={() => addToBasket(otherProps.name)} cartButton>
+              ADD TO CART
+            </Button>
+            <BasketIcon />
           </Row>
         </Col>
       </Container>
@@ -64,4 +67,4 @@ const OrderForms = ({ ...otherProps }) => {
   );
 };
 
-export default OrderForms;
+export default connect(null, { addToBasket })(OrderForms);
