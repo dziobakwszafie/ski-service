@@ -11,7 +11,7 @@ const OrderSharpStyles = styled.div`
   }
 `;
 
-const OrderForms = ({ name }) => {
+const OrderForms = ({ ...otherProps }) => {
   return (
     <OrderSharpStyles>
       <Container className="p-5 d-flex justify-content-center align-items-center">
