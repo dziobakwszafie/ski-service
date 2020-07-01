@@ -1,10 +1,7 @@
-import {
-  ADD_SERVICE,
-  TOGGLE_CART,
-} from "../actionTypes/actionTypes";
+import { ADD_ORDER, TOGGLE_CART } from "../actionTypes/actionTypes";
 
-export const addToBasket = (service) => {
-  return { type: ADD_SERVICE, payload: service };
+export const addToBasket = (order) => {
+  return { type: ADD_ORDER, payload: order };
 };
 
 export const toggleCart = () => {

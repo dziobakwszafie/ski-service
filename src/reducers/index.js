@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
 import params from "./ParamsReducer";
-import basket from "./ServiceReducer";
+import order from "./OrderReducer";
 
 export default combineReducers({
   params: params,
-  basket: basket,
+  order: order,
 });

@@ -1,19 +1,14 @@
 import React from "react";
-import { connect } from "react-redux";
-import OrderForms from "./components/OrderForms/OrderForms";
+import OrderForm from "./components/OrderForm/OrderForm";
+import Summary from "./components/Summary/Summary";
 
 const OrderPage = (props) => {
   return (
-    <div>
-      {props.params.map(({ id, ...otherProps }) => {
-        return <OrderForms key={id} {...otherProps} />;
-      })}
-    </div>
+    <>
+      <OrderForm />
+      <Summary />
+    </>
   );
 };
 
-const mapStateToProps = (state) => {
-  return { params: state.params };
-};
-
-export default connect(mapStateToProps)(OrderPage);
+export default OrderPage;
