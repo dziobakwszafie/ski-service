@@ -3,7 +3,6 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import { addToBasket } from "../../../../actions/actions";
-import BasketIcon from "../BasketIcon/BasketIcon";
 
 const OrderSharpStyles = styled.div`
   img {
@@ -14,13 +13,14 @@ const OrderSharpStyles = styled.div`
   }
 `;
 
-const OrderForms = ({ addToBasket, ...otherProps }) => {
+const OrderParams = ({ addToBasket, item }) => {
+  const { name } = item;
   return (
     <OrderSharpStyles>
       <Container className="p-5 d-flex justify-content-center align-items-center">
         <Col>
           <Row className="d-flex justify-content-center">
-            <h3>{otherProps.name}</h3>
+            <h3>{name}</h3>
           </Row>
           <Row>
             <Col xs={4}></Col>
@@ -56,10 +56,12 @@ const OrderForms = ({ addToBasket, ...otherProps }) => {
                 <Col xs={1}></Col>
               </Row>
             </Col>
-            <Button onClick={() => addToBasket(otherProps.name)} cartButton>
+            <Button
+              onClick={() => addToBasket(item, console.log(item))}
+              cartButton
+            >
               ADD TO CART
             </Button>
-            <BasketIcon />
           </Row>
         </Col>
       </Container>
@@ -67,4 +69,4 @@ const OrderForms = ({ addToBasket, ...otherProps }) => {
   );
 };
 
-export default connect(null, { addToBasket })(OrderForms);
+export default connect(null, { addToBasket })(OrderParams);

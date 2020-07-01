@@ -1,4 +1,4 @@
-import { TOGGLE_CART, ADD_SERVICE } from "../actionTypes/actionTypes";
+import { TOGGLE_CART, ADD_ORDER } from "../actionTypes/actionTypes";
 import _ from "lodash";
 
 const INITIAL_STATE = {
@@ -29,7 +29,7 @@ export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case TOGGLE_CART:
       return { ...state, hidden: !state.hidden };
-    case ADD_SERVICE:
+    case ADD_ORDER:
       return {
         ...state,
         basketItems: addItemToBasket(state.basketItems, action.payload),
