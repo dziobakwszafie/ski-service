@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/ski-service/static/js/main.80bf833e.chunk.js",
-    "main.js.map": "/ski-service/static/js/main.80bf833e.chunk.js.map",
+    "main.js": "/ski-service/static/js/main.57241fb0.chunk.js",
+    "main.js.map": "/ski-service/static/js/main.57241fb0.chunk.js.map",
     "runtime-main.js": "/ski-service/static/js/runtime-main.05ad6d14.js",
     "runtime-main.js.map": "/ski-service/static/js/runtime-main.05ad6d14.js.map",
     "static/css/2.af3c1da9.chunk.css": "/ski-service/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.98d910ae.chunk.js": "/ski-service/static/js/2.98d910ae.chunk.js",
-    "static/js/2.98d910ae.chunk.js.map": "/ski-service/static/js/2.98d910ae.chunk.js.map",
+    "static/js/2.6f91839a.chunk.js": "/ski-service/static/js/2.6f91839a.chunk.js",
+    "static/js/2.6f91839a.chunk.js.map": "/ski-service/static/js/2.6f91839a.chunk.js.map",
     "index.html": "/ski-service/index.html",
-    "precache-manifest.dd6b1293e40c7e94a29de36741cc1e36.js": "/ski-service/precache-manifest.dd6b1293e40c7e94a29de36741cc1e36.js",
+    "precache-manifest.45facb6af30431865a32e7295de870f1.js": "/ski-service/precache-manifest.45facb6af30431865a32e7295de870f1.js",
     "service-worker.js": "/ski-service/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/ski-service/static/css/2.af3c1da9.chunk.css.map",
     "static/media/sms.png": "/ski-service/static/media/sms.8c3ebee5.png",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.05ad6d14.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.98d910ae.chunk.js",
-    "static/js/main.80bf833e.chunk.js"
+    "static/js/2.6f91839a.chunk.js",
+    "static/js/main.57241fb0.chunk.js"
   ]
 }
