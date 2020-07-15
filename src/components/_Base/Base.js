@@ -1,12 +1,22 @@
-import React, { PureComponent } from "react";
-import { Container, Button, Row, Col } from "react-bootstrap";
-import styled from "styled-components";
-
-const Styles = styled.div`
-  .container {
-    background: #55bcc9;
-    max-width: 100vw;
-    height: 100vh;
+const HeaderStylesTitle = styled.h1`
+  font-family: "Bangers", cursive;
+  font-size: 120px;
+  color: rgba(169, 169, 169, 25%);
+`;
+const HeaderStylesTitleRed = styled.h2`
+  font-family: "Permanent Marker", cursive;
+  font-size: 80px;
+  color: #ff3b3f;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  white-space: nowrap;
+  @media (max-width: 990px) {
+    white-space: normal;
+  }
+  @media (max-width: 680px) {
+    font-size: 50px;
   }
 `;
 

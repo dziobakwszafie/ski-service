@@ -1,25 +1,14 @@
 import React from "react";
-import {
-  HashRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
-import Header from "./components/Header/Header";
+import { HashRouter as Router, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage/MainPage";
 import OrderPage from "./pages/OrderPage/OrderPage";
-import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <Router>
       <React.Fragment>
-        <Header />
-
         <Route path="/" exact component={MainPage} />
         <Route path="/order" exact component={OrderPage} />
-
-        <Footer />
       </React.Fragment>
     </Router>
   );
