@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Intro from "./components/Intro/Intro";
-import Order from "./components/Order/Order";
+import OrderLink from "./components/OrderLink/OrderLink";
 import IntroSharp from "./components/IntroSharp/IntroSharp";
 import IntroWax from "./components/IntroWax/IntroWax";
 
@@ -11,7 +11,7 @@ const MainPage = () => {
     <>
       <Header />
       <Intro />
-      <Order />
+      <OrderLink />
       <IntroSharp />
       <IntroWax />
       <Footer />

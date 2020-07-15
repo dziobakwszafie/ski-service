@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const IntroStyles = styled.div`
+const HeaderStyles = styled.div`
   height: 100vh;
   max-width: 100vw;
 `;
@@ -10,8 +10,8 @@ const VideoStyles = styled.iframe`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  max-width: 100%;
 `;
 
 const OverflowStyles = styled.div`
@@ -22,6 +22,7 @@ const OverflowStyles = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
+  text-align: center;
 `;
 
 const TitleStyles = styled.h1`
@@ -46,7 +47,7 @@ const SubtitleStyles = styled.h2`
 
 const Header = () => {
   return (
-    <IntroStyles>
+    <HeaderStyles>
       <div>
         <VideoStyles
           data-module-vimeo-player="video-promo"
@@ -70,7 +71,7 @@ const Header = () => {
         </TitleStyles>
         <SubtitleStyles>SERVICE DEPARTMENT</SubtitleStyles>
       </OverflowStyles>
-    </IntroStyles>
+    </HeaderStyles>
   );
 };
 
