@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "formik": "^2.1.5",
     "gh-pages": "^2.2.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
@@ -12,7 +13,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
     "redux": "^4.0.5",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "yup": "^0.29.1"
   },
   "homepage": "https://dziobakwszafie.github.io/ski-service",
   "scripts": {
