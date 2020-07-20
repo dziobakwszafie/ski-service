@@ -17,8 +17,9 @@ const initialValues = {
   email: "",
 };
 
-let onSubmit = (values) => {
+let onSubmit = (values, onSubmitProps) => {
   console.log(values);
+  onSubmitProps.resetForm();
 };
 
 const validationSchema = Yup.object({
@@ -27,6 +28,7 @@ const validationSchema = Yup.object({
 });
 
 //https://www.youtube.com/watch?v=rBOJzbFZAws&list=PLC3y8-rFHvwiPmFbtzEWjESkqBVDbdgGu&index=16
+//https://codesandbox.io/s/formik-redux-yup-example-ezne7?file=/src/actions/message.js
 
 const MakeOrderForm = () => {
   return (
@@ -36,36 +38,36 @@ const MakeOrderForm = () => {
         onSubmit={onSubmit}
         validationSchema={validationSchema}
       >
-        <Form>
-          <div className="form-control">
-            <label htmlFor="name">Name</label>
-            <Field
-              type="text"
-              id="name"
-              name="name"
-              // onChange={formik.handleChange}
-              // onBlur={formik.handleBlur}
-              // value={formik.values.name}
-            ></Field>
-            <ErrorMessage name="name" />
-          </div>
-          <div className="form-control">
-            <label htmlFor="email">Email</label>
-            <Field
-              type="email"
-              id="email"
-              name="email"
-              // onChange={formik.handleChange}
-              // onBlur={formik.handleBlur}
-              // value={formik.values.email}
-            ></Field>
-            <ErrorMessage name="email" />
-            {/* {formik.touched.email && formik.errors.email ? (
-            <div className="red">{formik.errors.email}</div>
-          ) : null} */}
-          </div>
-          <button>Submit</button>
-        </Form>
+        {(formik) => {
+          return (
+            <Form>
+              <div className="form-control">
+                <label htmlFor="name">Name</label>
+                <Field type="text" id="name" name="name"></Field>
+                <ErrorMessage name="name" />
+              </div>
+              <div className="form-control">
+                <label htmlFor="email">Email</label>
+                <Field type="email" id="email" name="email"></Field>
+                <ErrorMessage name="email" />
+              </div>
+              <button
+                type="reset"
+                disabled={!formik.dirty || formik.isSubmitting}
+              >
+                Reset
+              </button>
+              <button
+                type="submit"
+                disabled={
+                  !formik.isValid || !formik.dirty || formik.isSubmitting
+                }
+              >
+                Submit
+              </button>
+            </Form>
+          );
+        }}
       </Formik>
     </Styles>
   );
