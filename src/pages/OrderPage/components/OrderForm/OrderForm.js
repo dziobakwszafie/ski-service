@@ -1,76 +1,124 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import styled from "styled-components";
+import { Formik, Form } from "formik";
 import * as Yup from "yup";
+import FormikControl from "./FormikControl/FormikControl";
+import styled from "styled-components";
 
-const Styles = styled.div`
-  .red {
-    color: red;
-  }
-  .green {
-    color: green;
-  }
+const OrderFormStyles = styled.div`
+  display: flex;
 `;
 
-const initialValues = {
-  name: "",
-  email: "",
-};
+function FormikContainer() {
+  const radioOptions1 = [
+    { key: "Option 1", value: "rOption1" },
+    { key: "Option 2", value: "rOption2" },
+    { key: "Option 3", value: "rOption3" },
+  ];
+  const radioOptions2 = [
+    { key: "Option 1", value: "rOption12" },
+    { key: "Option 2", value: "rOption22" },
+    { key: "Option 3", value: "rOption32" },
+  ];
+  const radioOptions3 = [
+    { key: "Option 4", value: "rOption13" },
+    { key: "Option 5", value: "rOption32" },
+    { key: "Option 6", value: "rOption33" },
+  ];
+  const radioOptions4 = [
+    { key: "Option 1", value: "rOption14" },
+    { key: "Option 2", value: "rOption24" },
+    { key: "Option 3", value: "rOption34" },
+  ];
 
-let onSubmit = (values, onSubmitProps) => {
-  console.log(values);
-  onSubmitProps.resetForm();
-};
+  const initialValues = {
+    name: "",
+    email: "",
+    phone: "",
+    radioOption1: "",
+    radioOption2: "",
+    radioOption3: "",
+    radioOption4: "",
+    pickupDate: null,
+  };
+  const validationSchema = Yup.object({
+    name: Yup.string().required("Required"),
+    email: Yup.string().required("Required"),
+    phone: Yup.string().required("Required"),
+    radioOption1: Yup.string().required("Required"),
+    radioOption2: Yup.string().required("Required"),
+    radioOption3: Yup.string().required("Required"),
+    radioOption4: Yup.string().required("Required"),
+    pickupDate: Yup.date().required("Required").nullable(),
+  });
+  const onSubmit = (values) => {
+    console.log("Form data", values);
+    console.log("Saved data", JSON.parse(JSON.stringify(values)));
+  };
 
-const validationSchema = Yup.object({
-  name: Yup.string().required("Wymagane"),
-  email: Yup.string().required("Wymagane").email("Zły format"),
-});
-
-//https://www.youtube.com/watch?v=rBOJzbFZAws&list=PLC3y8-rFHvwiPmFbtzEWjESkqBVDbdgGu&index=16
-//https://codesandbox.io/s/formik-redux-yup-example-ezne7?file=/src/actions/message.js
-
-const MakeOrderForm = () => {
   return (
-    <Styles>
-      <Formik
-        initialValues={initialValues}
-        onSubmit={onSubmit}
-        validationSchema={validationSchema}
-      >
-        {(formik) => {
-          return (
+    <OrderFormStyles>
+      <div>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={onSubmit}
+        >
+          {(formik) => (
             <Form>
-              <div className="form-control">
-                <label htmlFor="name">Name</label>
-                <Field type="text" id="name" name="name"></Field>
-                <ErrorMessage name="name" />
-              </div>
-              <div className="form-control">
-                <label htmlFor="email">Email</label>
-                <Field type="email" id="email" name="email"></Field>
-                <ErrorMessage name="email" />
-              </div>
-              <button
-                type="reset"
-                disabled={!formik.dirty || formik.isSubmitting}
-              >
-                Reset
-              </button>
-              <button
-                type="submit"
-                disabled={
-                  !formik.isValid || !formik.dirty || formik.isSubmitting
-                }
-              >
-                Submit
-              </button>
+              <FormikControl
+                control="chakraInput"
+                type="name"
+                label="Name"
+                name="name"
+              />
+              <FormikControl
+                control="chakraInput"
+                type="email"
+                label="Email"
+                name="email"
+              />
+              <FormikControl
+                control="chakraInput"
+                type="phone"
+                label="Phone"
+                name="phone"
+              />
+              <FormikControl
+                control="radio"
+                label="Radio topic"
+                name="radioOption1"
+                options={radioOptions1}
+              />
+              <FormikControl
+                control="radio"
+                label="Radio topic"
+                name="radioOption2"
+                options={radioOptions2}
+              />
+              <FormikControl
+                control="radio"
+                label="Radio topic"
+                name="radioOption3"
+                options={radioOptions3}
+              />
+              <FormikControl
+                control="radio"
+                label="Radio topic"
+                name="radioOption4"
+                options={radioOptions4}
+              />
+              <FormikControl
+                control="date"
+                label="Pick a date"
+                name="pickupDate"
+              />
+              <button type="submit">Submit</button>
             </Form>
-          );
-        }}
-      </Formik>
-    </Styles>
+          )}
+        </Formik>
+      </div>
+    </OrderFormStyles>
   );
-};
+}
 
-export default MakeOrderForm;
+export default FormikContainer;

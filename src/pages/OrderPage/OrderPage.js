@@ -1,13 +1,16 @@
 import React from "react";
-import OrderForm from "./components/OrderForm/OrderForm";
-import Summary from "./components/Summary/Summary";
+import Header from "./components/Header/Header";
+import OrderSection from "./components/OrderSection/OrderSection";
+import styled from "styled-components";
+
+const OrderPageStyles = styled.div``;
 
 const OrderPage = () => {
   return (
-    <>
-      <OrderForm />
-      <Summary />
-    </>
+    <OrderPageStyles>
+      <Header />
+      <OrderSection />
+    </OrderPageStyles>
   );
 };
 
