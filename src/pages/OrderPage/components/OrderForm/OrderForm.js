@@ -3,6 +3,7 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import FormikControl from "./FormikControl/FormikControl";
 import styled from "styled-components";
+import { getIn } from "formik";
 
 const OrderFormStyles = styled.div`
   display: flex;
@@ -112,7 +113,14 @@ function FormikContainer() {
                 label="Pick a date"
                 name="pickupDate"
               />
-              <button type="submit">Submit</button>
+              <button
+                type="submit"
+                disabled={
+                  !formik.isValid || !formik.dirty || formik.isSubmitting
+                }
+              >
+                Submit
+              </button>
             </Form>
           )}
         </Formik>
