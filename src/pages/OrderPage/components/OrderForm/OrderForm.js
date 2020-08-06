@@ -3,53 +3,57 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import FormikControl from "./FormikControl/FormikControl";
 import styled from "styled-components";
-import { getIn } from "formik";
 
 const OrderFormStyles = styled.div`
   display: flex;
 `;
 
 function FormikContainer() {
-  const radioOptions1 = [
-    { key: "Option 1", value: "rOption1" },
-    { key: "Option 2", value: "rOption2" },
-    { key: "Option 3", value: "rOption3" },
+  const sideAngle = [
+    { key: "89 stopni", value: "89" },
+    { key: "88 stopni", value: "88" },
+    { key: "87 stopni", value: "87" },
   ];
-  const radioOptions2 = [
-    { key: "Option 1", value: "rOption12" },
-    { key: "Option 2", value: "rOption22" },
-    { key: "Option 3", value: "rOption32" },
+  const bottomAngle = [
+    { key: "0,0 stopni", value: "0,0" },
+    { key: "0,5 stopnia", value: "0,5" },
+    { key: "0,7 stopnia", value: "0,7" },
   ];
-  const radioOptions3 = [
-    { key: "Option 4", value: "rOption13" },
-    { key: "Option 5", value: "rOption32" },
-    { key: "Option 6", value: "rOption33" },
+  const diamond = [
+    { key: "Tuning diamentami", value: "tak" },
+    { key: "Zwykłe ostrzenie", value: "nie" },
   ];
-  const radioOptions4 = [
-    { key: "Option 1", value: "rOption14" },
-    { key: "Option 2", value: "rOption24" },
-    { key: "Option 3", value: "rOption34" },
+  const snow = [
+    { key: "Mokry", value: "mokry" },
+    { key: "Zwykły", value: "zwykły" },
+    { key: "Zmrożony", value: "zmrożony" },
+  ];
+  const fluor = [
+    { key: "Smarowanie smarem fluorowym", value: "Fluor" },
+    { key: "Smarowanie smarem hydrokarbonowym", value: "Hydrocarbon" },
   ];
 
   const initialValues = {
     name: "",
     email: "",
     phone: "",
-    radioOption1: "",
-    radioOption2: "",
-    radioOption3: "",
-    radioOption4: "",
+    sideAngle: "",
+    bottomAngle: "",
+    diamond: "",
+    snow: "",
+    fluor: "",
     pickupDate: null,
   };
   const validationSchema = Yup.object({
     name: Yup.string().required("Required"),
     email: Yup.string().required("Required"),
     phone: Yup.string().required("Required"),
-    radioOption1: Yup.string().required("Required"),
-    radioOption2: Yup.string().required("Required"),
-    radioOption3: Yup.string().required("Required"),
-    radioOption4: Yup.string().required("Required"),
-    pickupDate: Yup.date().required("Required").nullable(),
+    sideAngle: Yup.string().required("Required"),
+    bottomAngle: Yup.string().required("Required"),
+    diamond: Yup.string().required("Required"),
+    snow: Yup.string().required("Required"),
+    fluor: Yup.string().required("Required"),
+    // pickupDate: Yup.date().required("Required").nullable(),
   });
   const onSubmit = (values) => {
     console.log("Form data", values);
@@ -86,33 +90,39 @@ function FormikContainer() {
               />
               <FormikControl
                 control="radio"
-                label="Radio topic"
-                name="radioOption1"
-                options={radioOptions1}
+                label="Kąt boczny krawędzi"
+                name="sideAngle"
+                options={sideAngle}
               />
               <FormikControl
                 control="radio"
-                label="Radio topic"
-                name="radioOption2"
-                options={radioOptions2}
+                label="Kąt dolny krawędzi"
+                name="bottomAngle"
+                options={bottomAngle}
               />
               <FormikControl
                 control="radio"
-                label="Radio topic"
-                name="radioOption3"
-                options={radioOptions3}
+                label="Tuning pilnikami diamentowymi"
+                name="diamond"
+                options={diamond}
               />
               <FormikControl
                 control="radio"
-                label="Radio topic"
-                name="radioOption4"
-                options={radioOptions4}
+                label="Smar na śnieg"
+                name="snow"
+                options={snow}
               />
               <FormikControl
+                control="radio"
+                label="Smar z fluorem"
+                name="fluor"
+                options={fluor}
+              />
+              {/* <FormikControl
                 control="date"
                 label="Pick a date"
                 name="pickupDate"
-              />
+              /> */}
               <button
                 type="submit"
                 disabled={

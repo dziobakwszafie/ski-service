@@ -2,11 +2,6 @@
 
 Project of ski service app - still under develope, planned release winter 20/21.
 
-## Design
-
-<img src="https://github.com/dziobakwszafie/ski-service/blob/master/design.PNG" />
-<img src="https://github.com/dziobakwszafie/ski-service/blob/master/design1.png" />
-
 ## Getting Started
 
 Live version you can find here: https://dziobakwszafie.github.io/ski-service/
@@ -41,4 +36,4 @@ npm start
 
 ## Project Status
 
-:heavy_plus_sign:	under develope - planned release winter 20/21.
+:heavy_plus_sign: under develope - planned release winter 20/21.

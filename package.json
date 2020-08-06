@@ -6,6 +6,7 @@
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "emotion-theming": "^10.0.27",
     "formik": "^2.1.5",
@@ -43,6 +44,7 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
+    ],
+    "proxy": "https://europe-west3-ski-service-91995.cloudfunctions.net/api/orders"
   }
 }
