@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import FormikControl from "./FormikControl/FormikControl";
 import styled from "styled-components";
+import axios from "axios";
 
 const OrderFormStyles = styled.div`
   display: flex;
@@ -140,3 +141,35 @@ function FormikContainer() {
 }
 
 export default FormikContainer;
+
+// GET ORDERS
+// import React, { useState, useEffect } from "react";
+// import axios from "axios";
+
+// function App() {
+//   const [data, setData] = useState([]);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       const result = await axios(
+//         "https://europe-west3-ski-service-91995.cloudfunctions.net/api/orders"
+//       );
+
+//       setData(result.data);
+//     };
+
+//     fetchData();
+//   }, []);
+
+//   return (
+//     <ul>
+//       {data.map((item) => (
+//         <li key={item.orderId}>
+//           <a>{item.email}</a>
+//         </li>
+//       ))}
+//     </ul>
+//   );
+// }
+
+// export default App;
