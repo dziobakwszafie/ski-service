@@ -56,6 +56,9 @@ function FormikContainer() {
     fluor: Yup.string().required("Required"),
     // pickupDate: Yup.date().required("Required").nullable(),
   });
+
+  let [successMessage, setMessage] = useState();
+
   const onSubmit = (values) => {
     console.log("Form data", values);
     console.log("Saved data", JSON.parse(JSON.stringify(values)));
@@ -76,6 +79,10 @@ function FormikContainer() {
       )
       .then((res) => {
         console.log(res.data);
+
+        setMessage(
+          (successMessage = res.data ? "Zamówienie wysłano" : "Coś nie pykło")
+        );
       });
   };
 
@@ -153,6 +160,7 @@ function FormikContainer() {
             </Form>
           )}
         </Formik>
+        {successMessage}
       </div>
     </OrderFormStyles>
   );
