@@ -59,6 +59,24 @@ function FormikContainer() {
   const onSubmit = (values) => {
     console.log("Form data", values);
     console.log("Saved data", JSON.parse(JSON.stringify(values)));
+    const orderData = {
+      name: values.name,
+      email: values.email,
+      phone: values.phone,
+      sideAngle: values.sideAngle,
+      bottomAngle: values.bottomAngle,
+      diamond: values.diamond,
+      snow: values.snow,
+      fluor: values.fluor,
+    };
+    axios
+      .post(
+        "https://europe-west3-ski-service-91995.cloudfunctions.net/api/order",
+        orderData
+      )
+      .then((res) => {
+        console.log(res.data);
+      });
   };
 
   return (
