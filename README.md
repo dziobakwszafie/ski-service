@@ -30,9 +30,10 @@ npm start
 ## Built With
 
 - [React](https://reactjs.org/)
-- [React-Bootstrap](https://react-bootstrap.github.io/)
 - [Redux](https://redux.js.org/)
 - [styled-components](https://styled-components.com/)
+- [Chakra-ui](https://chakra-ui.com/)
+- [Formik](https://formik.org/)
 
 ## Project Status
 

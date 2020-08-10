@@ -128,19 +128,19 @@ function FormikContainer() {
               />
               <FormikControl
                 control="chakraRadio"
-                label="Tuning pilnikami diamentowymi"
+                label="Tuning krawędzi"
                 name="diamond"
                 options={diamond}
               />
               <FormikControl
                 control="chakraRadio"
-                label="Smar na śnieg"
+                label="Smarowanie na śnieg"
                 name="snow"
                 options={snow}
               />
               <FormikControl
                 control="chakraRadio"
-                label="Smar z fluorem"
+                label="Rodzaj smaru"
                 name="fluor"
                 options={fluor}
               />
