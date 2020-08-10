@@ -115,31 +115,31 @@ function FormikContainer() {
                 name="phone"
               />
               <FormikControl
-                control="radio"
+                control="chakraRadio"
                 label="Kąt boczny krawędzi"
                 name="sideAngle"
                 options={sideAngle}
               />
               <FormikControl
-                control="radio"
+                control="chakraRadio"
                 label="Kąt dolny krawędzi"
                 name="bottomAngle"
                 options={bottomAngle}
               />
               <FormikControl
-                control="radio"
+                control="chakraRadio"
                 label="Tuning pilnikami diamentowymi"
                 name="diamond"
                 options={diamond}
               />
               <FormikControl
-                control="radio"
+                control="chakraRadio"
                 label="Smar na śnieg"
                 name="snow"
                 options={snow}
               />
               <FormikControl
-                control="radio"
+                control="chakraRadio"
                 label="Smar z fluorem"
                 name="fluor"
                 options={fluor}
