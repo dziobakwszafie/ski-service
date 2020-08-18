@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import OrderForm from "../OrderForm/OrderForm";
-import OrderPrices from "../OrderPrices/OrderPrices";
+import OrderForm from "./OrderForm/OrderForm";
 import { theme, ThemeProvider } from "@chakra-ui/core";
 
 const OrderSectionStyles = styled.div``;
@@ -18,7 +17,6 @@ const VideoStyles = styled.iframe`
 const OrderSection = () => {
   return (
     <OrderSectionStyles>
-      <OrderPrices />
       <ThemeProvider theme={theme}>
         <OrderForm />
       </ThemeProvider>

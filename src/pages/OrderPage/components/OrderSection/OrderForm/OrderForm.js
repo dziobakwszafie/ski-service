@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import FormikControl from "./FormikControl/FormikControl";
+import FormikControl from "../../FormikControl/FormikControl";
 import styled from "styled-components";
 import axios from "axios";
 
@@ -9,7 +9,7 @@ const OrderFormStyles = styled.div`
   display: flex;
 `;
 
-function FormikContainer() {
+const OrderForm =() =>  {
   const sideAngle = [
     { key: "89 stopni", value: "89" },
     { key: "88 stopni", value: "88" },
@@ -35,9 +35,8 @@ function FormikContainer() {
   ];
 
   const initialValues = {
-    name: "",
-    email: "",
-    phone: "",
+    skis: "",
+    length: "",
     sideAngle: "",
     bottomAngle: "",
     diamond: "",
@@ -46,9 +45,8 @@ function FormikContainer() {
     pickupDate: null,
   };
   const validationSchema = Yup.object({
-    name: Yup.string().required("Required"),
-    email: Yup.string().required("Required"),
-    phone: Yup.string().required("Required"),
+    skis: Yup.string().required("Required"),
+    length: Yup.string().required("Required"),
     sideAngle: Yup.string().required("Required"),
     bottomAngle: Yup.string().required("Required"),
     diamond: Yup.string().required("Required"),
@@ -63,9 +61,8 @@ function FormikContainer() {
     console.log("Form data", values);
     console.log("Saved data", JSON.parse(JSON.stringify(values)));
     const orderData = {
-      name: values.name,
-      email: values.email,
-      phone: values.phone,
+      skis: values.skis,
+      length: values.length,
       sideAngle: values.sideAngle,
       bottomAngle: values.bottomAngle,
       diamond: values.diamond,
@@ -98,21 +95,15 @@ function FormikContainer() {
             <Form>
               <FormikControl
                 control="chakraInput"
-                type="name"
-                label="Name"
-                name="name"
+                type="skis"
+                label="Model nart"
+                name="skis"
               />
               <FormikControl
                 control="chakraInput"
-                type="email"
-                label="Email"
-                name="email"
-              />
-              <FormikControl
-                control="chakraInput"
-                type="phone"
-                label="Phone"
-                name="phone"
+                type="length"
+                label="Długość"
+                name="length"
               />
               <FormikControl
                 control="chakraRadio"
@@ -166,7 +157,7 @@ function FormikContainer() {
   );
 }
 
-export default FormikContainer;
+export default OrderForm;
 
 // GET ORDERS
 // import React, { useState, useEffect } from "react";
