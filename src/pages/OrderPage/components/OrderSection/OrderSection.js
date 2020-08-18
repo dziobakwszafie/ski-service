@@ -1,25 +1,31 @@
 import React from "react";
 import styled from "styled-components";
 import OrderForm from "./OrderForm/OrderForm";
+import OrderDesc from "./OrderDesc/OrderDesc";
 import { theme, ThemeProvider } from "@chakra-ui/core";
 
-const OrderSectionStyles = styled.div``;
+const OrderSectionStyles = styled.div`
+  display: flex;
+`;
 
-const VideoStyles = styled.iframe`
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  max-width: 100%;
-  overflow: hidden;
+const OrderFormStyles = styled.div`
+  width: 50%;
+`;
+const OrderDescStyles = styled.div`
+  width: 50%;
 `;
 
 const OrderSection = () => {
   return (
     <OrderSectionStyles>
-      <ThemeProvider theme={theme}>
-        <OrderForm />
-      </ThemeProvider>
+      <OrderFormStyles>
+        <ThemeProvider theme={theme}>
+          <OrderForm />
+        </ThemeProvider>
+      </OrderFormStyles>
+      <OrderDescStyles>
+        <OrderDesc />
+      </OrderDescStyles>
     </OrderSectionStyles>
   );
 };
