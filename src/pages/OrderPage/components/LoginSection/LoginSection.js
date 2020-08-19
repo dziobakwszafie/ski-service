@@ -1,13 +1,13 @@
-import React  from 'react'
-import LoginModal from "./LoginModal/LoginModal"
-import SignupModal from "./SignupModal/SignupModal"
+import React from "react";
+import LoginModal from "./LoginModal/LoginModal";
+import SignupModal from "./SignupModal/SignupModal";
 function LoginSection() {
-    return (
-<>
-<LoginModal />
-<SignupModal />
-</>
-    );
-  }
+  return (
+    <>
+      <LoginModal />
+      <SignupModal />
+    </>
+  );
+}
 
-export default LoginSection
+export default LoginSection;

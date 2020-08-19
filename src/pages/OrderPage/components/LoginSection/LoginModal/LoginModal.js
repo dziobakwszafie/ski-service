@@ -7,18 +7,17 @@ import axios from "axios";
 import { useDisclosure } from "@chakra-ui/core";
 import { theme, ThemeProvider } from "@chakra-ui/core";
 import {
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalFooter,
-    ModalBody,
-    ModalCloseButton,
-    Button,
-  } from "@chakra-ui/core";
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  Button,
+} from "@chakra-ui/core";
 
 function LoginModal() {
-
   const initialValues = {
     email: "",
     password: "",
@@ -39,80 +38,71 @@ function LoginModal() {
     };
     axios
       .post(
-        "https://europe-west3-ski-service-91995.cloudfunctions.net/api/order",
+        // "https://europe-west3-ski-service-91995.cloudfunctions.net/api/login",
+        "http://localhost:5000/ski-service-91995/europe-west3/api/login",
         loginData
       )
+
       .then((res) => {
         console.log(res.data);
-
+        localStorage.setItem("FBIdToken", `Bearer ${res.data.token}`);
         setMessage(
           (successMessage = res.data ? "Zalogowano" : "Niezalogowano")
         );
       });
   };
-  
-    const { isOpen, onOpen, onClose } = useDisclosure();
-    return (
-      <ThemeProvider theme={theme}>
-        <Button onClick={onOpen}>Zaloguj się</Button>
-  
-        <Modal isOpen={isOpen} onClose={onClose}>
-          <ModalOverlay />
-          <ModalContent>
-            <ModalCloseButton />
-            <ModalBody>
-                    <div>
-        <Formik
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={onSubmit}
-        >
-          {(formik) => (
-            <Form>
-              <FormikControl
-                control="chakraInput"
-                type="email"
-                label="Podaj email"
-                name="email"
-              />
-              <FormikControl
-                control="chakraInput"
-                type="password"
-                label="Hasło"
-                name="password"
-              />
-              <button
-                type="submit"
-                disabled={
-                  !formik.isValid || !formik.dirty || formik.isSubmitting
-                }
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <ThemeProvider theme={theme}>
+      <Button onClick={onOpen}>Zaloguj się</Button>
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Proszę sie zalogować</ModalHeader>
+          <ModalBody>
+            <div>
+              <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={onSubmit}
               >
-                Submit
-              </button>
-            </Form>
-          )}
-        </Formik>
-        {successMessage}
-      </div>
-            </ModalBody>
-  
-            <ModalFooter>
-              <Button variantColor="blue" mr={3} onClick={onClose}>
-                Close
-              </Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
-      </ThemeProvider>
-    );
-  }
+                {(formik) => (
+                  <Form>
+                    <FormikControl
+                      control="chakraInput"
+                      type="email"
+                      label="Podaj email"
+                      name="email"
+                    />
+                    <FormikControl
+                      control="chakraInput"
+                      type="password"
+                      label="Hasło"
+                      name="password"
+                    />
+                    <Button
+                      type="submit"
+                      disabled={
+                        !formik.isValid || !formik.dirty || formik.isSubmitting
+                      }
+                    >
+                      Submit
+                    </Button>
+                    <Button variantColor="blue" mr={3} onClick={onClose}>
+                      Close
+                    </Button>
+                  </Form>
+                )}
+              </Formik>
+              {successMessage}
+            </div>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+    </ThemeProvider>
+  );
+}
 
-export default LoginModal
-
-
-
-
-
-
-
-
+export default LoginModal;
