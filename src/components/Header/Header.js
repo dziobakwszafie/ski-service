@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { ReactComponent as Logo } from "../../../../assets/mainLogo.svg";
 
-const StyledLogo = styled(Logo)``;
+// const StyledLogo = styled(Logo)``;
 
 const OHeaderStyles = styled.div`
   height: 200px;
@@ -109,10 +108,8 @@ const Header = () => {
   return (
     <OHeaderStyles>
       <div>
-        <a href="#">
-          {/* <StyledLogo /> */}
-          Logo
-        </a>
+        {/* <StyledLogo /> */}
+        Logo
       </div>
       <nav>
         <input type="checkbox" id="check" />

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import FormikControl from "../../FormikControl/FormikControl";
+import FormikControl from "../../../../../components/FormikControl/FormikControl";
 import styled from "styled-components";
 import axios from "axios";
 
@@ -9,7 +9,7 @@ const OrderFormStyles = styled.div`
   display: flex;
 `;
 
-const OrderForm =() =>  {
+const OrderForm = () => {
   const sideAngle = [
     { key: "89 stopni", value: "89" },
     { key: "88 stopni", value: "88" },
@@ -155,7 +155,7 @@ const OrderForm =() =>  {
       </div>
     </OrderFormStyles>
   );
-}
+};
 
 export default OrderForm;
 

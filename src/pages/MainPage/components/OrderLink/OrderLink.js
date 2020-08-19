@@ -27,7 +27,7 @@ class Order extends PureComponent {
   render() {
     return (
       <OrderLinkStyles>
-        <Link to={`/order`}>
+        <Link to={`/login`}>
           <OrderButtonStyles>
             <button>ZAMÓW SERWIS</button>
           </OrderButtonStyles>
