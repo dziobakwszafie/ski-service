@@ -12,6 +12,7 @@ const token = localStorage.FBIdToken;
 if (token) {
   const decodedToken = jwtDecode(token);
   if (decodedToken.exp * 1000 < Date.now()) {
+    window.location.href = "/login";
     authenticated = false;
     console.log("Niezalogowany");
   } else {
@@ -31,12 +32,7 @@ const App = () => {
           component={LoginPage}
           authenticated={authenticated}
         />
-        <AuthRoute
-          path="/order"
-          exact
-          component={OrderPage}
-          authenticated={authenticated}
-        />
+        <Route path="/order" exact component={OrderPage} />
       </Switch>
     </Router>
   );
