@@ -5,7 +5,8 @@ import styled from "styled-components";
 import axios from "axios";
 import { theme, ThemeProvider } from "@chakra-ui/core";
 import FormikControl from "../../../../components/FormikControl/FormikControl";
-import { Button, Box } from "@chakra-ui/core";
+import { Button, Box, Spinner } from "@chakra-ui/core";
+import { useHistory } from "react-router-dom";
 
 function SignupModal() {
   const initialValues = {
@@ -23,7 +24,8 @@ function SignupModal() {
     phone: Yup.string().required("Required"),
   });
 
-  let [successMessage, setMessage] = useState();
+  let history = useHistory();
+  let [loadingMessage, setLoading] = useState();
 
   const onSubmit = (values) => {
     console.log("Form data", values);
@@ -35,17 +37,19 @@ function SignupModal() {
       name: values.name,
       phone: values.phone,
     };
+    setLoading((loadingMessage = true));
+
     axios
       .post(
-        "https://europe-west3-ski-service-91995.cloudfunctions.net/api/order",
+        // "https://europe-west3-ski-service-91995.cloudfunctions.net/api/signup",
+        "http://localhost:5000/ski-service-91995/europe-west3/api/signup",
         signupData
       )
       .then((res) => {
         console.log(res.data);
-
-        setMessage(
-          (successMessage = res.data ? "Zalogowano" : "Niezalogowano")
-        );
+        localStorage.setItem("FBIdToken", `Bearer ${res.data.token}`);
+        history.push("/order");
+        setLoading((loadingMessage = false));
       });
   };
 
@@ -90,18 +94,18 @@ function SignupModal() {
                   label="Telefon"
                   name="phone"
                 />
-                <button
+                <Button
                   type="submit"
                   disabled={
                     !formik.isValid || !formik.dirty || formik.isSubmitting
                   }
                 >
-                  Submit
-                </button>
+                  Wyślij
+                  {loadingMessage && <Spinner color="red.500" />}
+                </Button>
               </Form>
             )}
           </Formik>
-          {successMessage}
         </div>
       </Box>
     </ThemeProvider>

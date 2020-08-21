@@ -13,5 +13,10 @@ Useful links:
 - https://devhints.io/es6
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference?fbclid=IwAR3NL93Yxa9L8i7RvjxGLn6qFPV9udiRK0COD3O73NKwn3wsCE3qSd9cV6w
 
-LoginModal.js 39 - ogarnąć czemu nie działa
-dowiedzieć się czemu po usunięciu tokena mnie nie wyrzuca do logowania i czemu jest lag po zalogowaniu i wylogowaniu
+dowiedzieć się czemu po usunięciu tokena mnie nie wyrzuca do logowania i czemu po usunięciu tokena trzeba przeładowac stronkę na pasku zeby wykrył jego brak
+
+zrobić komunikat o błędzie bo za krótkie hasło albo sie nie zgadzaja, bo jest na serwerze ale nie ma tu obsługi tego
+
+Helpers:
+
+- https://stackoverflow.com/questions/42701129/how-to-push-to-history-in-react-router-v4

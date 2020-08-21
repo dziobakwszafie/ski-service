@@ -5,9 +5,10 @@ import FormikControl from "../../../../components/FormikControl/FormikControl";
 import styled from "styled-components";
 import axios from "axios";
 import { theme, ThemeProvider } from "@chakra-ui/core";
-import { Button, Box } from "@chakra-ui/core";
+import { Button, Box, Spinner } from "@chakra-ui/core";
+import { useHistory } from "react-router-dom";
 
-function LoginModal() {
+const LoginModal = () => {
   const initialValues = {
     email: "",
     password: "",
@@ -17,7 +18,8 @@ function LoginModal() {
     password: Yup.string().required("Required"),
   });
 
-  let [successMessage, setMessage] = useState();
+  let history = useHistory();
+  let [loadingMessage, setLoading] = useState();
 
   const onSubmit = (values) => {
     console.log("Form data", values);
@@ -26,6 +28,8 @@ function LoginModal() {
       email: values.email,
       password: values.password,
     };
+    setLoading((loadingMessage = true));
+
     axios
       .post(
         // "https://europe-west3-ski-service-91995.cloudfunctions.net/api/login",
@@ -36,10 +40,8 @@ function LoginModal() {
       .then((res) => {
         console.log(res.data);
         localStorage.setItem("FBIdToken", `Bearer ${res.data.token}`);
-        //  this.props.history.push('/');
-        setMessage(
-          (successMessage = res.data ? "Zalogowano" : "Niezalogowano")
-        );
+        history.push("/order");
+        setLoading((loadingMessage = false));
       });
   };
 
@@ -72,16 +74,16 @@ function LoginModal() {
                     !formik.isValid || !formik.dirty || formik.isSubmitting
                   }
                 >
-                  Submit
+                  Zaloguj
+                  {loadingMessage && <Spinner color="red.500" />}
                 </Button>
               </Form>
             )}
           </Formik>
-          {successMessage}
         </div>
       </Box>
     </ThemeProvider>
   );
-}
+};
 
 export default LoginModal;

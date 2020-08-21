@@ -45,7 +45,7 @@ const SubtitleStyles = styled.h2`
   transform: translate(-50%, -50%);
 `;
 
-const Header = () => {
+const MainHeader = () => {
   return (
     <HeaderStyles>
       <div>
@@ -75,4 +75,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default MainHeader;
