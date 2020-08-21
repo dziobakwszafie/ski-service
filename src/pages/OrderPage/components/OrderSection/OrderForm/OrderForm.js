@@ -71,7 +71,9 @@ const OrderForm = () => {
     };
     axios
       .post(
-        "https://europe-west3-ski-service-91995.cloudfunctions.net/api/order",
+        // "https://europe-west3-ski-service-91995.cloudfunctions.net/api/order",
+        "http://localhost:5000/ski-service-91995/europe-west3/api/order",
+
         orderData
       )
       .then((res) => {

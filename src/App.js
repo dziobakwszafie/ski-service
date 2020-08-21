@@ -11,8 +11,9 @@ const token = localStorage.FBIdToken;
 
 if (token) {
   const decodedToken = jwtDecode(token);
+  console.log(decodedToken);
   if (decodedToken.exp * 1000 < Date.now()) {
-    window.location.href = "/login";
+    window.location.href = "/ski-service/login";
     authenticated = false;
     console.log("Niezalogowany");
   } else {

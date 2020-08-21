@@ -17,6 +17,12 @@ dowiedzieć się czemu po usunięciu tokena mnie nie wyrzuca do logowania i czem
 
 zrobić komunikat o błędzie bo za krótkie hasło albo sie nie zgadzaja, bo jest na serwerze ale nie ma tu obsługi tego
 
+ogarnąć wylogowywanie
+
+nie da sie wysłac zamówienia z komponentu bo komponent nie ustawia headera z tokenem
+
+coś nie do końca działa przekierowanie w App.js 16 , to chyba coś z hash routerem
+
 Helpers:
 
 - https://stackoverflow.com/questions/42701129/how-to-push-to-history-in-react-router-v4
