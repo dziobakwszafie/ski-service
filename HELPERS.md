@@ -23,6 +23,10 @@ nie da sie wysłac zamówienia z komponentu bo komponent nie ustawia headera z t
 
 coś nie do końca działa przekierowanie w App.js 16 , to chyba coś z hash routerem
 
+ogarnac jak stosowac motywy z theme
+
+znowu nie działa przekierowywanie po logowaniu
+
 Helpers:
 
 - https://stackoverflow.com/questions/42701129/how-to-push-to-history-in-react-router-v4

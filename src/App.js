@@ -5,6 +5,9 @@ import OrderPage from "./pages/OrderPage/OrderPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import AuthRoute from "./util/AuthRoute";
 import jwtDecode from "jwt-decode";
+import axios from "axios";
+import { customTheme } from "./util/theme";
+import { ThemeProvider, CSSReset } from "@chakra-ui/core";
 
 let authenticated;
 const token = localStorage.FBIdToken;
@@ -22,20 +25,27 @@ if (token) {
   }
 }
 
+axios.defaults.baseURL =
+  "http://localhost:5000/ski-service-91995/europe-west3/api";
+// 'https://europe-west3-ski-service-91995.cloudfunctions.net/api/login';
+
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={MainPage} />
-        <AuthRoute
-          path="/login"
-          exact
-          component={LoginPage}
-          authenticated={authenticated}
-        />
-        <Route path="/order" exact component={OrderPage} />
-      </Switch>
-    </Router>
+    <ThemeProvider theme={customTheme}>
+      <CSSReset />
+      <Router>
+        <Switch>
+          <Route path="/" exact component={MainPage} />
+          <AuthRoute
+            path="/login"
+            exact
+            component={LoginPage}
+            authenticated={authenticated}
+          />
+          <Route path="/order" exact component={OrderPage} />
+        </Switch>
+      </Router>
+    </ThemeProvider>
   );
 };
 

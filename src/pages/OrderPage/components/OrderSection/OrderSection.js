@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import OrderForm from "./OrderForm/OrderForm";
 import OrderDesc from "./OrderDesc/OrderDesc";
-import { theme, ThemeProvider } from "@chakra-ui/core";
 
 const OrderSectionStyles = styled.div`
   display: flex;
@@ -19,9 +18,7 @@ const OrderSection = () => {
   return (
     <OrderSectionStyles>
       <OrderFormStyles>
-        <ThemeProvider theme={theme}>
-          <OrderForm />
-        </ThemeProvider>
+        <OrderForm />
       </OrderFormStyles>
       <OrderDescStyles>
         <OrderDesc />

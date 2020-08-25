@@ -31,11 +31,7 @@ const LoginModal = () => {
     setLoading((loadingMessage = true));
 
     axios
-      .post(
-        // "https://europe-west3-ski-service-91995.cloudfunctions.net/api/login",
-        "http://localhost:5000/ski-service-91995/europe-west3/api/login",
-        loginData
-      )
+      .post("/login", loginData)
 
       .then((res) => {
         console.log(res.data);

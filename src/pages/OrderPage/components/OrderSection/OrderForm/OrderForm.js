@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import FormikControl from "../../../../../components/FormikControl/FormikControl";
 import styled from "styled-components";
 import axios from "axios";
+import { Button } from "@chakra-ui/core";
 
 const OrderFormStyles = styled.div`
   display: flex;
@@ -71,8 +72,7 @@ const OrderForm = () => {
     };
     axios
       .post(
-        // "https://europe-west3-ski-service-91995.cloudfunctions.net/api/order",
-        "http://localhost:5000/ski-service-91995/europe-west3/api/order",
+        "/order",
 
         orderData
       )
@@ -142,14 +142,14 @@ const OrderForm = () => {
                 label="Pick a date"
                 name="pickupDate"
               /> */}
-              <button
+              <Button
                 type="submit"
                 disabled={
                   !formik.isValid || !formik.dirty || formik.isSubmitting
                 }
               >
                 Submit
-              </button>
+              </Button>
             </Form>
           )}
         </Formik>

@@ -39,18 +39,12 @@ function SignupModal() {
     };
     setLoading((loadingMessage = true));
 
-    axios
-      .post(
-        // "https://europe-west3-ski-service-91995.cloudfunctions.net/api/signup",
-        "http://localhost:5000/ski-service-91995/europe-west3/api/signup",
-        signupData
-      )
-      .then((res) => {
-        console.log(res.data);
-        localStorage.setItem("FBIdToken", `Bearer ${res.data.token}`);
-        history.push("/order");
-        setLoading((loadingMessage = false));
-      });
+    axios.post("/signup", signupData).then((res) => {
+      console.log(res.data);
+      localStorage.setItem("FBIdToken", `Bearer ${res.data.token}`);
+      history.push("/order");
+      setLoading((loadingMessage = false));
+    });
   };
 
   return (
