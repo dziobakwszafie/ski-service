@@ -22,7 +22,10 @@ const LoginModal = () => {
   });
 
   let history = useHistory();
-  let [loadingMessage, setLoading] = useState();
+
+  const loadingMessage = useSelector(
+    (state) => state.loadingReducer.loadingMessage
+  );
 
   const onSubmit = (values) => {
     console.log("Form data", values);
@@ -45,7 +48,7 @@ const LoginModal = () => {
         console.log(res.data);
         localStorage.setItem("FBIdToken", `Bearer ${res.data.token}`);
         history.push("/order");
-        setLoading((loadingMessage = false));
+        // setLoading((loadingMessage = false));
       });
   };
 
@@ -79,7 +82,7 @@ const LoginModal = () => {
                   }
                 >
                   Zaloguj
-                  {loadingMessage && <Spinner color="red.500" />}
+                  {loadingMessage === true && <Spinner color="red.500" />}
                 </Button>
               </Form>
             )}

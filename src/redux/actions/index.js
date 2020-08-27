@@ -1,5 +1,5 @@
 import { LOADING } from "../actionTypes/types";
 
-export const loginUser = (setLoading) => (dispatch) => {
-  dispatch(setLoading(false));
+export const loading = (setLoading) => (dispatch) => {
+  dispatch({ type: LOADING });
 };
