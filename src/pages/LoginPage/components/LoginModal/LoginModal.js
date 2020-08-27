@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import FormikControl from "../../../../components/FormikControl/FormikControl";
@@ -7,8 +7,11 @@ import axios from "axios";
 import { theme, ThemeProvider } from "@chakra-ui/core";
 import { Button, Box, Spinner } from "@chakra-ui/core";
 import { useHistory } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { LOADING } from "../../../../redux/actionTypes/types";
 
 const LoginModal = () => {
+  const dispatch = useDispatch();
   const initialValues = {
     email: "",
     password: "",
@@ -28,10 +31,15 @@ const LoginModal = () => {
       email: values.email,
       password: values.password,
     };
-    setLoading((loadingMessage = true));
+    // setLoading((loadingMessage = true));
+    dispatch({ type: LOADING });
 
     axios
-      .post("/login", loginData)
+      .post(
+        // "https://europe-west3-ski-service-91995.cloudfunctions.net/api/login",
+        "http://localhost:5000/ski-service-91995/europe-west3/api/login",
+        loginData
+      )
 
       .then((res) => {
         console.log(res.data);
@@ -43,7 +51,7 @@ const LoginModal = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box bg="#22f6d2" w="100%" p={4} color="white">
+      <Box bg="#22f6d2" w="100%" p={4}>
         <div>
           <Formik
             initialValues={initialValues}

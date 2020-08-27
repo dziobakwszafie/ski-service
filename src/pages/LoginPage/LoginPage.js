@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import LoginModal from "./components/LoginModal/LoginModal";
-import SignupModal from "./components/SignupModal/SignupModal";
+// import SignupModal from "./components/SignupModal/SignupModal";
 import Footer from "../../components/Footer/Footer";
 import styled from "styled-components";
 
@@ -16,7 +16,7 @@ const LoginPage = () => {
       <Header />
       <LoginPageStyles>
         <LoginModal />
-        <SignupModal />
+        {/* <SignupModal /> */}
       </LoginPageStyles>
       <Footer />
     </>
