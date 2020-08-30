@@ -5,6 +5,7 @@ import Intro from "./components/Intro/Intro";
 import OrderLink from "./components/OrderLink/OrderLink";
 import IntroSharp from "./components/IntroSharp/IntroSharp";
 import IntroWax from "./components/IntroWax/IntroWax";
+import Try from "./try";
 
 const MainPage = () => {
   return (
@@ -14,6 +15,7 @@ const MainPage = () => {
       <OrderLink />
       <IntroSharp />
       <IntroWax />
+      <Try />
       <Footer />
     </>
   );
