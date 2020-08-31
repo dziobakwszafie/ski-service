@@ -122,10 +122,10 @@ const Header = () => {
           <a href="#" onclick="uncheck()">
             HOME
           </a>
-          <a href="#" onclick="uncheck()">
+          <a href="#login" onclick="uncheck()">
             LOGIN
           </a>
-          <a href="#" onclick="uncheck()">
+          <a href="#order" onclick="uncheck()">
             ZAMÓWIENIE
           </a>
           <label for="check" class="button--hide-menu">

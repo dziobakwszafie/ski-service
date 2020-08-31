@@ -10,7 +10,7 @@ const OrderFormStyles = styled.div`
   display: flex;
 `;
 
-function FormikContainer() {
+const OrderForm = () => {
   const sideAngle = [
     { key: "89 stopni", value: "89" },
     { key: "88 stopni", value: "88" },
@@ -36,9 +36,8 @@ function FormikContainer() {
   ];
 
   const initialValues = {
-    name: "",
-    email: "",
-    phone: "",
+    skis: "",
+    length: "",
     sideAngle: "",
     bottomAngle: "",
     diamond: "",
@@ -47,9 +46,8 @@ function FormikContainer() {
     pickupDate: null,
   };
   const validationSchema = Yup.object({
-    name: Yup.string().required("Required"),
-    email: Yup.string().required("Required"),
-    phone: Yup.string().required("Required"),
+    skis: Yup.string().required("Required"),
+    length: Yup.string().required("Required"),
     sideAngle: Yup.string().required("Required"),
     bottomAngle: Yup.string().required("Required"),
     diamond: Yup.string().required("Required"),
@@ -64,9 +62,8 @@ function FormikContainer() {
     console.log("Form data", values);
     console.log("Saved data", JSON.parse(JSON.stringify(values)));
     const orderData = {
-      name: values.name,
-      email: values.email,
-      phone: values.phone,
+      skis: values.skis,
+      length: values.length,
       sideAngle: values.sideAngle,
       bottomAngle: values.bottomAngle,
       diamond: values.diamond,
@@ -75,7 +72,8 @@ function FormikContainer() {
     };
     axios
       .post(
-        "https://europe-west3-ski-service-91995.cloudfunctions.net/api/order",
+        "/order",
+
         orderData
       )
       .then((res) => {
@@ -99,21 +97,15 @@ function FormikContainer() {
             <Form>
               <FormikControl
                 control="chakraInput"
-                type="name"
-                label="Name"
-                name="name"
+                type="skis"
+                label="Model nart"
+                name="skis"
               />
               <FormikControl
                 control="chakraInput"
-                type="email"
-                label="Email"
-                name="email"
-              />
-              <FormikControl
-                control="chakraInput"
-                type="phone"
-                label="Phone"
-                name="phone"
+                type="length"
+                label="Długość"
+                name="length"
               />
               <FormikControl
                 control="chakraRadio"
@@ -129,19 +121,19 @@ function FormikContainer() {
               />
               <FormikControl
                 control="chakraRadio"
-                label="Tuning pilnikami diamentowymi"
+                label="Tuning krawędzi"
                 name="diamond"
                 options={diamond}
               />
               <FormikControl
                 control="chakraRadio"
-                label="Smar na śnieg"
+                label="Smarowanie na śnieg"
                 name="snow"
                 options={snow}
               />
               <FormikControl
                 control="chakraRadio"
-                label="Smar z fluorem"
+                label="Rodzaj smaru"
                 name="fluor"
                 options={fluor}
               />
@@ -165,6 +157,38 @@ function FormikContainer() {
       </div>
     </OrderFormStyles>
   );
-}
+};
 
-export default FormikContainer;
+export default OrderForm;
+
+// GET ORDERS
+// import React, { useState, useEffect } from "react";
+// import axios from "axios";
+
+// function App() {
+//   const [data, setData] = useState([]);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       const result = await axios(
+//         "https://europe-west3-ski-service-91995.cloudfunctions.net/api/orders"
+//       );
+
+//       setData(result.data);
+//     };
+
+//     fetchData();
+//   }, []);
+
+//   return (
+//     <ul>
+//       {data.map((item) => (
+//         <li key={item.orderId}>
+//           <a>{item.email}</a>
+//         </li>
+//       ))}
+//     </ul>
+//   );
+// }
+
+// export default App;

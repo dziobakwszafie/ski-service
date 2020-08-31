@@ -9,14 +9,11 @@ const OrderPageStyles = styled.div``;
 
 const OrderSectionStyles = styled.div`
   width: 100%;
-  margin-top: 5vw;
-  margin-left: 5vw;
 `;
 const HistorySectionStyles = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 5vw auto;
 `;
 
 const OrderPage = () => {
