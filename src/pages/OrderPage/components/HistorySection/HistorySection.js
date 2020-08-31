@@ -1,7 +1,7 @@
 import React from "react";
 
 const HistorySection = () => {
-  return <p>Tutaj będzie historia zamówień danego użytkownika</p>;
+  return <b>Tutaj będzie historia zamówień danego użytkownika</b>;
 };
 
 export default HistorySection;

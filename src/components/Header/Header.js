@@ -1,32 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 
-// const StyledLogo = styled(Logo)``;
+const HeaderStyles = styled.div`
+  height: 5vw;
+  width: 100%;
+`;
 
-const OHeaderStyles = styled.div`
-  height: 200px;
-  nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    float: right;
-    margin-top: 8px;
-    margin-bottom: 3px;
+const NavStyles = styled.nav`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  ul {
+    position: absolute;
+    right: 0;
   }
 
   .menu a {
     text-decoration: none;
-    -webkit-transition: 0.4s;
     transition: 0.4s;
     padding: 0 5px;
     margin-left: 10px;
-    /* font-size: 1rem; */
-    color: #777;
+    color: #000;
     font-weight: 600;
   }
 
@@ -48,8 +43,7 @@ const OHeaderStyles = styled.div`
   }
 
   .menu a:hover {
-    /* font-weight: 600; */
-    color: #75a99d;
+    color: red;
   }
 
   #check {
@@ -104,14 +98,22 @@ const OHeaderStyles = styled.div`
   }
 `;
 
+const SubtitleStyles = styled.h4`
+  font-family: "FlyingLeatherneck";
+  font-size: 2vw;
+  color: black;
+  position: absolute;
+  left: 0;
+`;
+
 const Header = () => {
   return (
-    <OHeaderStyles>
-      <div>
-        {/* <StyledLogo /> */}
-        Logo
-      </div>
-      <nav>
+    <HeaderStyles>
+      <NavStyles>
+        <SubtitleStyles>
+          <a href="#">NIESMIALI ROMANTYCY </a>
+        </SubtitleStyles>
+
         <input type="checkbox" id="check" />
         <label for="check" class="button--show-menu">
           <i class="fas fa-bars"></i>
@@ -120,18 +122,18 @@ const Header = () => {
           <a href="#" onclick="uncheck()">
             HOME
           </a>
-          <a href="#login" onclick="uncheck()">
+          <a href="#" onclick="uncheck()">
             LOGIN
           </a>
-          <a href="#order" onclick="uncheck()">
+          <a href="#" onclick="uncheck()">
             ZAMÓWIENIE
           </a>
           <label for="check" class="button--hide-menu">
             <i class="fas fa-times"></i>
           </label>
         </ul>
-      </nav>
-    </OHeaderStyles>
+      </NavStyles>
+    </HeaderStyles>
   );
 };
 

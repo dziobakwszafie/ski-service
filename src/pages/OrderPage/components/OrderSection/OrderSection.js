@@ -18,6 +18,7 @@ const OrderSection = () => {
   return (
     <OrderSectionStyles>
       <OrderFormStyles>
+        <b>Tutaj mamy formularzyk - już działa ale będzie ładniejszy</b>
         <OrderForm />
       </OrderFormStyles>
       <OrderDescStyles>
