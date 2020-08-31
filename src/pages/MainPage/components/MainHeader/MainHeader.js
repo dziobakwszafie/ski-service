@@ -2,20 +2,32 @@ import React from "react";
 import styled from "styled-components";
 
 const HeaderStyles = styled.div`
-  height: 100vh;
+  height: 56.25vw;
   max-width: 100vw;
 `;
 
-const VideoStyles = styled.iframe`
+const VideoContainer = styled.div`
+  height: 56.25vw;
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  max-width: 100%;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+`;
+const VideoStyles = styled.iframe`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 110%;
+  vertical-align: middle;
 `;
 
 const OverflowStyles = styled.div`
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   display: flex;
@@ -26,19 +38,20 @@ const OverflowStyles = styled.div`
 `;
 
 const TitleStyles = styled.h1`
-  font-family: "Bangers", cursive;
-  font-size: 120px;
-  color: #ff3b3f;
+  font-family: "FlyingLeatherneck";
+  font-size: 7vw;
+  color: black;
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  white-space: nowrap;
 `;
 
 const SubtitleStyles = styled.h2`
-  font-family: "Permanent Marker", cursive;
-  font-size: 80px;
-  color: #ff3b3f;
+  font-family: "FlyingLeatherneck";
+  font-size: 5vw;
+  color: black;
   position: absolute;
   top: 60%;
   left: 50%;
@@ -48,12 +61,12 @@ const SubtitleStyles = styled.h2`
 const MainHeader = () => {
   return (
     <HeaderStyles>
-      <div>
+      <VideoContainer>
         <VideoStyles
           data-module-vimeo-player="video-promo"
           src="https://player.vimeo.com/video/434891103?controls=false&amp;autoplay=1&amp;transparent=false&amp;autopause=false&amp;loop=1&amp;muted=1"
-          width="1920"
-          height="1080"
+          width="1280"
+          height="720"
           data-vimeo-player-autoplay="true"
           frameborder="0"
           webkitallowfullscreen=""
@@ -61,14 +74,10 @@ const MainHeader = () => {
           allowfullscreen=""
           allow="autoplay; encrypted-media"
           data-ready="true"
-          class="is-loaded"
         ></VideoStyles>
-      </div>
+      </VideoContainer>
       <OverflowStyles>
-        <TitleStyles>
-          NIEŚMIALI ROMANTYCY<br></br>
-          RACING TEAM
-        </TitleStyles>
+        <TitleStyles>NIESMIALI ROMANTYCY</TitleStyles>
         <SubtitleStyles>SERVICE DEPARTMENT</SubtitleStyles>
       </OverflowStyles>
     </HeaderStyles>

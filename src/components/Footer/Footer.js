@@ -15,7 +15,7 @@ const FooterContactStyles = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-right: black solid 1px;
+  border-right: black solid 0.33333vw;
   margin: 20px auto;
 `;
 
@@ -26,7 +26,7 @@ const FooterContactMailStyles = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: black solid 1px;
+  border-bottom: black solid 0.33333vw;
 `;
 
 const FooterContactIconsStyles = styled.div`
@@ -62,7 +62,7 @@ const FooterLocalizationStyles = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: black solid 1px;
+  border-bottom: black solid 0.33333vw;
 `;
 
 const FooterAuthorStyles = styled.div`
