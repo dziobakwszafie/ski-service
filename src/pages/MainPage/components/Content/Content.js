@@ -3,6 +3,11 @@ import styled from "styled-components";
 import IntroSharp from "./IntroSharp/IntroSharp";
 import IntroWax from "./IntroWax/IntroWax";
 import ExtraInfo from "./ExtraInfo/ExtraInfo";
+import myface from "../../../../assets/myface.jpeg";
+import wax from "../../../../assets/wax.jpeg";
+import service from "../../../../assets/service.jpg";
+import mountain from "../../../../assets/mountain.PNG";
+import drawboot from "../../../../assets/drawboot.PNG";
 
 const Main = styled.div`
   display: grid;
@@ -13,7 +18,7 @@ const Main = styled.div`
   border-bottom: 0.33333vw solid #000;
   @media only screen and (max-width: 1024px) {
     grid-template-columns: 49.46667vw auto;
-    grid-template-rows: 44vw 44vw 94vw 67vw 50vw 48vw 76vw;
+    grid-template-rows: 44vw 44vw 54vw 54vw 50vw 48vw 48vw;
   }
 `;
 const First = styled.div`
@@ -33,6 +38,10 @@ const Second = styled.div`
   grid-column-end: 4;
   grid-row-end: 2;
   background-color: #fff;
+  background-image: url("${wax}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @media only screen and (max-width: 1024px) {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -46,6 +55,10 @@ const Third = styled.div`
   grid-row-start: 2;
   grid-row-end: 3;
   background-color: #fff;
+  background-image: url("${service}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @media only screen and (max-width: 1024px) {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -72,6 +85,10 @@ const Fifth = styled.div`
   grid-row-start: 3;
   grid-row-end: 4;
   background-color: #fff;
+  background-image: url("${myface}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @media only screen and (max-width: 1024px) {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -98,6 +115,10 @@ const Seventh = styled.div`
   grid-row-start: 3;
   grid-row-end: 4;
   background-color: #fff;
+  background-image: url("${drawboot}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @media only screen and (max-width: 1024px) {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -111,6 +132,10 @@ const Eighth = styled.div`
   grid-row-start: 4;
   grid-row-end: 5;
   background-color: #fff;
+  background-image: url("${mountain}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @media only screen and (max-width: 1024px) {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -124,6 +149,9 @@ const Ninth = styled.div`
   grid-row-start: 4;
   grid-row-end: 5;
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media only screen and (max-width: 1024px) {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -156,7 +184,9 @@ const Try = () => {
       </Sixth>
       <Seventh>Seventh</Seventh>
       <Eighth>Eighth</Eighth>
-      <Ninth>Ninth</Ninth>
+      <Ninth>
+        <b>TU TEŻ COŚ BĘDZIE</b>
+      </Ninth>
     </Main>
   );
 };

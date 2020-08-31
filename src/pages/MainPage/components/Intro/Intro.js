@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import IntroText from "./IntroText/IntroText";
 import { Link } from "react-router-dom";
+import skiboots from "../../../../assets/ski-boots.jpeg";
+import skilift from "../../../../assets/skilift.jpeg";
+import cafe from "../../../../assets/cafe.PNG";
 
 const Main = styled.div`
   display: grid;
@@ -12,7 +15,7 @@ const Main = styled.div`
   border-bottom: 0.33333vw solid #000;
   border-top: 0.33333vw solid #000;
   @media only screen and (max-width: 1024px) {
-    grid-template-rows: 130vw 65vw 20vw 45vw;
+    grid-template-rows: auto 65vw 20vw 45vw;
     grid-template-columns: 50vw auto;
   }
 `;
@@ -35,6 +38,10 @@ const Second = styled.div`
   grid-row-start: 1;
   grid-row-end: 2;
   background-color: #fff;
+  background-image: url("${skilift}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @media only screen and (max-width: 1024px) {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -48,6 +55,10 @@ const Third = styled.div`
   grid-row-start: 1;
   grid-row-end: 3;
   background-color: #fff;
+  background-image: url("${skiboots}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @media only screen and (max-width: 1024px) {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -80,6 +91,10 @@ const Fifth = styled.div`
   grid-row-start: 3;
   grid-row-end: 4;
   background-color: #fff;
+  background-image: url("${cafe}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @media only screen and (max-width: 1024px) {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -91,7 +106,16 @@ const Fifth = styled.div`
 const LinkStyles = styled.h3`
   transform: rotate(-17deg);
   font-family: "FlyingLeatherneck";
-  font-size: 75px;
+  color: black;
+  @media only screen and (min-width: 1921px) {
+    font-size: 7vw;
+  }
+  @media only screen and (max-width: 1920px) {
+    font-size: 7vw;
+  }
+  @media only screen and (max-width: 1024px) {
+    font-size: 12vw;
+  }
 `;
 
 const Try = () => {
