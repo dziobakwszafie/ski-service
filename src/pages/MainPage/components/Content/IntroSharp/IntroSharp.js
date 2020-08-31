@@ -3,19 +3,16 @@ import styled from "styled-components";
 
 const IntroSharpStyles = styled.div`
   max-width: 100%;
-  background-color: #0e9aa7;
+
   display: flex;
 `;
 
 const IntroSharpTextContainer = styled.div`
-  width: 50%;
   padding: 5rem;
   @media screen and (max-width: 1000px) {
     width: 100%;
   }
 `;
-
-const IntroSharpPhotoContainer = styled.div``;
 
 const IntroSharpTitleStyles = styled.h1`
   font-family: "Permanent Marker", cursive;
@@ -54,7 +51,6 @@ const IntroSharp = () => {
           skręcie. A z kolei 87/0,5 to już raczej do jazdy na tyczkach.
         </IntroSharpTextStyles>
       </IntroSharpTextContainer>
-      <IntroSharpPhotoContainer></IntroSharpPhotoContainer>
     </IntroSharpStyles>
   );
 };

@@ -1,21 +1,15 @@
 import React from "react";
 import MainHeader from "./components/MainHeader/MainHeader";
-import Footer from "../../components/Footer/Footer";
+import Content from "./components/Content/Content";
 import Intro from "./components/Intro/Intro";
-import OrderLink from "./components/OrderLink/OrderLink";
-import IntroSharp from "./components/IntroSharp/IntroSharp";
-import IntroWax from "./components/IntroWax/IntroWax";
-import Try from "./try";
+import Footer from "../../components/Footer/Footer";
 
 const MainPage = () => {
   return (
     <>
       <MainHeader />
       <Intro />
-      <OrderLink />
-      <IntroSharp />
-      <IntroWax />
-      <Try />
+      <Content />
       <Footer />
     </>
   );

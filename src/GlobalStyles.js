@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import flyingleatherv2 from "./fonts/flyingleatherv2.ttf";
 
 export const GlobalStyles = createGlobalStyle`
 * {
@@ -29,5 +30,11 @@ export const GlobalStyles = createGlobalStyle`
     @media only screen and (max-width: 700px) {
         padding: 0 1rem;
     } */
+  }
+  @font-face {
+    font-family: "FlyingLeatherneck";
+    src: local("FlyingLeatherneck"), url(${flyingleatherv2}) format("truetype");
+    font-weight: 600;
+    font-style: normal;
   }
 `;

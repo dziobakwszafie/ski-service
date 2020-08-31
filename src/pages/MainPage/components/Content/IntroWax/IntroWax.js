@@ -3,20 +3,14 @@ import styled from "styled-components";
 
 const IntroWaxStyles = styled.div`
   max-width: 100%;
-  background-color: #009688;
   display: flex;
 `;
 
 const IntroWaxTextContainer = styled.div`
-  width: 50%;
   padding: 5rem;
   @media screen and (max-width: 1000px) {
     width: 100%;
   }
-`;
-
-const IntroWaxPhotoContainer = styled.div`
-  width: 50%;
 `;
 
 const IntroWaxTitleStyles = styled.h1`
@@ -35,7 +29,6 @@ const IntroWaxTextStyles = styled.p`
 const IntroWax = () => {
   return (
     <IntroWaxStyles>
-      <IntroWaxPhotoContainer></IntroWaxPhotoContainer>
       <IntroWaxTextContainer>
         <IntroWaxTitleStyles>SMAROWANKO</IntroWaxTitleStyles>
         <IntroWaxTextStyles>
