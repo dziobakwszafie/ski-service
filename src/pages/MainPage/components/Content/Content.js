@@ -8,6 +8,7 @@ import wax from "../../../../assets/wax.jpeg";
 import service from "../../../../assets/service.jpg";
 import mountain from "../../../../assets/mountain.PNG";
 import drawboot from "../../../../assets/drawboot.PNG";
+import skibar from "../../../../assets/skibar.jpeg";
 
 const Main = styled.div`
   display: grid;
@@ -152,6 +153,10 @@ const Ninth = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("${skibar}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @media only screen and (max-width: 1024px) {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -184,9 +189,7 @@ const Try = () => {
       </Sixth>
       <Seventh>Seventh</Seventh>
       <Eighth>Eighth</Eighth>
-      <Ninth>
-        <b>TU TEŻ COŚ BĘDZIE</b>
-      </Ninth>
+      <Ninth>Ninth</Ninth>
     </Main>
   );
 };

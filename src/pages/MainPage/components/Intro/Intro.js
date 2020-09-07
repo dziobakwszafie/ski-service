@@ -4,7 +4,7 @@ import IntroText from "./IntroText/IntroText";
 import { Link } from "react-router-dom";
 import skiboots from "../../../../assets/ski-boots.jpeg";
 import skilift from "../../../../assets/skilift.jpeg";
-import cafe from "../../../../assets/cafe.PNG";
+import cafe from "../../../../assets/cafe.jpeg";
 
 const Main = styled.div`
   display: grid;
