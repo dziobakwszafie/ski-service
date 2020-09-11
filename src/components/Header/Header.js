@@ -55,6 +55,8 @@ const NavStyles = styled.nav`
     .button--show-menu,
     .button--hide-menu {
       display: block;
+      position: absolute;
+      right: 2vw;
     }
 
     .menu {
@@ -100,7 +102,7 @@ const NavStyles = styled.nav`
 
 const SubtitleStyles = styled.h4`
   font-family: "FlyingLeatherneck";
-  font-size: 2vw;
+  font-size: 5vw;
   color: black;
   position: absolute;
   left: 0;

@@ -6,8 +6,8 @@ import ExtraInfo from "./ExtraInfo/ExtraInfo";
 import myface from "../../../../assets/myface.jpeg";
 import wax from "../../../../assets/wax.jpeg";
 import service from "../../../../assets/service.jpg";
-import mountain from "../../../../assets/mountain.PNG";
-import drawboot from "../../../../assets/drawboot.PNG";
+import mountain from "../../../../assets/mountain.png";
+import drawboot from "../../../../assets/drawboot.png";
 import skibar from "../../../../assets/skibar.jpeg";
 
 const Main = styled.div`

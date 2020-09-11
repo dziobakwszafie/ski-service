@@ -30,3 +30,6 @@ znowu nie działa przekierowywanie po logowaniu
 Helpers:
 
 - https://stackoverflow.com/questions/42701129/how-to-push-to-history-in-react-router-v4
+
+//https://codesandbox.io/s/react-redux-hook-by-indrek-lasn-forked-ehm0d?file=/package.json
+//https://medium.com/better-programming/how-to-use-redux-with-react-hooks-5422a7ceae6e

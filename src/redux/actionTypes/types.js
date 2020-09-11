@@ -1,1 +1,5 @@
-export const LOADING = "LOADING";
+export const SET_LOADING = "SET_LOADING";
+export const SET_AUTHENTICATED = "SET_AUTHENTICATED";
+export const SET_UNAUTHENTICATED = "SET_UNAUTHENTICATED";
+export const SET_USER = "SET_USER";
+export const SET_ERRORS = "SET_ERRORS";
