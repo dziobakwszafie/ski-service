@@ -7,6 +7,9 @@ import { theme, ThemeProvider } from "@chakra-ui/core";
 import FormikControl from "../../../../components/FormikControl/FormikControl";
 import { Button, Box, Spinner } from "@chakra-ui/core";
 import { useHistory } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { SET_LOADING } from "../../../../redux/actionTypes/types";
+import { signup } from "../../../../redux/actions";
 
 const LoginTitleStyle = styled.h3`
   font-family: "FlyingLeatherneck";
@@ -14,6 +17,7 @@ const LoginTitleStyle = styled.h3`
 `;
 
 const SignupComponent = () => {
+  const dispatch = useDispatch();
   const initialValues = {
     email: "",
     password: "",
@@ -29,9 +33,11 @@ const SignupComponent = () => {
     phone: Yup.string().required("Required"),
   });
 
-  let history = useHistory();
-  let [loadingMessage, setLoading] = useState();
+  const loadingMessage = useSelector(
+    (state) => state.loginReducer.loadingMessage
+  );
 
+  let signupData = {};
   const onSubmit = (values) => {
     console.log("Form data", values);
     console.log("Saved data", JSON.parse(JSON.stringify(values)));
@@ -42,14 +48,8 @@ const SignupComponent = () => {
       name: values.name,
       phone: values.phone,
     };
-    setLoading((loadingMessage = true));
-
-    axios.post("/signup", signupData).then((res) => {
-      console.log(res.data);
-      localStorage.setItem("FBIdToken", `Bearer ${res.data.token}`);
-      history.push("/order");
-      setLoading((loadingMessage = false));
-    });
+    dispatch({ type: SET_LOADING });
+    dispatch(signup(signupData));
   };
 
   return (

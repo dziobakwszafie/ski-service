@@ -12,9 +12,19 @@ export const login = (loginData) => (dispatch) => {
 
     .then((res) => {
       console.log(res.data);
-      const FBIdToken = `Bearer ${res.data.token}`;
-      localStorage.setItem("FBIdToken", FBIdToken);
-      axios.defaults.headers.common["Authorization"] = FBIdToken;
+      setAuthHeader(res.data.token);
+      dispatch(getUserData());
+      dispatch({ type: SET_LOADING });
+    });
+};
+
+export const signup = (signupData) => (dispatch) => {
+  axios
+    .post("/signup", signupData)
+
+    .then((res) => {
+      console.log(res.data);
+      setAuthHeader(res.data.token);
       dispatch(getUserData());
       dispatch({ type: SET_LOADING });
     });
@@ -30,4 +40,10 @@ export const getUserData = () => (dispatch) => {
       });
     })
     .catch((err) => console.log(err));
+};
+
+const setAuthHeader = (token) => {
+  const FBIdToken = `Bearer ${token}`;
+  localStorage.setItem("FBIdToken", FBIdToken);
+  axios.defaults.headers.common["Authorization"] = FBIdToken;
 };
