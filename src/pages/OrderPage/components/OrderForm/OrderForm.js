@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import FormikControl from "../../../../../components/FormikControl/FormikControl";
+import FormikControl from "../../../../components/FormikControl/FormikControl";
 import styled from "styled-components";
 import axios from "axios";
 import { Button } from "@chakra-ui/core";
