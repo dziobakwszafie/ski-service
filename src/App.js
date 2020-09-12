@@ -27,8 +27,8 @@ if (token) {
 }
 
 axios.defaults.baseURL =
-  "http://localhost:5000/ski-service-91995/europe-west3/api";
-// 'https://europe-west3-ski-service-91995.cloudfunctions.net/api';
+  // "http://localhost:5000/ski-service-91995/europe-west3/api";
+  "https://europe-west3-ski-service-91995.cloudfunctions.net/api";
 
 const App = () => {
   return (
