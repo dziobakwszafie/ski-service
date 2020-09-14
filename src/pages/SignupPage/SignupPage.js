@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 import SignupComponent from "./components/SignupComponent/SignupComponent";
 import Footer from "../../components/Footer/Footer";
 import styled from "styled-components";
-import skilift from "../../assets/lift.JPG";
+import lift from "../../assets/lift.jpg";
 import signup from "../../assets/signup.png";
 import whatshere from "../../assets/whatshere.png";
 import exercise from "../../assets/exercise.gif";
@@ -28,7 +28,7 @@ const First = styled.div`
   grid-row-start: 1;
   grid-row-end: 2;
   background-color: #fff;
-  background-image: url("${skilift}");
+  background-image: url("${lift}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,12 +82,9 @@ const Third = styled.div`
   }
 `;
 
-const LoginPageStyles = styled.div``;
+const SignupPageStyles = styled.div``;
 const HeaderStyles = styled.div`
   height: 10vw;
-  @media only screen and (max-width: 1024px) {
-    height: 200px;
-  }
 `;
 const BackToLoginStyles = styled.div`
   width: 50%;
@@ -103,22 +100,28 @@ const BackToLoginStyles = styled.div`
   :hover {
     background: black;
   }
-`;
-
-const SignupPageStyles = styled.div`
-  width: 60%;
-  margin: auto;
   @media only screen and (max-width: 1024px) {
-    width: 80%;
+    font-size: 3rem;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 2rem;
   }
 `;
+
+const SignupComponentStyles = styled.div`
+  width: 35vw;
+  @media only screen and (max-width: 1024px) {
+    width: 50vw;
+  }
+`;
+
 const FooterStyles = styled.div`
   bottom: 0;
 `;
 
 const LoginPage = () => {
   return (
-    <LoginPageStyles>
+    <SignupPageStyles>
       <HeaderStyles>
         <Header />
       </HeaderStyles>
@@ -130,9 +133,9 @@ const LoginPage = () => {
           </BackToLoginStyles>
         </First>
         <Second>
-          <SignupPageStyles>
+          <SignupComponentStyles>
             <SignupComponent />
-          </SignupPageStyles>
+          </SignupComponentStyles>
         </Second>
         <Third></Third>
       </Main>
@@ -140,7 +143,7 @@ const LoginPage = () => {
       <FooterStyles>
         <Footer />
       </FooterStyles>
-    </LoginPageStyles>
+    </SignupPageStyles>
   );
 };
 

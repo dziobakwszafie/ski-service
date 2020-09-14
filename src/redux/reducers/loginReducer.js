@@ -9,6 +9,7 @@ const initialState = {
   loadingMessage: false,
   authenticated: false,
   credentials: {},
+  orders: [],
 };
 
 export default function (state = initialState, action) {
@@ -28,6 +29,7 @@ export default function (state = initialState, action) {
     case SET_USER:
       return {
         authenticated: true,
+        userOrders: state.orders,
         ...action.payload,
       };
 

@@ -1,107 +1,83 @@
 import React from "react";
 import styled from "styled-components";
-import whatsappIcon from "./whatsapp.png";
-import phoneIcon from "./phone.png";
 
 const FooterStyles = styled.div`
-  width: 100%;
-  height: 150px;
-  display: flex;
-`;
-
-const FooterContactStyles = styled.div`
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-right: black solid 0.2vw;
-  margin: 20px auto;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-top: 3vw;
 `;
 
-const FooterContactMailStyles = styled.div`
-  width: 50%;
-  height: 50%;
+const FirstRow = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-bottom: black solid 0.2vw;
+  align-items: baseline;
 `;
-
-const FooterContactIconsStyles = styled.div`
-  width: 50%;
-  height: 50%;
+const SecondRow = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: baseline;
 `;
 
-const ImgStyles = styled.div`
-  #whatsappIcon {
-    height: 50px;
-    width: auto;
+const ThirdRow = styled.div`
+  display: flex;
+  align-items: baseline;
+  div {
+    margin-left: 20px;
+    display: flex;
+    align-items: baseline;
   }
-  #phoneIcon {
-    height: 50px;
-    width: auto;
+  @media only screen and (max-width: 470px) {
+    flex-direction: column;
   }
 `;
 
-const FooterOtherStyles = styled.div`
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+const BigText = styled.h4`
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  margin-left: 10px;
+  @media only screen and (max-width: 800px) {
+    font-size: 1em;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 0.8em;
+  }
 `;
-
-const FooterLocalizationStyles = styled.div`
-  width: 50%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: black solid 0.2vw;
-`;
-
-const FooterAuthorStyles = styled.div`
-  width: 50%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const SmallText = styled.p`
+  font-size: 0.8rem;
+  margin-bottom: 1em;
+  @media only screen and (max-width: 800px) {
+    font-size: 0.6em;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 0.4em;
+  }
 `;
 
 const Footer = () => {
   return (
     <FooterStyles>
-      <FooterContactStyles>
-        <FooterContactMailStyles>
-          <b>nieudomowiony.sledz@gmail.com</b>
-          <b>***-***-***</b>
-        </FooterContactMailStyles>
-        <FooterContactIconsStyles>
-          <ImgStyles>
-            <a href="https://wa.me/123456789">
-              <img src={whatsappIcon} id="whatsappIcon" alt="whatsapp icon" />
-            </a>
-          </ImgStyles>
-          <ImgStyles>
-            <a href="tel:123456789">
-              <img src={phoneIcon} id="phoneIcon" alt="Make a call icon" />
-            </a>
-          </ImgStyles>
-        </FooterContactIconsStyles>
-      </FooterContactStyles>
-      <FooterOtherStyles>
-        <FooterLocalizationStyles>
-          <p>gdzie nas znajdziesz: Zabrze</p>
-        </FooterLocalizationStyles>
-        <FooterAuthorStyles>
-          <b>dziobakwszafie 2019</b>
-        </FooterAuthorStyles>
-      </FooterOtherStyles>
+      <FirstRow>
+        <SmallText>email</SmallText>
+        <BigText>dziobakwszafie@gmail.com</BigText>
+      </FirstRow>
+
+      <SecondRow>
+        <SmallText> numer kontaktowy</SmallText>
+        <BigText>***-***-***</BigText>
+      </SecondRow>
+
+      <ThirdRow>
+        <div>
+          <SmallText>gdzie nas znajdziesz</SmallText>
+          <BigText>Zabrze</BigText>
+        </div>
+        <div>
+          <SmallText>all rights reserved</SmallText>
+          <BigText>2020 dziobakwszafie</BigText>
+        </div>
+      </ThirdRow>
     </FooterStyles>
   );
 };

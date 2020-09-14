@@ -19,7 +19,7 @@ const Main = styled.div`
   border-bottom: 0.33333vw solid #000;
   @media only screen and (max-width: 1024px) {
     grid-template-columns: 49.46667vw auto;
-    grid-template-rows: 44vw 44vw 54vw 54vw 50vw 48vw 48vw;
+    grid-template-rows: 44vw 44vw 58vw 54vw 50vw 48vw 48vw;
   }
 `;
 const First = styled.div`
@@ -102,7 +102,7 @@ const Sixth = styled.div`
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 5;
-  background-color: #d54062;
+  background-color: #ed8e8e;
   @media only screen and (max-width: 1024px) {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -165,31 +165,24 @@ const Ninth = styled.div`
   }
 `;
 
-const IntroTitleStyles = styled.h1`
-  font-family: "Permanent Marker", cursive;
-  font-size: 40px;
-  color: #0b8d99;
-  padding-bottom: 3rem;
-`;
-
 const Try = () => {
   return (
     <Main>
       <First>
         <IntroSharp />
       </First>
-      <Second>Second</Second>
-      <Third>Third</Third>
+      <Second></Second>
+      <Third></Third>
       <Fourth>
         <IntroWax />
       </Fourth>
-      <Fifth>Fifth</Fifth>
+      <Fifth></Fifth>
       <Sixth>
         <ExtraInfo />
       </Sixth>
-      <Seventh>Seventh</Seventh>
-      <Eighth>Eighth</Eighth>
-      <Ninth>Ninth</Ninth>
+      <Seventh></Seventh>
+      <Eighth></Eighth>
+      <Ninth></Ninth>
     </Main>
   );
 };

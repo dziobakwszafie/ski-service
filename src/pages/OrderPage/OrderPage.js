@@ -9,13 +9,13 @@ import styled from "styled-components";
 const OrderMainSection = styled.div`
   display: grid;
   grid-template-columns: 57.83333vw auto;
-  grid-template-rows: 34vw 26vw;
+  grid-template-rows: auto auto;
   grid-gap: 0.2vw;
   background-color: #000;
   border-bottom: 0.2vw solid #000;
   border-top: 0.2vw solid #000;
   @media only screen and (max-width: 1024px) {
-    grid-template-rows: 65vw 45vw 45vw;
+    grid-template-rows: auto 45vw 45vw;
     grid-template-columns: 90vw;
   }
 `;
@@ -70,9 +70,6 @@ const Third = styled.div`
 
 const HeaderStyles = styled.div`
   height: 10vw;
-  @media only screen and (max-width: 1024px) {
-    height: 200px;
-  }
 `;
 
 const OrderPage = () => {

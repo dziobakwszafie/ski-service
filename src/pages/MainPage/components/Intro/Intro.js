@@ -124,15 +124,15 @@ const Try = () => {
       <First>
         <IntroText />
       </First>
-      <Second>Second</Second>
-      <Third>Third</Third>
+      <Second></Second>
+      <Third></Third>
       <Fourth>
         <Link to={`/login`}>
           <LinkStyles>ZAMÓW</LinkStyles>
           <LinkStyles>SERWIS</LinkStyles>
         </Link>
       </Fourth>
-      <Fifth>Fifth</Fifth>
+      <Fifth></Fifth>
     </Main>
   );
 };

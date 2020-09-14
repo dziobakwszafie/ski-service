@@ -22,7 +22,7 @@ const IntroWaxTitleStyles = styled.h1`
   font-family: "Permanent Marker", cursive;
   font-size: 2em;
   padding-bottom: 2rem;
-  color: #f37736;
+  color: #ed5c8a;
 `;
 
 const IntroWaxTextStyles = styled.p`

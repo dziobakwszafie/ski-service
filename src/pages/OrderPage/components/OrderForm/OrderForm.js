@@ -8,6 +8,17 @@ import { Button } from "@chakra-ui/core";
 
 const OrderFormStyles = styled.div`
   display: flex;
+  margin-top: 3vw;
+  margin-bottom: 5vw;
+`;
+
+const OrderformTitleStyle = styled.h3`
+  font-family: "FlyingLeatherneck";
+  font-size: 3rem;
+  margin-bottom: 2vw;
+  @media only screen and (max-width: 1024px) {
+    font-size: 2rem;
+  }
 `;
 
 const OrderForm = () => {
@@ -88,6 +99,8 @@ const OrderForm = () => {
   return (
     <OrderFormStyles>
       <div>
+        <OrderformTitleStyle>Formularz zamówien</OrderformTitleStyle>
+
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -160,35 +173,3 @@ const OrderForm = () => {
 };
 
 export default OrderForm;
-
-// GET ORDERS
-// import React, { useState, useEffect } from "react";
-// import axios from "axios";
-
-// function App() {
-//   const [data, setData] = useState([]);
-
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       const result = await axios(
-//         "https://europe-west3-ski-service-91995.cloudfunctions.net/api/orders"
-//       );
-
-//       setData(result.data);
-//     };
-
-//     fetchData();
-//   }, []);
-
-//   return (
-//     <ul>
-//       {data.map((item) => (
-//         <li key={item.orderId}>
-//           <a>{item.email}</a>
-//         </li>
-//       ))}
-//     </ul>
-//   );
-// }
-
-// export default App;

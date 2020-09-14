@@ -4,7 +4,7 @@ import LoginComponent from "./components/LoginComponent/LoginComponent";
 import Footer from "../../components/Footer/Footer";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import skilift from "../../assets/lift.JPG";
+import lift from "../../assets/lift.jpg";
 import signup from "../../assets/signup.png";
 import whatshere from "../../assets/whatshere.png";
 import exercise from "../../assets/exercise.gif";
@@ -12,13 +12,14 @@ import exercise from "../../assets/exercise.gif";
 const Main = styled.div`
   display: grid;
   grid-template-columns: auto 57.83333vw;
-  grid-template-rows: 26vw 34vw;
+  grid-template-rows: 28vw 34vw;
   grid-gap: 0.23333vw;
   background-color: #000;
   border-bottom: 0.23333vw solid #000;
   border-top: 0.23333vw solid #000;
+
   @media only screen and (max-width: 1024px) {
-    grid-template-rows: 45vw 65vw 45vw;
+    grid-template-rows: auto 65vw 45vw;
     grid-template-columns: 50vw auto;
   }
 `;
@@ -80,7 +81,7 @@ const Fourth = styled.div`
   grid-row-start: 2;
   grid-row-end: 3;
   background-color: #fff;
-  background-image: url("${skilift}");
+  background-image: url("${lift}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -95,9 +96,6 @@ const Fourth = styled.div`
 const LoginPageStyles = styled.div``;
 const HeaderStyles = styled.div`
   height: 10vw;
-  @media only screen and (max-width: 1024px) {
-    height: 200px;
-  }
 `;
 const LinkBgStyle = styled.div`
   width: 100%;
@@ -108,7 +106,10 @@ const LinkBgStyle = styled.div`
   background-size: contain;
 `;
 const LoginComponentStyles = styled.div`
-  width: 60%;
+  width: 35vw;
+  @media only screen and (max-width: 1024px) {
+    width: 50vw;
+  }
 `;
 const FooterStyles = styled.div`
   bottom: 0;

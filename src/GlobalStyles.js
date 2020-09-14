@@ -11,6 +11,10 @@ export const GlobalStyles = createGlobalStyle`
   *::after {
     box-sizing: inherit;
   }
+  *  ::selection {
+    color: pink;
+    background: transparent;
+  }
   html {
     box-sizing: border-box;
     overflow-y: scroll;

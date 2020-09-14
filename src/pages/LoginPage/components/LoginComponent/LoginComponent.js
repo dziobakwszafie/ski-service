@@ -11,7 +11,10 @@ import { login } from "../../../../redux/actions";
 
 const LoginTitleStyle = styled.h3`
   font-family: "FlyingLeatherneck";
-  font-size: 3vw;
+  font-size: 3rem;
+  @media only screen and (max-width: 1024px) {
+    font-size: 2rem;
+  }
 `;
 
 const LoginComponent = () => {
@@ -37,14 +40,13 @@ const LoginComponent = () => {
       email: values.email,
       password: values.password,
     };
-    // setLoading((loadingMessage = true));
     dispatch({ type: SET_LOADING });
     dispatch(login(loginData));
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <Box w="100%" p={4}>
+      <Box w="100%" p={5}>
         <div>
           <LoginTitleStyle>Zaloguj</LoginTitleStyle>
           <Formik

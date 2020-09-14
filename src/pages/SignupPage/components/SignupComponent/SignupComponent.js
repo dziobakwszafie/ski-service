@@ -13,7 +13,10 @@ import { signup } from "../../../../redux/actions";
 
 const LoginTitleStyle = styled.h3`
   font-family: "FlyingLeatherneck";
-  font-size: 3vw;
+  font-size: 3rem;
+  @media only screen and (max-width: 1024px) {
+    font-size: 2rem;
+  }
 `;
 
 const SignupComponent = () => {

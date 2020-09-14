@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const HeaderStyles = styled.div`
-  height: 5vw;
   width: 100%;
+  height: 100%;
 `;
 
 const NavStyles = styled.nav`
@@ -20,7 +20,7 @@ const NavStyles = styled.nav`
     text-decoration: none;
     transition: 0.4s;
     padding: 0 5px;
-    margin-left: 10px;
+    margin-left: 15px;
     color: #000;
     font-weight: 600;
   }
@@ -122,13 +122,13 @@ const Header = () => {
         </label>
         <ul class="menu">
           <a href="#" onclick="uncheck()">
-            HOME
+            STRONA GŁÓWNA
           </a>
           <a href="#login" onclick="uncheck()">
-            LOGIN
+            LOGOWANIE
           </a>
           <a href="#order" onclick="uncheck()">
-            ZAMÓWIENIE
+            FORMULARZ ZAMÓWIENIA
           </a>
           <label for="check" class="button--hide-menu">
             <i class="fas fa-times"></i>
