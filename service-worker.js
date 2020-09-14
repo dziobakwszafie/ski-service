@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ski-service/precache-manifest.5dc8b79e4bb2f294bdb0fb22d701e342.js"
+  "/ski-service/precache-manifest.6bfccac8a121c86556a2d0420afc7feb.js"
 );
 
 self.addEventListener('message', (event) => {

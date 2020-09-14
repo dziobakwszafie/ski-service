@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c84730721885c304d511765f277e53f3",
+    "revision": "cacc9cae4fccf0079cfc234734758742",
     "url": "/ski-service/index.html"
   },
   {
-    "revision": "4c401e77a0a4d21aacdc",
+    "revision": "05ebd9ecf69831f07c4a",
     "url": "/ski-service/static/css/2.25ff2e5b.chunk.css"
   },
   {
-    "revision": "4c401e77a0a4d21aacdc",
-    "url": "/ski-service/static/js/2.879f8d65.chunk.js"
+    "revision": "05ebd9ecf69831f07c4a",
+    "url": "/ski-service/static/js/2.cbaaf4a9.chunk.js"
   },
   {
-    "revision": "46d06c1ff06559117892fded2fd2455e",
-    "url": "/ski-service/static/js/2.879f8d65.chunk.js.LICENSE.txt"
+    "revision": "165ef5d30ac96eafecf6106d816a6324",
+    "url": "/ski-service/static/js/2.cbaaf4a9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4b6eb3bad8e8519b2f72",
-    "url": "/ski-service/static/js/main.3b1b6674.chunk.js"
+    "revision": "52974a8d2327d98e45b8",
+    "url": "/ski-service/static/js/main.8916143f.chunk.js"
   },
   {
     "revision": "7c48ae24717bce521ace",
@@ -45,7 +45,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "8b780e8b88c5476d913b84bc6ceed32e",
-    "url": "/ski-service/static/media/lift.8b780e8b.JPG"
+    "url": "/ski-service/static/media/lift.8b780e8b.jpg"
   },
   {
     "revision": "8812a25a66378a1a8221f00534057a93",
@@ -78,10 +78,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1c8912bec963766539628978cb130433",
     "url": "/ski-service/static/media/wax.1c8912be.jpeg"
-  },
-  {
-    "revision": "dae79eeabf399b1a873acfd0285a5947",
-    "url": "/ski-service/static/media/whatsapp.dae79eea.png"
   },
   {
     "revision": "79109504e6ca068b50ade691cc42808a",

@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.js": "/ski-service/static/js/main.3b1b6674.chunk.js",
-    "main.js.map": "/ski-service/static/js/main.3b1b6674.chunk.js.map",
+    "main.js": "/ski-service/static/js/main.8916143f.chunk.js",
+    "main.js.map": "/ski-service/static/js/main.8916143f.chunk.js.map",
     "runtime-main.js": "/ski-service/static/js/runtime-main.d6f484b2.js",
     "runtime-main.js.map": "/ski-service/static/js/runtime-main.d6f484b2.js.map",
     "static/css/2.25ff2e5b.chunk.css": "/ski-service/static/css/2.25ff2e5b.chunk.css",
-    "static/js/2.879f8d65.chunk.js": "/ski-service/static/js/2.879f8d65.chunk.js",
-    "static/js/2.879f8d65.chunk.js.map": "/ski-service/static/js/2.879f8d65.chunk.js.map",
+    "static/js/2.cbaaf4a9.chunk.js": "/ski-service/static/js/2.cbaaf4a9.chunk.js",
+    "static/js/2.cbaaf4a9.chunk.js.map": "/ski-service/static/js/2.cbaaf4a9.chunk.js.map",
     "index.html": "/ski-service/index.html",
-    "precache-manifest.5dc8b79e4bb2f294bdb0fb22d701e342.js": "/ski-service/precache-manifest.5dc8b79e4bb2f294bdb0fb22d701e342.js",
+    "precache-manifest.6bfccac8a121c86556a2d0420afc7feb.js": "/ski-service/precache-manifest.6bfccac8a121c86556a2d0420afc7feb.js",
     "service-worker.js": "/ski-service/service-worker.js",
     "static/css/2.25ff2e5b.chunk.css.map": "/ski-service/static/css/2.25ff2e5b.chunk.css.map",
-    "static/js/2.879f8d65.chunk.js.LICENSE.txt": "/ski-service/static/js/2.879f8d65.chunk.js.LICENSE.txt",
+    "static/js/2.cbaaf4a9.chunk.js.LICENSE.txt": "/ski-service/static/js/2.cbaaf4a9.chunk.js.LICENSE.txt",
     "static/media/arrow.png": "/ski-service/static/media/arrow.b946496a.png",
     "static/media/cafe.jpeg": "/ski-service/static/media/cafe.1782eaa4.jpeg",
     "static/media/drawboot.PNG": "/ski-service/static/media/drawboot.9bac093d.PNG",
     "static/media/exercise.gif": "/ski-service/static/media/exercise.6ac6b8d5.gif",
     "static/media/flyingleatherv2.ttf": "/ski-service/static/media/flyingleatherv2.f291e1c0.ttf",
-    "static/media/lift.JPG": "/ski-service/static/media/lift.8b780e8b.JPG",
+    "static/media/lift.jpg": "/ski-service/static/media/lift.8b780e8b.jpg",
     "static/media/mountain.PNG": "/ski-service/static/media/mountain.8812a25a.PNG",
     "static/media/myface.jpeg": "/ski-service/static/media/myface.c07e03d1.jpeg",
     "static/media/service.jpg": "/ski-service/static/media/service.5feefa82.jpg",
@@ -26,13 +26,12 @@
     "static/media/skibar.jpeg": "/ski-service/static/media/skibar.ce3fce00.jpeg",
     "static/media/skilift.jpeg": "/ski-service/static/media/skilift.ac46ecb6.jpeg",
     "static/media/wax.jpeg": "/ski-service/static/media/wax.1c8912be.jpeg",
-    "static/media/whatsapp.png": "/ski-service/static/media/whatsapp.dae79eea.png",
     "static/media/whatshere.png": "/ski-service/static/media/whatshere.79109504.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d6f484b2.js",
     "static/css/2.25ff2e5b.chunk.css",
-    "static/js/2.879f8d65.chunk.js",
-    "static/js/main.3b1b6674.chunk.js"
+    "static/js/2.cbaaf4a9.chunk.js",
+    "static/js/main.8916143f.chunk.js"
   ]
 }
