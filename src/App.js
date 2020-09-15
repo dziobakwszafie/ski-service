@@ -7,8 +7,11 @@ import SignupPage from "./pages/SignupPage/SignupPage";
 import AuthRoute from "./util/AuthRoute";
 import jwtDecode from "jwt-decode";
 import axios from "axios";
+import store from "./redux/reducers";
 import { customTheme } from "./util/theme";
 import { ThemeProvider, CSSReset } from "@chakra-ui/core";
+import { logoutUser, getUserData } from "./redux/actions";
+import { SET_AUTHENTICATED } from "./redux/actionTypes/types";
 
 let authenticated;
 const token = localStorage.FBIdToken;
@@ -17,11 +20,14 @@ if (token) {
   const decodedToken = jwtDecode(token);
   console.log(decodedToken);
   if (decodedToken.exp * 1000 < Date.now()) {
-    // window.location.href = "/ski-service/login";
+    window.location.href = "/login";
     authenticated = false;
     console.log("Niezalogowany");
+    store.dispatch(logoutUser());
   } else {
-    authenticated = true;
+    store.dispatch({ type: SET_AUTHENTICATED });
+    axios.defaults.headers.common["Authorization"] = token;
+    store.dispatch(getUserData());
     console.log("Zalogowany");
   }
 }

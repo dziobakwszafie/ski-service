@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { logoutUser } from "../../redux/actions";
 
 const HeaderStyles = styled.div`
   width: 100%;
@@ -109,6 +111,7 @@ const SubtitleStyles = styled.h4`
 `;
 
 const Header = () => {
+  const dispatch = useDispatch();
   return (
     <HeaderStyles>
       <NavStyles>
@@ -121,14 +124,11 @@ const Header = () => {
           <i class="fas fa-bars"></i>
         </label>
         <ul class="menu">
-          <a href="#" onclick="uncheck()">
-            STRONA GŁÓWNA
-          </a>
-          <a href="#login" onclick="uncheck()">
-            LOGOWANIE
-          </a>
-          <a href="#order" onclick="uncheck()">
-            FORMULARZ ZAMÓWIENIA
+          <a href="#">STRONA GŁÓWNA</a>
+          <a href="#login">LOGOWANIE</a>
+          <a href="#order">ZAMÓW SERWIS</a>
+          <a href="#" onClick={dispatch(logoutUser)}>
+            WYLOGUJ
           </a>
           <label for="check" class="button--hide-menu">
             <i class="fas fa-times"></i>
