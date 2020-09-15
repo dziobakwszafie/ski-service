@@ -31,3 +31,6 @@ Helpers:
 
 //https://codesandbox.io/s/react-redux-hook-by-indrek-lasn-forked-ehm0d?file=/package.json
 //https://medium.com/better-programming/how-to-use-redux-with-react-hooks-5422a7ceae6e
+
+1. Dodać info o tym, ze dany email jest już używany
+2. im not a robto przy zamowieniu

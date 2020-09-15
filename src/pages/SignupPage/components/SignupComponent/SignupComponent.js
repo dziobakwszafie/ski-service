@@ -19,6 +19,11 @@ const LoginTitleStyle = styled.h3`
   }
 `;
 
+const SuccessMessageStyle = styled.p`
+  color: red;
+  margin-top: 2vw;
+`;
+
 const SignupComponent = () => {
   const dispatch = useDispatch();
   const initialValues = {
@@ -38,6 +43,10 @@ const SignupComponent = () => {
 
   const loadingMessage = useSelector(
     (state) => state.loginReducer.loadingMessage
+  );
+
+  const successMessage = useSelector(
+    (state) => state.loginReducer.successMessage
   );
 
   let signupData = {};
@@ -112,6 +121,11 @@ const SignupComponent = () => {
             )}
           </Formik>
         </div>
+        {successMessage === true && (
+          <SuccessMessageStyle>
+            <b>Gratki - udało Ci sie założyć konto</b>
+          </SuccessMessageStyle>
+        )}
       </Box>
     </ThemeProvider>
   );

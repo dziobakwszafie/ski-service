@@ -17,6 +17,11 @@ const LoginTitleStyle = styled.h3`
   }
 `;
 
+const SuccessMessageStyle = styled.p`
+  color: red;
+  margin-top: 2vw;
+`;
+
 const LoginComponent = () => {
   const dispatch = useDispatch();
   const initialValues = {
@@ -30,6 +35,10 @@ const LoginComponent = () => {
 
   const loadingMessage = useSelector(
     (state) => state.loginReducer.loadingMessage
+  );
+
+  const successMessage = useSelector(
+    (state) => state.loginReducer.successMessage
   );
 
   let loginData = {};
@@ -82,6 +91,11 @@ const LoginComponent = () => {
             )}
           </Formik>
         </div>
+        {successMessage === true && (
+          <SuccessMessageStyle>
+            <b>Gratki - udało Ci sie zalogować</b>
+          </SuccessMessageStyle>
+        )}
       </Box>
     </ThemeProvider>
   );

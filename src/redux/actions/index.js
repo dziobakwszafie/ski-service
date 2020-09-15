@@ -1,6 +1,7 @@
 import {
   SET_LOADING,
   SET_AUTHENTICATED,
+  SET_LOGIN_SUCCESS,
   SET_UNAUTHENTICATED,
   SET_USER,
 } from "../actionTypes/types";
@@ -15,6 +16,7 @@ export const login = (loginData) => (dispatch) => {
       setAuthHeader(res.data.token);
       dispatch(getUserData());
       dispatch({ type: SET_LOADING });
+      dispatch({ type: SET_LOGIN_SUCCESS });
     });
 };
 
@@ -27,6 +29,7 @@ export const signup = (signupData) => (dispatch) => {
       setAuthHeader(res.data.token);
       dispatch(getUserData());
       dispatch({ type: SET_LOADING });
+      dispatch({ type: SET_LOGIN_SUCCESS });
     });
 };
 
