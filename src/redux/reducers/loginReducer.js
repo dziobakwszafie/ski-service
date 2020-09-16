@@ -28,7 +28,6 @@ export default function (state = initialState, action) {
       };
     case SET_UNAUTHENTICATED:
       return initialState;
-
     case SET_LOGIN_SUCCESS:
       return {
         ...state,
@@ -41,7 +40,6 @@ export default function (state = initialState, action) {
         successMessage: state.successMessage,
         ...action.payload,
       };
-
     default: {
       return state;
     }

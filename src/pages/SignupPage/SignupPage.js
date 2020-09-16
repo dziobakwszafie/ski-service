@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 import SignupComponent from "./components/SignupComponent/SignupComponent";
 import Footer from "../../components/Footer/Footer";
 import styled from "styled-components";
-import lift from "../../assets/lift.jpg";
+import lift from "../../assets/lift.JPG";
 import signup from "../../assets/signup.png";
 import whatshere from "../../assets/whatshere.png";
 import exercise from "../../assets/exercise.gif";

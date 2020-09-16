@@ -127,8 +127,15 @@ const Header = () => {
           <a href="#">STRONA GŁÓWNA</a>
           <a href="#login">LOGOWANIE</a>
           <a href="#order">ZAMÓW SERWIS</a>
-          <a href="#" onClick={dispatch(logoutUser)}>
-            WYLOGUJ
+          <a href="#">
+            <p
+              onClick={() => {
+                dispatch(logoutUser());
+              }}
+            >
+              WYLOGUJ
+            </p>
+            {/* cant do only onClick={dispatch(logoutUser()) because u have 2 pass function to onClick instead of just calling it */}
           </a>
           <label for="check" class="button--hide-menu">
             <i class="fas fa-times"></i>
