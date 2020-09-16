@@ -26,6 +26,8 @@ const SuccessMessageStyle = styled.p`
 
 const SignupComponent = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
+
   const initialValues = {
     email: "",
     password: "",
@@ -48,6 +50,16 @@ const SignupComponent = () => {
   const successMessage = useSelector(
     (state) => state.loginReducer.successMessage
   );
+
+  const authenticated = useSelector(
+    (state) => state.loginReducer.authenticated
+  );
+
+  if (authenticated === true) {
+    setInterval(function () {
+      history.push("/order");
+    }, 2000);
+  }
 
   let signupData = {};
   const onSubmit = (values) => {
@@ -123,7 +135,7 @@ const SignupComponent = () => {
         </div>
         {successMessage === true && (
           <SuccessMessageStyle>
-            <b>Gratki - udało Ci sie założyć konto</b>
+            <b>Gratki - udało Ci się założyć konto</b>
           </SuccessMessageStyle>
         )}
       </Box>

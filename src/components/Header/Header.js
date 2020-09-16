@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
 import { logoutUser } from "../../redux/actions";
+import { useSelector, useDispatch } from "react-redux";
 
 const HeaderStyles = styled.div`
   width: 100%;
@@ -126,6 +126,11 @@ const LogoutStyles = styled.p`
 
 const Header = () => {
   const dispatch = useDispatch();
+
+  const authenticated = useSelector(
+    (state) => state.loginReducer.authenticated
+  );
+
   return (
     <HeaderStyles>
       <NavStyles>
@@ -139,17 +144,21 @@ const Header = () => {
         </label>
         <ul class="menu">
           <a href="#">STRONA GŁÓWNA</a>
-          <a href="#login">LOGOWANIE</a>
+
+          {authenticated === false && <a href="#login">LOGOWANIE</a>}
           <a href="#order">ZAMÓW SERWIS</a>
-          <a
-            href="#"
-            onClick={() => {
-              dispatch(logoutUser());
-            }}
-          >
-            <LogoutStyles>WYLOGUJ</LogoutStyles>
-            {/* cant do only onClick={dispatch(logoutUser()) because u have 2 pass function to onClick instead of just calling it */}
-          </a>
+          {authenticated === true && (
+            <a
+              href="#"
+              onClick={() => {
+                dispatch(logoutUser());
+              }}
+            >
+              <LogoutStyles>WYLOGUJ</LogoutStyles>
+              {/* cant do only onClick={dispatch(logoutUser()) because u have 2 pass function to onClick instead of just calling it */}
+            </a>
+          )}
+
           <label for="check" class="button--hide-menu">
             <i class="fas fa-times"></i>
           </label>

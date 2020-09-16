@@ -18,11 +18,6 @@ const LoginTitleStyle = styled.h3`
   }
 `;
 
-const SuccessMessageStyle = styled.p`
-  color: red;
-  margin-top: 2vw;
-`;
-
 const LoginComponent = () => {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -40,9 +35,13 @@ const LoginComponent = () => {
     (state) => state.loginReducer.loadingMessage
   );
 
-  const successMessage = useSelector(
-    (state) => state.loginReducer.successMessage
+  const authenticated = useSelector(
+    (state) => state.loginReducer.authenticated
   );
+
+  if (authenticated === true) {
+    history.push("/order");
+  }
 
   let loginData = {};
   const onSubmit = (values) => {
@@ -55,10 +54,6 @@ const LoginComponent = () => {
     dispatch({ type: SET_LOADING });
     dispatch(login(loginData));
   };
-
-  if (successMessage === true) {
-    history.push("/order");
-  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -98,11 +93,6 @@ const LoginComponent = () => {
             )}
           </Formik>
         </div>
-        {successMessage === true && (
-          <SuccessMessageStyle>
-            <b>Gratki - udało Ci sie zalogować</b>
-          </SuccessMessageStyle>
-        )}
       </Box>
     </ThemeProvider>
   );

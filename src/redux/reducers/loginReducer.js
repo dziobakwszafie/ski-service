@@ -2,7 +2,7 @@ import {
   SET_LOADING,
   SET_AUTHENTICATED,
   SET_UNAUTHENTICATED,
-  SET_LOGIN_SUCCESS,
+  SET_SUCCESS_MESSAGE,
   SET_USER,
 } from "../actionTypes/types";
 
@@ -28,7 +28,7 @@ export default function (state = initialState, action) {
       };
     case SET_UNAUTHENTICATED:
       return initialState;
-    case SET_LOGIN_SUCCESS:
+    case SET_SUCCESS_MESSAGE:
       return {
         ...state,
         successMessage: !state.successMessage,
@@ -36,7 +36,6 @@ export default function (state = initialState, action) {
     case SET_USER:
       return {
         authenticated: true,
-        userOrders: state.orders,
         successMessage: state.successMessage,
         ...action.payload,
       };

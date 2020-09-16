@@ -81,7 +81,11 @@ const OrderPage = () => {
     (state) => state.loginReducer.successMessage
   );
 
-  if (successMessage === false) {
+  const authenticated = useSelector(
+    (state) => state.loginReducer.authenticated
+  );
+
+  if (authenticated === false) {
     history.push("/login");
   }
 

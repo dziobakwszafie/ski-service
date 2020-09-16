@@ -2,9 +2,8 @@ TODO:
 
 1. Dodać info o tym, ze dany email jest już używany - ale to już na serwerze
 2. im not a robot przy zamowieniu
-3. ogarnac problem z wiadomosciami
-4. ogarnac jak stosowac motywy z theme
-5. zrobić komunikat o błędzie bo za krótkie hasło albo sie nie zgadzaja, bo jest na serwerze ale nie ma tu obsługi tego
+3. ogarnac jak stosowac motywy z theme
+4. zrobić komunikat o błędzie bo za krótkie hasło albo sie nie zgadzaja, bo jest na serwerze ale nie ma tu obsługi tego
 
 Useful links:
 

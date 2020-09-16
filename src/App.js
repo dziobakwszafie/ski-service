@@ -12,31 +12,32 @@ import { customTheme } from "./util/theme";
 import { ThemeProvider, CSSReset } from "@chakra-ui/core";
 import { logoutUser, getUserData } from "./redux/actions";
 import { SET_AUTHENTICATED } from "./redux/actionTypes/types";
-
-let authenticated;
-const token = localStorage.FBIdToken;
-
-if (token) {
-  const decodedToken = jwtDecode(token);
-  console.log(decodedToken);
-  if (decodedToken.exp * 1000 < Date.now()) {
-    window.location.href = "/login";
-    authenticated = false;
-    console.log("Niezalogowany");
-    store.dispatch(logoutUser());
-  } else {
-    store.dispatch({ type: SET_AUTHENTICATED });
-    axios.defaults.headers.common["Authorization"] = token;
-    store.dispatch(getUserData());
-    console.log("Zalogowany");
-  }
-}
+import { useDispatch } from "react-redux";
 
 axios.defaults.baseURL =
   // "http://localhost:5000/ski-service-91995/europe-west3/api";
   "https://europe-west3-ski-service-91995.cloudfunctions.net/api";
 
 const App = () => {
+  const dispatch = useDispatch();
+  let authenticated;
+
+  const token = localStorage.FBIdToken;
+
+  if (token) {
+    const decodedToken = jwtDecode(token);
+    console.log(decodedToken);
+    if (decodedToken.exp * 1000 < Date.now()) {
+      window.location.href = "/login";
+      console.log("Niezalogowany");
+      store.dispatch(logoutUser());
+    } else {
+      store.dispatch({ type: SET_AUTHENTICATED });
+      axios.defaults.headers.common["Authorization"] = token;
+      store.dispatch(getUserData());
+      console.log("Zalogowany");
+    }
+  }
   return (
     <ThemeProvider theme={customTheme}>
       <CSSReset />
