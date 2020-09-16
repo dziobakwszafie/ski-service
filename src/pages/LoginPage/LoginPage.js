@@ -110,6 +110,9 @@ const LoginComponentStyles = styled.div`
   @media only screen and (max-width: 1024px) {
     width: 50vw;
   }
+  @media only screen and (max-width: 550px) {
+    width: 80vw;
+  }
 `;
 const FooterStyles = styled.div`
   bottom: 0;

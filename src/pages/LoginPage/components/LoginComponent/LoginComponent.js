@@ -8,6 +8,7 @@ import { Button, Box, Spinner } from "@chakra-ui/core";
 import { useSelector, useDispatch } from "react-redux";
 import { SET_LOADING } from "../../../../redux/actionTypes/types";
 import { login } from "../../../../redux/actions";
+import { useHistory } from "react-router-dom";
 
 const LoginTitleStyle = styled.h3`
   font-family: "FlyingLeatherneck";
@@ -24,6 +25,8 @@ const SuccessMessageStyle = styled.p`
 
 const LoginComponent = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
+
   const initialValues = {
     email: "",
     password: "",
@@ -52,6 +55,10 @@ const LoginComponent = () => {
     dispatch({ type: SET_LOADING });
     dispatch(login(loginData));
   };
+
+  if (successMessage === true) {
+    history.push("/order");
+  }
 
   return (
     <ThemeProvider theme={theme}>

@@ -9,6 +9,8 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
+import dayjs from "dayjs";
+import "dayjs/locale/pl";
 
 const useStyles = makeStyles({
   table: {
@@ -33,6 +35,7 @@ const HistoryTitleStyle = styled.h3`
 const HistorySection = () => {
   const userOrders = useSelector((state) => state.loginReducer.orders);
   const classes = useStyles();
+  dayjs.locale("pl");
 
   return (
     <HistoryTableStyle>
@@ -55,7 +58,9 @@ const HistorySection = () => {
             {userOrders.map((order) => (
               <TableRow key={order.createdAt}>
                 <TableCell component="th" scope="row">
-                  {order.skis}
+                  {dayjs(order.createdAt)
+                    .locale("pl")
+                    .format("DD-MM-YYYY HH:mm")}
                 </TableCell>
                 <TableCell align="right">{order.skis}</TableCell>
                 <TableCell align="right">{order.length}</TableCell>

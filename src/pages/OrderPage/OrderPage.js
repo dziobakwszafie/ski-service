@@ -5,6 +5,8 @@ import OrderDesc from "./components/OrderDesc/OrderDesc";
 import HistorySection from "./components/HistorySection/HistorySection";
 import Footer from "../../components/Footer/Footer";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 const OrderMainSection = styled.div`
   display: grid;
@@ -73,6 +75,16 @@ const HeaderStyles = styled.div`
 `;
 
 const OrderPage = () => {
+  const history = useHistory();
+
+  const successMessage = useSelector(
+    (state) => state.loginReducer.successMessage
+  );
+
+  if (successMessage === false) {
+    history.push("/login");
+  }
+
   return (
     <>
       <HeaderStyles>

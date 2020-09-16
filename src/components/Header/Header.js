@@ -18,6 +18,10 @@ const NavStyles = styled.nav`
     right: 0;
   }
 
+  .menu {
+    display: flex;
+  }
+
   .menu a {
     text-decoration: none;
     transition: 0.4s;
@@ -53,12 +57,16 @@ const NavStyles = styled.nav`
     visibility: hidden;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1180px) {
     .button--show-menu,
     .button--hide-menu {
       display: block;
       position: absolute;
       right: 2vw;
+      font-size: 2.2em;
+      @media only screen and (max-width: 500px) {
+        font-size: 1.5em;
+      }
     }
 
     .menu {
@@ -73,6 +81,8 @@ const NavStyles = styled.nav`
       -webkit-transition: 0.7s;
       transition: 0.7s;
       width: 40%;
+      display: flex;
+      flex-direction: column;
     }
 
     .menu a {
@@ -110,6 +120,10 @@ const SubtitleStyles = styled.h4`
   left: 0;
 `;
 
+const LogoutStyles = styled.p`
+  color: grey;
+`;
+
 const Header = () => {
   const dispatch = useDispatch();
   return (
@@ -127,14 +141,13 @@ const Header = () => {
           <a href="#">STRONA GŁÓWNA</a>
           <a href="#login">LOGOWANIE</a>
           <a href="#order">ZAMÓW SERWIS</a>
-          <a href="#">
-            <p
-              onClick={() => {
-                dispatch(logoutUser());
-              }}
-            >
-              WYLOGUJ
-            </p>
+          <a
+            href="#"
+            onClick={() => {
+              dispatch(logoutUser());
+            }}
+          >
+            <LogoutStyles>WYLOGUJ</LogoutStyles>
             {/* cant do only onClick={dispatch(logoutUser()) because u have 2 pass function to onClick instead of just calling it */}
           </a>
           <label for="check" class="button--hide-menu">
