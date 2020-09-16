@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "45de5a9572c3b062d5c526db9fe0ffdf",
+    "revision": "acd9e92621efcbd1cd50c7a328f911c3",
     "url": "/ski-service/index.html"
   },
   {
-    "revision": "fdc63126dc9a6e085ffd",
+    "revision": "ae79aba126fc4302a0f5",
     "url": "/ski-service/static/css/2.25ff2e5b.chunk.css"
   },
   {
-    "revision": "fdc63126dc9a6e085ffd",
-    "url": "/ski-service/static/js/2.a8220d2d.chunk.js"
+    "revision": "ae79aba126fc4302a0f5",
+    "url": "/ski-service/static/js/2.956f6d19.chunk.js"
   },
   {
     "revision": "165ef5d30ac96eafecf6106d816a6324",
-    "url": "/ski-service/static/js/2.a8220d2d.chunk.js.LICENSE.txt"
+    "url": "/ski-service/static/js/2.956f6d19.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "55d5809a858efd0a7fdf",
-    "url": "/ski-service/static/js/main.5108a823.chunk.js"
+    "revision": "1116c527de45cf401bdc",
+    "url": "/ski-service/static/js/main.446e7dbf.chunk.js"
   },
   {
     "revision": "7c48ae24717bce521ace",
@@ -45,7 +45,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "8b780e8b88c5476d913b84bc6ceed32e",
-    "url": "/ski-service/static/media/lift.8b780e8b.JPG"
+    "url": "/ski-service/static/media/lift.8b780e8b.jpg"
   },
   {
     "revision": "8812a25a66378a1a8221f00534057a93",
@@ -60,8 +60,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ski-service/static/media/service.5feefa82.jpg"
   },
   {
-    "revision": "d19d3fac1ccc7f930d905f634f1f6c78",
-    "url": "/ski-service/static/media/signup.d19d3fac.png"
+    "revision": "3ba3b63ddb71d79420f14b86db3f07b5",
+    "url": "/ski-service/static/media/signup.3ba3b63d.png"
   },
   {
     "revision": "b44ff5a446bdf05ea94ee4fe3ae467f8",
