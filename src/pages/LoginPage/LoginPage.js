@@ -4,10 +4,19 @@ import LoginComponent from "./components/LoginComponent/LoginComponent";
 import Footer from "../../components/Footer/Footer";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import lift from "../../assets/lift.jpg";
+import lift from "../../assets/lift.JPG";
 import signup from "../../assets/signup.png";
 import whatshere from "../../assets/whatshere.png";
 import exercise from "../../assets/exercise.gif";
+import { useEffect } from "react";
+
+function ScrollToTopOnMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+}
 
 const Main = styled.div`
   display: grid;
@@ -121,6 +130,7 @@ const FooterStyles = styled.div`
 const LoginPage = () => {
   return (
     <LoginPageStyles>
+      <ScrollToTopOnMount />
       <HeaderStyles>
         <Header />
       </HeaderStyles>
