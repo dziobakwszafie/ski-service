@@ -37,7 +37,7 @@ const BigText = styled.h4`
   margin-bottom: 1em;
   font-size: 1.3em;
   margin-left: 10px;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1024px) {
     font-size: 1em;
   }
   @media only screen and (max-width: 600px) {
@@ -47,7 +47,7 @@ const BigText = styled.h4`
 const SmallText = styled.p`
   font-size: 0.8rem;
   margin-bottom: 1em;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1024px) {
     font-size: 0.6em;
   }
   @media only screen and (max-width: 600px) {

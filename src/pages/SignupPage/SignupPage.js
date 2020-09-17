@@ -93,7 +93,10 @@ const Third = styled.div`
 
 const SignupPageStyles = styled.div``;
 const HeaderStyles = styled.div`
-  height: 10vw;
+  height: 5vw;
+  @media only screen and (max-width: 1500px) {
+    height: 75px;
+  }
 `;
 const BackToLoginStyles = styled.div`
   width: 50%;

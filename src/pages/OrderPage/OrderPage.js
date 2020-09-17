@@ -71,15 +71,14 @@ const Third = styled.div`
 `;
 
 const HeaderStyles = styled.div`
-  height: 10vw;
+  height: 5vw;
+  @media only screen and (max-width: 1500px) {
+    height: 75px;
+  }
 `;
 
 const OrderPage = () => {
   const history = useHistory();
-
-  const successMessage = useSelector(
-    (state) => state.loginReducer.successMessage
-  );
 
   const authenticated = useSelector(
     (state) => state.loginReducer.authenticated

@@ -5,6 +5,7 @@ import FormikControl from "../../../../components/FormikControl/FormikControl";
 import styled from "styled-components";
 import axios from "axios";
 import { Button } from "@chakra-ui/core";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const OrderFormStyles = styled.div`
   display: flex;
@@ -22,6 +23,7 @@ const OrderformTitleStyle = styled.h3`
 `;
 
 const OrderForm = () => {
+  const [disableSubmit, setDisableSubmit] = useState(true);
   const sideAngle = [
     { key: "89 stopni", value: "89" },
     { key: "88 stopni", value: "88" },
@@ -158,11 +160,18 @@ const OrderForm = () => {
               <Button
                 type="submit"
                 disabled={
-                  !formik.isValid || !formik.dirty || formik.isSubmitting
+                  !formik.isValid ||
+                  !formik.dirty ||
+                  formik.isSubmitting ||
+                  disableSubmit
                 }
               >
                 Submit
               </Button>
+              <ReCAPTCHA
+                sitekey="6LfLTc0ZAAAAAHM_OJKPNxwYr0aeEI31ZkjZ7MoO"
+                onChange={() => setDisableSubmit(false)}
+              />
             </Form>
           )}
         </Formik>

@@ -19,11 +19,12 @@ const IntroStyles = styled.div`
   }
 `;
 
-const IntroTitleStyles = styled.h1`
+const IntroTitleStyles = styled.h2`
   font-family: "Permanent Marker", cursive;
   font-size: 2em;
   padding-bottom: 2rem;
   color: #0b8d99;
+  text-align: center;
 `;
 
 const IntroTextStyles = styled.p`

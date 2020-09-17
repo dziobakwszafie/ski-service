@@ -118,6 +118,12 @@ const SubtitleStyles = styled.h4`
   color: black;
   position: absolute;
   left: 0;
+  @media only screen and (max-width: 1000px) {
+    font-size: 7.5vw;
+  }
+  @media only screen and (max-width: 550px) {
+    font-size: 8.5vw;
+  }
 `;
 
 const LogoutStyles = styled.p`

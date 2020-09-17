@@ -104,7 +104,10 @@ const Fourth = styled.div`
 
 const LoginPageStyles = styled.div``;
 const HeaderStyles = styled.div`
-  height: 10vw;
+  height: 5vw;
+  @media only screen and (max-width: 1500px) {
+    height: 75px;
+  }
 `;
 const LinkBgStyle = styled.div`
   width: 100%;

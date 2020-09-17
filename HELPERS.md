@@ -4,6 +4,8 @@ TODO:
 2. im not a robot przy zamowieniu
 3. ogarnac jak stosowac motywy z theme
 4. zrobić komunikat o błędzie bo za krótkie hasło albo sie nie zgadzaja, bo jest na serwerze ale nie ma tu obsługi tego
+5. sortowanie historii zamowien
+6. zamów serwis jest źle klikalny
 
 Useful links:
 
@@ -18,6 +20,7 @@ Useful links:
 - https://stackoverflow.com/questions/42701129/how-to-push-to-history-in-react-router-v4
 - https://codesandbox.io/s/react-redux-hook-by-indrek-lasn-forked-ehm0d?file=/package.json
 - https://medium.com/better-programming/how-to-use-redux-with-react-hooks-5422a7ceae6e
+- https://reactrouter.com/web/guides/scroll-restoration
 
 logowanie oauth2.0 + openidconnect
 biblioteka ktora umozliwa logowanie w reakcie react-oidc

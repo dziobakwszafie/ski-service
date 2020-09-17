@@ -18,7 +18,7 @@ const Main = styled.div`
   background-color: #000;
   border-bottom: 0.33333vw solid #000;
   @media only screen and (max-width: 1024px) {
-    grid-template-columns: 49.46667vw auto;
+    grid-template-columns: 50vw auto;
     grid-template-rows: 44vw 44vw 58vw 54vw 50vw 48vw 48vw;
   }
 `;
@@ -86,7 +86,8 @@ const Fifth = styled.div`
   grid-row-start: 3;
   grid-row-end: 4;
   background-color: #fff;
-  background-image: url("${myface}");
+  background-image: url("${skibar}");
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -116,7 +117,8 @@ const Seventh = styled.div`
   grid-row-start: 3;
   grid-row-end: 4;
   background-color: #fff;
-  background-image: url("${drawboot}");
+  background-image: url("${myface}");
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,7 +135,8 @@ const Eighth = styled.div`
   grid-row-start: 4;
   grid-row-end: 5;
   background-color: #fff;
-  background-image: url("${mountain}");
+  background-image: url("${drawboot}");
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -153,7 +156,7 @@ const Ninth = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("${skibar}");
+  background-image: url("${mountain}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
