@@ -17,8 +17,8 @@ const OrderMainSection = styled.div`
   border-bottom: 0.2vw solid #000;
   border-top: 0.2vw solid #000;
   @media only screen and (max-width: 1024px) {
-    grid-template-rows: auto 45vw 45vw;
-    grid-template-columns: 90vw;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 100vw;
   }
 `;
 const First = styled.div`
@@ -32,7 +32,7 @@ const First = styled.div`
   align-items: center;
   @media only screen and (max-width: 1024px) {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
   }
@@ -48,7 +48,7 @@ const Second = styled.div`
   align-items: center;
   @media only screen and (max-width: 1024px) {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
   }
@@ -59,12 +59,10 @@ const Third = styled.div`
   grid-row-start: 2;
   grid-row-end: 3;
   background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   @media only screen and (max-width: 1024px) {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
   }

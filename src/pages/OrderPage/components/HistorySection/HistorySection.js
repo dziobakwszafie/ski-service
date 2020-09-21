@@ -14,13 +14,15 @@ import "dayjs/locale/pl";
 
 const useStyles = makeStyles({
   table: {
-    width: 800,
+    minWidth: 800,
   },
 });
 
 const HistoryTableStyle = styled.div`
   margin-top: 3vw;
   margin-bottom: 5vw;
+  width: 90%;
+  overflow: scroll;
 `;
 
 const HistoryTitleStyle = styled.h3`
