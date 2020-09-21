@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a91aef68d2b032578e9a2a8eedddb14",
+    "revision": "1ec336d873757ee04915296af299cecb",
     "url": "/ski-service/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ski-service/static/js/2.f67b8b32.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0d9a12e9f477aa9a408b",
-    "url": "/ski-service/static/js/main.b7683ec4.chunk.js"
+    "revision": "31d558b464409a3a881f",
+    "url": "/ski-service/static/js/main.05ccbfe3.chunk.js"
   },
   {
     "revision": "7c48ae24717bce521ace",
@@ -45,7 +45,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "8b780e8b88c5476d913b84bc6ceed32e",
-    "url": "/ski-service/static/media/lift.8b780e8b.JPG"
+    "url": "/ski-service/static/media/lift.8b780e8b.jpg"
   },
   {
     "revision": "8812a25a66378a1a8221f00534057a93",

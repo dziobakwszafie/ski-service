@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/ski-service/static/js/main.b7683ec4.chunk.js",
-    "main.js.map": "/ski-service/static/js/main.b7683ec4.chunk.js.map",
+    "main.js": "/ski-service/static/js/main.05ccbfe3.chunk.js",
+    "main.js.map": "/ski-service/static/js/main.05ccbfe3.chunk.js.map",
     "runtime-main.js": "/ski-service/static/js/runtime-main.d6f484b2.js",
     "runtime-main.js.map": "/ski-service/static/js/runtime-main.d6f484b2.js.map",
     "static/css/2.25ff2e5b.chunk.css": "/ski-service/static/css/2.25ff2e5b.chunk.css",
     "static/js/2.f67b8b32.chunk.js": "/ski-service/static/js/2.f67b8b32.chunk.js",
     "static/js/2.f67b8b32.chunk.js.map": "/ski-service/static/js/2.f67b8b32.chunk.js.map",
     "index.html": "/ski-service/index.html",
-    "precache-manifest.66ecb7b810acaffd2ca40d1e325d59d7.js": "/ski-service/precache-manifest.66ecb7b810acaffd2ca40d1e325d59d7.js",
+    "precache-manifest.ff70f61e6fc24dcec8f02eb4824be65c.js": "/ski-service/precache-manifest.ff70f61e6fc24dcec8f02eb4824be65c.js",
     "service-worker.js": "/ski-service/service-worker.js",
     "static/css/2.25ff2e5b.chunk.css.map": "/ski-service/static/css/2.25ff2e5b.chunk.css.map",
     "static/js/2.f67b8b32.chunk.js.LICENSE.txt": "/ski-service/static/js/2.f67b8b32.chunk.js.LICENSE.txt",
@@ -17,7 +17,7 @@
     "static/media/drawboot.PNG": "/ski-service/static/media/drawboot.9bac093d.PNG",
     "static/media/exercise.gif": "/ski-service/static/media/exercise.6ac6b8d5.gif",
     "static/media/flyingleatherv2.ttf": "/ski-service/static/media/flyingleatherv2.f291e1c0.ttf",
-    "static/media/lift.JPG": "/ski-service/static/media/lift.8b780e8b.JPG",
+    "static/media/lift.jpg": "/ski-service/static/media/lift.8b780e8b.jpg",
     "static/media/mountain.PNG": "/ski-service/static/media/mountain.8812a25a.PNG",
     "static/media/myface.jpeg": "/ski-service/static/media/myface.c07e03d1.jpeg",
     "static/media/service.jpg": "/ski-service/static/media/service.5feefa82.jpg",
@@ -32,6 +32,6 @@
     "static/js/runtime-main.d6f484b2.js",
     "static/css/2.25ff2e5b.chunk.css",
     "static/js/2.f67b8b32.chunk.js",
-    "static/js/main.b7683ec4.chunk.js"
+    "static/js/main.05ccbfe3.chunk.js"
   ]
 }
