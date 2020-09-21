@@ -11,6 +11,7 @@ const OrderFormStyles = styled.div`
   display: flex;
   margin-top: 3vw;
   margin-bottom: 5vw;
+  width: 90%;
 `;
 
 const OrderformTitleStyle = styled.h3`
@@ -83,26 +84,19 @@ const OrderForm = () => {
       snow: values.snow,
       fluor: values.fluor,
     };
-    axios
-      .post(
-        "/order",
+    axios.post("/order", orderData).then((res) => {
+      console.log(res.data);
 
-        orderData
-      )
-      .then((res) => {
-        console.log(res.data);
-
-        setMessage(
-          (successMessage = res.data ? "Zamówienie wysłano" : "Coś nie pykło")
-        );
-      });
+      setMessage(
+        (successMessage = res.data ? "Zamówienie wysłano" : "Coś nie pykło")
+      );
+    });
   };
 
   return (
     <OrderFormStyles>
       <div>
         <OrderformTitleStyle>Formularz zamówien</OrderformTitleStyle>
-
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -157,6 +151,10 @@ const OrderForm = () => {
                 label="Pick a date"
                 name="pickupDate"
               /> */}
+              <ReCAPTCHA
+                sitekey="6LfLTc0ZAAAAAHM_OJKPNxwYr0aeEI31ZkjZ7MoO"
+                onChange={() => setDisableSubmit(false)}
+              />
               <Button
                 type="submit"
                 disabled={
@@ -168,10 +166,6 @@ const OrderForm = () => {
               >
                 Submit
               </Button>
-              <ReCAPTCHA
-                sitekey="6LfLTc0ZAAAAAHM_OJKPNxwYr0aeEI31ZkjZ7MoO"
-                onChange={() => setDisableSubmit(false)}
-              />
             </Form>
           )}
         </Formik>
