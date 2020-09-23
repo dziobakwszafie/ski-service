@@ -8,6 +8,7 @@ const IntroSharpStyles = styled.div`
   padding: 2vw;
 `;
 
+
 const IntroSharpTitleStyles = styled.h3`
   padding-bottom: 1rem;
   color: ${colors.text.Primary4};
