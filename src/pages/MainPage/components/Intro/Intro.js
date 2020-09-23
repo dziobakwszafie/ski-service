@@ -12,12 +12,12 @@ import colors from "../../../../styles/colors";
 const Main = styled.div`
   display: grid;
   grid-template-columns: 47.83333vw 25.83333vw auto;
-  grid-template-rows: 34vw 8vw 26vw;
+  grid-template-rows: auto 8vw 26vw;
   grid-gap: 0.33333vw;
-  background-color: #000;
-  border-bottom: 0.33333vw solid #000;
-  border-top: 0.33333vw solid #000;
-  @media only screen and (max-width: 1024px) {
+  background-color: ${colors.background.Primary1};
+  border-bottom: 0.33333vw solid ${colors.background.Primary1};
+  border-top: 0.33333vw solid ${colors.background.Primary1};
+  ${device.M} {
     grid-template-rows: auto 65vw 20vw 45vw;
     grid-template-columns: 50vw auto;
   }
@@ -27,8 +27,8 @@ const First = styled.div`
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 4;
-  background-color: #fff;
-  @media only screen and (max-width: 1024px) {
+  background-color: ${colors.background.Primary3};
+  ${device.M} {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -40,12 +40,12 @@ const Second = styled.div`
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   background-image: url("${skilift}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -57,12 +57,12 @@ const Third = styled.div`
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   background-image: url("${skiboots}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -74,14 +74,14 @@ const Fourth = styled.div`
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 4;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   display: flex;
   justify-content: center;
   align-items: center;
   :hover {
     background-color: red;
   }
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
@@ -93,12 +93,12 @@ const Fifth = styled.div`
   grid-column-end: 4;
   grid-row-start: 3;
   grid-row-end: 4;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   background-image: url("${cafe}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 4;
@@ -108,21 +108,22 @@ const Fifth = styled.div`
 
 const LinkStyles = styled.h3`
   transform: rotate(-17deg);
-  font-family: "FlyingLeatherneck";
-  color: black;
-  ${device.mobileL} {
-    color: green;
-  }
-  @media only screen and (min-width: 1921px) {
-    font-size: 7vw;
-  }
-  @media only screen and (max-width: 1920px) {
-    font-size: 7vw;
-  }
-  @media only screen and (max-width: 1024px) {
-    font-size: 12vw;
+  ${typography.header.XXL}
+  color: ${colors.text.Secondary1};
+  ${device.M} {
+    ${typography.header.S}
   }
 `;
+
+const NavLink = styled(Link)`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Wrapper = styled.div``;
 
 const Try = () => {
   return (
@@ -133,10 +134,12 @@ const Try = () => {
       <Second></Second>
       <Third></Third>
       <Fourth>
-        <Link to={`/login`}>
-          <LinkStyles>ZAMÓW</LinkStyles>
-          <LinkStyles>SERWIS</LinkStyles>
-        </Link>
+        <NavLink to={`/login`}>
+          <Wrapper>
+            <LinkStyles>ZAMÓW</LinkStyles>
+            <LinkStyles>SERWIS</LinkStyles>
+          </Wrapper>
+        </NavLink>
       </Fourth>
       <Fifth></Fifth>
     </Main>

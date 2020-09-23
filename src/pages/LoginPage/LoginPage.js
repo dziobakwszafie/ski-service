@@ -4,7 +4,7 @@ import LoginComponent from "./components/LoginComponent/LoginComponent";
 import Footer from "../../components/Footer/Footer";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import lift from "../../assets/lift.JPG";
+import lift from "../../assets/lift.jpg";
 import signup from "../../assets/signup.png";
 import whatshere from "../../assets/whatshere.png";
 import exercise from "../../assets/exercise.gif";

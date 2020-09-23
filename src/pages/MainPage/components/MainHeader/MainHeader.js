@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import device from "../../../../styles/devices";
+import typography from "../../../../styles/typography";
+import colors from "../../../../styles/colors";
 
 const HeaderStyles = styled.div`
   height: 56.25vw;
@@ -38,24 +41,29 @@ const OverflowStyles = styled.div`
 `;
 
 const TitleStyles = styled.h1`
-  font-family: "FlyingLeatherneck";
-  font-size: 7vw;
-  color: black;
+  ${typography.header.XXL}
+  color: ${colors.text.Primary1};
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
+  ${device.L} {
+    ${typography.header.L}
+  }
 `;
 
 const SubtitleStyles = styled.h2`
-  font-family: "FlyingLeatherneck";
-  font-size: 5vw;
-  color: black;
+  ${typography.header.XL}
+  color: ${colors.text.Primary1};
   position: absolute;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  white-space: nowrap;
+  ${device.L} {
+    ${typography.header.M}
+  }
 `;
 
 const MainHeader = () => {
