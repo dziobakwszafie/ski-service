@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import skiboots from "../../../../assets/ski-boots.jpeg";
 import skilift from "../../../../assets/skilift.jpeg";
 import cafe from "../../../../assets/cafe.jpeg";
+import device from "../../../../styles/devices";
+import typography from "../../../../styles/typography";
+import colors from "../../../../styles/colors";
 
 const Main = styled.div`
   display: grid;
@@ -107,6 +110,9 @@ const LinkStyles = styled.h3`
   transform: rotate(-17deg);
   font-family: "FlyingLeatherneck";
   color: black;
+  ${device.mobileL} {
+    color: green;
+  }
   @media only screen and (min-width: 1921px) {
     font-size: 7vw;
   }

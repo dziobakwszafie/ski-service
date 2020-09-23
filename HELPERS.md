@@ -1,12 +1,3 @@
-TODO:
-
-1. Dodać info o tym, ze dany email jest już używany - ale to już na serwerze
-2. im not a robot przy zamowieniu
-3. ogarnac jak stosowac motywy z theme
-4. zrobić komunikat o błędzie bo za krótkie hasło albo sie nie zgadzaja, bo jest na serwerze ale nie ma tu obsługi tego
-5. sortowanie historii zamowien
-6. zamów serwis jest źle klikalny
-
 Useful links:
 
 - https://digitalsynopsis.com/design/beautiful-color-palettes-combinations-schemes/?fbclid=IwAR2E3zZm9ER05805WTjOutqft_gJM9BFjhFDlIrj50fs7Zxyomq0e8Ngnj0
@@ -21,6 +12,3 @@ Useful links:
 - https://codesandbox.io/s/react-redux-hook-by-indrek-lasn-forked-ehm0d?file=/package.json
 - https://medium.com/better-programming/how-to-use-redux-with-react-hooks-5422a7ceae6e
 - https://reactrouter.com/web/guides/scroll-restoration
-
-logowanie oauth2.0 + openidconnect
-biblioteka ktora umozliwa logowanie w reakcie react-oidc
