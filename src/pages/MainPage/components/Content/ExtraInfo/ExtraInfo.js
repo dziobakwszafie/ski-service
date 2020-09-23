@@ -1,35 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import { queryForTitle, queryForText } from "../../../../../styles/devices";
+import colors from "../../../../../styles/colors";
 
 const IntroWaxStyles = styled.div`
   width: 100%;
-  padding: 3vw;
-  @media only screen and (min-width: 1921px) {
-    font-size: 1.2vw;
-  }
-  @media only screen and (max-width: 1920px) {
-    font-size: 1.2vw;
-  }
-  @media only screen and (max-width: 1500px) {
-    font-size: 1.3vw;
-  }
-  @media only screen and (max-width: 1024px) {
-    font-size: 2.2vw;
-  }
+  padding: 2vw;
 `;
 
 const IntroWaxTitleStyles = styled.h1`
-  font-family: "Permanent Marker", cursive;
-  font-size: 2em;
-  padding-bottom: 2rem;
-  color: #ed5c8a;
+  padding-bottom: 1rem;
+  color: ${colors.text.Primary6};
+  ${queryForTitle}
 `;
 
 const IntroWaxTextStyles = styled.p`
-  font-family: "Roboto", sans-serif;
-  font-size: 1em;
   line-height: 1.5em;
-  margin-bottom: 1vw;
+  margin-bottom: 2vw;
+  ${queryForText}
 `;
 
 const ExtraInfo = () => {
@@ -47,10 +35,10 @@ const ExtraInfo = () => {
         sumie bez problemu. https://www.racewax.com/base-structure-theory/
       </IntroWaxTextStyles>
       <IntroWaxTextStyles>
-        Ja w nartach na niedzielne jazdy mam 88/0,5 i to jest ok do takiego w
-        miare snucia się po stoku. 89/0,7 będzie bardziej stabilne na prostych i
-        troche gorzej trzymała w skręcie. A z kolei 87/0,5 to już raczej do
-        jazdy na tyczkach.
+        Ja w nartach na niedzielne jazdy mam ustawione kąty na 88/0,5 i to jest
+        ok do takiego w miare snucia się po stoku. 89/0,7 będzie bardziej
+        stabilne na prostych i troche gorzej trzymała w skręcie. A z kolei
+        87/0,5(albo 0) to już raczej do jazdy na tyczkach.
       </IntroWaxTextStyles>
     </IntroWaxStyles>
   );

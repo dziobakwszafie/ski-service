@@ -41,29 +41,23 @@ const OverflowStyles = styled.div`
 `;
 
 const TitleStyles = styled.h1`
-  ${typography.header.XXL}
-  color: ${colors.text.Primary1};
+  ${typography.header.XL}
+  color: ${colors.text.Primary4};
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
-  ${device.L} {
-    ${typography.header.L}
-  }
 `;
 
 const SubtitleStyles = styled.h2`
   ${typography.header.XL}
-  color: ${colors.text.Primary1};
+  color: ${colors.text.Primary3};
   position: absolute;
-  top: 60%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
-  ${device.L} {
-    ${typography.header.M}
-  }
 `;
 
 const MainHeader = () => {

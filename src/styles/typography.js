@@ -14,33 +14,39 @@ const typography = {
   header: {
     XXL: `
         ${specialStyles1}
-        font-size: 7vw;`,
+        font-size: 14vw;`,
     XL: `
         ${specialStyles1}
-        font-size: 5vw;`,
+        font-size: 10vw;`,
     L: `
         ${specialStyles1}
-        font-size: 10vw;`,
+        font-size: 8vw;`,
     M: `
         ${specialStyles1}
-        font-size: 8vw;`,
+        font-size: 7vw;`,
     S: `
         ${specialStyles1};
-        font-size: 14vw;`,
+        font-size: 5vw;`,
+    XS: `
+        ${specialStyles1};
+        font-size: 4vw;`,
   },
   body: {
     XL: `
         ${defaultStyles}
-        font-size: 1.2vw;`,
+        font-size: 4vw;`,
     L: `
         ${defaultStyles}
-        font-size: 1.8vw;`,
+        font-size: 3.5vw;`,
     M: `
         ${defaultStyles}
         font-size: 2.8vw;`,
     S: `
         ${defaultStyles}
-        font-size: 4vw;`,
+        font-size: 1.8vw;`,
+    XS: `
+        ${defaultStyles}
+        font-size: 1.2vw;`,
   },
 };
 

@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { queryForTitle, queryForText } from "../../styles/devices";
+import colors from "../../styles/colors";
 
 const FooterStyles = styled.div`
   display: flex;
@@ -8,7 +10,8 @@ const FooterStyles = styled.div`
   align-items: center;
   font-size: 1.1rem;
   text-transform: uppercase;
-  margin-top: 3vw;
+  padding-top: 3vw;
+  background-color: ${colors.background.Primary3};
 `;
 
 const FirstRow = styled.div`

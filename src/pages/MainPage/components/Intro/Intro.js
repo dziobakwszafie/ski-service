@@ -108,10 +108,10 @@ const Fifth = styled.div`
 
 const LinkStyles = styled.h3`
   transform: rotate(-17deg);
-  ${typography.header.XXL}
+  ${typography.header.L}
   color: ${colors.text.Secondary1};
   ${device.M} {
-    ${typography.header.S}
+    ${typography.header.XXL}
   }
 `;
 

@@ -1,3 +1,5 @@
+import typography from "./typography";
+
 const device = {
   XXL: `@media (min-width: 1920px)`,
   XL: `@media (max-width: 1919px)`,
@@ -8,3 +10,39 @@ const device = {
 };
 
 export default device;
+
+export const queryForTitle = `
+${device.XXL} {
+  ${typography.header.XS}
+}
+${device.XL} {
+  ${typography.header.S}
+}
+${device.L} {
+  ${typography.header.S}
+}
+${device.M} {
+  ${typography.header.M}
+}
+${device.S} {
+  ${typography.header.XL}
+}
+`;
+
+export const queryForText = `
+${device.XXL} {
+  ${typography.body.XS}
+}
+${device.XL} {
+  ${typography.body.S}
+}
+${device.L} {
+  ${typography.body.S}
+}
+${device.M} {
+  ${typography.body.M}
+}
+${device.S} {
+  ${typography.body.M}
+}
+`;

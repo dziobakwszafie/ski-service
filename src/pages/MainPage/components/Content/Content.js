@@ -9,25 +9,28 @@ import service from "../../../../assets/service.jpg";
 import mountain from "../../../../assets/mountain.PNG";
 import drawboot from "../../../../assets/drawboot.PNG";
 import skibar from "../../../../assets/skibar.jpeg";
+import device from "../../../../styles/devices";
+import colors from "../../../../styles/colors";
 
 const Main = styled.div`
   display: grid;
   grid-gap: 0.33333vw;
   grid-template-columns: 27.83333vw 7.83333vw 19.83333vw 15.83333vw auto;
-  grid-template-rows: 24vw 24vw 28vw 34vw;
-  background-color: #000;
-  border-bottom: 0.33333vw solid #000;
-  @media only screen and (max-width: 1024px) {
+  grid-template-rows: auto auto 28vw 28vw;
+  background-color: ${colors.background.Primary1};
+  border-bottom: 0.33333vw solid ${colors.background.Primary1};
+  ${device.M} {
     grid-template-columns: 50vw auto;
-    grid-template-rows: 44vw 44vw 58vw 54vw 50vw 48vw 48vw;
+    grid-template-rows: auto auto auto 54vw auto auto 48vw;
   }
 `;
+
 const First = styled.div`
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 3;
-  background-color: #0e9aa7;
-  @media only screen and (max-width: 1024px) {
+  background-color: ${colors.background.Primary4};
+  ${device.M} {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -38,12 +41,12 @@ const Second = styled.div`
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-end: 2;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   background-image: url("${wax}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -55,12 +58,12 @@ const Third = styled.div`
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   background-image: url("${service}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -72,8 +75,8 @@ const Fourth = styled.div`
   grid-row-start: 1;
   grid-row-end: 3;
   grid-column-end: 6;
-  background-color: #009688;
-  @media only screen and (max-width: 1024px) {
+  background-color: ${colors.background.Primary5};
+  ${device.M} {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
@@ -85,13 +88,12 @@ const Fifth = styled.div`
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   background-image: url("${skibar}");
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 4;
@@ -103,8 +105,8 @@ const Sixth = styled.div`
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 5;
-  background-color: #ed8e8e;
-  @media only screen and (max-width: 1024px) {
+  background-color: ${colors.background.Primary6};
+  ${device.M} {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 5;
@@ -116,13 +118,12 @@ const Seventh = styled.div`
   grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 4;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   background-image: url("${myface}");
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 5;
@@ -134,13 +135,12 @@ const Eighth = styled.div`
   grid-column-end: 3;
   grid-row-start: 4;
   grid-row-end: 5;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   background-image: url("${drawboot}");
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 6;
@@ -152,7 +152,7 @@ const Ninth = styled.div`
   grid-column-end: 6;
   grid-row-start: 4;
   grid-row-end: 5;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,7 +160,7 @@ const Ninth = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 7;

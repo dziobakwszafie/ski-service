@@ -3,42 +3,26 @@ import styled from "styled-components";
 import arrow from "../../../../../assets/arrow.png";
 import device from "../../../../../styles/devices";
 import typography from "../../../../../styles/typography";
+import { queryForTitle, queryForText } from "../../../../../styles/devices";
 import { specialStyles1 } from "../../../../../styles/typography";
 import colors from "../../../../../styles/colors";
 
 const IntroStyles = styled.div`
   width: 100%;
   padding: 3vw;
-  ${device.XXL} {
-    ${typography.body.XL}
-  }
-  ${device.XL} {
-    ${typography.body.XL}
-  }
-  ${device.L} {
-    ${typography.body.L}
-  }
-  ${device.M} {
-    ${typography.body.M}
-  }
-  ${device.S} {
-    ${typography.body.S}
-  }
 `;
 
 const IntroTitleStyles = styled.h2`
-  ${typography.header.XL}
-  color: ${colors.text.Primary3};
-  padding-bottom: 2rem;
+  color: ${colors.text.Secondary1};
+  padding-bottom: 1rem;
   text-align: center;
-  ${device.M} {
-    ${typography.header.M}
-  }
+  ${queryForTitle}
 `;
 
 const IntroTextStyles = styled.p`
   color: ${colors.text.Primary1};
   margin-bottom: 1vw;
+  ${queryForText}
 `;
 
 const IntroArrowStyles = styled.div`
