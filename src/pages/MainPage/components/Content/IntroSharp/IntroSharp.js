@@ -1,38 +1,28 @@
 import React from "react";
 import styled from "styled-components";
+import { queryForTitle, queryForText } from "../../../../../styles/devices";
+import colors from "../../../../../styles/colors";
 
 const IntroSharpStyles = styled.div`
   width: 100%;
-  padding: 3vw;
-  @media only screen and (min-width: 1921px) {
-    font-size: 1.2vw;
-  }
-  @media only screen and (max-width: 1920px) {
-    font-size: 1.2vw;
-  }
-  @media only screen and (max-width: 1500px) {
-    font-size: 1.3vw;
-  }
-  @media only screen and (max-width: 1024px) {
-    font-size: 2.2vw;
-  }
+  padding: 2vw;
 `;
 
-const IntroSharpTitleStyles = styled.h1`
-  font-family: "Permanent Marker", cursive;
-  font-size: 2em;
+
+const IntroSharpTitleStyles = styled.h3`
   padding-bottom: 1rem;
-  color: #f5b60a;
+  color: ${colors.text.Primary4};
+  ${queryForTitle}
 `;
 
 const IntroSharpTextStyles = styled.p`
-  font-family: "Roboto", sans-serif;
-  font-size: 1em;
   line-height: 1.5em;
-  margin-bottom: 1vw;
+  margin-bottom: 2vw;
   ul {
-    padding: 10px;
+    padding: 2vw;
+    padding-left: 4vw;
   }
+  ${queryForText}
 `;
 
 const IntroSharp = () => {
@@ -54,10 +44,15 @@ const IntroSharp = () => {
         Dla amatora polecanymi kątami to:
         <ul>
           <li> z boku - 88 lub 89 stopni </li>
+          <li>
+            można tez zaostrzyc na 86 lub 87 ale wtedy trzeba się mocno pochylać
+            w skręcie żeby narta trzymała
+          </li>
           <li>od spodu (podniesienie) - 0,5 lub 0,7 stopnia</li>
           <li>
-            można też oczywiśćie ostrzyć 86 i 87 z boku i na 0 od dołu ale to
-            raczej dla zawodników
+            przy podniesieniu 0,5 narta będzie nardziej nerwowa, można tez
+            zrobić 0 - wtedy skręca super ale nie jedzie prosto, opcja raczej
+            tylko na tyczki
           </li>
         </ul>
       </IntroSharpTextStyles>

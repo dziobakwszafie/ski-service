@@ -1,75 +1,52 @@
 const defaultStyles = `
-font-family: Lato;
+font-family: Roboto, sans-serif;
 font-style: normal;
 font-weight: normal;
 color: #000000;
 line-height: 135%;`;
 
+export const specialStyles1 = `
+font-family: "FlyingLeatherneck";
+`;
+
 const typography = {
   globalStyles: defaultStyles,
   header: {
     XXL: `
-        ${defaultStyles}
-        font-size: 37px;`,
+        ${specialStyles1}
+        font-size: 14vw;`,
     XL: `
-        ${defaultStyles}
-        font-size: 33px;`,
+        ${specialStyles1}
+        font-size: 10vw;`,
     L: `
-        ${defaultStyles}
-        font-size: 29px;`,
+        ${specialStyles1}
+        font-size: 8vw;`,
     M: `
-        ${defaultStyles}
-        font-size: 25px;`,
+        ${specialStyles1}
+        font-size: 7vw;`,
     S: `
-        ${defaultStyles};
-        font-size: 21px;`,
-    bold: {
-      XXL: `
-          ${defaultStyles}
-          font-weight: bold;
-          font-size: 37px;`,
-      XL: `
-          ${defaultStyles}
-          font-weight: bold;
-          font-size: 33px;`,
-      L: `
-          ${defaultStyles}
-          font-weight: bold;
-          font-size: 29px;`,
-      M: `
-          ${defaultStyles}
-          font-weight: bold;
-          font-size: 25px;`,
-      S: `
-          ${defaultStyles}
-          font-weight: bold;
-          font-size: 21px;`,
-    },
+        ${specialStyles1};
+        font-size: 5vw;`,
+    XS: `
+        ${specialStyles1};
+        font-size: 4vw;`,
   },
   body: {
+    XL: `
+        ${defaultStyles}
+        font-size: 4vw;`,
     L: `
         ${defaultStyles}
-        font-size: 17px;`,
+        font-size: 3.5vw;`,
     M: `
         ${defaultStyles}
-        font-size: 15px;`,
+        font-size: 2.8vw;`,
     S: `
         ${defaultStyles}
-        font-size: 13px;`,
-    bold: {
-      L: `
-          ${defaultStyles}
-          font-weight: bold;
-          font-size: 17px;`,
-      M: `
-          ${defaultStyles}
-          font-weight: bold;
-          font-size: 15px;`,
-      S: `
-          ${defaultStyles}
-          font-weight: bold;
-          font-size: 13px;`,
-    },
+        font-size: 1.8vw;`,
+    XS: `
+        ${defaultStyles}
+        font-size: 1.2vw;`,
   },
 };
 

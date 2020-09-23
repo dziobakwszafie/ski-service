@@ -1,37 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 import arrow from "../../../../../assets/arrow.png";
+import device from "../../../../../styles/devices";
+import typography from "../../../../../styles/typography";
+import { queryForTitle, queryForText } from "../../../../../styles/devices";
+import { specialStyles1 } from "../../../../../styles/typography";
+import colors from "../../../../../styles/colors";
 
 const IntroStyles = styled.div`
   width: 100%;
   padding: 3vw;
-  @media only screen and (min-width: 1921px) {
-    font-size: 1.2vw;
-  }
-  @media only screen and (max-width: 1920px) {
-    font-size: 1.2vw;
-  }
-  @media only screen and (max-width: 1500px) {
-    font-size: 1.3vw;
-  }
-  @media only screen and (max-width: 1024px) {
-    font-size: 2.2vw;
-  }
 `;
 
 const IntroTitleStyles = styled.h2`
-  font-family: "Permanent Marker", cursive;
-  font-size: 2em;
-  padding-bottom: 2rem;
-  color: #0b8d99;
+  color: ${colors.text.Secondary1};
+  padding-bottom: 1rem;
   text-align: center;
+  ${queryForTitle}
 `;
 
 const IntroTextStyles = styled.p`
-  font-family: "Roboto", sans-serif;
-  font-size: 1em;
-  line-height: 1.5em;
+  color: ${colors.text.Primary1};
   margin-bottom: 1vw;
+  ${queryForText}
 `;
 
 const IntroArrowStyles = styled.div`
@@ -39,21 +30,22 @@ const IntroArrowStyles = styled.div`
   align-items: center;
 `;
 const IntroArrowTitleStyles = styled.h4`
-  font-family: "FlyingLeatherneck";
-  @media only screen and (min-width: 1921px) {
+  ${specialStyles1}
+  ${device.XXL} {
     font-size: 7vw;
   }
-  @media only screen and (max-width: 1920px) {
+  ${device.XL} {
     font-size: 7vw;
   }
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     font-size: 12vw;
   }
 `;
 const IntroArrowImgStyles = styled.div`
-  width: 60%;
+  width: 100%;
   margin: 4vw;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
+    width: 60%;
     transform: rotate(120deg);
   }
 `;
@@ -69,9 +61,9 @@ const Intro = () => {
 
       <IntroTextStyles>
         A tak na serio to od krawędzi zależy nie tylko to jak narta trzyma
-        podczas skrętu (bo to chyba wiadomo powszechnie) ale też w jaki sposób
-        będzie ona rozpoczynała skręt, wychodziła z niego oraz czy podczas jazdy
-        na wprost nie będzie zbyt nerwowa.
+        podczas skrętu ale też w jaki sposób będzie ona rozpoczynała skręt,
+        wychodziła z niego oraz czy podczas jazdy na wprost nie będzie zbyt
+        nerwowa.
       </IntroTextStyles>
 
       <IntroTextStyles>
@@ -79,7 +71,7 @@ const Intro = () => {
         bądźmy szczerzy, ja wiem że jak ktoś odda chociaż raz w roku narty do
         Decathlonu na serwis, to już jest sukces. Co się dzieje gdy narta nie
         jest nasmarowana? Slizg się utlenia, co uwidacznia się poprzez
-        powstawanie szarego nalotu, zmniejsza się jego hydrofobowość i zwiększa
+        powstawanie szarego nalotu. Zmniejsza się jego hydrofobowość i zwiększa
         szorstkość. Wpływa to nie tylko na to, że pojedziemy wolnej ale też moze
         być Ci trudniej zainicjować sam skręt albo hamowanie.
       </IntroTextStyles>

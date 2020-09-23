@@ -1,10 +1,48 @@
+import typography from "./typography";
+
 const device = {
-  mobile: `@media (max-width: 640px)`,
-  mobileL: `@media (max-width: 767px)`,
-  tablet: `@media (min-width: 768px)`,
-  tabletL: `@media (min-width: 1024px)`,
-  desktop: `@media (min-width: 1366px)`,
-  desktopFHD: `@media (min-width: 1920px)`,
+  XXL: `@media (min-width: 1920px)`,
+  XL: `@media (max-width: 1919px)`,
+  L: `@media (max-width: 1366px)`,
+  M: `@media (max-width: 1024px)`,
+  S: `@media (max-width: 767px)`,
+  XS: `@media (max-width: 640px)`,
 };
 
 export default device;
+
+export const queryForTitle = `
+${device.XXL} {
+  ${typography.header.XS}
+}
+${device.XL} {
+  ${typography.header.S}
+}
+${device.L} {
+  ${typography.header.S}
+}
+${device.M} {
+  ${typography.header.M}
+}
+${device.S} {
+  ${typography.header.XL}
+}
+`;
+
+export const queryForText = `
+${device.XXL} {
+  ${typography.body.XS}
+}
+${device.XL} {
+  ${typography.body.S}
+}
+${device.L} {
+  ${typography.body.S}
+}
+${device.M} {
+  ${typography.body.M}
+}
+${device.S} {
+  ${typography.body.M}
+}
+`;
