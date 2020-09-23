@@ -1,14 +1,14 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1ec336d873757ee04915296af299cecb",
+    "revision": "d90b6188c850f54f3baf6ad3aca2f58a",
     "url": "/ski-service/index.html"
   },
   {
-    "revision": "d41d45db1b4f7828a973",
-    "url": "/ski-service/static/css/2.25ff2e5b.chunk.css"
+    "revision": "22af0547e1426970794e",
+    "url": "/ski-service/static/css/2.8d4cdce2.chunk.css"
   },
   {
-    "revision": "d41d45db1b4f7828a973",
+    "revision": "22af0547e1426970794e",
     "url": "/ski-service/static/js/2.f67b8b32.chunk.js"
   },
   {
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ski-service/static/js/2.f67b8b32.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "31d558b464409a3a881f",
-    "url": "/ski-service/static/js/main.05ccbfe3.chunk.js"
+    "revision": "2c675344ab7b671067d4",
+    "url": "/ski-service/static/js/main.e5a76803.chunk.js"
   },
   {
     "revision": "7c48ae24717bce521ace",
     "url": "/ski-service/static/js/runtime-main.d6f484b2.js"
   },
   {
-    "revision": "b946496a28507616d5f0448cf7fa6a6b",
-    "url": "/ski-service/static/media/arrow.b946496a.png"
+    "revision": "56c988a677428d503242973bd8f303a0",
+    "url": "/ski-service/static/media/arrow.56c988a6.png"
   },
   {
     "revision": "1782eaa4c5042ddd5eb4762b62ae9d18",
