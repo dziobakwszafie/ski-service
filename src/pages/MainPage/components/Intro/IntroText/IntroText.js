@@ -9,14 +9,28 @@ import colors from "../../../../../styles/colors";
 
 const IntroStyles = styled.div`
   width: 100%;
-  padding: 3vw;
+  padding: 0 2vw 2vw 2vw;
 `;
 
 const IntroTitleStyles = styled.h2`
   color: ${colors.text.Secondary1};
   padding-bottom: 1rem;
   text-align: center;
-  ${queryForTitle}
+  ${device.XXL} {
+    ${typography.header.M}
+  }
+  ${device.XL} {
+    ${typography.header.M}
+  }
+  ${device.L} {
+    ${typography.header.M}
+  }
+  ${device.M} {
+    ${typography.header.M}
+  }
+  ${device.S} {
+    ${typography.header.XL}
+  }
 `;
 
 const IntroTextStyles = styled.p`
