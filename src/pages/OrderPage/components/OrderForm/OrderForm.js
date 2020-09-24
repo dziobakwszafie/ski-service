@@ -18,7 +18,7 @@ const OrderFormStyles = styled.div`
 
 const OrderformTitleStyle = styled.h3`
   ${queryForTitle}
-  color: ${colors.text.Primary3}
+  color: ${colors.text.Primary3};
 `;
 
 const OrderForm = () => {
