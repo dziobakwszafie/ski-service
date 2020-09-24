@@ -4,113 +4,85 @@ import { logoutUser } from "../../redux/actions";
 import { useSelector, useDispatch } from "react-redux";
 import { specialStyles1 } from "../../styles/typography";
 import colors from "../../styles/colors";
+import { Link } from "react-router-dom";
+import { slide as Menu } from "react-burger-menu";
 
 const HeaderStyles = styled.div`
   width: 100%;
   height: 100%;
 `;
 
-const NavStyles = styled.nav`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  background-color: ${colors.background.Primary3};
-  ul {
-    position: absolute;
-    right: 0;
-  }
-
-  .menu {
+const Nav2 = styled.div`
+  .navBar {
     display: flex;
+    background-color: rgba(133, 187, 8, 0.582);
+    height: inherit;
+  }
+  h1 {
+    display: inline;
+    margin-left: 2rem;
+    font-family: "Fredericka the Great", cursive;
+    font-weight: lighter;
+    font-size: 3em;
+    background: -webkit-linear-gradient(rgb(6, 10, 6), rgb(18, 134, 2));
   }
 
-  .menu a {
+  .navbar-links-item {
+    display: inline-block;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .menu-item {
+    color: white;
     text-decoration: none;
-    transition: 0.4s;
-    padding: 0 5px;
-    margin-left: 15px;
-    color: ${colors.text.Primary1};
-    font-weight: 600;
+    list-style: none;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
   }
 
-  .menu a:last-of-type {
-    margin-right: 50px;
+  .bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right: 30px;
+    top: 20px;
   }
 
-  .button--show-menu,
-  .button--hide-menu {
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    font-size: 1.5em;
-    cursor: pointer;
-    display: none;
+  .bm-burger-bars {
+    background: #1a2701;
   }
 
-  .button--show-menu {
-    float: right;
+  .bm-burger-bars-hover {
+    background: #f7f6f8;
   }
 
-  .menu a:hover {
-    color: red;
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
   }
 
-  #check {
-    position: absolute;
-    visibility: hidden;
+  .bm-menu {
+    background: #040b2c85;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
   }
 
-  @media screen and (max-width: 1180px) {
-    .button--show-menu,
-    .button--hide-menu {
-      display: block;
-      position: absolute;
-      right: 2vw;
-      font-size: 2.2em;
-      @media only screen and (max-width: 500px) {
-        font-size: 1.5em;
-      }
-    }
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.1%;
+  }
 
-    .menu {
-      position: fixed;
-      width: 100%;
-      right: -100%;
-      top: 0;
-      text-align: center;
-      padding: 80px 0;
-      line-height: normal;
-      -webkit-transition: 0.7s;
-      transition: 0.7s;
-      width: 40%;
-      display: flex;
-      flex-direction: column;
-    }
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+  }
 
-    .menu a {
-      display: block;
-      padding: 0.8rem;
-      opacity: 1;
-      margin: auto;
-    }
-
-    .menu a:last-of-type {
-      margin-right: 0;
-    }
-
-    .button--hide-menu {
-      position: absolute;
-      top: 1.6rem;
-      right: 1.6rem;
-    }
-
-    #check:checked ~ .menu {
-      right: 0;
-    }
-
-    #check:checked ~ .button--show-menu {
-      visibility: hidden;
-    }
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(255, 255, 255, 0) !important;
+    width: 150% !important;
   }
 `;
 
@@ -131,7 +103,7 @@ const SubtitleStyles = styled.h4`
 `;
 
 const LogoutStyles = styled.p`
-  color: grey;
+  color: red;
 `;
 
 const Header = () => {
@@ -143,37 +115,49 @@ const Header = () => {
 
   return (
     <HeaderStyles>
-      <NavStyles>
-        <SubtitleStyles>
-          <a href="#">NIESMIALI ROMANTYCY </a>
-        </SubtitleStyles>
+      <SubtitleStyles>
+        <a href="#">NIESMIALI ROMANTYCY </a>
+      </SubtitleStyles>
 
-        <input type="checkbox" id="check" />
-        <label for="check" class="button--show-menu">
-          <i class="fas fa-bars"></i>
-        </label>
-        <ul class="menu">
-          <a href="#">STRONA GŁÓWNA</a>
+      <Nav2>
+        <div className="navBar" data-testid="navBar">
+          <Menu disableAutoFocus isOpen={false} right>
+            <li className="navbar-links-item">
+              <Link to="/" className="menu-item">
+                STRONA GŁÓWNA
+              </Link>
+            </li>
 
-          {authenticated === false && <a href="#login">LOGOWANIE</a>}
-          <a href="#order">ZAMÓW SERWIS</a>
-          {authenticated === true && (
-            <a
-              href="#"
-              onClick={() => {
-                dispatch(logoutUser());
-              }}
-            >
-              <LogoutStyles>WYLOGUJ</LogoutStyles>
-              {/* cant do only onClick={dispatch(logoutUser()) because u have 2 pass function to onClick instead of just calling it */}
-            </a>
-          )}
+            {authenticated === false && (
+              <li className="navbar-links-item">
+                <Link to="/login" className="menu-item">
+                  LOGOWANIE
+                </Link>
+              </li>
+            )}
 
-          <label for="check" class="button--hide-menu">
-            <i class="fas fa-times"></i>
-          </label>
-        </ul>
-      </NavStyles>
+            <li className="navbar-links-item">
+              <Link to="/order" className="menu-item">
+                ZAMÓW SERWIS
+              </Link>
+            </li>
+
+            {authenticated === true && (
+              <li className="navbar-links-item">
+                <a
+                  href="#"
+                  onClick={() => {
+                    dispatch(logoutUser());
+                  }}
+                >
+                  <LogoutStyles>WYLOGUJ</LogoutStyles>
+                  {/* cant do only onClick={dispatch(logoutUser()) because u have 2 pass function to onClick instead of just calling it */}
+                </a>
+              </li>
+            )}
+          </Menu>
+        </div>
+      </Nav2>
     </HeaderStyles>
   );
 };
