@@ -4,11 +4,14 @@ import SignupComponent from "./components/SignupComponent/SignupComponent";
 import Footer from "../../components/Footer/Footer";
 import styled from "styled-components";
 import lift from "../../assets/lift.jpg";
-import signup from "../../assets/signup.png";
+import signup from "../../assets/signup.PNG";
 import whatshere from "../../assets/whatshere.png";
 import exercise from "../../assets/exercise.gif";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import colors from "../../styles/colors";
+import device from "../../styles/devices";
+import { specialStyles1 } from "../../styles/typography";
 
 function ScrollToTopOnMount() {
   useEffect(() => {
@@ -23,10 +26,10 @@ const Main = styled.div`
   grid-template-columns: auto 57.83333vw;
   grid-template-rows: 26vw 34vw;
   grid-gap: 0.23333vw;
-  background-color: #000;
-  border-bottom: 0.23333vw solid #000;
-  border-top: 0.23333vw solid #000;
-  @media only screen and (max-width: 1024px) {
+  background-color: ${colors.background.Primary1};
+  border-bottom: 0.23333vw solid ${colors.background.Primary1};
+  border-top: 0.23333vw solid ${colors.background.Primary1};
+  ${device.M} {
     grid-template-rows: 45vw auto;
     grid-template-columns: 50vw auto;
   }
@@ -36,7 +39,7 @@ const First = styled.div`
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   background-image: url("${lift}");
   background-position: center;
   background-repeat: no-repeat;
@@ -44,7 +47,7 @@ const First = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -56,11 +59,11 @@ const Second = styled.div`
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   display: flex;
   align-items: center;
   justify-content: center;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -72,7 +75,7 @@ const Third = styled.div`
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   background-image: url("${whatshere}");
   background-position: center;
   background-repeat: no-repeat;
@@ -83,7 +86,7 @@ const Third = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
   }
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -102,7 +105,7 @@ const BackToLoginStyles = styled.div`
   width: 50%;
   height: 50%;
   background: rgba(0, 0, 0, 0.4);
-  font-family: "FlyingLeatherneck";
+  border-radius: 5px;
   font-size: 3vw;
   color: white;
   display: flex;
@@ -112,7 +115,7 @@ const BackToLoginStyles = styled.div`
   :hover {
     background: black;
   }
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     font-size: 3rem;
   }
   @media only screen and (max-width: 600px) {
@@ -120,9 +123,14 @@ const BackToLoginStyles = styled.div`
   }
 `;
 
+const Wrapper = styled.div`
+  ${specialStyles1}
+  color: ${colors.text.Primary2};
+`;
+
 const SignupComponentStyles = styled.div`
   width: 35vw;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     width: 50vw;
   }
 `;
@@ -142,7 +150,9 @@ const LoginPage = () => {
       <Main>
         <First>
           <BackToLoginStyles>
-            <Link to={`/login`}>POWROT DO LOGOWANIA</Link>
+            <Link to={`/login`}>
+              <Wrapper>POWROT DO LOGOWANIA</Wrapper>
+            </Link>
           </BackToLoginStyles>
         </First>
         <Second>

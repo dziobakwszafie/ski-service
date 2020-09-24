@@ -11,6 +11,8 @@ import { useSelector } from "react-redux";
 import styled from "styled-components";
 import dayjs from "dayjs";
 import "dayjs/locale/pl";
+import { queryForTitle } from "../../../../styles/devices";
+import colors from "../../../../styles/colors";
 
 const useStyles = makeStyles({
   table: {
@@ -26,12 +28,8 @@ const HistoryTableStyle = styled.div`
 `;
 
 const HistoryTitleStyle = styled.h3`
-  font-family: "FlyingLeatherneck";
-  font-size: 3rem;
-  margin-bottom: 2vw;
-  @media only screen and (max-width: 1024px) {
-    font-size: 2rem;
-  }
+  ${queryForTitle}
+  color: ${colors.text.Primary4}
 `;
 
 const HistorySection = () => {

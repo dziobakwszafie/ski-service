@@ -9,13 +9,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { SET_LOADING } from "../../../../redux/actionTypes/types";
 import { login } from "../../../../redux/actions";
 import { useHistory } from "react-router-dom";
+import { queryForTitle } from "../../../../styles/devices";
 
 const LoginTitleStyle = styled.h3`
-  font-family: "FlyingLeatherneck";
-  font-size: 3rem;
-  @media only screen and (max-width: 1024px) {
-    font-size: 2rem;
-  }
+  ${queryForTitle}
 `;
 
 const LoginComponent = () => {

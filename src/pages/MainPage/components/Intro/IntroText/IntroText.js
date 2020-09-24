@@ -3,7 +3,7 @@ import styled from "styled-components";
 import arrow from "../../../../../assets/arrow.png";
 import device from "../../../../../styles/devices";
 import typography from "../../../../../styles/typography";
-import { queryForTitle, queryForText } from "../../../../../styles/devices";
+import { queryForText } from "../../../../../styles/devices";
 import { specialStyles1 } from "../../../../../styles/typography";
 import colors from "../../../../../styles/colors";
 

@@ -7,16 +7,18 @@ import Footer from "../../components/Footer/Footer";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import colors from "../../styles/colors";
+import device from "../../styles/devices";
 
 const OrderMainSection = styled.div`
   display: grid;
   grid-template-columns: 57.83333vw auto;
   grid-template-rows: auto auto;
   grid-gap: 0.2vw;
-  background-color: #000;
-  border-bottom: 0.2vw solid #000;
-  border-top: 0.2vw solid #000;
-  @media only screen and (max-width: 1024px) {
+  background-color: ${colors.background.Primary1};
+  border-bottom: 0.23333vw solid ${colors.background.Primary1};
+  border-top: 0.23333vw solid ${colors.background.Primary1};
+  ${device.M} {
     grid-template-rows: auto auto auto;
     grid-template-columns: 100vw;
   }
@@ -26,11 +28,11 @@ const First = styled.div`
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   display: flex;
   justify-content: center;
   align-items: center;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -42,11 +44,11 @@ const Second = styled.div`
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: #fff;
+  background-color: ${colors.background.Primary2};
   display: flex;
   justify-content: center;
   align-items: center;
-  @media only screen and (max-width: 1024px) {
+  ${device.M} {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -58,9 +60,8 @@ const Third = styled.div`
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: #fff;
-
-  @media only screen and (max-width: 1024px) {
+  background-color: ${colors.background.Primary2};
+  ${device.M} {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;

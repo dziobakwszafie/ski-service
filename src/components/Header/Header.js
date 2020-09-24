@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { logoutUser } from "../../redux/actions";
 import { useSelector, useDispatch } from "react-redux";
+import { specialStyles1 } from "../../styles/typography";
+import colors from "../../styles/colors";
 
 const HeaderStyles = styled.div`
   width: 100%;
@@ -13,6 +15,7 @@ const NavStyles = styled.nav`
   height: 100%;
   display: flex;
   align-items: center;
+  background-color: ${colors.background.Primary3};
   ul {
     position: absolute;
     right: 0;
@@ -27,7 +30,7 @@ const NavStyles = styled.nav`
     transition: 0.4s;
     padding: 0 5px;
     margin-left: 15px;
-    color: #000;
+    color: ${colors.text.Primary1};
     font-weight: 600;
   }
 
@@ -72,7 +75,6 @@ const NavStyles = styled.nav`
     .menu {
       position: fixed;
       width: 100%;
-      background: #ffffff9f;
       right: -100%;
       top: 0;
       text-align: center;
@@ -113,7 +115,6 @@ const NavStyles = styled.nav`
 `;
 
 const SubtitleStyles = styled.h4`
-  font-family: "FlyingLeatherneck";
   font-size: 5vw;
   color: black;
   position: absolute;
@@ -123,6 +124,9 @@ const SubtitleStyles = styled.h4`
   }
   @media only screen and (max-width: 550px) {
     font-size: 8.5vw;
+  }
+  a {
+    ${specialStyles1}
   }
 `;
 

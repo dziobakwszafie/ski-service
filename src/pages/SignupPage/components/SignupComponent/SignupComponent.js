@@ -10,13 +10,10 @@ import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { SET_LOADING } from "../../../../redux/actionTypes/types";
 import { signup } from "../../../../redux/actions";
+import { queryForTitle } from "../../../../styles/devices";
 
 const LoginTitleStyle = styled.h3`
-  font-family: "FlyingLeatherneck";
-  font-size: 3rem;
-  @media only screen and (max-width: 1024px) {
-    font-size: 2rem;
-  }
+  ${queryForTitle}
 `;
 
 const SuccessMessageStyle = styled.p`
@@ -80,7 +77,7 @@ const SignupComponent = () => {
     <ThemeProvider theme={theme}>
       <Box w="100%" p={4}>
         <div>
-          <LoginTitleStyle>Zarejestruj</LoginTitleStyle>
+          <LoginTitleStyle>Rejestruj</LoginTitleStyle>
 
           <Formik
             initialValues={initialValues}
