@@ -125,13 +125,13 @@ const NavLink = styled(Link)`
 
 const Try = ({ reference }) => {
   return (
-    <Main>
+    <Main ref={reference}>
       <First>
         <IntroText />
       </First>
       <Second></Second>
       <Third></Third>
-      <Fourth ref={reference}>
+      <Fourth>
         <NavLink to={`/login`}>
           <div>
             <LinkStyles>ZAMÓW</LinkStyles>

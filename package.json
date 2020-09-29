@@ -51,5 +51,12 @@
       "last 1 safari version"
     ],
     "proxy": "https://europe-west3-ski-service-91995.cloudfunctions.net/api/orders"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-git": "^2.10.1",
+    "gulp-prompt": "^1.2.0",
+    "run-sequence": "^2.2.1",
+    "yargs": "^16.0.3"
   }
 }
