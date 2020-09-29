@@ -5,7 +5,7 @@ import colors from "../../../../styles/colors";
 
 const DescrTitleStyle = styled.h3`
   ${queryForTitle}
-  color: ${colors.text.Primary6}
+  color: ${colors.text.Primary6};
 `;
 
 const OrderDesc = () => {

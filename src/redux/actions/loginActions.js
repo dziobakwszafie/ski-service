@@ -4,7 +4,7 @@ import {
   SET_SUCCESS_MESSAGE,
   SET_UNAUTHENTICATED,
   SET_USER,
-} from "../actionTypes/types";
+} from "../actionTypes/loginTypes";
 import axios from "axios";
 
 export const login = (loginData) => (dispatch) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { logoutUser } from "../../redux/actions";
+import { logoutUser } from "../../redux/actions/loginActions";
 import { useSelector, useDispatch } from "react-redux";
 import { specialStyles1 } from "../../styles/typography";
 import colors from "../../styles/colors";
@@ -67,6 +67,7 @@ const NavStyles = styled.nav`
       position: fixed;
       width: 100%;
       right: -100%;
+      background-color: white;
       top: 0;
       text-align: center;
       padding: 80px 0;
@@ -83,9 +84,12 @@ const NavStyles = styled.nav`
       padding: 0.8rem;
       opacity: 1;
       margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .menu a:last-of-type {
-      margin-right: 0;
+      margin-right: auto;
     }
     .button--hide-menu {
       position: absolute;

@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import styled from "styled-components";
-import axios from "axios";
 import { theme, ThemeProvider } from "@chakra-ui/core";
 import FormikControl from "../../../../components/FormikControl/FormikControl";
 import { Button, Box, Spinner } from "@chakra-ui/core";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { SET_LOADING } from "../../../../redux/actionTypes/types";
-import { signup } from "../../../../redux/actions";
+import { SET_LOADING } from "../../../../redux/actionTypes/loginTypes";
+import { signup } from "../../../../redux/actions/loginActions";
 import { queryForTitle } from "../../../../styles/devices";
 
 const LoginTitleStyle = styled.h3`
@@ -32,12 +31,27 @@ const SignupComponent = () => {
     name: "",
     phone: "",
   };
+
+  const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
   const validationSchema = Yup.object({
-    email: Yup.string().required("Required"),
-    password: Yup.string().required("Required"),
-    confirmPassword: Yup.string().required("Required"),
-    name: Yup.string().required("Required"),
-    phone: Yup.string().required("Required"),
+    email: Yup.string()
+      .email("Zły format maila")
+      .required("Nie może być puste"),
+    password: Yup.string()
+      .min(6, "Minimum 6 znaków")
+      .required("Nie może być puste"),
+    confirmPassword: Yup.string()
+      .oneOf([Yup.ref("password")], "Hasła nie pasują")
+      .required("Nie może być puste"),
+    name: Yup.string()
+      .min(2, "Mininum 4 znaki")
+      .max(20, "Maximum 20 znaków")
+      .required("Nie może być puste"),
+    phone: Yup.string()
+      .matches(phoneRegExp, "Zły format")
+      .length(9, "Numer musi mieć 9 znaków")
+      .required("Nie może być puste"),
   });
 
   const loadingMessage = useSelector(
@@ -58,7 +72,6 @@ const SignupComponent = () => {
     }, 2000);
   }
 
-  let signupData = {};
   const onSubmit = (values) => {
     console.log("Form data", values);
     console.log("Saved data", JSON.parse(JSON.stringify(values)));

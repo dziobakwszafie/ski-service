@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import FormikControl from "../../../../components/FormikControl/FormikControl";
@@ -6,8 +6,8 @@ import styled from "styled-components";
 import { theme, ThemeProvider } from "@chakra-ui/core";
 import { Button, Box, Spinner } from "@chakra-ui/core";
 import { useSelector, useDispatch } from "react-redux";
-import { SET_LOADING } from "../../../../redux/actionTypes/types";
-import { login } from "../../../../redux/actions";
+import { SET_LOADING } from "../../../../redux/actionTypes/loginTypes";
+import { login } from "../../../../redux/actions/loginActions";
 import { useHistory } from "react-router-dom";
 import { queryForTitle } from "../../../../styles/devices";
 
@@ -16,9 +16,6 @@ const LoginTitleStyle = styled.h3`
 `;
 
 const LoginComponent = () => {
-  const dispatch = useDispatch();
-  const history = useHistory();
-
   const initialValues = {
     email: "",
     password: "",
@@ -27,6 +24,9 @@ const LoginComponent = () => {
     email: Yup.string().required("Required"),
     password: Yup.string().required("Required"),
   });
+
+  const dispatch = useDispatch();
+  const history = useHistory();
 
   const loadingMessage = useSelector(
     (state) => state.loginReducer.loadingMessage

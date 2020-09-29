@@ -10,8 +10,8 @@ import axios from "axios";
 import store from "./redux/reducers";
 import { customTheme } from "./util/theme";
 import { ThemeProvider, CSSReset } from "@chakra-ui/core";
-import { logoutUser, getUserData } from "./redux/actions";
-import { SET_AUTHENTICATED } from "./redux/actionTypes/types";
+import { logoutUser, getUserData } from "./redux/actions/loginActions";
+import { SET_AUTHENTICATED } from "./redux/actionTypes/loginTypes";
 import { useDispatch } from "react-redux";
 
 axios.defaults.baseURL =
