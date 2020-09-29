@@ -123,7 +123,7 @@ const BackToLoginStyles = styled.div`
   }
 `;
 
-const Wrapper = styled.div`
+const LinkStyles = styled.div`
   ${specialStyles1}
   color: ${colors.text.Primary2};
 `;
@@ -133,6 +133,14 @@ const SignupComponentStyles = styled.div`
   ${device.M} {
     width: 50vw;
   }
+`;
+
+const NavLink = styled(Link)`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const FooterStyles = styled.div`
@@ -150,9 +158,9 @@ const LoginPage = () => {
       <Main>
         <First>
           <BackToLoginStyles>
-            <Link to={`/login`}>
-              <Wrapper>POWROT DO LOGOWANIA</Wrapper>
-            </Link>
+            <NavLink to={`/login`}>
+              <LinkStyles>POWROT DO LOGOWANIA</LinkStyles>
+            </NavLink>
           </BackToLoginStyles>
         </First>
         <Second>

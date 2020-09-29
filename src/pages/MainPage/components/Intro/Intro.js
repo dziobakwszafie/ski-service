@@ -123,8 +123,6 @@ const NavLink = styled(Link)`
   align-items: center;
 `;
 
-const Wrapper = styled.div``;
-
 const Try = () => {
   return (
     <Main>
@@ -135,10 +133,10 @@ const Try = () => {
       <Third></Third>
       <Fourth>
         <NavLink to={`/login`}>
-          <Wrapper>
+          <div>
             <LinkStyles>ZAMÓW</LinkStyles>
             <LinkStyles>SERWIS</LinkStyles>
-          </Wrapper>
+          </div>
         </NavLink>
       </Fourth>
       <Fifth></Fifth>
