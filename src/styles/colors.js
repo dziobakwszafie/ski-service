@@ -6,6 +6,7 @@ const colors = {
     Primary4: "#f5b60a",
     Primary5: "#f37736",
     Primary6: "#ed5c8a",
+    Primary7: "#333333",
     Secondary1: "#008000",
   },
   background: {

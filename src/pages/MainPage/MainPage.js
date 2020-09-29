@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import MainHeader from "./components/MainHeader/MainHeader";
 import Content from "./components/Content/Content";
 import Intro from "./components/Intro/Intro";
 import Footer from "../../components/Footer/Footer";
 
 const MainPage = () => {
+  const scrollToDiv = (ref) => window.scrollTo(0, ref.current.offsetTop);
+  const el1 = useRef();
+  const el2 = useRef();
   return (
     <>
-      <MainHeader />
-      <Intro />
+      <MainHeader reference={el1} click={() => scrollToDiv(el2)} />
+      <Intro reference={el2} />
       <Content />
       <Footer />
     </>

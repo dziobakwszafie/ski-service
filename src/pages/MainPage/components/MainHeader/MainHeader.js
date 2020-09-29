@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import typography from "../../../../styles/typography";
 import colors from "../../../../styles/colors";
+import device from "../../../../styles/devices";
+import { Link } from "react-router-dom";
 
 const HeaderStyles = styled.div`
   height: 56.25vw;
@@ -59,7 +61,68 @@ const SubtitleStyles = styled.h2`
   white-space: nowrap;
 `;
 
-const MainHeader = () => {
+const Wrapper = styled.div`
+  position: absolute;
+  top: 5vw;
+  left: 5vw;
+`;
+
+const Wrapper2 = styled.div`
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+const ButtonStyles = styled.a`
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: ${colors.text.Primary7};
+  border: 2px solid ${colors.text.Primary7};
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  ${device.S} {
+    width: 120px;
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+
+  :after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: ${colors.background.Secondary1};
+    transition: all 0.35s;
+  }
+
+  :hover {
+    color: ${colors.text.Primary2};
+    cursor: pointer;
+  }
+
+  :hover:after {
+    width: 100%;
+  }
+`;
+
+const MainHeader = ({ reference, click }) => {
   return (
     <HeaderStyles>
       <VideoContainer>
@@ -80,6 +143,18 @@ const MainHeader = () => {
       <OverflowStyles>
         <TitleStyles>NIESMIALI ROMANTYCY</TitleStyles>
         <SubtitleStyles>SERVICE DEPARTMENT</SubtitleStyles>
+        <Wrapper>
+          <ButtonStyles href="#">
+            <Link to={`/order`}>
+              <span>Złóż zamówienie</span>
+            </Link>
+          </ButtonStyles>
+        </Wrapper>
+        <Wrapper2 ref={reference}>
+          <ButtonStyles onClick={click}>
+            <span>Przejdź niżej!</span>
+          </ButtonStyles>
+        </Wrapper2>
       </OverflowStyles>
     </HeaderStyles>
   );

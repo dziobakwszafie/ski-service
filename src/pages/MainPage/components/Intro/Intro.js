@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import IntroText from "./IntroText/IntroText";
 import { Link } from "react-router-dom";
@@ -123,7 +123,7 @@ const NavLink = styled(Link)`
   align-items: center;
 `;
 
-const Try = () => {
+const Try = ({ reference }) => {
   return (
     <Main>
       <First>
@@ -131,7 +131,7 @@ const Try = () => {
       </First>
       <Second></Second>
       <Third></Third>
-      <Fourth>
+      <Fourth ref={reference}>
         <NavLink to={`/login`}>
           <div>
             <LinkStyles>ZAMÓW</LinkStyles>
