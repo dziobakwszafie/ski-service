@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { logoutUser } from "../../redux/actions/loginActions";
+import { logoutUser, getUserData } from "../../redux/actions/loginActions";
 import { useSelector, useDispatch } from "react-redux";
 import { specialStyles1 } from "../../styles/typography";
 import colors from "../../styles/colors";
@@ -148,7 +148,17 @@ const Header = () => {
 
           {authenticated === false && <a href="#login">LOGOWANIE</a>}
           {authenticated === true && <a href="#order">ZAMÓW SERWIS</a>}
-          {authenticated === true && <a href="#history">HISTORIA ZAMÓWIEŃ</a>}
+          {authenticated === true && (
+            <a
+              href="#history"
+              onClick={() => {
+                dispatch(getUserData());
+              }}
+            >
+              HISTORIA ZAMÓWIEŃ
+            </a>
+          )}
+          <a href="#fastprices">SPRAWDŹ CENY</a>
 
           {authenticated === true && (
             <a
@@ -161,7 +171,6 @@ const Header = () => {
               {/* cant do only onClick={dispatch(logoutUser()) because u have 2 pass function to onClick instead of just calling it */}
             </a>
           )}
-
           <label for="check" class="button--hide-menu">
             <i class="fas fa-times"></i>
           </label>

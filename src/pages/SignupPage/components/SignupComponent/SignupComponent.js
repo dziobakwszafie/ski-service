@@ -69,6 +69,7 @@ const SignupComponent = () => {
   if (authenticated === true) {
     setInterval(function () {
       history.push("/order");
+      window.location.reload();
     }, 2000);
   }
 

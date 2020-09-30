@@ -13,7 +13,9 @@ function ChakraInput(props) {
     <Field name={name}>
       {({ field, form }) => (
         <FormControl isInvalid={form.errors[name] && form.touched[name]}>
-          <FormLabel htmlFor={name}>{label}</FormLabel>
+          <FormLabel htmlFor={name}>
+            <b>{label}</b>
+          </FormLabel>
           <Input id={name} {...rest} {...field} />
           <FormErrorMessage>{form.errors[name]}</FormErrorMessage>
         </FormControl>

@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../components/Header/Header";
-import HistorySection from "./components/HistorySection/HistorySection";
+import FastPrices from "./components/FastPrices/FastPrices";
 import Footer from "../../components/Footer/Footer";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
@@ -8,9 +8,9 @@ import styled from "styled-components";
 import colors from "../../styles/colors";
 import device from "../../styles/devices";
 
-const HistoryStyles = styled.div``;
+const FastPricesStyles = styled.div``;
 
-const HistoryPageStyles = styled.div`
+const FastPricesPageStyles = styled.div`
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
@@ -49,32 +49,22 @@ const HeaderStyles = styled.div`
   }
 `;
 
-const HistoryPage = () => {
-  const history = useHistory();
-
-  const authenticated = useSelector(
-    (state) => state.loginReducer.authenticated
-  );
-
-  if (authenticated === false) {
-    history.push("/login");
-  }
-
+const FastPricesPage = () => {
   return (
-    <HistoryStyles>
+    <FastPricesStyles>
       <HeaderStyles>
         <Header />
       </HeaderStyles>
 
-      <HistoryPageStyles>
+      <FastPricesPageStyles>
         <First>
-          <HistorySection />
+          <FastPrices />
         </First>
-      </HistoryPageStyles>
+      </FastPricesPageStyles>
 
       <Footer />
-    </HistoryStyles>
+    </FastPricesStyles>
   );
 };
 
-export default HistoryPage;
+export default FastPricesPage;

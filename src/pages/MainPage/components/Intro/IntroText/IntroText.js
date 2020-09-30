@@ -31,10 +31,12 @@ const IntroTitleStyles = styled.h2`
   ${device.S} {
     ${typography.header.XL}
   }
+  border-bottom: solid 0.33333vw ${colors.text.Primary1}; ;
 `;
 
 const IntroTextStyles = styled.p`
   color: ${colors.text.Primary1};
+  margin-top: 2vw;
   margin-bottom: 1vw;
   ${queryForText}
 `;
