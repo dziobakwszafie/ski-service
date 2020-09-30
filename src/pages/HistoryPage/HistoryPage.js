@@ -18,7 +18,7 @@ const HistoryPageStyles = styled.div`
   background-color: ${colors.background.Primary1};
   border-bottom: 0.23333vw solid ${colors.background.Primary1};
   border-top: 0.23333vw solid ${colors.background.Primary1};
-  height: 80vh;
+  min-height: 80vh;
   ${device.M} {
     grid-template-rows: auto;
     grid-template-columns: 100vw;

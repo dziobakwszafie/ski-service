@@ -8,6 +8,12 @@ import { Button } from "@chakra-ui/core";
 import ReCAPTCHA from "react-google-recaptcha";
 import { queryForTitle } from "../../../../styles/devices";
 import colors from "../../../../styles/colors";
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from "@chakra-ui/core";
 
 const OrderFormStyles = styled.div`
   display: flex;
@@ -19,6 +25,17 @@ const OrderFormStyles = styled.div`
 const OrderformTitleStyle = styled.h3`
   ${queryForTitle}
   color: ${colors.text.Primary3};
+`;
+
+const FormWrapper = styled(Form)`
+  * {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+`;
+
+const MessageStyles = styled.p`
+  margin-top: 15px;
 `;
 
 const OrderForm = () => {
@@ -73,7 +90,7 @@ const OrderForm = () => {
   });
 
   const [disableSubmit, setDisableSubmit] = useState(true);
-  let [successMessage, setMessage] = useState();
+  let [message, setMessage] = useState();
 
   const onSubmit = (values) => {
     console.log("Form data", values);
@@ -90,7 +107,18 @@ const OrderForm = () => {
       console.log(res.data);
 
       setMessage(
-        (successMessage = res.data ? "Zamówienie wysłano" : "Coś nie pykło")
+        // (message = res.data ? "Zamówienie wysłano" : "Coś nie wyszło")
+        (message = res.data ? (
+          <Alert status="success">
+            <AlertIcon />
+            Zamówienie zostało wysłane!
+          </Alert>
+        ) : (
+          <Alert status="error">
+            <AlertIcon />
+            Oj oj coś nie poszło
+          </Alert>
+        ))
       );
     });
   };
@@ -105,7 +133,7 @@ const OrderForm = () => {
           onSubmit={onSubmit}
         >
           {(formik) => (
-            <Form>
+            <FormWrapper>
               <FormikControl
                 control="chakraInput"
                 type="skis"
@@ -158,6 +186,9 @@ const OrderForm = () => {
                 onChange={() => setDisableSubmit(false)}
               />
               <Button
+                my="10px"
+                leftIcon="arrow-forward"
+                variantColor="teal"
                 type="submit"
                 disabled={
                   !formik.isValid ||
@@ -168,10 +199,10 @@ const OrderForm = () => {
               >
                 Submit
               </Button>
-            </Form>
+            </FormWrapper>
           )}
         </Formik>
-        {successMessage}
+        <MessageStyles>{message}</MessageStyles>
       </div>
     </OrderFormStyles>
   );

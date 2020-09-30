@@ -8,6 +8,7 @@ const colors = {
     Primary6: "#ed5c8a",
     Primary7: "#333333",
     Secondary1: "#008000",
+    Secondary2: "#FF0000",
   },
   background: {
     Primary1: "#000",
