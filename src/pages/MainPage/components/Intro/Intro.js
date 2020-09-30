@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import IntroText from "./IntroText/IntroText";
 import { Link } from "react-router-dom";
