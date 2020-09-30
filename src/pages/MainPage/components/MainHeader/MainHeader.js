@@ -69,6 +69,12 @@ const Wrapper = styled.div`
 
 const Wrapper2 = styled.div`
   position: absolute;
+  top: 10vw;
+  left: 5vw;
+`;
+
+const Wrapper3 = styled.div`
+  position: absolute;
   bottom: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -122,6 +128,14 @@ const ButtonStyles = styled.a`
   }
 `;
 
+const ButtonSecondStyles = styled(ButtonStyles)`
+  border: 2px solid ${colors.text.Primary5};
+
+  :after {
+    background-color: ${colors.background.Primary4};
+  }
+`;
+
 const MainHeader = ({ reference, click }) => {
   return (
     <HeaderStyles>
@@ -150,11 +164,18 @@ const MainHeader = ({ reference, click }) => {
             </Link>
           </ButtonStyles>
         </Wrapper>
-        <Wrapper2 ref={reference}>
-          <ButtonStyles onClick={click}>
-            <span>Przejdź niżej!</span>
+        <Wrapper2>
+          <ButtonStyles href="#">
+            <Link to={`/fastprices`}>
+              <span>Sprawdź ceny</span>
+            </Link>
           </ButtonStyles>
         </Wrapper2>
+        <Wrapper3 ref={reference}>
+          <ButtonSecondStyles onClick={click}>
+            <span>Przejdź niżej!</span>
+          </ButtonSecondStyles>
+        </Wrapper3>
       </OverflowStyles>
     </HeaderStyles>
   );

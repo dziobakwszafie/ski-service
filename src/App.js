@@ -5,6 +5,7 @@ import OrderPage from "./pages/OrderPage/OrderPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import HistoryPage from "./pages/HistoryPage/HistoryPage";
+import FastPricesPage from "./pages/FastPricesPage/FastPricesPage";
 import AuthRoute from "./util/AuthRoute";
 import jwtDecode from "jwt-decode";
 import axios from "axios";
@@ -54,6 +55,7 @@ const App = () => {
           <Route path="/signup" exact component={SignupPage} />
           <Route path="/order" exact component={OrderPage} />
           <Route path="/history" exact component={HistoryPage} />
+          <Route path="/fastprices" exact component={FastPricesPage} />
         </Switch>
       </Router>
     </ThemeProvider>
