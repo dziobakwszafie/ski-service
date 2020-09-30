@@ -29,10 +29,13 @@ const HistoryTableStyle = styled.div`
 
 const HistoryTitleStyle = styled.h3`
   ${queryForTitle}
-  color: ${colors.text.Primary4}
+  color: ${colors.text.Primary4};
 `;
 
 const HistorySection = () => {
+  // const dispatch = useDispatch();
+  // dispatch(getUserData());
+
   const userOrders = useSelector((state) => state.loginReducer.orders);
   const classes = useStyles();
   dayjs.locale("pl");

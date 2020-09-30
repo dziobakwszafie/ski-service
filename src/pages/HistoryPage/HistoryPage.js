@@ -8,6 +8,8 @@ import styled from "styled-components";
 import colors from "../../styles/colors";
 import device from "../../styles/devices";
 
+const HistoryStyles = styled.div``;
+
 const HistoryPageStyles = styled.div`
   display: grid;
   grid-template-columns: auto;
@@ -16,11 +18,13 @@ const HistoryPageStyles = styled.div`
   background-color: ${colors.background.Primary1};
   border-bottom: 0.23333vw solid ${colors.background.Primary1};
   border-top: 0.23333vw solid ${colors.background.Primary1};
+  height: 80vh;
   ${device.M} {
     grid-template-rows: auto;
     grid-template-columns: 100vw;
   }
 `;
+
 const First = styled.div`
   grid-column-start: 1;
   grid-column-end: 2;
@@ -57,7 +61,7 @@ const HistoryPage = () => {
   }
 
   return (
-    <>
+    <HistoryStyles>
       <HeaderStyles>
         <Header />
       </HeaderStyles>
@@ -69,7 +73,7 @@ const HistoryPage = () => {
       </HistoryPageStyles>
 
       <Footer />
-    </>
+    </HistoryStyles>
   );
 };
 

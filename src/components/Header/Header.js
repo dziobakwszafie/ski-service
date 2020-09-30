@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { logoutUser } from "../../redux/actions/loginActions";
+import { logoutUser, getUserData } from "../../redux/actions/loginActions";
 import { useSelector, useDispatch } from "react-redux";
 import { specialStyles1 } from "../../styles/typography";
 import colors from "../../styles/colors";
@@ -148,7 +148,16 @@ const Header = () => {
 
           {authenticated === false && <a href="#login">LOGOWANIE</a>}
           {authenticated === true && <a href="#order">ZAMÓW SERWIS</a>}
-          {authenticated === true && <a href="#history">HISTORIA ZAMÓWIEŃ</a>}
+          {authenticated === true && (
+            <a
+              href="#history"
+              onClick={() => {
+                dispatch(getUserData());
+              }}
+            >
+              HISTORIA ZAMÓWIEŃ
+            </a>
+          )}
 
           {authenticated === true && (
             <a
