@@ -12,6 +12,10 @@ Project of ski service app - still under develope, planned release winter 20/21.
 
 Live version you can find here: https://dziobakwszafie.github.io/ski-service/
 
+## Server 
+
+As a server we use Firebase. Server repo you can find here: https://dziobakwszafie.github.io/ski-service-server/
+
 ### To run it locally
 
 Get the repo
@@ -26,7 +30,7 @@ or
 download ZIP file
 ```
 
-Run npm scripts
+Then run npm scripts at root folder
 
 ```
 npm install
@@ -37,6 +41,7 @@ npm start
 
 - [React](https://reactjs.org/)
 - [Redux](https://redux.js.org/)
+- [redux-thunk](https://github.com/reduxjs/redux-thunk)
 - [styled-components](https://styled-components.com/)
 - [Chakra-ui](https://chakra-ui.com/)
 - [Material-UI](https://material-ui.com/)
