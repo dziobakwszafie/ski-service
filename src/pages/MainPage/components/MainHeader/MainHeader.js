@@ -94,12 +94,21 @@ const ButtonStyles = styled.a`
   text-align: center;
   position: relative;
   transition: all 0.35s;
+  ${device.M} {
+    width: 180px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 35px;
+  }
   ${device.S} {
     width: 120px;
     height: 30px;
     font-size: 10px;
-    text-align: center;
     line-height: 30px;
+  }
+  ${device.XS} {
+    height: 24px;
+    line-height: 24px;
   }
 
   span {

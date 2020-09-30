@@ -78,6 +78,7 @@ const NavStyles = styled.nav`
       display: flex;
       flex-direction: column;
       z-index: 100;
+      min-width: 50vw;
     }
     .menu a {
       display: block;
@@ -136,7 +137,7 @@ const Header = () => {
     <HeaderStyles>
       <NavStyles>
         <SubtitleStyles>
-          <a href="#">NIESMIALI ROMANTYCY </a>
+          <a href="/">NIESMIALI ROMANTYCY </a>
         </SubtitleStyles>
 
         <input type="checkbox" id="check" />
@@ -144,7 +145,7 @@ const Header = () => {
           <i class="fas fa-bars"></i>
         </label>
         <ul class="menu">
-          <a href="#">STRONA GŁÓWNA</a>
+          <a href="/">STRONA GŁÓWNA</a>
 
           {authenticated === false && <a href="#login">LOGOWANIE</a>}
           {authenticated === true && <a href="#order">ZAMÓW SERWIS</a>}
@@ -162,7 +163,7 @@ const Header = () => {
 
           {authenticated === true && (
             <a
-              href="#"
+              href="/"
               onClick={() => {
                 dispatch(logoutUser());
               }}
