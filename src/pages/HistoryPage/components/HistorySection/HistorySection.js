@@ -32,13 +32,15 @@ const HistoryTitleStyle = styled.h3`
   color: ${colors.text.Primary4};
 `;
 
-const HistorySection = () => {
+const HistorySection = (key) => {
   // const dispatch = useDispatch();
   // dispatch(getUserData());
 
   const userOrders = useSelector((state) => state.loginReducer.orders);
   const classes = useStyles();
   dayjs.locale("pl");
+
+  const list = userOrders.sort((a, b) => (a.createdAt > b.createdAt ? 1 : -1));
 
   return (
     <HistoryTableStyle>
@@ -58,7 +60,7 @@ const HistorySection = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {userOrders.map((order) => (
+            {list.map((order) => (
               <TableRow key={order.createdAt}>
                 <TableCell component="th" scope="row">
                   {dayjs(order.createdAt)

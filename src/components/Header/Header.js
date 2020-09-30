@@ -158,6 +158,7 @@ const Header = () => {
               HISTORIA ZAMÓWIEŃ
             </a>
           )}
+          <a href="#fastprices">SPRAWDŹ CENY</a>
 
           {authenticated === true && (
             <a
@@ -170,7 +171,6 @@ const Header = () => {
               {/* cant do only onClick={dispatch(logoutUser()) because u have 2 pass function to onClick instead of just calling it */}
             </a>
           )}
-          <a href="#fastprices">SPRAWDŹ CENY</a>
           <label for="check" class="button--hide-menu">
             <i class="fas fa-times"></i>
           </label>
