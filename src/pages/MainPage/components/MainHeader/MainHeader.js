@@ -76,9 +76,9 @@ const Wrapper2 = styled.div`
 
 const ButtonStyles = styled.a`
   display: block;
-  width: 200px;
-  height: 40px;
-  line-height: 40px;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
   font-size: 18px;
   font-family: sans-serif;
   text-decoration: none;

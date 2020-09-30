@@ -16,7 +16,7 @@ const Main = styled.div`
   display: grid;
   grid-gap: 0.33333vw;
   grid-template-columns: 27.83333vw 7.83333vw 19.83333vw 15.83333vw auto;
-  grid-template-rows: auto auto 28vw 28vw;
+  grid-template-rows: auto auto 29vw 29vw;
   background-color: ${colors.background.Primary1};
   border-bottom: 0.33333vw solid ${colors.background.Primary1};
   ${device.M} {

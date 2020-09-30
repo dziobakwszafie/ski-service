@@ -43,7 +43,7 @@ const typography = {
         font-size: 2.8vw;`,
     S: `
         ${defaultStyles}
-        font-size: 1.8vw;`,
+        font-size: 1.6vw;`,
     XS: `
         ${defaultStyles}
         font-size: 1.2vw;`,

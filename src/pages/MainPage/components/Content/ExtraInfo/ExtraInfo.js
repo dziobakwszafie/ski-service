@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { queryForTitle, queryForText } from "../../../../../styles/devices";
 import colors from "../../../../../styles/colors";
+import device from "../../../../../styles/devices";
+import typography from "../../../../../styles/typography";
 
 const IntroWaxStyles = styled.div`
   width: 100%;
@@ -17,7 +19,22 @@ const IntroWaxTitleStyles = styled.h1`
 const IntroWaxTextStyles = styled.p`
   line-height: 1.5em;
   margin-bottom: 2vw;
-  ${queryForText}
+
+  ${device.XXL} {
+    ${typography.body.XS}
+  }
+  ${device.XL} {
+    ${typography.body.XS}
+  }
+  ${device.L} {
+    ${typography.body.S}
+  }
+  ${device.M} {
+    ${typography.body.M}
+  }
+  ${device.S} {
+    ${typography.body.M}
+  }
 `;
 
 const ExtraInfo = () => {

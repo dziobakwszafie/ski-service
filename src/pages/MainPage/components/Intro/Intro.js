@@ -75,17 +75,33 @@ const Fourth = styled.div`
   grid-row-start: 2;
   grid-row-end: 4;
   background-color: ${colors.background.Primary2};
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  :hover {
-    background-color: red;
-  }
+  position: relative;
+
   ${device.M} {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 5;
+  }
+  ::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: ${colors.background.Secondary1};
+    transition: all 0.35s;
+  }
+  :hover {
+    background-color: ${colors.text.Primary2};
+    cursor: pointer;
+  }
+  :hover::before {
+    width: 100%;
   }
 `;
 const Fifth = styled.div`
@@ -106,6 +122,16 @@ const Fifth = styled.div`
   }
 `;
 
+const NavLink = styled(Link)`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Wrapper = styled.div``;
+
 const LinkStyles = styled.h3`
   transform: rotate(-17deg);
   ${typography.header.L}
@@ -113,14 +139,6 @@ const LinkStyles = styled.h3`
   ${device.M} {
     ${typography.header.XXL}
   }
-`;
-
-const NavLink = styled(Link)`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 const Try = ({ reference }) => {
@@ -133,10 +151,10 @@ const Try = ({ reference }) => {
       <Third></Third>
       <Fourth>
         <NavLink to={`/login`}>
-          <div>
+          <Wrapper>
             <LinkStyles>ZAMÓW</LinkStyles>
             <LinkStyles>SERWIS</LinkStyles>
-          </div>
+          </Wrapper>
         </NavLink>
       </Fourth>
       <Fifth></Fifth>
