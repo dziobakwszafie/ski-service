@@ -46,3 +46,7 @@ npm start
 - [Chakra-ui](https://chakra-ui.com/)
 - [Material-UI](https://material-ui.com/)
 - [Formik](https://formik.org/)
+- [Firebase](https://firebase.google.com/)
+- [Express](https://expressjs.com/)
+- [Node.js](https://nodejs.org/en/)
+
