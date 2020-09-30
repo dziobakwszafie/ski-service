@@ -52,7 +52,7 @@ const NavStyles = styled.nav`
     position: absolute;
     visibility: hidden;
   }
-  @media screen and (max-width: 1180px) {
+  @media screen and (max-width: 1280px) {
     .button--show-menu,
     .button--hide-menu {
       display: block;
@@ -147,7 +147,9 @@ const Header = () => {
           <a href="#">STRONA GŁÓWNA</a>
 
           {authenticated === false && <a href="#login">LOGOWANIE</a>}
-          <a href="#order">ZAMÓW SERWIS</a>
+          {authenticated === true && <a href="#order">ZAMÓW SERWIS</a>}
+          {authenticated === true && <a href="#history">HISTORIA ZAMÓWIEŃ</a>}
+
           {authenticated === true && (
             <a
               href="#"

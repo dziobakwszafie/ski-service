@@ -1,25 +1,23 @@
 import React from "react";
 import Header from "../../components/Header/Header";
-import OrderForm from "./components/OrderForm/OrderForm";
-import OrderDesc from "./components/OrderDesc/OrderDesc";
-import Summary from "./components/Summary/Summary";
+import HistorySection from "./components/HistorySection/HistorySection";
 import Footer from "../../components/Footer/Footer";
-import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import styled from "styled-components";
 import colors from "../../styles/colors";
 import device from "../../styles/devices";
 
-const OrderMainSection = styled.div`
+const HistoryPageStyles = styled.div`
   display: grid;
-  grid-template-columns: 57.83333vw auto;
-  grid-template-rows: auto auto;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
   grid-gap: 0.2vw;
   background-color: ${colors.background.Primary1};
   border-bottom: 0.23333vw solid ${colors.background.Primary1};
   border-top: 0.23333vw solid ${colors.background.Primary1};
   ${device.M} {
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto;
     grid-template-columns: 100vw;
   }
 `;
@@ -39,38 +37,6 @@ const First = styled.div`
     grid-row-end: 2;
   }
 `;
-const Second = styled.div`
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  background-color: ${colors.background.Primary2};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  ${device.M} {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-`;
-const Third = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  background-color: ${colors.background.Primary2};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  ${device.M} {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-`;
 
 const HeaderStyles = styled.div`
   height: 5vw;
@@ -79,7 +45,7 @@ const HeaderStyles = styled.div`
   }
 `;
 
-const OrderPage = () => {
+const HistoryPage = () => {
   const history = useHistory();
 
   const authenticated = useSelector(
@@ -96,21 +62,15 @@ const OrderPage = () => {
         <Header />
       </HeaderStyles>
 
-      <OrderMainSection>
+      <HistoryPageStyles>
         <First>
-          <OrderForm />
+          <HistorySection />
         </First>
-        <Second>
-          <OrderDesc />
-        </Second>
-        <Third>
-          <Summary />
-        </Third>
-      </OrderMainSection>
+      </HistoryPageStyles>
 
       <Footer />
     </>
   );
 };
 
-export default OrderPage;
+export default HistoryPage;

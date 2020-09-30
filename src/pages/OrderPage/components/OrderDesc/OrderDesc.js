@@ -9,7 +9,7 @@ const DescrTitleStyle = styled.h3`
 `;
 
 const OrderDesc = () => {
-  return <DescrTitleStyle>co do czego uzywam</DescrTitleStyle>;
+  return <DescrTitleStyle>czego uzywam</DescrTitleStyle>;
 };
 
 export default OrderDesc;
