@@ -3,7 +3,7 @@ import styled from "styled-components";
 import IntroText from "./IntroText/IntroText";
 import { Link } from "react-router-dom";
 import skiboots from "../../../../assets/ski-boots.jpeg";
-import skilift from "../../../../assets/skilift.jpeg";
+import photoshoot from "../../../../assets/photoshoot.jpg";
 import cafe from "../../../../assets/cafe.jpeg";
 import device from "../../../../styles/devices";
 import typography from "../../../../styles/typography";
@@ -41,7 +41,7 @@ const Second = styled.div`
   grid-row-start: 1;
   grid-row-end: 2;
   background-color: ${colors.background.Primary2};
-  background-image: url("${skilift}");
+  background-image: url("${photoshoot}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

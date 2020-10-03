@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import arrow from "../../../../../assets/arrow.png";
+import bricks from "../../../../../assets/bricks.jpg";
 import device from "../../../../../styles/devices";
 import typography from "../../../../../styles/typography";
 import { queryForText } from "../../../../../styles/devices";
@@ -9,11 +10,17 @@ import colors from "../../../../../styles/colors";
 
 const IntroStyles = styled.div`
   width: 100%;
-  padding: 0 2vw 2vw 2vw;
+`;
+
+const Wrapper = styled.div`
+  background-image: url("${bricks}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const IntroTitleStyles = styled.h2`
-  color: ${colors.text.Secondary1};
+  color: ${colors.text.Primary8};
   padding-bottom: 1rem;
   text-align: center;
   ${device.XXL} {
@@ -35,6 +42,7 @@ const IntroTitleStyles = styled.h2`
 `;
 
 const IntroTextStyles = styled.p`
+  padding: 0 2vw 0 2vw;
   color: ${colors.text.Primary1};
   margin-top: 2vw;
   margin-bottom: 1vw;
@@ -46,6 +54,7 @@ const IntroArrowStyles = styled.div`
   align-items: center;
 `;
 const IntroArrowTitleStyles = styled.h4`
+  padding: 0 2vw 0 2vw;
   ${specialStyles1}
   ${device.XXL} {
     font-size: 7vw;
@@ -69,7 +78,10 @@ const IntroArrowImgStyles = styled.div`
 const Intro = () => {
   return (
     <IntroStyles>
-      <IntroTitleStyles>PO CO W OGÓLE TEN SERWIS</IntroTitleStyles>
+      <Wrapper>
+        <IntroTitleStyles>PO CO W OGÓLE TEN SERWIS</IntroTitleStyles>
+      </Wrapper>
+
       <IntroTextStyles>
         Bo podczas jazdy tępią się krawędzie. A ślizgi się psują i podczas jazdy
         i podczas leżenia w piwnicy.

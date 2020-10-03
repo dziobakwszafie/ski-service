@@ -33,9 +33,6 @@ const HistoryTitleStyle = styled.h3`
 `;
 
 const HistorySection = (key) => {
-  // const dispatch = useDispatch();
-  // dispatch(getUserData());
-
   const userOrders = useSelector((state) => state.loginReducer.orders);
   const classes = useStyles();
   dayjs.locale("pl");

@@ -65,6 +65,9 @@ const Wrapper = styled.div`
   position: absolute;
   top: 5vw;
   left: 5vw;
+  ${device.XS} {
+    top: 3vw;
+  }
 `;
 
 const Wrapper2 = styled.div`
