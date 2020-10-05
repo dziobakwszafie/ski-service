@@ -6,7 +6,7 @@ import store from "./redux/reducers";
 import App from "./App";
 
 describe("App", () => {
-  test("renders App component", () => {
+  test("render App component", () => {
     render(
       <Provider store={store}>
         <App />

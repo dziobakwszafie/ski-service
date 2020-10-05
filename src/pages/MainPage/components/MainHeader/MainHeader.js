@@ -83,7 +83,7 @@ const Wrapper3 = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-const ButtonStyles = styled.a`
+const ButtonStyles = styled.div`
   display: block;
   width: 250px;
   height: 50px;
@@ -170,14 +170,14 @@ const MainHeader = ({ reference, click }) => {
         <TitleStyles>NIESMIALI ROMANTYCY</TitleStyles>
         <SubtitleStyles>SERVICE DEPARTMENT</SubtitleStyles>
         <Wrapper>
-          <ButtonStyles href="#">
+          <ButtonStyles>
             <Link to={`/order`}>
               <span>Złóż zamówienie</span>
             </Link>
           </ButtonStyles>
         </Wrapper>
         <Wrapper2>
-          <ButtonStyles href="#">
+          <ButtonStyles>
             <Link to={`/fastprices`}>
               <span>Sprawdź ceny</span>
             </Link>

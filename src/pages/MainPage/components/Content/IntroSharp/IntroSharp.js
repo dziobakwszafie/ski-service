@@ -8,14 +8,13 @@ const IntroSharpStyles = styled.div`
   padding: 2vw;
 `;
 
-
 const IntroSharpTitleStyles = styled.h3`
   padding-bottom: 1rem;
   color: ${colors.text.Primary4};
   ${queryForTitle}
 `;
 
-const IntroSharpTextStyles = styled.p`
+const IntroSharpTextStyles = styled.div`
   line-height: 1.5em;
   margin-bottom: 2vw;
   ul {
