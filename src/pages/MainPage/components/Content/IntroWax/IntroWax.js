@@ -14,7 +14,7 @@ const IntroWaxTitleStyles = styled.h1`
   ${queryForTitle}
 `;
 
-const IntroWaxTextStyles = styled.p`
+const IntroWaxTextStyles = styled.div`
   line-height: 1.5em;
   margin-bottom: 2vw;
   ul {
