@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { queryForTitle } from "../../../../styles/devices";
+import { queryForTitle, queryForText } from "../../../../styles/devices";
 import colors from "../../../../styles/colors";
 import device from "../../../../styles/devices";
 import { Link } from "react-router-dom";
+import PriceItem from "./PriceItem/PriceItem";
 
 const FastPricesStyle = styled.div`
   display: flex;
@@ -77,10 +78,7 @@ const FastPrices = () => {
       <FastPricesTitleStyle>
         tutaj bedzie cennik - tylko na razie sie tworzy
       </FastPricesTitleStyle>
-      <FastPricesTitleStyle>
-        wiecej informacji o sprawach technicznych znajdziesz w zakladce zloz
-        zamowienie
-      </FastPricesTitleStyle>
+      {/* <PriceItem /> */}
       <Wrapper>
         <ButtonStyles href="#">
           <Link to={`/order`}>

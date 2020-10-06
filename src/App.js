@@ -14,14 +14,12 @@ import { customTheme } from "./util/theme";
 import { ThemeProvider, CSSReset } from "@chakra-ui/core";
 import { logoutUser, getUserData } from "./redux/actions/loginActions";
 import { SET_AUTHENTICATED } from "./redux/actionTypes/loginTypes";
-import { useDispatch } from "react-redux";
 
 axios.defaults.baseURL =
   // "http://localhost:5000/ski-service-91995/europe-west3/api";
   "https://europe-west3-ski-service-91995.cloudfunctions.net/api";
 
 const App = () => {
-  const dispatch = useDispatch();
   let authenticated;
 
   const token = localStorage.FBIdToken;

@@ -8,12 +8,7 @@ import { Button } from "@chakra-ui/core";
 import ReCAPTCHA from "react-google-recaptcha";
 import { queryForTitle } from "../../../../styles/devices";
 import colors from "../../../../styles/colors";
-import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
-} from "@chakra-ui/core";
+import { Alert, AlertIcon } from "@chakra-ui/core";
 
 const OrderFormStyles = styled.div`
   display: flex;
