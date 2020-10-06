@@ -178,7 +178,7 @@ const MainHeader = ({ reference, click }) => {
         </Wrapper>
         <Wrapper2>
           <ButtonStyles>
-            <Link to={`/fastprices`}>
+            <Link to={`/prices`}>
               <span>Sprawdź ceny</span>
             </Link>
           </ButtonStyles>

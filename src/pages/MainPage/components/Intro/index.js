@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import IntroText from "./IntroText/IntroText";
+import IntroText from "./IntroText";
 import { Link } from "react-router-dom";
 import skiboots from "../../../../assets/ski-boots.jpeg";
 import photoshoot from "../../../../assets/photoshoot.jpg";

@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../../components/Header/Header";
-import HistorySection from "./components/HistorySection/HistorySection";
-import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header";
+import HistorySection from "./components/HistorySection";
+import Footer from "../../components/Footer";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";

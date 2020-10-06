@@ -1,11 +1,11 @@
 import React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import MainPage from "./pages/MainPage/MainPage";
-import OrderPage from "./pages/OrderPage/OrderPage";
-import LoginPage from "./pages/LoginPage/LoginPage";
-import SignupPage from "./pages/SignupPage/SignupPage";
-import HistoryPage from "./pages/HistoryPage/HistoryPage";
-import FastPricesPage from "./pages/FastPricesPage/FastPricesPage";
+import MainPage from "./pages/MainPage";
+import OrderPage from "./pages/OrderPage";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
+import HistoryPage from "./pages/HistoryPage";
+import PricesPage from "./pages/PricesPage";
 import AuthRoute from "./util/AuthRoute";
 import jwtDecode from "jwt-decode";
 import axios from "axios";
@@ -53,7 +53,7 @@ const App = () => {
           <Route path="/signup" exact component={SignupPage} />
           <Route path="/order" exact component={OrderPage} />
           <Route path="/history" exact component={HistoryPage} />
-          <Route path="/fastprices" exact component={FastPricesPage} />
+          <Route path="/prices" exact component={PricesPage} />
         </Switch>
       </Router>
     </ThemeProvider>
