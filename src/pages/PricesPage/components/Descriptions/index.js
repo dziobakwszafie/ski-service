@@ -5,15 +5,14 @@ import colors from "../../../../styles/colors";
 import device from "../../../../styles/devices";
 
 const DecriptionsStyle = styled.div`
-  width: 100%;
   display: grid;
+  grid-gap: 0.2vw;
   grid-template-columns: 33vw auto 33vw;
   grid-template-rows: 20vw auto;
-  grid-gap: 0.2vw;
   background-color: ${colors.background.Primary1};
   ${device.M} {
+    grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
-    grid-template-columns: 100vw;
   }
 `;
 
@@ -28,7 +27,7 @@ const DecriptionsTextStyle = styled.div`
   color: ${colors.text.Primary1};
   padding: 2vw;
   ul {
-    padding: 2vw;
+    padding: 3vw;
   }
 `;
 
@@ -89,7 +88,7 @@ const Descriptions = () => {
   return (
     <DecriptionsStyle>
       <First>
-        <DecriptionsTitleStyle>Panie, jo to sie nie znom</DecriptionsTitleStyle>
+        <DecriptionsTitleStyle>Panie, jo sie nie znom</DecriptionsTitleStyle>
         <DecriptionsTextStyle>
           Spoko luzik, nie każdy musi się znać. Już tłumaczę wszystko.
         </DecriptionsTextStyle>
