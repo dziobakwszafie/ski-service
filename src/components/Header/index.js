@@ -159,7 +159,7 @@ const Header = () => {
               HISTORIA ZAMÓWIEŃ
             </a>
           )}
-          <a href="#fastprices">SPRAWDŹ CENY</a>
+          <a href="#prices">SPRAWDŹ CENY</a>
 
           {authenticated === true && (
             <a

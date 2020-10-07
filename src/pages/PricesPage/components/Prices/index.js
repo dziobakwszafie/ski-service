@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { queryForTitle } from "../../../../styles/devices";
+import { queryForTitle, queryForText } from "../../../../styles/devices";
 import colors from "../../../../styles/colors";
 import device from "../../../../styles/devices";
 import { Link } from "react-router-dom";
+import { services } from "./Services.table";
 
 const FastPricesStyle = styled.div`
   display: flex;
@@ -16,14 +17,18 @@ const FastPricesTitleStyle = styled.h3`
   ${queryForTitle}
   color: ${colors.text.Primary6};
   text-align: center;
-  margin-bottom: 5vw;
 `;
 
 const Wrapper = styled.div`
   position: relative;
+  margin: 5vw auto;
 `;
 
-const ButtonStyles = styled.a`
+const PriceItems = styled.div`
+  display: flex;
+`;
+
+const ButtonStyles = styled.div`
   display: block;
   width: 250px;
   height: 50px;
@@ -71,18 +76,43 @@ const ButtonStyles = styled.a`
   }
 `;
 
-const FastPrices = () => {
+const SingleServiceStyle = styled.div`
+  width: 22vw;
+  height: 30vw;
+  margin: 0 4vw;
+  background-color: ${colors.background.Primary3};
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+`;
+
+const SingleServiceTextStyle = styled.h3`
+  ${queryForText}
+  color: ${colors.text.Primary6};
+  text-align: center;
+`;
+
+const FastPrices = (props = { services }) => {
   return (
     <FastPricesStyle>
-      <FastPricesTitleStyle>
-        tutaj bedzie cennik - tylko na razie sie tworzy
-      </FastPricesTitleStyle>
-      <FastPricesTitleStyle>
-        wiecej informacji o sprawach technicznych znajdziesz w zakladce zloz
-        zamowienie
-      </FastPricesTitleStyle>
+      <FastPricesTitleStyle>cennik</FastPricesTitleStyle>
+      <PriceItems>
+        {services.map((service) => (
+          <SingleServiceStyle>
+            <SingleServiceTextStyle>
+              {service.map((singleService) => (
+                <p>
+                  {singleService.task} - {singleService.price} zł
+                </p>
+              ))}
+            </SingleServiceTextStyle>
+          </SingleServiceStyle>
+        ))}
+      </PriceItems>
+
       <Wrapper>
-        <ButtonStyles href="#">
+        <ButtonStyles>
           <Link to={`/order`}>
             <span>Złóż zamówienie</span>
           </Link>

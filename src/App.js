@@ -1,11 +1,11 @@
 import React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import MainPage from "./pages/MainPage/MainPage";
-import OrderPage from "./pages/OrderPage/OrderPage";
-import LoginPage from "./pages/LoginPage/LoginPage";
-import SignupPage from "./pages/SignupPage/SignupPage";
-import HistoryPage from "./pages/HistoryPage/HistoryPage";
-import FastPricesPage from "./pages/FastPricesPage/FastPricesPage";
+import MainPage from "./pages/MainPage";
+import OrderPage from "./pages/OrderPage";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
+import HistoryPage from "./pages/HistoryPage";
+import PricesPage from "./pages/PricesPage";
 import AuthRoute from "./util/AuthRoute";
 import jwtDecode from "jwt-decode";
 import axios from "axios";
@@ -14,14 +14,12 @@ import { customTheme } from "./util/theme";
 import { ThemeProvider, CSSReset } from "@chakra-ui/core";
 import { logoutUser, getUserData } from "./redux/actions/loginActions";
 import { SET_AUTHENTICATED } from "./redux/actionTypes/loginTypes";
-import { useDispatch } from "react-redux";
 
 axios.defaults.baseURL =
   // "http://localhost:5000/ski-service-91995/europe-west3/api";
   "https://europe-west3-ski-service-91995.cloudfunctions.net/api";
 
 const App = () => {
-  const dispatch = useDispatch();
   let authenticated;
 
   const token = localStorage.FBIdToken;
@@ -55,7 +53,7 @@ const App = () => {
           <Route path="/signup" exact component={SignupPage} />
           <Route path="/order" exact component={OrderPage} />
           <Route path="/history" exact component={HistoryPage} />
-          <Route path="/fastprices" exact component={FastPricesPage} />
+          <Route path="/prices" exact component={PricesPage} />
         </Switch>
       </Router>
     </ThemeProvider>

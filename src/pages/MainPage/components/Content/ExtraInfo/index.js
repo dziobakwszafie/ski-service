@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { queryForTitle, queryForText } from "../../../../../styles/devices";
+import { queryForTitle } from "../../../../../styles/devices";
 import colors from "../../../../../styles/colors";
 import device from "../../../../../styles/devices";
 import typography from "../../../../../styles/typography";

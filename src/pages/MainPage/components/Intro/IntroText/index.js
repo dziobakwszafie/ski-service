@@ -107,7 +107,7 @@ const Intro = () => {
       <IntroArrowStyles>
         <IntroArrowTitleStyles>URATUJ SWOJE DECHY</IntroArrowTitleStyles>
         <IntroArrowImgStyles>
-          <img src={`${arrow}`} />
+          <img alt="strzałka_wskazująca_zamówienie" src={`${arrow}`} />
         </IntroArrowImgStyles>
       </IntroArrowStyles>
     </IntroStyles>

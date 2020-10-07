@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "../../components/Header/Header";
-import OrderForm from "./components/OrderForm/OrderForm";
-import OrderDesc from "./components/OrderDesc/OrderDesc";
-import Summary from "./components/Summary/Summary";
-import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header";
+import OrderForm from "./components/OrderForm";
+import OrderDesc from "./components/OrderDesc";
+import Summary from "./components/Summary";
+import Footer from "../../components/Footer";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
