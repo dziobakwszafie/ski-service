@@ -90,8 +90,9 @@ const Descriptions = () => {
       <First>
         <DecriptionsTitleStyle>Panie, jo sie nie znom</DecriptionsTitleStyle>
         <DecriptionsTextStyle>
-          Spoko luzik, nie każdy musi się znać. Już tłumaczę wszystko.
+          Spoko luzik, nie każdy musi się znać.
         </DecriptionsTextStyle>
+        <DecriptionsTextStyle>Już tłumaczę wszystko.</DecriptionsTextStyle>
       </First>
 
       <Second>
@@ -144,7 +145,8 @@ const Descriptions = () => {
         <DecriptionsTextStyle>
           <p>
             <b>Dostawa</b> - chcesz żebyśmy odebrali od Ciebie narty, a
-            nastepnie przywieźli pod drzwi? Nie ma problemu. Szczegóły w krótce.
+            nastepnie przywieźli pod drzwi? Nie ma problemu. Szczegóły w krótce
+            bo na razie musimy to rozkmninić.
           </p>
         </DecriptionsTextStyle>
       </Fourth>

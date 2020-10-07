@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { queryForTitle, queryForText } from "../../../../styles/devices";
+import device, {
+  queryForTitle,
+  queryForText,
+} from "../../../../styles/devices";
 import colors from "../../../../styles/colors";
-import device from "../../../../styles/devices";
+import typography from "../../../../styles/typography";
 import { Link } from "react-router-dom";
 import { services } from "./Services.table";
 
@@ -87,10 +90,29 @@ const SingleServiceStyle = styled.div`
   align-items: center;
 `;
 
-const SingleServiceTextStyle = styled.h3`
-  ${queryForText}
+const SingleServiceTextStyle = styled.p`
+  ${device.XXL} {
+    ${typography.body.XS}
+  }
+  ${device.XL} {
+    ${typography.body.S}
+  }
+  ${device.L} {
+    ${typography.body.S}
+  }
+  ${device.M} {
+    ${typography.body.S}
+  }
+  ${device.S} {
+    ${typography.body.S}
+  }
   color: ${colors.text.Primary6};
   text-align: center;
+  margin-bottom: 15%;
+`;
+
+const SingleLineStyle = styled.p`
+  margin-bottom: 2vw;
 `;
 
 const FastPrices = (props = { services }) => {
@@ -102,9 +124,9 @@ const FastPrices = (props = { services }) => {
           <SingleServiceStyle>
             <SingleServiceTextStyle>
               {service.map((singleService) => (
-                <p>
+                <SingleLineStyle>
                   {singleService.task} - {singleService.price} zł
-                </p>
+                </SingleLineStyle>
               ))}
             </SingleServiceTextStyle>
           </SingleServiceStyle>

@@ -27,7 +27,13 @@ const waxing = [
 const transport = [
   {
     id: "1",
-    task: "sooon",
+    task: "door-2-door",
+    price: "milion",
+  },
+  {
+    id: "2",
+    task: "odbiór osobisty",
+    price: "0",
   },
 ];
 
