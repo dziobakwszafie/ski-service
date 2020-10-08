@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3b8ac1a4f3cf1e644153d7f0460918c6",
+    "revision": "a96569a09d16ab3e41c7c0af4a5d28dc",
     "url": "/ski-service/index.html"
   },
   {
-    "revision": "92a0f4c4cdfd7f336bdf",
+    "revision": "a4de8299871a01b7c841",
     "url": "/ski-service/static/css/2.8d4cdce2.chunk.css"
   },
   {
-    "revision": "92a0f4c4cdfd7f336bdf",
-    "url": "/ski-service/static/js/2.26667a86.chunk.js"
+    "revision": "a4de8299871a01b7c841",
+    "url": "/ski-service/static/js/2.25ad75eb.chunk.js"
   },
   {
     "revision": "165ef5d30ac96eafecf6106d816a6324",
-    "url": "/ski-service/static/js/2.26667a86.chunk.js.LICENSE.txt"
+    "url": "/ski-service/static/js/2.25ad75eb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a27e8304365a56db17d9",
-    "url": "/ski-service/static/js/main.0dc6f014.chunk.js"
+    "revision": "af5a0a79acd987632409",
+    "url": "/ski-service/static/js/main.9eec4ad0.chunk.js"
   },
   {
     "revision": "7c48ae24717bce521ace",
