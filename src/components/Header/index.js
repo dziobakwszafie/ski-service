@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { logoutUser, getUserData } from "../../redux/actions/loginActions";
 import { useSelector, useDispatch } from "react-redux";
 import { specialStyles1 } from "../../styles/typography";
@@ -137,7 +138,7 @@ const Header = () => {
     <HeaderStyles>
       <NavStyles>
         <SubtitleStyles>
-          <a href="#0">NIESMIALI ROMANTYCY </a>
+          <Link to={`/0`}>NIESMIALI ROMANTYCY </Link>
         </SubtitleStyles>
 
         <input type="checkbox" id="check" />
@@ -145,32 +146,32 @@ const Header = () => {
           <i class="fas fa-bars"></i>
         </label>
         <ul class="menu">
-          <a href="#0">STRONA GŁÓWNA</a>
+          <Link to={`/0`}>STRONA GŁÓWNA</Link>
 
-          {authenticated === false && <a href="#login">LOGOWANIE</a>}
-          {authenticated === true && <a href="#order">ZAMÓW SERWIS</a>}
+          {authenticated === false && <Link to={`/login`}>LOGOWANIE</Link>}
+          {authenticated === true && <Link to={`/order`}>ZAMÓW SERWIS</Link>}
           {authenticated === true && (
-            <a
-              href="#history"
+            <Link
+              to={`/history`}
               onClick={() => {
                 dispatch(getUserData());
               }}
             >
               HISTORIA ZAMÓWIEŃ
-            </a>
+            </Link>
           )}
-          <a href="#prices">SPRAWDŹ CENY</a>
+          <Link to={`/prices`}>SPRAWDŹ CENY</Link>
 
           {authenticated === true && (
-            <a
-              href="#0"
+            <Link
+              to={`/0`}
               onClick={() => {
                 dispatch(logoutUser());
               }}
             >
               <LogoutStyles>WYLOGUJ</LogoutStyles>
               {/* cant do only onClick={dispatch(logoutUser()) because u have 2 pass function to onClick instead of just calling it */}
-            </a>
+            </Link>
           )}
           <label for="check" class="button--hide-menu">
             <i class="fas fa-times"></i>
