@@ -43,7 +43,6 @@ const App = () => {
       <CSSReset />
       <Router>
         <Switch>
-          <Route path="/" exact component={MainPage} />
           <AuthRoute
             path="/login"
             exact
@@ -54,6 +53,7 @@ const App = () => {
           <Route path="/order" exact component={OrderPage} />
           <Route path="/history" exact component={HistoryPage} />
           <Route path="/prices" exact component={PricesPage} />
+          <Route path="/" component={MainPage} />
         </Switch>
       </Router>
     </ThemeProvider>

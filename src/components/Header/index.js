@@ -137,7 +137,7 @@ const Header = () => {
     <HeaderStyles>
       <NavStyles>
         <SubtitleStyles>
-          <a href="/">NIESMIALI ROMANTYCY </a>
+          <a href="#0">NIESMIALI ROMANTYCY </a>
         </SubtitleStyles>
 
         <input type="checkbox" id="check" />
@@ -145,7 +145,7 @@ const Header = () => {
           <i class="fas fa-bars"></i>
         </label>
         <ul class="menu">
-          <a href="/">STRONA GŁÓWNA</a>
+          <a href="#0">STRONA GŁÓWNA</a>
 
           {authenticated === false && <a href="#login">LOGOWANIE</a>}
           {authenticated === true && <a href="#order">ZAMÓW SERWIS</a>}
@@ -163,7 +163,7 @@ const Header = () => {
 
           {authenticated === true && (
             <a
-              href="/"
+              href="#0"
               onClick={() => {
                 dispatch(logoutUser());
               }}
