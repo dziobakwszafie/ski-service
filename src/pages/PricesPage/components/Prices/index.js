@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import device, {
-  queryForTitle,
-  queryForText,
-} from "../../../../styles/devices";
+import device, { queryForTitle } from "../../../../styles/devices";
 import colors from "../../../../styles/colors";
 import typography from "../../../../styles/typography";
 import { Link } from "react-router-dom";

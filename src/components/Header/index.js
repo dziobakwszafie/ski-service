@@ -157,7 +157,7 @@ const Header = () => {
         </label>
         <ul class="menu">
           <Link to={`/0`}>STRONA GŁÓWNA</Link>
-
+          <Link to={`/prices`}>SPRAWDŹ CENY</Link>
           {authenticated === false && <Link to={`/login`}>LOGOWANIE</Link>}
           {authenticated === true && <Link to={`/order`}>ZAMÓW SERWIS</Link>}
           {authenticated === true && (
@@ -170,7 +170,6 @@ const Header = () => {
               HISTORIA ZAMÓWIEŃ
             </Link>
           )}
-          <Link to={`/prices`}>SPRAWDŹ CENY</Link>
 
           {authenticated === true && (
             <Link

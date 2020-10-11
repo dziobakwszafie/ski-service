@@ -5,7 +5,6 @@ import Descriptions from "./components/Descriptions";
 import Footer from "../../components/Footer";
 import styled from "styled-components";
 import colors from "../../styles/colors";
-import device from "../../styles/devices";
 
 const PricesPageStyles = styled.div``;
 
