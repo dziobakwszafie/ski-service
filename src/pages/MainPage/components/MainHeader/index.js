@@ -28,6 +28,14 @@ const VideoStyles = styled.iframe`
   width: 110%;
   height: 110%;
   vertical-align: middle;
+  ${device.L} {
+    width: 130%;
+    height: 130%;
+  }
+  ${device.XS} {
+    width: 160%;
+    height: 160%;
+  }
 `;
 
 const OverflowStyles = styled.div`
