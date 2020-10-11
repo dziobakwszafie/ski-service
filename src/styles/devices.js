@@ -46,3 +46,21 @@ ${device.S} {
   ${typography.body.M}
 }
 `;
+
+export const queryForExtra = `
+${device.XXL} {
+  ${typography.extra.XL}
+}
+${device.XL} {
+  ${typography.extra.XL}
+}
+${device.L} {
+  ${typography.extra.XL}
+}
+${device.M} {
+  ${typography.extra.XL}
+}
+${device.S} {
+  ${typography.extra.XL}
+}
+`;

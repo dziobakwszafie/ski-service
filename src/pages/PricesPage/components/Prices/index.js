@@ -124,9 +124,11 @@ const FastPrices = (props = { services }) => {
           <SingleServiceStyle>
             <SingleServiceTextStyle>
               {service.map((singleService) => (
-                <SingleLineStyle>
-                  {singleService.task} - {singleService.price} zł
-                </SingleLineStyle>
+                <div>
+                  <SingleLineStyle>
+                    {singleService.task} - {singleService.price} zł
+                  </SingleLineStyle>
+                </div>
               ))}
             </SingleServiceTextStyle>
           </SingleServiceStyle>

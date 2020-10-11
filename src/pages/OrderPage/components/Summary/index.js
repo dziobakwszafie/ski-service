@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { queryForTitle } from "../../../../styles/devices";
+import { queryForTitle, queryForText } from "../../../../styles/devices";
 import colors from "../../../../styles/colors";
 
 const SummaryStyles = styled.h3`
@@ -15,15 +15,21 @@ const SummaryStyles = styled.h3`
 const SummaryTitleStyles = styled.h3`
   ${queryForTitle}
   color: ${colors.text.Primary4};
+  align-self: center;
+`;
+
+const SummaryTextStyles = styled.div`
+  ${queryForText}
 `;
 
 const HistorySection = () => {
   return (
     <SummaryStyles>
-      <SummaryTitleStyles>Podsumowanie zamówienia</SummaryTitleStyles>
-      <SummaryTitleStyles>
-        Tu bedzie podsumowanie ale nie ma na razie cennika
-      </SummaryTitleStyles>
+      <SummaryTitleStyles>Podsumowanie</SummaryTitleStyles>
+      <SummaryTextStyles>
+        Na razie rozmyślam jak to fajnie zrobić
+      </SummaryTextStyles>
+      <SummaryTextStyles>Będzie jak wymyślę</SummaryTextStyles>
     </SummaryStyles>
   );
 };

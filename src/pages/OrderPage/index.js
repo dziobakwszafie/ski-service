@@ -31,7 +31,6 @@ const First = styled.div`
   background-color: ${colors.background.Primary2};
   display: flex;
   justify-content: center;
-  align-items: center;
   ${device.M} {
     grid-column-start: 1;
     grid-column-end: 2;

@@ -6,6 +6,7 @@ Project of ski service app - still under develope, planned release winter 20/21.
 [![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://badge.fury.io/gh/tterb%2FHyde)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/cdnjs/cdnjs.svg?style=flat)]()
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)]()
+![Success](https://img.shields.io/badge/GitHub_Actions-success-success.svg?logo=github&logoColor=white)
 
 ## Project Status
 
@@ -15,7 +16,7 @@ Project of ski service app - still under develope, planned release winter 20/21.
 
 Live version you can find here: https://dziobakwszafie.github.io/ski-service/
 
-## Server 
+## Server
 
 As a server we use Firebase. Server repo you can find here: https://dziobakwszafie.github.io/ski-service-server/
 
@@ -52,4 +53,3 @@ npm start
 - [Firebase](https://firebase.google.com/)
 - [Express](https://expressjs.com/)
 - [Node.js](https://nodejs.org/en/)
-

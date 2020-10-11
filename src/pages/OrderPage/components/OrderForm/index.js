@@ -181,7 +181,7 @@ const OrderForm = () => {
                 onChange={() => setDisableSubmit(false)}
               />
               <Button
-                my="10px"
+                my="2vw"
                 leftIcon="arrow-forward"
                 variantColor="teal"
                 type="submit"
