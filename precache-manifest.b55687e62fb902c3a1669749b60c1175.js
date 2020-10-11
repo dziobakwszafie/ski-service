@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a96569a09d16ab3e41c7c0af4a5d28dc",
+    "revision": "eeb1ffef3d985ab130cbd7bbc882a457",
     "url": "/ski-service/index.html"
   },
   {
-    "revision": "a4de8299871a01b7c841",
+    "revision": "85e81c4daf672a4487f5",
     "url": "/ski-service/static/css/2.8d4cdce2.chunk.css"
   },
   {
-    "revision": "a4de8299871a01b7c841",
-    "url": "/ski-service/static/js/2.25ad75eb.chunk.js"
+    "revision": "85e81c4daf672a4487f5",
+    "url": "/ski-service/static/js/2.e55aafb9.chunk.js"
   },
   {
     "revision": "165ef5d30ac96eafecf6106d816a6324",
-    "url": "/ski-service/static/js/2.25ad75eb.chunk.js.LICENSE.txt"
+    "url": "/ski-service/static/js/2.e55aafb9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "af5a0a79acd987632409",
-    "url": "/ski-service/static/js/main.9eec4ad0.chunk.js"
+    "revision": "c4c0a95454ee4b31761f",
+    "url": "/ski-service/static/js/main.0699603d.chunk.js"
   },
   {
     "revision": "7c48ae24717bce521ace",
     "url": "/ski-service/static/js/runtime-main.d6f484b2.js"
+  },
+  {
+    "revision": "9f18d323568fc4a708501e3da4bcbb1a",
+    "url": "/ski-service/static/media/Aeronaves.9f18d323.ttf"
   },
   {
     "revision": "56c988a677428d503242973bd8f303a0",
@@ -50,6 +54,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f72e24eda1bcc5ae3723ecd3d207572c",
     "url": "/ski-service/static/media/lift.f72e24ed.JPG"
+  },
+  {
+    "revision": "66a7de7f8b67212600a715aa4dc5bde8",
+    "url": "/ski-service/static/media/ludzik.66a7de7f.png"
   },
   {
     "revision": "8812a25a66378a1a8221f00534057a93",
