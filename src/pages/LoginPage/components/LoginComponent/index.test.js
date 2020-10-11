@@ -1,5 +1,6 @@
 import React from "react";
-import { fireEvent, render, waitFor } from "@testing-library/react";
+import { render } from "@testing-library/react";
+// import { fireEvent, waitFor } from "@testing-library/react";
 import LoginComponent from "./index";
 import { Provider } from "react-redux";
 import store from "../../../../redux/reducers";
@@ -19,7 +20,7 @@ describe("LoginComponent", () => {
   //       <LoginComponent onSubmit={onSubmit} />
   //     </Provider>
   //   );
-  //   fireEvent.submit(queryByTestId("formToTest"));
+  //   fireEvent.submit(queryByTestId("form"));
 
   //   await waitFor(() => {
   //     expect(onSubmit).toHaveBeenCalled();

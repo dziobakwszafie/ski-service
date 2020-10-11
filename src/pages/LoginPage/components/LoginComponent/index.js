@@ -63,7 +63,7 @@ const LoginComponent = () => {
             onSubmit={onSubmit}
           >
             {(formik) => (
-              <Form>
+              <Form data-testid="form">
                 <FormikControl
                   control="chakraInput"
                   type="email"
