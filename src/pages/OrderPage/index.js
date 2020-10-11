@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../components/Header";
 import OrderForm from "./components/OrderForm";
 import OrderDesc from "./components/OrderDesc";
-import Summary from "./components/Summary";
+import OrderSummary from "./components/OrderSummary";
 import Footer from "../../components/Footer";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
@@ -103,7 +103,7 @@ const OrderPage = () => {
           <OrderDesc />
         </Second>
         <Third>
-          <Summary />
+          <OrderSummary />
         </Third>
       </OrderMainSection>
 

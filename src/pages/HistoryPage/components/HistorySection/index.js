@@ -52,9 +52,9 @@ const HistorySection = (key) => {
               <TableCell align="right">Długość</TableCell>
               <TableCell align="right">Kąt boczny</TableCell>
               <TableCell align="right">Kąt dolny</TableCell>
-              <TableCell align="right">Diamenty</TableCell>
+              <TableCell align="right">Rodzaj pilników</TableCell>
               <TableCell align="right">Rodzaj śniegu</TableCell>
-              <TableCell align="right">Fluor</TableCell>
+              <TableCell align="right">Rodzaj smaru</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

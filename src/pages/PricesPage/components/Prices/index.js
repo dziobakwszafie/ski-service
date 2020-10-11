@@ -112,6 +112,8 @@ const SingleLineStyle = styled.p`
   margin-bottom: 2vw;
 `;
 
+const iconPath = "../../../../assets/";
+
 const FastPrices = (props = { services }) => {
   return (
     <FastPricesStyle>
@@ -123,7 +125,7 @@ const FastPrices = (props = { services }) => {
               {service.map((singleService) => (
                 <div>
                   <SingleLineStyle>
-                    {singleService.task} - {singleService.price} zł
+                    {singleService.task} {singleService.price}
                   </SingleLineStyle>
                 </div>
               ))}

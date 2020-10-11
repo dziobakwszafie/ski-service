@@ -5,7 +5,7 @@ import colors from "../../../../styles/colors";
 import device from "../../../../styles/devices";
 import typography from "../../../../styles/typography";
 
-const DescrStyles = styled.h3`
+const DescrStyles = styled.div`
   ${queryForTitle}
   color: ${colors.text.Primary6};
   display: flex;
@@ -48,7 +48,7 @@ const OrderDesc = () => {
     <DescrStyles>
       <DescrTitleStyles>CO I JAK</DescrTitleStyles>
       <DescrTextStyles>
-        <p>Kąt boczny</p>
+        <b>Kąt boczny</b>
         <ul>
           <li>
             89 stopni - jak jeździsz niezbyt dobrze - rzadko wybierane
@@ -64,7 +64,7 @@ const OrderDesc = () => {
         </ul>
       </DescrTextStyles>
       <DescrTextStyles>
-        <p>Kąt dolny</p>
+        <b>Kąt dolny</b>
         <ul>
           <li>0,7 stopnia - jeśli chcesz nartę stabilną głównie na prostych</li>
           <li>0,5 stopnia - ustawienie standardowe</li>
@@ -75,7 +75,7 @@ const OrderDesc = () => {
         </ul>
       </DescrTextStyles>
       <DescrTextStyles>
-        <p>Rodzaj pilników</p>
+        <b>Rodzaj pilników</b>
         <ul>
           <li>stalowe - standardowy zestaw 2 pilników</li>
           <li>
@@ -85,7 +85,7 @@ const OrderDesc = () => {
         </ul>
       </DescrTextStyles>
       <DescrTextStyles>
-        <p>Przewidywany rodzaj śniegu</p>
+        <b>Przewidywany rodzaj śniegu</b>
         <ul>
           <li>
             mokry - zazwyczaj na wiosnę i przy temperaturach około zera i więcej
@@ -97,7 +97,7 @@ const OrderDesc = () => {
         </ul>
       </DescrTextStyles>
       <DescrTextStyles>
-        <p>Rodzaj smaru</p>
+        <b>Rodzaj smaru</b>
         <ul>
           <li>smar hydrokarbon - zwyczajny smar, najczęściej używany</li>
           <li>

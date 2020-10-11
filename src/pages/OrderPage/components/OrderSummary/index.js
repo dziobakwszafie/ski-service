@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { queryForTitle, queryForText } from "../../../../styles/devices";
 import colors from "../../../../styles/colors";
 
-const SummaryStyles = styled.h3`
+const SummaryStyles = styled.div`
   ${queryForTitle}
   color: ${colors.text.Primary4};
   display: flex;
@@ -22,7 +22,7 @@ const SummaryTextStyles = styled.div`
   ${queryForText}
 `;
 
-const HistorySection = () => {
+const OrderSummary = () => {
   return (
     <SummaryStyles>
       <SummaryTitleStyles>Podsumowanie</SummaryTitleStyles>
@@ -34,4 +34,4 @@ const HistorySection = () => {
   );
 };
 
-export default HistorySection;
+export default OrderSummary;
