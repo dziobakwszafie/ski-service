@@ -16,7 +16,7 @@ function ChakraInput(props) {
           isInvalid={form.errors[name] && form.touched[name]}
           mt="1vw"
         >
-          <FormLabel htmlFor={name} fontSize={20}>
+          <FormLabel htmlFor={name} fontSize={18}>
             <b>{label}</b>
           </FormLabel>
           <Input id={name} {...rest} {...field} />

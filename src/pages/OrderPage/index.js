@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../components/Header";
 import OrderForm from "./components/OrderForm";
 import OrderDesc from "./components/OrderDesc";
-import Summary from "./components/Summary";
+import OrderSummary from "./components/OrderSummary";
 import Footer from "../../components/Footer";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
@@ -42,22 +42,6 @@ const Second = styled.div`
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
-  grid-row-end: 2;
-  background-color: ${colors.background.Primary2};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  ${device.M} {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-`;
-const Third = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 2;
   grid-row-end: 3;
   background-color: ${colors.background.Primary2};
   display: flex;
@@ -68,6 +52,22 @@ const Third = styled.div`
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
+  }
+`;
+const Third = styled.div`
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: ${colors.background.Primary2};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ${device.M} {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 `;
 
@@ -103,7 +103,7 @@ const OrderPage = () => {
           <OrderDesc />
         </Second>
         <Third>
-          <Summary />
+          <OrderSummary />
         </Third>
       </OrderMainSection>
 

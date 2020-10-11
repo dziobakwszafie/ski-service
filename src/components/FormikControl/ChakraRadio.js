@@ -14,7 +14,7 @@ function ChakraRadio(props) {
     <Field name={name}>
       {({ field, form }) => (
         <FormControl isInvalid={form.errors[name] && form.touched[name]}>
-          <FormLabel htmlFor={name} fontSize={20}>
+          <FormLabel htmlFor={name} fontSize={18}>
             <b>{label}</b>
           </FormLabel>
           <RadioGroup isInline>

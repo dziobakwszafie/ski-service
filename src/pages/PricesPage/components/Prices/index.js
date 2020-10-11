@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import device, {
-  queryForTitle,
-  queryForText,
-} from "../../../../styles/devices";
+import device, { queryForTitle } from "../../../../styles/devices";
 import colors from "../../../../styles/colors";
 import typography from "../../../../styles/typography";
 import { Link } from "react-router-dom";
@@ -115,6 +112,8 @@ const SingleLineStyle = styled.p`
   margin-bottom: 2vw;
 `;
 
+const iconPath = "../../../../assets/";
+
 const FastPrices = (props = { services }) => {
   return (
     <FastPricesStyle>
@@ -126,7 +125,7 @@ const FastPrices = (props = { services }) => {
               {service.map((singleService) => (
                 <div>
                   <SingleLineStyle>
-                    {singleService.task} - {singleService.price} zł
+                    {singleService.task} {singleService.price}
                   </SingleLineStyle>
                 </div>
               ))}

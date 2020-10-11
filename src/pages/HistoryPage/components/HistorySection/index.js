@@ -30,6 +30,7 @@ const HistoryTableStyle = styled.div`
 const HistoryTitleStyle = styled.h3`
   ${queryForTitle}
   color: ${colors.text.Primary4};
+  text-align: center;
 `;
 
 const HistorySection = (key) => {
@@ -51,9 +52,9 @@ const HistorySection = (key) => {
               <TableCell align="right">Długość</TableCell>
               <TableCell align="right">Kąt boczny</TableCell>
               <TableCell align="right">Kąt dolny</TableCell>
-              <TableCell align="right">Diamenty</TableCell>
+              <TableCell align="right">Rodzaj pilników</TableCell>
               <TableCell align="right">Rodzaj śniegu</TableCell>
-              <TableCell align="right">Fluor</TableCell>
+              <TableCell align="right">Rodzaj smaru</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
