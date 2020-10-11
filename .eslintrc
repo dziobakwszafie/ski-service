@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:eslint/recommended",
+    "plugin:jest/recommended",
+    "prettier",
+    "prettier/react",
+    "prettier/eslint",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react", "eslint", "jest"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "rules": {
+    "no-unused-vars": 0,
+    "eslint/no-unused-vars": ["error"]
+  }
+}
