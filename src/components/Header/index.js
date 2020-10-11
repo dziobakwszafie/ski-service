@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { logoutUser, getUserData } from "../../redux/actions/loginActions";
 import { useSelector, useDispatch } from "react-redux";
-import { specialStyles1 } from "../../styles/typography";
+import { specialStyles1, specialStyles2 } from "../../styles/typography";
+import { queryForExtra } from "../../styles/devices";
 import colors from "../../styles/colors";
 
 const HeaderStyles = styled.div`
@@ -47,13 +48,13 @@ const NavStyles = styled.nav`
     float: right;
   }
   .menu a:hover {
-    color: red;
+    color: ${colors.text.Secondary1};
   }
   #check {
     position: absolute;
     visibility: hidden;
   }
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1520px) {
     .button--show-menu,
     .button--hide-menu {
       display: block;
@@ -68,20 +69,22 @@ const NavStyles = styled.nav`
       position: fixed;
       width: 100%;
       right: -100%;
-      background-color: white;
       top: 0;
       text-align: center;
       padding: 80px 0;
       line-height: normal;
       -webkit-transition: 0.7s;
       transition: 0.7s;
-      width: 40%;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       z-index: 100;
       min-width: 50vw;
+      background-color: ${colors.background.Primary4};
     }
     .menu a {
+      ${specialStyles2};
+      ${queryForExtra};
       display: block;
       padding: 0.8rem;
       opacity: 1;
@@ -124,7 +127,14 @@ const SubtitleStyles = styled.h4`
 `;
 
 const LogoutStyles = styled.p`
-  color: grey;
+  color: ${colors.text.Primary4};
+  :hover {
+    color: ${colors.text.Secondary2};
+  }
+  @media screen and (max-width: 1500px) {
+    ${queryForExtra};
+    ${specialStyles2};
+  }
 `;
 
 const Header = () => {

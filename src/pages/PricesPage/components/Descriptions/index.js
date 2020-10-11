@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { queryForTitle, queryForText } from "../../../../styles/devices";
 import colors from "../../../../styles/colors";
 import device from "../../../../styles/devices";
+import ludzik from "../../../../assets/ludzik.png";
 
 const DecriptionsStyle = styled.div`
   display: grid;
@@ -84,15 +85,33 @@ const Fourth = styled.div`
   }
 `;
 
+const Wrapper = styled.div`
+  display: flex;
+`;
+
+const ImgStyle = styled.div`
+  width: 100%;
+  background-image: url("${ludzik}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+`;
+
 const Descriptions = () => {
   return (
     <DecriptionsStyle>
       <First>
         <DecriptionsTitleStyle>Panie, jo sie nie znom</DecriptionsTitleStyle>
-        <DecriptionsTextStyle>
-          Spoko luzik, nie każdy musi się znać.
-        </DecriptionsTextStyle>
-        <DecriptionsTextStyle>Już tłumaczę wszystko.</DecriptionsTextStyle>
+        <Wrapper>
+          <ImgStyle />
+
+          <div>
+            <DecriptionsTextStyle>
+              Spoko luzik, nie każdy musi się znać.
+            </DecriptionsTextStyle>
+            <DecriptionsTextStyle>Już tłumaczę wszystko.</DecriptionsTextStyle>
+          </div>
+        </Wrapper>
       </First>
 
       <Second>

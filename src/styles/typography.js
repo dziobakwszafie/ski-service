@@ -8,6 +8,9 @@ line-height: 135%;`;
 export const specialStyles1 = `
 font-family: "FlyingLeatherneck";
 `;
+export const specialStyles2 = `
+font-family: "Aeronaves";
+`;
 
 const typography = {
   globalStyles: defaultStyles,
@@ -47,6 +50,23 @@ const typography = {
     XS: `
         ${defaultStyles}
         font-size: 1.2vw;`,
+  },
+  extra: {
+    XL: `
+        ${specialStyles2}
+        font-size: 8vw;`,
+    L: `
+        ${specialStyles2}
+        font-size: 7vw;`,
+    M: `
+        ${specialStyles2}
+        font-size: 6vw;`,
+    S: `
+        ${specialStyles2}
+        font-size: 5vw;`,
+    XS: `
+        ${specialStyles2}
+        font-size: 4vw;`,
   },
 };
 
