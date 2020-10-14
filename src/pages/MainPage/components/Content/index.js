@@ -1,16 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import IntroSharp from "./IntroSharp";
-import IntroWax from "./IntroWax";
-import ExtraInfo from "./ExtraInfo";
-import myface from "../../../../assets/myface.jpeg";
-import wax from "../../../../assets/wax.jpeg";
-import service from "../../../../assets/service.jpg";
-import mountain from "../../../../assets/mountain.PNG";
-import drawboot from "../../../../assets/drawboot.PNG";
-import skibar from "../../../../assets/skibar.jpeg";
-import device from "../../../../styles/devices";
-import colors from "../../../../styles/colors";
+import React from 'react';
+import styled from 'styled-components';
+import IntroSharp from './IntroSharp';
+import IntroWax from './IntroWax';
+import ExtraInfo from './ExtraInfo';
+import myface from '../../../../assets/myface.jpeg';
+import wax from '../../../../assets/wax.jpeg';
+import service from '../../../../assets/service.jpg';
+import mountain from '../../../../assets/mountain.PNG';
+import drawboot from '../../../../assets/drawboot.PNG';
+import skibar from '../../../../assets/skibar.jpeg';
+import device from '../../../../styles/devices';
+import colors from '../../../../styles/colors';
 
 const Main = styled.div`
   display: grid;
@@ -42,7 +42,7 @@ const Second = styled.div`
   grid-column-end: 4;
   grid-row-end: 2;
   background-color: ${colors.background.Primary2};
-  background-image: url("${wax}");
+  background-image: url('${wax}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,7 +59,7 @@ const Third = styled.div`
   grid-row-start: 2;
   grid-row-end: 3;
   background-color: ${colors.background.Primary2};
-  background-image: url("${service}");
+  background-image: url('${service}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -89,7 +89,7 @@ const Fifth = styled.div`
   grid-row-start: 3;
   grid-row-end: 4;
   background-color: ${colors.background.Primary2};
-  background-image: url("${skibar}");
+  background-image: url('${skibar}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -119,7 +119,7 @@ const Seventh = styled.div`
   grid-row-start: 3;
   grid-row-end: 4;
   background-color: ${colors.background.Primary2};
-  background-image: url("${myface}");
+  background-image: url('${myface}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,7 +136,7 @@ const Eighth = styled.div`
   grid-row-start: 4;
   grid-row-end: 5;
   background-color: ${colors.background.Primary2};
-  background-image: url("${drawboot}");
+  background-image: url('${drawboot}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -156,7 +156,7 @@ const Ninth = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("${mountain}");
+  background-image: url('${mountain}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

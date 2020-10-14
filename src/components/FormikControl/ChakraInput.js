@@ -1,11 +1,11 @@
-import React from "react";
-import { Field } from "formik";
+import React from 'react';
+import { Field } from 'formik';
 import {
   Input,
   FormControl,
   FormLabel,
   FormErrorMessage,
-} from "@chakra-ui/core";
+} from '@chakra-ui/core';
 
 function ChakraInput(props) {
   const { label, name, ...rest } = props;
@@ -14,8 +14,7 @@ function ChakraInput(props) {
       {({ field, form }) => (
         <FormControl
           isInvalid={form.errors[name] && form.touched[name]}
-          mt="1vw"
-        >
+          mt="1vw">
           <FormLabel htmlFor={name} fontSize={18}>
             <b>{label}</b>
           </FormLabel>

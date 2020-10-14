@@ -1,19 +1,19 @@
-import React from "react";
-import styled from "styled-components";
-import arrow from "../../../../../assets/arrow.png";
-import bricks from "../../../../../assets/bricks.jpg";
-import device from "../../../../../styles/devices";
-import typography from "../../../../../styles/typography";
-import { queryForText } from "../../../../../styles/devices";
-import { specialStyles1 } from "../../../../../styles/typography";
-import colors from "../../../../../styles/colors";
+import React from 'react';
+import styled from 'styled-components';
+import arrow from '../../../../../assets/arrow.png';
+import bricks from '../../../../../assets/bricks.jpg';
+import device from '../../../../../styles/devices';
+import typography from '../../../../../styles/typography';
+import { queryForText } from '../../../../../styles/devices';
+import { specialStyles1 } from '../../../../../styles/typography';
+import colors from '../../../../../styles/colors';
 
 const IntroStyles = styled.div`
   width: 100%;
 `;
 
 const Wrapper = styled.div`
-  background-image: url("${bricks}");
+  background-image: url('${bricks}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

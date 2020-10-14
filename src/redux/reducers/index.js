@@ -1,7 +1,7 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
-import loginReducer from "./loginReducer";
-import { composeWithDevTools } from "redux-devtools-extension";
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import loginReducer from './loginReducer';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const initialState = {};
 

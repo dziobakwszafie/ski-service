@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import typography from "../../../../styles/typography";
-import colors from "../../../../styles/colors";
-import device from "../../../../styles/devices";
-import { Link } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+import typography from '../../../../styles/typography';
+import colors from '../../../../styles/colors';
+import device from '../../../../styles/devices';
+import { Link } from 'react-router-dom';
 
 const HeaderStyles = styled.div`
   height: 56.25vw;
@@ -129,7 +129,7 @@ const ButtonStyles = styled.div`
 
   :after {
     position: absolute;
-    content: "";
+    content: '';
     top: 0;
     left: 0;
     width: 0;
@@ -171,8 +171,7 @@ const MainHeader = ({ reference, click }) => {
           mozallowfullscreen=""
           allowfullscreen=""
           allow="autoplay; encrypted-media"
-          data-ready="true"
-        ></VideoStyles>
+          data-ready="true"></VideoStyles>
       </VideoContainer>
       <OverflowStyles>
         <TitleStyles>NIESMIALI ROMANTYCY</TitleStyles>

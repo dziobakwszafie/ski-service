@@ -1,12 +1,12 @@
-import React from "react";
-import { Field } from "formik";
+import React from 'react';
+import { Field } from 'formik';
 import {
   Radio,
   RadioGroup,
   FormControl,
   FormLabel,
   FormErrorMessage,
-} from "@chakra-ui/core";
+} from '@chakra-ui/core';
 
 function ChakraRadio(props) {
   const { label, name, options, ...rest } = props;
@@ -28,8 +28,7 @@ function ChakraRadio(props) {
                     {...rest}
                     value={option.value}
                     checked={field.value === option.value}
-                    variantColor="red"
-                  >
+                    variantColor="red">
                     {option.key}
                   </Radio>
                 </React.Fragment>

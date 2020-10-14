@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { logoutUser, getUserData } from "../../redux/actions/loginActions";
-import { useSelector, useDispatch } from "react-redux";
-import { specialStyles1, specialStyles2 } from "../../styles/typography";
-import { queryForExtra } from "../../styles/devices";
-import colors from "../../styles/colors";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { logoutUser, getUserData } from '../../redux/actions/loginActions';
+import { useSelector, useDispatch } from 'react-redux';
+import { specialStyles1, specialStyles2 } from '../../styles/typography';
+import { queryForExtra } from '../../styles/devices';
+import colors from '../../styles/colors';
 
 const HeaderStyles = styled.div`
   width: 100%;
@@ -165,8 +165,7 @@ const Header = () => {
               to={`/history`}
               onClick={() => {
                 dispatch(getUserData());
-              }}
-            >
+              }}>
               HISTORIA ZAMÓWIEŃ
             </Link>
           )}
@@ -176,8 +175,7 @@ const Header = () => {
               to={`/0`}
               onClick={() => {
                 dispatch(logoutUser());
-              }}
-            >
+              }}>
               <LogoutStyles>WYLOGUJ</LogoutStyles>
               {/* cant do only onClick={dispatch(logoutUser()) because u have 2 pass function to onClick instead of just calling it */}
             </Link>

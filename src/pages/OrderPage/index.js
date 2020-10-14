@@ -1,14 +1,14 @@
-import React from "react";
-import Header from "../../components/Header";
-import OrderForm from "./components/OrderForm";
-import OrderDesc from "./components/OrderDesc";
-import OrderSummary from "./components/OrderSummary";
-import Footer from "../../components/Footer";
-import styled from "styled-components";
-import { useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
-import colors from "../../styles/colors";
-import device from "../../styles/devices";
+import React from 'react';
+import Header from '../../components/Header';
+import OrderForm from './components/OrderForm';
+import OrderDesc from './components/OrderDesc';
+import OrderSummary from './components/OrderSummary';
+import Footer from '../../components/Footer';
+import styled from 'styled-components';
+import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import colors from '../../styles/colors';
+import device from '../../styles/devices';
 
 const OrderMainSection = styled.div`
   display: grid;
@@ -86,7 +86,7 @@ const OrderPage = () => {
   );
 
   if (authenticated === false) {
-    history.push("/login");
+    history.push('/login');
   }
 
   return (

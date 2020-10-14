@@ -57,7 +57,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "npm test -- --coverage",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
   },
   "eslintConfig": {
     "extends": "react-app"

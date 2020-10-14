@@ -1,10 +1,10 @@
-import React from "react";
-import Header from "../../components/Header";
-import Prices from "./components/Prices";
-import Descriptions from "./components/Descriptions";
-import Footer from "../../components/Footer";
-import styled from "styled-components";
-import colors from "../../styles/colors";
+import React from 'react';
+import Header from '../../components/Header';
+import Prices from './components/Prices';
+import Descriptions from './components/Descriptions';
+import Footer from '../../components/Footer';
+import styled from 'styled-components';
+import colors from '../../styles/colors';
 
 const PricesPageStyles = styled.div``;
 

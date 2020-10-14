@@ -1,16 +1,16 @@
-import React from "react";
-import Header from "../../components/Header";
-import LoginComponent from "./components/LoginComponent";
-import Footer from "../../components/Footer";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import lift from "../../assets/lift.JPG";
-import signup from "../../assets/signup.png";
-import whatshere from "../../assets/whatshere.png";
-import exercise from "../../assets/exercise.gif";
-import { useEffect } from "react";
-import colors from "../../styles/colors";
-import device from "../../styles/devices";
+import React from 'react';
+import Header from '../../components/Header';
+import LoginComponent from './components/LoginComponent';
+import Footer from '../../components/Footer';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import lift from '../../assets/lift.JPG';
+import signup from '../../assets/signup.png';
+import whatshere from '../../assets/whatshere.png';
+import exercise from '../../assets/exercise.gif';
+import { useEffect } from 'react';
+import colors from '../../styles/colors';
+import device from '../../styles/devices';
 
 function ScrollToTopOnMount() {
   useEffect(() => {
@@ -68,12 +68,12 @@ const Third = styled.div`
   grid-row-start: 2;
   grid-row-end: 3;
   background-color: ${colors.background.Primary2};
-  background-image: url("${whatshere}");
+  background-image: url('${whatshere}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   :hover {
-    background-image: url("${exercise}");
+    background-image: url('${exercise}');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -91,7 +91,7 @@ const Fourth = styled.div`
   grid-row-start: 2;
   grid-row-end: 3;
   background-color: ${colors.background.Primary2};
-  background-image: url("${lift}");
+  background-image: url('${lift}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -113,7 +113,7 @@ const HeaderStyles = styled.div`
 const LinkBgStyle = styled.div`
   width: 100%;
   height: 100%;
-  background-image: url("${signup}");
+  background-image: url('${signup}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
