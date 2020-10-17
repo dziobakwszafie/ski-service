@@ -27,6 +27,7 @@ const HistoryTitleStyle = styled.h3`
   ${queryForTitle}
   color: ${colors.text.Primary4};
   text-align: center;
+  -webkit-text-stroke: 1px black;
 `;
 
 const SubTitleStyle = styled.h4`
@@ -47,11 +48,31 @@ const SingleOrder = styled.div`
   }
 `;
 
+const OrderContentStyle = styled.div`
+  ${queryForText}
+  ${device.XL} {
+    font-size: 1.5vw;
+  }
+  display: flex;
+`;
+
 const SingleLine = styled.p`
   ${queryForText}
   ${device.XL} {
     font-size: 1.5vw;
   }
+`;
+
+const SingleBox = styled.div`
+  ${queryForText}
+  ${device.XL} {
+    font-size: 1.5vw;
+  }
+  border: solid ${colors.text.Primary1} 1px;
+  border-radius: 2px;
+  padding: 2vw;
+  width: 30%;
+  margin-left: 30%;
 `;
 
 const HistorySection = (key) => {
@@ -70,28 +91,37 @@ const HistorySection = (key) => {
               <b>Zamówienie z dnia</b>{' '}
               {dayjs(order.createdAt).locale('pl').format('DD-MM-YYYY HH:mm')}
             </SubTitleStyle>
+            <OrderContentStyle>
+              <div>
+                <SingleLine>
+                  model nart: <b>{order.skis}</b>
+                </SingleLine>
+                <SingleLine>
+                  długość: <b>{order.length}</b>
+                </SingleLine>
+                <SingleLine>
+                  kąt boczny: <b>{order.sideAngle}</b>
+                </SingleLine>
+                <SingleLine>
+                  kąt dolny: <b>{order.bottomAngle}</b>
+                </SingleLine>
+                <SingleLine>
+                  rodzaj pilników: <b>{order.diamond}</b>
+                </SingleLine>
+                <SingleLine>
+                  rodzaj śniegu: <b>{order.snow}</b>
+                </SingleLine>
+                <SingleLine>
+                  rodzaj smaru: <b>{order.fluor}</b>
+                </SingleLine>
+              </div>
 
-            <SingleLine>
-              model nart: <b>{order.skis}</b>
-            </SingleLine>
-            <SingleLine>
-              długość: <b>{order.length}</b>
-            </SingleLine>
-            <SingleLine>
-              kąt boczny: <b>{order.sideAngle}</b>
-            </SingleLine>
-            <SingleLine>
-              kąt dolny: <b>{order.bottomAngle}</b>
-            </SingleLine>
-            <SingleLine>
-              rodzaj pilników: <b>{order.diamond}</b>
-            </SingleLine>
-            <SingleLine>
-              rodzaj śniegu: <b>{order.snow}</b>
-            </SingleLine>
-            <SingleLine>
-              rodzaj smaru: <b>{order.fluor}</b>
-            </SingleLine>
+              <SingleBox>
+                Tutaj mooooże zrobię możliwość komentowania zamówienia. Niby mam
+                to już zrobione na serwerze ale sam nie wiem czy mi to tak do
+                końca potrzebne.
+              </SingleBox>
+            </OrderContentStyle>
           </SingleOrder>
         ))}
       </OrdersContainer>
