@@ -20,7 +20,8 @@ const Wrapper = styled.div`
 `;
 
 const IntroTitleStyles = styled.h2`
-  color: ${colors.text.Primary8};
+  color: ${colors.text.Primary5};
+  -webkit-text-stroke: 2px black;
   padding-bottom: 1rem;
   text-align: center;
   ${device.XXL} {

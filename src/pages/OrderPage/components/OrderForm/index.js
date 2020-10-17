@@ -33,6 +33,10 @@ const MessageStyles = styled.p`
   margin-top: 15px;
 `;
 
+const RecaptchaStyling = styled.div`
+  margin-top: 15px;
+`;
+
 const OrderForm = () => {
   const sideAngle = [
     { key: '89', value: '89' },
@@ -175,10 +179,12 @@ const OrderForm = () => {
                 label="Pick a date"
                 name="pickupDate"
               /> */}
-              <ReCAPTCHA
-                sitekey="6LfLTc0ZAAAAAHM_OJKPNxwYr0aeEI31ZkjZ7MoO"
-                onChange={() => setDisableSubmit(false)}
-              />
+              <RecaptchaStyling>
+                <ReCAPTCHA
+                  sitekey="6LfLTc0ZAAAAAHM_OJKPNxwYr0aeEI31ZkjZ7MoO"
+                  onChange={() => setDisableSubmit(false)}
+                />
+              </RecaptchaStyling>
               <Button
                 my="2vw"
                 leftIcon="arrow-forward"
@@ -190,7 +196,7 @@ const OrderForm = () => {
                   formik.isSubmitting ||
                   disableSubmit
                 }>
-                Submit
+                Wyślij
               </Button>
             </FormWrapper>
           )}

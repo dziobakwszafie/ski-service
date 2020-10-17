@@ -57,6 +57,7 @@ const TitleStyles = styled.h1`
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
+  -webkit-text-stroke: 1px black;
 `;
 
 const SubtitleStyles = styled.h2`
@@ -67,6 +68,7 @@ const SubtitleStyles = styled.h2`
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
+  -webkit-text-stroke: 1px black;
 `;
 
 const Wrapper = styled.div`
@@ -100,11 +102,13 @@ const ButtonStyles = styled.div`
   font-family: sans-serif;
   text-decoration: none;
   color: ${colors.text.Primary7};
-  border: 2px solid ${colors.text.Primary7};
+  border: 1px solid ${colors.text.Primary7};
   letter-spacing: 2px;
   text-align: center;
   position: relative;
   transition: all 0.35s;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
   ${device.M} {
     width: 180px;
     height: 35px;
@@ -150,10 +154,7 @@ const ButtonStyles = styled.div`
 
 const ButtonSecondStyles = styled(ButtonStyles)`
   border: 2px solid ${colors.text.Primary5};
-
-  :after {
-    background-color: ${colors.background.Primary4};
-  }
+  background-color: rgba(14, 154, 167, 0.3);
 `;
 
 const MainHeader = ({ reference, click }) => {
@@ -162,9 +163,9 @@ const MainHeader = ({ reference, click }) => {
       <VideoContainer>
         <VideoStyles
           data-module-vimeo-player="video-promo"
-          src="https://player.vimeo.com/video/434891103?controls=false&amp;autoplay=1&amp;transparent=false&amp;autopause=false&amp;loop=1&amp;muted=1"
-          width="1280"
-          height="720"
+          src="https://player.vimeo.com/video/469306200?controls=false&amp;autoplay=1&amp;transparent=false&amp;autopause=false&amp;loop=1&amp;muted=1"
+          width="1920"
+          height="1080"
           data-vimeo-player-autoplay="true"
           frameborder="0"
           webkitallowfullscreen=""

@@ -12,6 +12,7 @@ const IntroSharpTitleStyles = styled.h3`
   padding-bottom: 1rem;
   color: ${colors.text.Primary4};
   ${queryForTitle}
+  -webkit-text-stroke: 1px black;
 `;
 
 const IntroSharpTextStyles = styled.div`

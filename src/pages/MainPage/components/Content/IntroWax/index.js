@@ -12,6 +12,7 @@ const IntroWaxTitleStyles = styled.h1`
   padding-bottom: 1rem;
   color: ${colors.text.Primary5};
   ${queryForTitle}
+  -webkit-text-stroke: 1px black;
 `;
 
 const IntroWaxTextStyles = styled.div`
