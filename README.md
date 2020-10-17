@@ -2,6 +2,7 @@
 
 Project of ski service app - still under develope, planned release winter 20/21.
 
+[![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://badge.fury.io/gh/tterb%2FHyde)
 [![CodeFactor](https://www.codefactor.io/repository/github/dziobakwszafie/ski-service/badge)](https://www.codefactor.io/repository/github/dziobakwszafie/ski-service)
 [![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://badge.fury.io/gh/tterb%2FHyde)
 ![Success](https://img.shields.io/badge/GitHub_Actions-success-success.svg?logo=github&logoColor=white)
