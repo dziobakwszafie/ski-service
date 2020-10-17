@@ -5,10 +5,11 @@ Project of ski service app - still under develope, planned release winter 20/21.
 [![CodeFactor](https://www.codefactor.io/repository/github/dziobakwszafie/ski-service/badge)](https://www.codefactor.io/repository/github/dziobakwszafie/ski-service)
 [![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://badge.fury.io/gh/tterb%2FHyde)
 ![Success](https://img.shields.io/badge/GitHub_Actions-success-success.svg?logo=github&logoColor=white)
-![David](https://img.shields.io/david/dziobakwszafie/ski-service)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues-raw/dziobakwszafie/ski-service)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/dziobakwszafie/ski-service)
+![David](https://img.shields.io/david/dziobakwszafie/ski-service?color=green)
+![GitHub issues](https://img.shields.io/github/issues-raw/dziobakwszafie/ski-service)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/dziobakwszafie/ski-service)
 ![GitHub deployments](https://img.shields.io/github/deployments/dziobakwszafie/ski-service/github-pages?label=dh-pages%20deploy)
+![GitHub repo size](https://img.shields.io/github/repo-size/dziobakwszafie/ski-service)
 
 ## Project Status
 
