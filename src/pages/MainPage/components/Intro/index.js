@@ -130,8 +130,6 @@ const NavLink = styled(Link)`
   align-items: center;
 `;
 
-const Wrapper = styled.div``;
-
 const LinkStyles = styled.h3`
   transform: rotate(-17deg);
   ${typography.header.L}
@@ -151,10 +149,10 @@ const Try = ({ reference }) => {
       <Third></Third>
       <Fourth>
         <NavLink to={`/login`}>
-          <Wrapper>
+          <div>
             <LinkStyles>ZAMÓW</LinkStyles>
             <LinkStyles>SERWIS</LinkStyles>
-          </Wrapper>
+          </div>
         </NavLink>
       </Fourth>
       <Fifth></Fifth>

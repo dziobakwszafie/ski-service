@@ -9,7 +9,7 @@ const DecriptionsStyle = styled.div`
   display: grid;
   grid-gap: 0.2vw;
   grid-template-columns: 33vw auto 33vw;
-  grid-template-rows: 20vw auto;
+  grid-template-rows: 30vw auto;
   background-color: ${colors.background.Primary1};
   ${device.M} {
     grid-template-columns: auto;
@@ -30,6 +30,11 @@ const DecriptionsTextStyle = styled.div`
   ul {
     padding: 3vw;
   }
+`;
+
+const DecriptionsTextStyleCenter = styled(DecriptionsTextStyle)`
+  padding: 0.5vw;
+  text-align: center;
 `;
 
 const First = styled.div`
@@ -85,12 +90,8 @@ const Fourth = styled.div`
   }
 `;
 
-const Wrapper = styled.div`
-  display: flex;
-`;
-
 const ImgStyle = styled.div`
-  width: 100%;
+  height: 60%;
   background-image: url('${ludzik}');
   background-position: center;
   background-repeat: no-repeat;
@@ -102,16 +103,11 @@ const Descriptions = () => {
     <DecriptionsStyle>
       <First>
         <DecriptionsTitleStyle>Panie, jo sie nie znom</DecriptionsTitleStyle>
-        <Wrapper>
-          <ImgStyle />
 
-          <div>
-            <DecriptionsTextStyle>
-              Spoko luzik, nie każdy musi się znać.
-            </DecriptionsTextStyle>
-            <DecriptionsTextStyle>Już tłumaczę wszystko.</DecriptionsTextStyle>
-          </div>
-        </Wrapper>
+        <ImgStyle />
+        <DecriptionsTextStyleCenter>
+          Spoczko, już tłumaczę co i jak.
+        </DecriptionsTextStyleCenter>
       </First>
 
       <Second>
