@@ -25,6 +25,7 @@ const FastPricesTitleStyle = styled.h3`
 const Wrapper = styled.div`
   position: relative;
   margin: 5vw auto;
+  display: flex;
 `;
 
 const PriceItems = styled.div`
@@ -45,6 +46,7 @@ const ButtonStyles = styled.div`
   text-align: center;
   position: relative;
   transition: all 0.35s;
+  margin: auto 10px;
   ${device.S} {
     width: 120px;
     height: 30px;
@@ -76,6 +78,17 @@ const ButtonStyles = styled.div`
 
   :hover:after {
     width: 100%;
+  }
+`;
+
+const FakeButtonStyles = styled(ButtonStyles)`
+  border: 2px solid ${colors.text.Primary2};
+  :hover {
+    background-color: ${colors.background.Primary2};
+    cursor: default;
+  }
+  :after {
+    background-color: ${colors.background.Primary2};
   }
 `;
 
@@ -161,6 +174,9 @@ const FastPrices = (props = { services }) => {
             <span>Złóż zamówienie</span>
           </Link>
         </ButtonStyles>
+        <FakeButtonStyles>
+          <span>Albooo przesuń niżej</span>
+        </FakeButtonStyles>
       </Wrapper>
     </FastPricesStyle>
   );
