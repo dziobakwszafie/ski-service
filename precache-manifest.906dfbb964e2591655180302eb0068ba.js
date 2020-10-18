@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "79f85c0309b30229d87c97f3563a5e3c",
+    "revision": "c91621dd9c94f4e66ae6a2a152e87c8d",
     "url": "/ski-service/index.html"
   },
   {
-    "revision": "d5872ed3f28c83f1b9a0",
+    "revision": "25ec043e81e9f9be807a",
     "url": "/ski-service/static/css/2.8d4cdce2.chunk.css"
   },
   {
-    "revision": "d5872ed3f28c83f1b9a0",
-    "url": "/ski-service/static/js/2.8a2221aa.chunk.js"
+    "revision": "25ec043e81e9f9be807a",
+    "url": "/ski-service/static/js/2.75a59084.chunk.js"
   },
   {
     "revision": "46d06c1ff06559117892fded2fd2455e",
-    "url": "/ski-service/static/js/2.8a2221aa.chunk.js.LICENSE.txt"
+    "url": "/ski-service/static/js/2.75a59084.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d7b906a2eead0b932912",
-    "url": "/ski-service/static/js/main.a7a02e36.chunk.js"
+    "revision": "11ff199b3073d501eb2a",
+    "url": "/ski-service/static/js/main.7f18327f.chunk.js"
   },
   {
     "revision": "7c48ae24717bce521ace",
@@ -38,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1782eaa4c5042ddd5eb4762b62ae9d18",
     "url": "/ski-service/static/media/cafe.1782eaa4.jpeg"
+  },
+  {
+    "revision": "2eff95cee5bcdb8b68389f69fa8ef140",
+    "url": "/ski-service/static/media/car.2eff95ce.png"
   },
   {
     "revision": "9bac093d5d655cbd0ec4e389faeccabd",
@@ -80,6 +84,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ski-service/static/media/service.5feefa82.jpg"
   },
   {
+    "revision": "661202bf0fd121e0c9b81751095d761f",
+    "url": "/ski-service/static/media/sharpi.661202bf.png"
+  },
+  {
     "revision": "8ba73c5ff8d033faf129b18e35c586fd",
     "url": "/ski-service/static/media/signup.8ba73c5f.png"
   },
@@ -94,6 +102,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1c8912bec963766539628978cb130433",
     "url": "/ski-service/static/media/wax.1c8912be.jpeg"
+  },
+  {
+    "revision": "85a442973dac205b7b8f599c5b9b0250",
+    "url": "/ski-service/static/media/waxi.85a44297.png"
   },
   {
     "revision": "79109504e6ca068b50ade691cc42808a",
