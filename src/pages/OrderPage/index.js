@@ -20,7 +20,7 @@ const OrderMainSection = styled.div`
   border-top: 0.23333vw solid ${colors.background.Primary1};
   ${device.M} {
     grid-template-rows: auto auto auto;
-    grid-template-columns: 100vw;
+    grid-template-columns: auto;
   }
 `;
 const First = styled.div`

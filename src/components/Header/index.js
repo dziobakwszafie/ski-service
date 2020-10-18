@@ -171,7 +171,7 @@ const Header = () => {
               onClick={() => {
                 dispatch(getUserData());
               }}>
-              HISTORIA ZAMÓWIEŃ
+              HISTORIA
             </Link>
           )}
 
