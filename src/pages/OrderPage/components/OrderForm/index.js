@@ -4,14 +4,22 @@ import * as Yup from 'yup';
 import FormikControl from '../../../../components/FormikControl/FormikControl';
 import styled from 'styled-components';
 import axios from 'axios';
-import { Button } from '@chakra-ui/core';
+import { Button, Spinner } from '@chakra-ui/core';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { queryForTitle } from '../../../../styles/devices';
 import colors from '../../../../styles/colors';
-import { Alert, AlertIcon } from '@chakra-ui/core';
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from '@chakra-ui/core';
+import { SET_LOADING } from '../../../../redux/actionTypes/loginTypes';
+import { useSelector, useDispatch } from 'react-redux';
 
 const OrderFormStyles = styled.div`
   display: flex;
+  justify-content: center;
   margin-top: 3vw;
   margin-bottom: 5vw;
   width: 90%;
@@ -20,20 +28,24 @@ const OrderFormStyles = styled.div`
 const OrderformTitleStyle = styled.h3`
   ${queryForTitle}
   color: ${colors.text.Primary3};
+  text-align: center;
 `;
 
 const FormWrapper = styled(Form)`
-  * {
-    margin-top: 2px;
-    margin-bottom: 2px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
-const MessageStyles = styled.p`
-  margin-top: 15px;
+const SinglePos = styled.div`
+  margin: 15px auto;
 `;
 
 const RecaptchaStyling = styled.div`
+  margin-top: 15px;
+`;
+
+const MessageStyles = styled.div`
   margin-top: 15px;
 `;
 
@@ -91,7 +103,14 @@ const OrderForm = () => {
   const [disableSubmit, setDisableSubmit] = useState(true);
   let [message, setMessage] = useState();
 
+  const dispatch = useDispatch();
+
+  const loadingMessage = useSelector(
+    (state) => state.loginReducer.loadingMessage
+  );
+
   const onSubmit = (values) => {
+    dispatch({ type: SET_LOADING });
     console.log('Form data', values);
     const orderData = {
       skis: values.skis,
@@ -104,18 +123,40 @@ const OrderForm = () => {
     };
     axios.post('/order', orderData).then((res) => {
       console.log(res.data);
-
+      if (res.data) dispatch({ type: SET_LOADING });
       setMessage(
-        // (message = res.data ? "Zamówienie wysłano" : "Coś nie wyszło")
         (message = res.data ? (
-          <Alert status="success">
-            <AlertIcon />
-            Zamówienie zostało wysłane!
+          <Alert
+            status="success"
+            variant="subtle"
+            flexDirection="column"
+            justifyContent="center"
+            textAlign="center"
+            height="200px">
+            <AlertIcon size="40px" mr={0} />
+            <AlertTitle mt={4} mb={1} fontSize="lg">
+              Zamówienie zostało wysłane!
+            </AlertTitle>
+            <AlertDescription maxWidth="sm">
+              W razie pytań zapraszam do kontaktu telefonicznego lub mailowego.
+            </AlertDescription>
           </Alert>
         ) : (
-          <Alert status="error">
-            <AlertIcon />
-            Oj oj coś nie poszło
+          <Alert
+            status="error"
+            variant="subtle"
+            flexDirection="column"
+            justifyContent="center"
+            textAlign="center"
+            height="200px">
+            <AlertIcon size="40px" mr={0} />
+            <AlertTitle mt={4} mb={1} fontSize="lg">
+              Oj coś nie poszło.
+            </AlertTitle>
+            <AlertDescription maxWidth="sm">
+              Spróbuj ponownie, a jak dalej się nie uda to zapraszam do kontaktu
+              telefonicznego lub mailowego.
+            </AlertDescription>
           </Alert>
         ))
       );
@@ -132,72 +173,91 @@ const OrderForm = () => {
           onSubmit={onSubmit}>
           {(formik) => (
             <FormWrapper>
-              <FormikControl
-                control="chakraInput"
-                type="skis"
-                label="Model nart"
-                name="skis"
-              />
-              <FormikControl
-                control="chakraInput"
-                type="length"
-                label="Długość [cm]"
-                name="length"
-              />
-              <FormikControl
-                control="chakraRadio"
-                label="Kąt boczny krawędzi [stopnie]"
-                name="sideAngle"
-                options={sideAngle}
-              />
-              <FormikControl
-                control="chakraRadio"
-                label="Kąt dolny krawędzi [stopnie]"
-                name="bottomAngle"
-                options={bottomAngle}
-              />
-              <FormikControl
-                control="chakraRadio"
-                label="Rodzaj pilników do ostrzenia"
-                name="diamond"
-                options={diamond}
-              />
-              <FormikControl
-                control="chakraRadio"
-                label="Smarowanie na śnieg"
-                name="snow"
-                options={snow}
-              />
-              <FormikControl
-                control="chakraRadio"
-                label="Rodzaj smaru"
-                name="fluor"
-                options={fluor}
-              />
+              <SinglePos>
+                <FormikControl
+                  control="chakraInput"
+                  type="skis"
+                  label="Model nart"
+                  name="skis"
+                />
+              </SinglePos>
+              <SinglePos>
+                <FormikControl
+                  control="chakraInput"
+                  type="length"
+                  label="Długość [cm]"
+                  name="length"
+                />
+              </SinglePos>
+              <SinglePos>
+                <FormikControl
+                  control="chakraRadio"
+                  label="Kąt boczny krawędzi [stopnie]"
+                  name="sideAngle"
+                  options={sideAngle}
+                />
+              </SinglePos>
+              <SinglePos>
+                <FormikControl
+                  control="chakraRadio"
+                  label="Kąt dolny krawędzi [stopnie]"
+                  name="bottomAngle"
+                  options={bottomAngle}
+                />
+              </SinglePos>
+              <SinglePos>
+                <FormikControl
+                  control="chakraRadio"
+                  label="Rodzaj pilników do ostrzenia"
+                  name="diamond"
+                  options={diamond}
+                />
+              </SinglePos>
+              <SinglePos>
+                <FormikControl
+                  control="chakraRadio"
+                  label="Smarowanie na śnieg"
+                  name="snow"
+                  options={snow}
+                />
+              </SinglePos>
+              <SinglePos>
+                <FormikControl
+                  control="chakraRadio"
+                  label="Rodzaj smaru"
+                  name="fluor"
+                  options={fluor}
+                />
+              </SinglePos>
               {/* <FormikControl
                 control="date"
                 label="Pick a date"
                 name="pickupDate"
               /> */}
-              <RecaptchaStyling>
-                <ReCAPTCHA
-                  sitekey="6LfLTc0ZAAAAAHM_OJKPNxwYr0aeEI31ZkjZ7MoO"
-                  onChange={() => setDisableSubmit(false)}
-                />
-              </RecaptchaStyling>
-              <Button
-                my="2vw"
-                leftIcon="arrow-forward"
-                variantColor="teal"
-                type="submit"
-                disabled={
-                  !formik.isValid ||
-                  !formik.dirty ||
-                  formik.isSubmitting ||
-                  disableSubmit
-                }>
-                Wyślij
-              </Button>
+              <SinglePos>
+                <RecaptchaStyling>
+                  <ReCAPTCHA
+                    sitekey="6LfLTc0ZAAAAAHM_OJKPNxwYr0aeEI31ZkjZ7MoO"
+                    onChange={() => setDisableSubmit(false)}
+                  />
+                </RecaptchaStyling>
+              </SinglePos>
+              <SinglePos>
+                <Button
+                  my="2vw"
+                  leftIcon="arrow-forward"
+                  variantColor="teal"
+                  type="submit"
+                  disabled={
+                    !formik.isValid ||
+                    !formik.dirty ||
+                    formik.isSubmitting ||
+                    disableSubmit
+                  }>
+                  Wyślij
+                  {loadingMessage === true && <Spinner color="red.500" />}
+                </Button>
+              </SinglePos>
             </FormWrapper>
           )}
         </Formik>
