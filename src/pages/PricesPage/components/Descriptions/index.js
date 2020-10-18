@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { queryForTitle, queryForText } from "../../../../styles/devices";
-import colors from "../../../../styles/colors";
-import device from "../../../../styles/devices";
-import ludzik from "../../../../assets/ludzik.png";
+import React from 'react';
+import styled from 'styled-components';
+import { queryForTitle, queryForText } from '../../../../styles/devices';
+import colors from '../../../../styles/colors';
+import device from '../../../../styles/devices';
+import ludzik from '../../../../assets/ludzik.png';
 
 const DecriptionsStyle = styled.div`
   display: grid;
@@ -91,7 +91,7 @@ const Wrapper = styled.div`
 
 const ImgStyle = styled.div`
   width: 100%;
-  background-image: url("${ludzik}");
+  background-image: url('${ludzik}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

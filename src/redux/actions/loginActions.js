@@ -4,12 +4,12 @@ import {
   SET_SUCCESS_MESSAGE,
   SET_UNAUTHENTICATED,
   SET_USER,
-} from "../actionTypes/loginTypes";
-import axios from "axios";
+} from '../actionTypes/loginTypes';
+import axios from 'axios';
 
 export const login = (loginData) => (dispatch) => {
   axios
-    .post("/login", loginData)
+    .post('/login', loginData)
 
     .then((res) => {
       console.log(res.data);
@@ -22,7 +22,7 @@ export const login = (loginData) => (dispatch) => {
 
 export const signup = (signupData) => (dispatch) => {
   axios
-    .post("/signup", signupData)
+    .post('/signup', signupData)
 
     .then((res) => {
       console.log(res.data);
@@ -36,7 +36,7 @@ export const signup = (signupData) => (dispatch) => {
 
 export const getUserData = () => (dispatch) => {
   axios
-    .get("/user")
+    .get('/user')
     .then((res) => {
       dispatch({
         type: SET_USER,
@@ -47,13 +47,13 @@ export const getUserData = () => (dispatch) => {
 };
 
 export const logoutUser = () => (dispatch) => {
-  localStorage.removeItem("FBIdToken");
-  delete axios.defaults.headers.common["Authorization"];
+  localStorage.removeItem('FBIdToken');
+  delete axios.defaults.headers.common['Authorization'];
   dispatch({ type: SET_UNAUTHENTICATED });
 };
 
 const setAuthHeader = (token) => {
   const FBIdToken = `Bearer ${token}`;
-  localStorage.setItem("FBIdToken", FBIdToken);
-  axios.defaults.headers.common["Authorization"] = FBIdToken;
+  localStorage.setItem('FBIdToken', FBIdToken);
+  axios.defaults.headers.common['Authorization'] = FBIdToken;
 };

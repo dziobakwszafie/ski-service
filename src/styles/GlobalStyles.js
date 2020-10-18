@@ -1,7 +1,7 @@
-import { createGlobalStyle } from "styled-components";
-import typography from "./typography";
-import flyingleatherv2 from "../fonts/flyingleatherv2.ttf";
-import Aeronaves from "../fonts/Aeronaves.ttf";
+import { createGlobalStyle } from 'styled-components';
+import typography from './typography';
+import flyingleatherv2 from '../fonts/flyingleatherv2.ttf';
+import Aeronaves from '../fonts/Aeronaves.ttf';
 
 export const GlobalStyles = createGlobalStyle`
 * {

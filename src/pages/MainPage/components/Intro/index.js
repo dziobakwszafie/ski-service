@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import IntroText from "./IntroText";
-import { Link } from "react-router-dom";
-import skiboots from "../../../../assets/ski-boots.jpeg";
-import photoshoot from "../../../../assets/photoshoot.jpg";
-import cafe from "../../../../assets/cafe.jpeg";
-import device from "../../../../styles/devices";
-import typography from "../../../../styles/typography";
-import colors from "../../../../styles/colors";
+import React from 'react';
+import styled from 'styled-components';
+import IntroText from './IntroText';
+import { Link } from 'react-router-dom';
+import skiboots from '../../../../assets/ski-boots.jpeg';
+import photoshoot from '../../../../assets/photoshoot.jpg';
+import cafe from '../../../../assets/cafe.jpeg';
+import device from '../../../../styles/devices';
+import typography from '../../../../styles/typography';
+import colors from '../../../../styles/colors';
 
 const Main = styled.div`
   display: grid;
@@ -41,7 +41,7 @@ const Second = styled.div`
   grid-row-start: 1;
   grid-row-end: 2;
   background-color: ${colors.background.Primary2};
-  background-image: url("${photoshoot}");
+  background-image: url('${photoshoot}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -58,7 +58,7 @@ const Third = styled.div`
   grid-row-start: 1;
   grid-row-end: 3;
   background-color: ${colors.background.Primary2};
-  background-image: url("${skiboots}");
+  background-image: url('${skiboots}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -88,7 +88,7 @@ const Fourth = styled.div`
   }
   ::before {
     position: absolute;
-    content: "";
+    content: '';
     top: 0;
     left: 0;
     width: 0;
@@ -110,7 +110,7 @@ const Fifth = styled.div`
   grid-row-start: 3;
   grid-row-end: 4;
   background-color: ${colors.background.Primary2};
-  background-image: url("${cafe}");
+  background-image: url('${cafe}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

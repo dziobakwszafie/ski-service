@@ -1,16 +1,16 @@
-import React from "react";
-import Header from "../../components/Header";
-import SignupComponent from "./components/SignupComponent";
-import Footer from "../../components/Footer";
-import styled from "styled-components";
-import lift from "../../assets/lift.JPG";
-import whatshere from "../../assets/whatshere.png";
-import exercise from "../../assets/exercise.gif";
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
-import colors from "../../styles/colors";
-import device from "../../styles/devices";
-import { specialStyles1 } from "../../styles/typography";
+import React from 'react';
+import Header from '../../components/Header';
+import SignupComponent from './components/SignupComponent';
+import Footer from '../../components/Footer';
+import styled from 'styled-components';
+import lift from '../../assets/lift.JPG';
+import whatshere from '../../assets/whatshere.png';
+import exercise from '../../assets/exercise.gif';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import colors from '../../styles/colors';
+import device from '../../styles/devices';
+import { specialStyles1 } from '../../styles/typography';
 
 function ScrollToTopOnMount() {
   useEffect(() => {
@@ -39,7 +39,7 @@ const First = styled.div`
   grid-row-start: 1;
   grid-row-end: 2;
   background-color: ${colors.background.Primary2};
-  background-image: url("${lift}");
+  background-image: url('${lift}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -75,12 +75,12 @@ const Third = styled.div`
   grid-row-start: 2;
   grid-row-end: 3;
   background-color: ${colors.background.Primary2};
-  background-image: url("${whatshere}");
+  background-image: url('${whatshere}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   :hover {
-    background-image: url("${exercise}");
+    background-image: url('${exercise}');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

@@ -1,10 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { queryForTitle, queryForText } from "../../../../styles/devices";
-import colors from "../../../../styles/colors";
+import React from 'react';
+import styled from 'styled-components';
+import { queryForTitle, queryForText } from '../../../../styles/devices';
+import colors from '../../../../styles/colors';
 
 const SummaryStyles = styled.div`
-  ${queryForTitle}
   color: ${colors.text.Primary4};
   display: flex;
   flex-direction: column;

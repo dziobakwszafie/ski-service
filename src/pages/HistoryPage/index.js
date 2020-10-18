@@ -1,12 +1,12 @@
-import React from "react";
-import Header from "../../components/Header";
-import HistorySection from "./components/HistorySection";
-import Footer from "../../components/Footer";
-import { useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
-import styled from "styled-components";
-import colors from "../../styles/colors";
-import device from "../../styles/devices";
+import React from 'react';
+import Header from '../../components/Header';
+import HistorySection from './components/HistorySection';
+import Footer from '../../components/Footer';
+import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import styled from 'styled-components';
+import colors from '../../styles/colors';
+import device from '../../styles/devices';
 
 const HistoryStyles = styled.div``;
 
@@ -21,7 +21,7 @@ const HistoryPageStyles = styled.div`
   min-height: 80vh;
   ${device.M} {
     grid-template-rows: auto;
-    grid-template-columns: 100vw;
+    grid-template-columns: auto;
   }
 `;
 
@@ -57,7 +57,7 @@ const HistoryPage = () => {
   );
 
   if (authenticated === false) {
-    history.push("/login");
+    history.push('/login');
   }
 
   return (

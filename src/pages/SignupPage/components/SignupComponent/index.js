@@ -1,15 +1,15 @@
-import React from "react";
-import { Formik, Form } from "formik";
-import * as Yup from "yup";
-import styled from "styled-components";
-import { theme, ThemeProvider } from "@chakra-ui/core";
-import FormikControl from "../../../../components/FormikControl/FormikControl";
-import { Button, Box, Spinner } from "@chakra-ui/core";
-import { useHistory } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { SET_LOADING } from "../../../../redux/actionTypes/loginTypes";
-import { signup } from "../../../../redux/actions/loginActions";
-import { queryForTitle } from "../../../../styles/devices";
+import React from 'react';
+import { Formik, Form } from 'formik';
+import * as Yup from 'yup';
+import styled from 'styled-components';
+import { theme, ThemeProvider } from '@chakra-ui/core';
+import FormikControl from '../../../../components/FormikControl/FormikControl';
+import { Button, Box, Spinner } from '@chakra-ui/core';
+import { useHistory } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { SET_LOADING } from '../../../../redux/actionTypes/loginTypes';
+import { signup } from '../../../../redux/actions/loginActions';
+import { queryForTitle } from '../../../../styles/devices';
 
 const LoginTitleStyle = styled.h3`
   ${queryForTitle}
@@ -25,33 +25,33 @@ const SignupComponent = () => {
   const history = useHistory();
 
   const initialValues = {
-    email: "",
-    password: "",
-    confirmPassword: "",
-    name: "",
-    phone: "",
+    email: '',
+    password: '',
+    confirmPassword: '',
+    name: '',
+    phone: '',
   };
 
   const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
   const validationSchema = Yup.object({
     email: Yup.string()
-      .email("Zły format maila")
-      .required("Nie może być puste"),
+      .email('Zły format maila')
+      .required('Nie może być puste'),
     password: Yup.string()
-      .min(6, "Minimum 6 znaków")
-      .required("Nie może być puste"),
+      .min(6, 'Minimum 6 znaków')
+      .required('Nie może być puste'),
     confirmPassword: Yup.string()
-      .oneOf([Yup.ref("password")], "Hasła nie pasują")
-      .required("Nie może być puste"),
+      .oneOf([Yup.ref('password')], 'Hasła nie pasują')
+      .required('Nie może być puste'),
     name: Yup.string()
-      .min(2, "Mininum 4 znaki")
-      .max(20, "Maximum 20 znaków")
-      .required("Nie może być puste"),
+      .min(2, 'Mininum 4 znaki')
+      .max(20, 'Maximum 20 znaków')
+      .required('Nie może być puste'),
     phone: Yup.string()
-      .matches(phoneRegExp, "Zły format")
-      .length(9, "Numer musi mieć 9 znaków")
-      .required("Nie może być puste"),
+      .matches(phoneRegExp, 'Zły format')
+      .length(9, 'Numer musi mieć 9 znaków')
+      .required('Nie może być puste'),
   });
 
   const loadingMessage = useSelector(
@@ -68,14 +68,14 @@ const SignupComponent = () => {
 
   if (authenticated === true) {
     setInterval(function () {
-      history.push("/order");
+      history.push('/order');
       window.location.reload();
     }, 2000);
   }
 
   const onSubmit = (values) => {
-    console.log("Form data", values);
-    console.log("Saved data", JSON.parse(JSON.stringify(values)));
+    console.log('Form data', values);
+    console.log('Saved data', JSON.parse(JSON.stringify(values)));
     const signupData = {
       email: values.email,
       password: values.password,
@@ -96,8 +96,7 @@ const SignupComponent = () => {
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
-            onSubmit={onSubmit}
-          >
+            onSubmit={onSubmit}>
             {(formik) => (
               <Form>
                 <FormikControl
@@ -135,8 +134,7 @@ const SignupComponent = () => {
                   type="submit"
                   disabled={
                     !formik.isValid || !formik.dirty || formik.isSubmitting
-                  }
-                >
+                  }>
                   Wyślij
                   {loadingMessage && <Spinner color="red.500" />}
                 </Button>

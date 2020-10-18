@@ -1,30 +1,26 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
-import { useSelector } from "react-redux";
-import styled from "styled-components";
-import dayjs from "dayjs";
-import "dayjs/locale/pl";
-import { queryForTitle } from "../../../../styles/devices";
-import colors from "../../../../styles/colors";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import styled from 'styled-components';
+import dayjs from 'dayjs';
+import 'dayjs/locale/pl';
+import {
+  queryForTitle,
+  queryForText,
+  queryForExtra,
+} from '../../../../styles/devices';
+import colors from '../../../../styles/colors';
+import device from '../../../../styles/devices';
 
-const useStyles = makeStyles({
-  table: {
-    minWidth: 800,
-  },
-});
-
-const HistoryTableStyle = styled.div`
+const HistoryStyle = styled.div`
   margin-top: 3vw;
   margin-bottom: 5vw;
   width: 90%;
-  overflow: scroll;
+`;
+
+const OrdersContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 
 const HistoryTitleStyle = styled.h3`
@@ -33,51 +29,102 @@ const HistoryTitleStyle = styled.h3`
   text-align: center;
 `;
 
+const SubTitleStyle = styled.h4`
+  ${queryForText}
+  color: ${colors.text.Primary7};
+  text-align: center;
+  margin-bottom: 10px;
+`;
+
+const SingleOrder = styled.div`
+  margin: 2vw;
+  ${queryForExtra}
+  background-color:${colors.background.Primary4};
+  padding: 2vw;
+  width: 100%;
+  :nth-child(even) {
+    background-color: ${colors.background.Primary5};
+  }
+`;
+
+const OrderContentStyle = styled.div`
+  ${queryForText}
+  ${device.XL} {
+    font-size: 1.5vw;
+  }
+  display: flex;
+`;
+
+const SingleLine = styled.p`
+  ${queryForText}
+  ${device.XL} {
+    font-size: 1.5vw;
+  }
+`;
+
+const SingleBox = styled.div`
+  ${queryForText}
+  ${device.XL} {
+    font-size: 1.5vw;
+  }
+  border: solid ${colors.text.Primary1} 1px;
+  border-radius: 2px;
+  padding: 2vw;
+  width: 30%;
+  margin-left: 30%;
+`;
+
 const HistorySection = (key) => {
   const userOrders = useSelector((state) => state.loginReducer.orders);
-  const classes = useStyles();
-  dayjs.locale("pl");
+  dayjs.locale('pl');
 
-  const list = userOrders.sort((a, b) => (a.createdAt > b.createdAt ? 1 : -1));
+  const list = userOrders.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 
   return (
-    <HistoryTableStyle>
+    <HistoryStyle>
       <HistoryTitleStyle>Historia zamówien</HistoryTitleStyle>
-      <TableContainer component={Paper} className={classes.table}>
-        <Table aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell>Data</TableCell>
-              <TableCell align="right">Narty</TableCell>
-              <TableCell align="right">Długość</TableCell>
-              <TableCell align="right">Kąt boczny</TableCell>
-              <TableCell align="right">Kąt dolny</TableCell>
-              <TableCell align="right">Rodzaj pilników</TableCell>
-              <TableCell align="right">Rodzaj śniegu</TableCell>
-              <TableCell align="right">Rodzaj smaru</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {list.map((order) => (
-              <TableRow key={order.createdAt}>
-                <TableCell component="th" scope="row">
-                  {dayjs(order.createdAt)
-                    .locale("pl")
-                    .format("DD-MM-YYYY HH:mm")}
-                </TableCell>
-                <TableCell align="right">{order.skis}</TableCell>
-                <TableCell align="right">{order.length}</TableCell>
-                <TableCell align="right">{order.sideAngle}</TableCell>
-                <TableCell align="right">{order.bottomAngle}</TableCell>
-                <TableCell align="right">{order.diamond}</TableCell>
-                <TableCell align="right">{order.snow}</TableCell>
-                <TableCell align="right">{order.fluor}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </HistoryTableStyle>
+      <OrdersContainer>
+        {list.map((order) => (
+          <SingleOrder key={order.createdAt}>
+            <SubTitleStyle>
+              <b>Zamówienie z dnia</b>{' '}
+              {dayjs(order.createdAt).locale('pl').format('DD-MM-YYYY HH:mm')}
+            </SubTitleStyle>
+            <OrderContentStyle>
+              <div>
+                <SingleLine>
+                  model nart: <b>{order.skis}</b>
+                </SingleLine>
+                <SingleLine>
+                  długość: <b>{order.length}</b>
+                </SingleLine>
+                <SingleLine>
+                  kąt boczny: <b>{order.sideAngle}</b>
+                </SingleLine>
+                <SingleLine>
+                  kąt dolny: <b>{order.bottomAngle}</b>
+                </SingleLine>
+                <SingleLine>
+                  rodzaj pilników: <b>{order.diamond}</b>
+                </SingleLine>
+                <SingleLine>
+                  rodzaj śniegu: <b>{order.snow}</b>
+                </SingleLine>
+                <SingleLine>
+                  rodzaj smaru: <b>{order.fluor}</b>
+                </SingleLine>
+              </div>
+
+              <SingleBox>
+                Tutaj mooooże zrobię możliwość komentowania zamówienia. Niby mam
+                to już zrobione na serwerze ale sam nie wiem czy mi to tak do
+                końca potrzebne.
+              </SingleBox>
+            </OrderContentStyle>
+          </SingleOrder>
+        ))}
+      </OrdersContainer>
+    </HistoryStyle>
   );
 };
 

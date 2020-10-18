@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import device, { queryForTitle } from "../../../../styles/devices";
-import colors from "../../../../styles/colors";
-import typography from "../../../../styles/typography";
-import { Link } from "react-router-dom";
-import { services } from "./Services.table";
+import React from 'react';
+import styled from 'styled-components';
+import device, { queryForTitle } from '../../../../styles/devices';
+import colors from '../../../../styles/colors';
+import typography from '../../../../styles/typography';
+import { Link } from 'react-router-dom';
+import { services } from './Services.table';
 
 const FastPricesStyle = styled.div`
   display: flex;
@@ -57,7 +57,7 @@ const ButtonStyles = styled.div`
 
   :after {
     position: absolute;
-    content: "";
+    content: '';
     top: 0;
     left: 0;
     width: 0;
@@ -111,8 +111,6 @@ const SingleServiceTextStyle = styled.p`
 const SingleLineStyle = styled.p`
   margin-bottom: 2vw;
 `;
-
-const iconPath = "../../../../assets/";
 
 const FastPrices = (props = { services }) => {
   return (

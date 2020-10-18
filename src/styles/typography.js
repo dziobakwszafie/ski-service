@@ -17,22 +17,34 @@ const typography = {
   header: {
     XXL: `
         ${specialStyles1}
-        font-size: 14vw;`,
+        font-size: 14vw;
+        -webkit-text-stroke: 1px black;
+        `,
     XL: `
         ${specialStyles1}
-        font-size: 10vw;`,
+        font-size: 10vw;
+        -webkit-text-stroke: 1px black;
+        `,
     L: `
         ${specialStyles1}
-        font-size: 8vw;`,
+        font-size: 8vw;
+        -webkit-text-stroke: 1px black;
+        `,
     M: `
         ${specialStyles1}
-        font-size: 7vw;`,
+        font-size: 7vw;
+        -webkit-text-stroke: 1px black;
+        `,
     S: `
         ${specialStyles1};
-        font-size: 5vw;`,
+        font-size: 5vw;
+        -webkit-text-stroke: 1px black;
+        `,
     XS: `
         ${specialStyles1};
-        font-size: 4vw;`,
+        font-size: 4vw;
+        -webkit-text-stroke: 1px black;
+        `,
   },
   body: {
     XL: `
