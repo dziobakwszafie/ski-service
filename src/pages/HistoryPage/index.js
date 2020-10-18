@@ -21,7 +21,7 @@ const HistoryPageStyles = styled.div`
   min-height: 80vh;
   ${device.M} {
     grid-template-rows: auto;
-    grid-template-columns: 100vw;
+    grid-template-columns: auto;
   }
 `;
 

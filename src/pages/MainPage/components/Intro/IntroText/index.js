@@ -21,7 +21,6 @@ const Wrapper = styled.div`
 
 const IntroTitleStyles = styled.h2`
   color: ${colors.text.Primary5};
-  -webkit-text-stroke: 2px black;
   padding-bottom: 1rem;
   text-align: center;
   ${device.XXL} {
@@ -39,7 +38,8 @@ const IntroTitleStyles = styled.h2`
   ${device.S} {
     ${typography.header.XL}
   }
-  border-bottom: solid 0.33333vw ${colors.text.Primary1}; ;
+  border-bottom: solid 0.33333vw ${colors.text.Primary1};
+  -webkit-text-stroke: 2px black !important;
 `;
 
 const IntroTextStyles = styled.p`

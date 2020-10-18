@@ -57,7 +57,6 @@ const TitleStyles = styled.h1`
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
-  -webkit-text-stroke: 1px black;
 `;
 
 const SubtitleStyles = styled.h2`
@@ -68,7 +67,6 @@ const SubtitleStyles = styled.h2`
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
-  -webkit-text-stroke: 1px black;
 `;
 
 const Wrapper = styled.div`

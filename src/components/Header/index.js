@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { specialStyles1, specialStyles2 } from '../../styles/typography';
 import { queryForExtra } from '../../styles/devices';
 import colors from '../../styles/colors';
+import kockodan from '../../assets/kockodan.png';
 
 const HeaderStyles = styled.div`
   width: 100%;
@@ -81,6 +82,10 @@ const NavStyles = styled.nav`
       z-index: 100;
       min-width: 50vw;
       background-color: ${colors.background.Primary4};
+      background-image: url('${kockodan}');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     .menu a {
       ${specialStyles2};

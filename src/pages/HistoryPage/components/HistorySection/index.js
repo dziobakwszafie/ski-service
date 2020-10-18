@@ -27,7 +27,6 @@ const HistoryTitleStyle = styled.h3`
   ${queryForTitle}
   color: ${colors.text.Primary4};
   text-align: center;
-  -webkit-text-stroke: 1px black;
 `;
 
 const SubTitleStyle = styled.h4`
