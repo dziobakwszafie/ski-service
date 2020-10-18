@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e3a379778596d5bd82cbeba40e186097",
+    "revision": "79f85c0309b30229d87c97f3563a5e3c",
     "url": "/ski-service/index.html"
   },
   {
-    "revision": "3952a3fef5d822fe8a15",
+    "revision": "d5872ed3f28c83f1b9a0",
     "url": "/ski-service/static/css/2.8d4cdce2.chunk.css"
   },
   {
-    "revision": "3952a3fef5d822fe8a15",
-    "url": "/ski-service/static/js/2.cc3fbcc5.chunk.js"
+    "revision": "d5872ed3f28c83f1b9a0",
+    "url": "/ski-service/static/js/2.8a2221aa.chunk.js"
   },
   {
-    "revision": "165ef5d30ac96eafecf6106d816a6324",
-    "url": "/ski-service/static/js/2.cc3fbcc5.chunk.js.LICENSE.txt"
+    "revision": "46d06c1ff06559117892fded2fd2455e",
+    "url": "/ski-service/static/js/2.8a2221aa.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "11a8a8e077ff46255da4",
-    "url": "/ski-service/static/js/main.fe182b5d.chunk.js"
+    "revision": "d7b906a2eead0b932912",
+    "url": "/ski-service/static/js/main.a7a02e36.chunk.js"
   },
   {
     "revision": "7c48ae24717bce521ace",
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ski-service/static/media/Aeronaves.9f18d323.ttf"
   },
   {
-    "revision": "56c988a677428d503242973bd8f303a0",
-    "url": "/ski-service/static/media/arrow.56c988a6.png"
+    "revision": "58292b9ba010543ee217b7965610853f",
+    "url": "/ski-service/static/media/arrow.58292b9b.png"
   },
   {
     "revision": "609b6ceb962dbe8fed86d85640249a60",
@@ -50,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f291e1c04c4cb5305c0d3a707edeba18",
     "url": "/ski-service/static/media/flyingleatherv2.f291e1c0.ttf"
+  },
+  {
+    "revision": "71d7aa98ab89527ace9f84f3a1ec4fec",
+    "url": "/ski-service/static/media/kockodan.71d7aa98.png"
   },
   {
     "revision": "f72e24eda1bcc5ae3723ecd3d207572c",
