@@ -5,6 +5,9 @@ import colors from '../../../../styles/colors';
 import typography from '../../../../styles/typography';
 import { Link } from 'react-router-dom';
 import { services } from './Services.table';
+import sharpi from '../../../../assets/sharpi.png';
+import waxi from '../../../../assets/waxi.png';
+import car from '../../../../assets/car.png';
 
 const FastPricesStyle = styled.div`
   display: flex;
@@ -77,14 +80,17 @@ const ButtonStyles = styled.div`
 `;
 
 const SingleServiceStyle = styled.div`
-  width: 22vw;
+  width: 25vw;
   height: 30vw;
+  padding: 2vw;
   margin: 0 4vw;
-  background-color: ${colors.background.Primary3};
+  background-color: ${colors.background.Primary9};
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
+  border-radius: 5px;
 `;
 
 const SingleServiceTextStyle = styled.p`
@@ -105,11 +111,18 @@ const SingleServiceTextStyle = styled.p`
   }
   color: ${colors.text.Primary6};
   text-align: center;
-  margin-bottom: 15%;
+  padding-top: 1.5vw;
+  border-top: 0.2vw solid black;
+`;
+
+const PictureStyle = styled.div`
+  position: absolute;
+  top: 20%;
+  transform: rotate(-17deg);
 `;
 
 const SingleLineStyle = styled.p`
-  margin-bottom: 2vw;
+  margin-bottom: 1vw;
 `;
 
 const FastPrices = (props = { services }) => {
@@ -119,14 +132,24 @@ const FastPrices = (props = { services }) => {
       <PriceItems>
         {services.map((service) => (
           <SingleServiceStyle>
+            <PictureStyle>
+              {service.photo === 'sharpi' ? (
+                <img src={sharpi} alt="pricePic" />
+              ) : service.photo === 'waxi' ? (
+                <img src={waxi} alt="pricePic" />
+              ) : (
+                <img src={car} alt="pricePic" />
+              )}
+            </PictureStyle>
             <SingleServiceTextStyle>
-              {service.map((singleService) => (
-                <div>
-                  <SingleLineStyle>
-                    {singleService.task} {singleService.price}
-                  </SingleLineStyle>
-                </div>
-              ))}
+              <SingleLineStyle>
+                {service.task1}
+                {service.price1}
+              </SingleLineStyle>
+              <SingleLineStyle>
+                {service.task2}
+                {service.price2}
+              </SingleLineStyle>
             </SingleServiceTextStyle>
           </SingleServiceStyle>
         ))}

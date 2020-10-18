@@ -8,7 +8,7 @@ const colors = {
     Primary6: '#ed5c8a',
     Primary7: '#333333',
     Primary8: '#009688',
-    Secondary1: '#008000',
+    Secondary1: '#bb2205',
     Secondary2: '#FF0000',
   },
   background: {
@@ -20,6 +20,7 @@ const colors = {
     Primary6: '#ed8e8e',
     Primary7: '#f5f5dc ',
     Primary8: '#f1935c ',
+    Primary9: '#bb2205 ',
     Secondary1: '#FF0000',
   },
 };
