@@ -90,6 +90,9 @@ const FakeButtonStyles = styled(ButtonStyles)`
   :after {
     background-color: ${colors.background.Primary2};
   }
+  ${device.S} {
+    width: 150px;
+  }
 `;
 
 const SingleServiceStyle = styled.div`
