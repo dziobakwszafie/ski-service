@@ -107,7 +107,7 @@ const SingleServiceStyle = styled.div`
   align-items: center;
   margin: 0 4vw;
   padding: 2vw;
-  width: 25vw;
+  width: 24vw;
   height: 30vw;
   border-radius: 5px;
   background-color: ${colors.background.Primary9};
