@@ -1,12 +1,12 @@
-import React from "react";
-import { render } from "@testing-library/react";
+import React from 'react';
+import { render } from '@testing-library/react';
 // import { fireEvent, waitFor } from "@testing-library/react";
-import { Provider } from "react-redux";
-import LoginComponent from "./index";
-import store from "../../../../redux/reducers";
+import { Provider } from 'react-redux';
+import LoginComponent from './index';
+import store from '../../../../redux/reducers';
 
-describe("LoginComponent", () => {
-  test("render default LoginComponent component", () => {
+describe('LoginComponent', () => {
+  test('render default LoginComponent component', () => {
     render(
       <Provider store={store}>
         <LoginComponent />

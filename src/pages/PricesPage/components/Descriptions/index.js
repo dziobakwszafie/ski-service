@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 import device, {
   queryForTitle,
   queryForText,
-} from "../../../../styles/devices";
-import colors from "../../../../styles/colors";
+} from '../../../../styles/devices';
+import colors from '../../../../styles/colors';
 
-import ludzik from "../../../../assets/ludzik.png";
+import ludzik from '../../../../assets/ludzik.png';
 
 const DecriptionsStyle = styled.div`
   display: grid;

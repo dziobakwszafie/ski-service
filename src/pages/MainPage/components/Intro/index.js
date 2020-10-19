@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import IntroText from "./IntroText";
-import skiboots from "../../../../assets/ski-boots.jpeg";
-import photoshoot from "../../../../assets/photoshoot.jpg";
-import cafe from "../../../../assets/cafe.jpeg";
-import device from "../../../../styles/devices";
-import typography from "../../../../styles/typography";
-import colors from "../../../../styles/colors";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import IntroText from './IntroText';
+import skiboots from '../../../../assets/ski-boots.jpeg';
+import photoshoot from '../../../../assets/photoshoot.jpg';
+import cafe from '../../../../assets/cafe.jpeg';
+import device from '../../../../styles/devices';
+import typography from '../../../../styles/typography';
+import colors from '../../../../styles/colors';
 
 const Main = styled.div`
   display: grid;

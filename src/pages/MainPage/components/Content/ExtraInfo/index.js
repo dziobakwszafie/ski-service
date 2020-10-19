@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import device, { queryForTitle } from "../../../../../styles/devices";
-import colors from "../../../../../styles/colors";
+import React from 'react';
+import styled from 'styled-components';
+import device, { queryForTitle } from '../../../../../styles/devices';
+import colors from '../../../../../styles/colors';
 
-import typography from "../../../../../styles/typography";
+import typography from '../../../../../styles/typography';
 
 const IntroWaxStyles = styled.div`
   padding: 2vw;

@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import Header from "../../components/Header";
-import SignupComponent from "./components/SignupComponent";
-import Footer from "../../components/Footer";
-import lift from "../../assets/lift.JPG";
-import whatshere from "../../assets/whatshere.png";
-import exercise from "../../assets/exercise.gif";
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import Header from '../../components/Header';
+import SignupComponent from './components/SignupComponent';
+import Footer from '../../components/Footer';
+import lift from '../../assets/lift.JPG';
+import whatshere from '../../assets/whatshere.png';
+import exercise from '../../assets/exercise.gif';
 
-import colors from "../../styles/colors";
-import device from "../../styles/devices";
-import { specialStyles1 } from "../../styles/typography";
+import colors from '../../styles/colors';
+import device from '../../styles/devices';
+import { specialStyles1 } from '../../styles/typography';
 
 function ScrollToTopOnMount() {
   useEffect(() => {

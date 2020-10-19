@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
-import MainHeader from "./components/MainHeader";
-import Content from "./components/Content";
-import Intro from "./components/Intro";
-import Footer from "../../components/Footer";
+import React, { useRef } from 'react';
+import MainHeader from './components/MainHeader';
+import Content from './components/Content';
+import Intro from './components/Intro';
+import Footer from '../../components/Footer';
 
 const MainPage = () => {
   const scrollToDiv = (ref) => window.scrollTo(0, ref.current.offsetTop);
