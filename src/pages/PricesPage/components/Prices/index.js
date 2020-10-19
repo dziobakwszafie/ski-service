@@ -1,14 +1,14 @@
 /* eslint-disable no-nested-ternary */
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import device, { queryForTitle } from '../../../../styles/devices';
-import colors from '../../../../styles/colors';
-import typography from '../../../../styles/typography';
-import services from './Services.table';
-import sharpi from '../../../../assets/sharpi.png';
-import waxi from '../../../../assets/waxi.png';
-import car from '../../../../assets/car.png';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import device, { queryForTitle } from "../../../../styles/devices";
+import colors from "../../../../styles/colors";
+import typography from "../../../../styles/typography";
+import services from "./Services.table";
+import sharpi from "../../../../assets/sharpi.png";
+import waxi from "../../../../assets/waxi.png";
+import car from "../../../../assets/car.png";
 
 const FastPricesStyle = styled.div`
   display: flex;
@@ -154,9 +154,9 @@ const FastPrices = (props = { services }) => {
         {services.map((service) => (
           <SingleServiceStyle>
             <PictureStyle>
-              {service.photo === 'sharpi' ? (
+              {service.photo === "sharpi" ? (
                 <img src={sharpi} alt="pricePic" />
-              ) : service.photo === 'waxi' ? (
+              ) : service.photo === "waxi" ? (
                 <img src={waxi} alt="pricePic" />
               ) : (
                 <img src={car} alt="pricePic" />

@@ -4,7 +4,7 @@ import {
   SET_UNAUTHENTICATED,
   SET_SUCCESS_MESSAGE,
   SET_USER,
-} from '../actionTypes/loginTypes';
+} from "../actionTypes/loginTypes";
 
 const initialState = {
   loadingMessage: false,

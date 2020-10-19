@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import arrow from '../../../../../assets/arrow.png';
-import bricks from '../../../../../assets/bricks.jpg';
-import device, { queryForText } from '../../../../../styles/devices';
-import typography, { specialStyles1 } from '../../../../../styles/typography';
+import React from "react";
+import styled from "styled-components";
+import arrow from "../../../../../assets/arrow.png";
+import bricks from "../../../../../assets/bricks.jpg";
+import device, { queryForText } from "../../../../../styles/devices";
+import typography, { specialStyles1 } from "../../../../../styles/typography";
 
-import colors from '../../../../../styles/colors';
+import colors from "../../../../../styles/colors";
 
 const IntroStyles = styled.div`
   width: 100%;

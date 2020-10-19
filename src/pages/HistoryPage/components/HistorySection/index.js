@@ -1,14 +1,14 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import styled from 'styled-components';
-import dayjs from 'dayjs';
-import 'dayjs/locale/pl';
+import React from "react";
+import { useSelector } from "react-redux";
+import styled from "styled-components";
+import dayjs from "dayjs";
+import "dayjs/locale/pl";
 import device, {
   queryForTitle,
   queryForText,
   queryForExtra,
-} from '../../../../styles/devices';
-import colors from '../../../../styles/colors';
+} from "../../../../styles/devices";
+import colors from "../../../../styles/colors";
 
 const HistoryStyle = styled.div`
   margin-top: 3vw;
@@ -80,7 +80,7 @@ const SingleBox = styled.div`
 
 const HistorySection = (key) => {
   const userOrders = useSelector((state) => state.loginReducer.orders);
-  dayjs.locale('pl');
+  dayjs.locale("pl");
 
   const list = userOrders.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 
@@ -91,8 +91,8 @@ const HistorySection = (key) => {
         {list.map((order) => (
           <SingleOrder key={order.createdAt}>
             <SubTitleStyle>
-              <b>Zamówienie z dnia</b>{' '}
-              {dayjs(order.createdAt).locale('pl').format('DD-MM-YYYY HH:mm')}
+              <b>Zamówienie z dnia</b>{" "}
+              {dayjs(order.createdAt).locale("pl").format("DD-MM-YYYY HH:mm")}
             </SubTitleStyle>
             <OrderContentStyle>
               <div>

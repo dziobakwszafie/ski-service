@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import device, {
   queryForTitle,
   queryForText,
-} from '../../../../styles/devices';
-import colors from '../../../../styles/colors';
+} from "../../../../styles/devices";
+import colors from "../../../../styles/colors";
 
-import typography from '../../../../styles/typography';
+import typography from "../../../../styles/typography";
 
 const DescrStyles = styled.div`
   display: flex;

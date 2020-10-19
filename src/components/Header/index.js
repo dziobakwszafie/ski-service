@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { logoutUser, getUserData } from '../../redux/actions/loginActions';
-import { specialStyles1, specialStyles2 } from '../../styles/typography';
-import { queryForExtra } from '../../styles/devices';
-import colors from '../../styles/colors';
-import kockodan from '../../assets/kockodan.png';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logoutUser, getUserData } from "../../redux/actions/loginActions";
+import { specialStyles1, specialStyles2 } from "../../styles/typography";
+import { queryForExtra } from "../../styles/devices";
+import colors from "../../styles/colors";
+import kockodan from "../../assets/kockodan.png";
 
 const HeaderStyles = styled.div`
   width: 100%;
