@@ -23,11 +23,9 @@
     "import/prefer-default-export":0
   },
   "settings": {
-    "import/resolver": {
-      "node": {
-        "paths": ["node_modules/"],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
+    "import/ignore": [
+      ".js",
+      ".jsx"
+    ]
   }
 }
