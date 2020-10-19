@@ -1,23 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import typography from '../../../../styles/typography';
 import colors from '../../../../styles/colors';
 import device from '../../../../styles/devices';
-import { Link } from 'react-router-dom';
 
 const HeaderStyles = styled.div`
-  height: 56.25vw;
   max-width: 100vw;
+  height: 56.25vw;
 `;
 
 const VideoContainer = styled.div`
-  height: 56.25vw;
   position: absolute;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
   overflow: hidden;
+  height: 56.25vw;
 `;
 const VideoStyles = styled.iframe`
   position: absolute;
@@ -51,20 +51,22 @@ const OverflowStyles = styled.div`
 
 const TitleStyles = styled.h1`
   ${typography.header.XL}
-  color: ${colors.text.Primary4};
+
   position: absolute;
   top: 35%;
   left: 50%;
+  color: ${colors.text.Primary4};
   transform: translate(-50%, -50%);
   white-space: nowrap;
 `;
 
 const SubtitleStyles = styled.h2`
   ${typography.header.XL}
-  color: ${colors.text.Primary3};
+
   position: absolute;
   top: 55%;
   left: 50%;
+  color: ${colors.text.Primary3};
   transform: translate(-50%, -50%);
   white-space: nowrap;
 `;
@@ -92,21 +94,21 @@ const Wrapper3 = styled.div`
 `;
 
 const ButtonStyles = styled.div`
+  position: relative;
   display: block;
   width: 250px;
   height: 50px;
-  line-height: 50px;
-  font-size: 18px;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: ${colors.text.Primary7};
   border: 1px solid ${colors.text.Primary7};
-  letter-spacing: 2px;
-  text-align: center;
-  position: relative;
-  transition: all 0.35s;
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.3);
+  color: ${colors.text.Primary7};
+  font-family: sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.35s;
   ${device.M} {
     width: 180px;
     height: 35px;
@@ -129,7 +131,7 @@ const ButtonStyles = styled.div`
     z-index: 2;
   }
 
-  :after {
+  ::after {
     position: absolute;
     content: '';
     top: 0;
@@ -145,7 +147,7 @@ const ButtonStyles = styled.div`
     cursor: pointer;
   }
 
-  :hover:after {
+  :hover::after {
     width: 100%;
   }
 `;
@@ -170,21 +172,22 @@ const MainHeader = ({ reference, click }) => {
           mozallowfullscreen=""
           allowfullscreen=""
           allow="autoplay; encrypted-media"
-          data-ready="true"></VideoStyles>
+          data-ready="true"
+        />
       </VideoContainer>
       <OverflowStyles>
         <TitleStyles>NIESMIALI ROMANTYCY</TitleStyles>
         <SubtitleStyles>SERVICE DEPARTMENT</SubtitleStyles>
         <Wrapper>
           <ButtonStyles>
-            <Link to={`/order`}>
+            <Link to="/order">
               <span>Złóż zamówienie</span>
             </Link>
           </ButtonStyles>
         </Wrapper>
         <Wrapper2>
           <ButtonStyles>
-            <Link to={`/prices`}>
+            <Link to="/prices">
               <span>Sprawdź ceny</span>
             </Link>
           </ButtonStyles>

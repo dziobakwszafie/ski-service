@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import FormikControl from '../../../../components/FormikControl/FormikControl';
 import styled from 'styled-components';
 import axios from 'axios';
-import { Button, Spinner } from '@chakra-ui/core';
-import ReCAPTCHA from 'react-google-recaptcha';
-import { queryForTitle } from '../../../../styles/devices';
-import colors from '../../../../styles/colors';
 import {
+  Button,
+  Spinner,
   Alert,
   AlertIcon,
   AlertTitle,
   AlertDescription,
 } from '@chakra-ui/core';
-import { SET_LOADING } from '../../../../redux/actionTypes/loginTypes';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { useSelector, useDispatch } from 'react-redux';
+import { queryForTitle } from '../../../../styles/devices';
+import colors from '../../../../styles/colors';
+
+import { SET_LOADING } from '../../../../redux/actionTypes/loginTypes';
+import FormikControl from '../../../../components/FormikControl/FormikControl';
 
 const OrderFormStyles = styled.div`
   display: flex;
@@ -27,6 +29,7 @@ const OrderFormStyles = styled.div`
 
 const OrderformTitleStyle = styled.h3`
   ${queryForTitle}
+
   color: ${colors.text.Primary3};
   text-align: center;
 `;
@@ -111,7 +114,6 @@ const OrderForm = () => {
 
   const onSubmit = (values) => {
     dispatch({ type: SET_LOADING });
-    console.log('Form data', values);
     const orderData = {
       skis: values.skis,
       length: values.length,
@@ -122,7 +124,6 @@ const OrderForm = () => {
       fluor: values.fluor,
     };
     axios.post('/order', orderData).then((res) => {
-      console.log(res.data);
       if (res.data) dispatch({ type: SET_LOADING });
       setMessage(
         (message = res.data ? (

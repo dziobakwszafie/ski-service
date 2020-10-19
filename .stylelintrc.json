@@ -1,7 +1,4 @@
 {
-  "processors": [
-    "stylelint-processor-styled-components"
-  ],
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-recommended",
@@ -20,9 +17,9 @@
       "dollar-variables",
       "at-variables",
       "declarations",
-      "at-rules",
+      "less-mixins",
       "rules",
-      "less-mixins"
+      "at-rules"
     ],
     "order/properties-order": [
       {

@@ -1,5 +1,8 @@
 import React from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import jwtDecode from 'jwt-decode';
+import axios from 'axios';
+import { ThemeProvider, CSSReset } from '@chakra-ui/core';
 import MainPage from './pages/MainPage';
 import OrderPage from './pages/OrderPage';
 import LoginPage from './pages/LoginPage';
@@ -7,11 +10,8 @@ import SignupPage from './pages/SignupPage';
 import HistoryPage from './pages/HistoryPage';
 import PricesPage from './pages/PricesPage';
 import AuthRoute from './util/AuthRoute';
-import jwtDecode from 'jwt-decode';
-import axios from 'axios';
 import store from './redux/reducers';
 import { customTheme } from './util/theme';
-import { ThemeProvider, CSSReset } from '@chakra-ui/core';
 import { logoutUser, getUserData } from './redux/actions/loginActions';
 import { SET_AUTHENTICATED } from './redux/actionTypes/loginTypes';
 
@@ -26,19 +26,17 @@ const App = () => {
 
   if (token) {
     const decodedToken = jwtDecode(token);
-    console.log(decodedToken);
     if (decodedToken.exp * 1000 < Date.now()) {
       window.location.href = '/login';
-      console.log('Niezalogowany');
       store.dispatch(logoutUser());
     } else {
       store.dispatch({ type: SET_AUTHENTICATED });
-      axios.defaults.headers.common['Authorization'] = token;
+      axios.defaults.headers.common.Authorization = token;
       store.dispatch(getUserData());
-      console.log('Zalogowany');
     }
   }
   return (
+    // eslint-disable-next-line react/jsx-filename-extension
     <ThemeProvider theme={customTheme}>
       <CSSReset />
       <Router>

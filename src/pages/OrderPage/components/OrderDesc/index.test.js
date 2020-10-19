@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import OrderDesc from './index';
 import { Provider } from 'react-redux';
+import OrderDesc from './index';
 import store from '../../../../redux/reducers';
 
 describe('OrderDesc', () => {

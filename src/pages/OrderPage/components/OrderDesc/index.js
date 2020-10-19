@@ -1,16 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import { queryForTitle, queryForText } from '../../../../styles/devices';
+import device, {
+  queryForTitle,
+  queryForText,
+} from '../../../../styles/devices';
 import colors from '../../../../styles/colors';
-import device from '../../../../styles/devices';
+
 import typography from '../../../../styles/typography';
 
 const DescrStyles = styled.div`
-  color: ${colors.text.Primary6};
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 3vw 2vw;
+  color: ${colors.text.Primary6};
+
   ul {
     margin: 2vw;
   }
@@ -18,6 +22,7 @@ const DescrStyles = styled.div`
 
 const DescrTitleStyles = styled.h3`
   ${queryForTitle}
+
   color: ${colors.text.Primary6};
   text-align: center;
 `;
@@ -35,12 +40,11 @@ const DescrTextStyles = styled.div`
   }
   ${device.M} {
     ${typography.body.M}
+
+    margin: auto 3vw;
   }
   ${device.S} {
     ${typography.body.M}
-  }
-  ${device.M} {
-    margin: auto 3vw;
   }
 `;
 

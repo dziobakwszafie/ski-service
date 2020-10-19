@@ -21,14 +21,15 @@ const useStyles = makeStyles({
 });
 
 const HistoryTableStyle = styled.div`
+  overflow: scroll;
   margin-top: 3vw;
   margin-bottom: 5vw;
   width: 90%;
-  overflow: scroll;
 `;
 
 const HistoryTitleStyle = styled.h3`
   ${queryForTitle}
+
   color: ${colors.text.Primary4};
   text-align: center;
 `;

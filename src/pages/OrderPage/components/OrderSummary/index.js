@@ -4,17 +4,18 @@ import { queryForTitle, queryForText } from '../../../../styles/devices';
 import colors from '../../../../styles/colors';
 
 const SummaryStyles = styled.div`
-  color: ${colors.text.Primary4};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: ${colors.text.Primary4};
 `;
 
 const SummaryTitleStyles = styled.h3`
   ${queryForTitle}
-  color: ${colors.text.Primary4};
+
   align-self: center;
+  color: ${colors.text.Primary4};
 `;
 
 const SummaryTextStyles = styled.div`

@@ -60,9 +60,8 @@
     "test:coverage": "npm test -- --coverage",
     "eject": "react-scripts eject",
     "format": "prettier --write \"{,!(node_modules)/**/}*.js\"",
-    "lint:css": "stylelint --fix ./src/**/*.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "css:fix": "stylelint --fix ./src/**/*.js",
+    "js:fix": "eslint --fix ."
   },
   "husky": {
     "hooks": {
@@ -73,8 +72,7 @@
     "*.+(js|jsx)": [
       "eslint --fix",
       "prettier --write",
-      "npm run lint:css",
-      "git add"
+      "npm run css:fix"
     ]
   },
   "eslintConfig": {

@@ -12,6 +12,14 @@
   },
   "rules": {
     "no-unused-vars": 0,
-    "eslint/no-unused-vars": ["error"]
+    "eslint/no-unused-vars": 0,
+    "react/jsx-filename-extension": 0,
+    "jsx-a11y/label-has-associated-control":0,
+    "order/at-rule":0,
+    "react/prop-types":0,
+    "react/jsx-props-no-spreading":0,
+    "react/destructuring-assignment":0,
+    "prefer-const":0,
+    "import/prefer-default-export":0
   }
 }

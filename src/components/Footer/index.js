@@ -7,10 +7,10 @@ const FooterStyles = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.1rem;
-  text-transform: uppercase;
   padding-top: 3vw;
   background-color: ${colors.background.Primary3};
+  font-size: 1.1rem;
+  text-transform: uppercase;
 `;
 
 const FirstRow = styled.div`
@@ -25,11 +25,13 @@ const SecondRow = styled.div`
 const ThirdRow = styled.div`
   display: flex;
   align-items: baseline;
+
   div {
-    margin-left: 20px;
     display: flex;
     align-items: baseline;
+    margin-left: 20px;
   }
+
   @media only screen and (max-width: 470px) {
     flex-direction: column;
   }
@@ -37,21 +39,25 @@ const ThirdRow = styled.div`
 
 const BigText = styled.h4`
   margin-bottom: 1em;
-  font-size: 1.3em;
   margin-left: 10px;
+  font-size: 1.3em;
+
   @media only screen and (max-width: 1024px) {
     font-size: 1em;
   }
+
   @media only screen and (max-width: 600px) {
     font-size: 0.8em;
   }
 `;
 const SmallText = styled.p`
-  font-size: 0.8rem;
   margin-bottom: 1em;
+  font-size: 0.8rem;
+
   @media only screen and (max-width: 1024px) {
     font-size: 0.6em;
   }
+
   @media only screen and (max-width: 600px) {
     font-size: 0.4em;
   }

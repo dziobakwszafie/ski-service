@@ -14,11 +14,11 @@ import colors from '../../../../styles/colors';
 
 const Main = styled.div`
   display: grid;
+  border-bottom: 0.33333vw solid ${colors.background.Primary1};
+  background-color: ${colors.background.Primary1};
   grid-gap: 0.33333vw;
   grid-template-columns: 27.83333vw 7.83333vw 19.83333vw 15.83333vw auto;
   grid-template-rows: auto auto 29vw 29vw;
-  background-color: ${colors.background.Primary1};
-  border-bottom: 0.33333vw solid ${colors.background.Primary1};
   ${device.M} {
     grid-template-columns: 50vw auto;
     grid-template-rows: auto auto auto 54vw auto auto 48vw;
@@ -38,14 +38,14 @@ const First = styled.div`
   }
 `;
 const Second = styled.div`
+  background-color: ${colors.background.Primary2};
+  background-image: url('${wax}');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-end: 2;
-  background-color: ${colors.background.Primary2};
-  background-image: url('${wax}');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   ${device.M} {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -54,15 +54,15 @@ const Second = styled.div`
   }
 `;
 const Third = styled.div`
+  background-color: ${colors.background.Primary2};
+  background-image: url('${service}');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: ${colors.background.Primary2};
-  background-image: url('${service}');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   ${device.M} {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -84,15 +84,15 @@ const Fourth = styled.div`
   }
 `;
 const Fifth = styled.div`
+  background-color: ${colors.background.Primary2};
+  background-image: url('${skibar}');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
-  background-color: ${colors.background.Primary2};
-  background-image: url('${skibar}');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   ${device.M} {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -114,15 +114,15 @@ const Sixth = styled.div`
   }
 `;
 const Seventh = styled.div`
+  background-color: ${colors.background.Primary2};
+  background-image: url('${myface}');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-column-start: 5;
   grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 4;
-  background-color: ${colors.background.Primary2};
-  background-image: url('${myface}');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   ${device.M} {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -131,15 +131,15 @@ const Seventh = styled.div`
   }
 `;
 const Eighth = styled.div`
+  background-color: ${colors.background.Primary2};
+  background-image: url('${drawboot}');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 4;
   grid-row-end: 5;
-  background-color: ${colors.background.Primary2};
-  background-image: url('${drawboot}');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   ${device.M} {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -148,18 +148,18 @@ const Eighth = styled.div`
   }
 `;
 const Ninth = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${colors.background.Primary2};
+  background-image: url('${mountain}');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-column-start: 5;
   grid-column-end: 6;
   grid-row-start: 4;
   grid-row-end: 5;
-  background-color: ${colors.background.Primary2};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('${mountain}');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   ${device.M} {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -174,18 +174,18 @@ const Try = () => {
       <First>
         <IntroSharp />
       </First>
-      <Second></Second>
-      <Third></Third>
+      <Second />
+      <Third />
       <Fourth>
         <IntroWax />
       </Fourth>
-      <Fifth></Fifth>
+      <Fifth />
       <Sixth>
         <ExtraInfo />
       </Sixth>
-      <Seventh></Seventh>
-      <Eighth></Eighth>
-      <Ninth></Ninth>
+      <Seventh />
+      <Eighth />
+      <Ninth />
     </Main>
   );
 };

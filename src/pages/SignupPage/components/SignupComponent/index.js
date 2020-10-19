@@ -2,11 +2,11 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import styled from 'styled-components';
-import { theme, ThemeProvider } from '@chakra-ui/core';
-import FormikControl from '../../../../components/FormikControl/FormikControl';
-import { Button, Box, Spinner } from '@chakra-ui/core';
+import { theme, ThemeProvider, Button, Box, Spinner } from '@chakra-ui/core';
+
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import FormikControl from '../../../../components/FormikControl/FormikControl';
 import { SET_LOADING } from '../../../../redux/actionTypes/loginTypes';
 import { signup } from '../../../../redux/actions/loginActions';
 import { queryForTitle } from '../../../../styles/devices';
@@ -16,8 +16,8 @@ const LoginTitleStyle = styled.h3`
 `;
 
 const SuccessMessageStyle = styled.p`
-  color: red;
   margin-top: 2vw;
+  color: red;
 `;
 
 const SignupComponent = () => {
@@ -67,15 +67,13 @@ const SignupComponent = () => {
   );
 
   if (authenticated === true) {
-    setInterval(function () {
+    setInterval(() => {
       history.push('/order');
       window.location.reload();
     }, 2000);
   }
 
   const onSubmit = (values) => {
-    console.log('Form data', values);
-    console.log('Saved data', JSON.parse(JSON.stringify(values)));
     const signupData = {
       email: values.email,
       password: values.password,

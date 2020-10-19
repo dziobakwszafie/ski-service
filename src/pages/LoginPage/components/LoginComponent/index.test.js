@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 // import { fireEvent, waitFor } from "@testing-library/react";
-import LoginComponent from './index';
 import { Provider } from 'react-redux';
+import LoginComponent from './index';
 import store from '../../../../redux/reducers';
 
 describe('LoginComponent', () => {

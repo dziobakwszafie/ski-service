@@ -4,8 +4,8 @@ import { queryForTitle, queryForText } from '../../../../../styles/devices';
 import colors from '../../../../../styles/colors';
 
 const IntroSharpStyles = styled.div`
-  width: 100%;
   padding: 2vw;
+  width: 100%;
 `;
 
 const IntroSharpTitleStyles = styled.h3`
@@ -15,8 +15,9 @@ const IntroSharpTitleStyles = styled.h3`
 `;
 
 const IntroSharpTextStyles = styled.div`
-  line-height: 1.5em;
   margin-bottom: 2vw;
+  line-height: 1.5em;
+
   ul {
     padding: 2vw;
     padding-left: 4vw;

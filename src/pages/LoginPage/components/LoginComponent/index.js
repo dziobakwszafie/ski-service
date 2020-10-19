@@ -1,14 +1,14 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import FormikControl from '../../../../components/FormikControl/FormikControl';
 import styled from 'styled-components';
-import { theme, ThemeProvider } from '@chakra-ui/core';
-import { Button, Box, Spinner } from '@chakra-ui/core';
+import { theme, ThemeProvider, Button, Box, Spinner } from '@chakra-ui/core';
+
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { SET_LOADING } from '../../../../redux/actionTypes/loginTypes';
 import { login } from '../../../../redux/actions/loginActions';
-import { useHistory } from 'react-router-dom';
+import FormikControl from '../../../../components/FormikControl/FormikControl';
 import { queryForTitle } from '../../../../styles/devices';
 
 const LoginTitleStyle = styled.h3`
@@ -42,8 +42,6 @@ const LoginComponent = () => {
 
   let loginData = {};
   const onSubmit = (values) => {
-    console.log('Form data', values);
-    console.log('Saved data', JSON.parse(JSON.stringify(values)));
     loginData = {
       email: values.email,
       password: values.password,

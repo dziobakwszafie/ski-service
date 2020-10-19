@@ -21,4 +21,6 @@ const transport = {
   price2: '- darmo',
 };
 
-export const services = [sharpening, waxing, transport];
+const services = [sharpening, waxing, transport];
+
+export default services;
