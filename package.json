@@ -47,6 +47,7 @@
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-order": "^4.1.0",
     "stylelint-processor-styled-components": "^1.10.0"
   },
   "homepage": "https://dziobakwszafie.github.io/ski-service",
@@ -58,7 +59,8 @@
     "test": "react-scripts test",
     "test:coverage": "npm test -- --coverage",
     "eject": "react-scripts eject",
-    "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
+    "format": "prettier --write \"{,!(node_modules)/**/}*.js\"",
+    "lint:css": "stylelint ./src/**/*.js"
   },
   "eslintConfig": {
     "extends": "react-app"
