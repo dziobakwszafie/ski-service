@@ -1,9 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import { queryForTitle, queryForText } from '../../../../styles/devices';
-import colors from '../../../../styles/colors';
-import device from '../../../../styles/devices';
-import ludzik from '../../../../assets/ludzik.png';
+import React from "react";
+import styled from "styled-components";
+import device, {
+  queryForTitle,
+  queryForText,
+} from "../../../../styles/devices";
+import colors from "../../../../styles/colors";
+
+import ludzik from "../../../../assets/ludzik.png";
 
 const DecriptionsStyle = styled.div`
   display: grid;
@@ -19,14 +22,17 @@ const DecriptionsStyle = styled.div`
 
 const DecriptionsTitleStyle = styled.h3`
   ${queryForTitle}
+
   color: ${colors.text.Primary7};
   text-align: center;
 `;
 
 const DecriptionsTextStyle = styled.div`
   ${queryForText}
-  color: ${colors.text.Primary1};
+
   padding: 2vw;
+  color: ${colors.text.Primary1};
+
   ul {
     padding: 3vw;
   }
@@ -93,8 +99,8 @@ const Fourth = styled.div`
 const ImgStyle = styled.div`
   height: 60%;
   background-image: url('${ludzik}');
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: contain;
 `;
 
@@ -143,7 +149,7 @@ const Descriptions = () => {
           <ul>
             <li>
               na ślizg nanoszona jest warstwa smaru na gorąco, która następnie
-              jest kilkukrotnie "wprasowywana" w ślizg
+              jest kilkukrotnie wprasowywana w ślizg
             </li>
             <li>
               następnie nadmiar smaru jest cyklinowany, a ślizg polerowany
@@ -151,7 +157,7 @@ const Descriptions = () => {
             </li>
             <li>
               w przypadku smaru z fluorem, jest on nawet kilkunastokrotnie
-              "wprasowywany" w ślizg w celu jak najlepszego nasączenia struktury
+              wprasowywany w ślizg w celu jak najlepszego nasączenia struktury
             </li>
           </ul>
         </DecriptionsTextStyle>

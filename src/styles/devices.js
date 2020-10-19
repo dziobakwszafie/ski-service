@@ -1,4 +1,4 @@
-import typography from './typography';
+import typography from "./typography";
 
 const device = {
   XXL: `@media (min-width: 1920px)`,

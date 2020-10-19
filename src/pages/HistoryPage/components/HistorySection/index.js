@@ -1,15 +1,14 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import styled from 'styled-components';
-import dayjs from 'dayjs';
-import 'dayjs/locale/pl';
-import {
+import React from "react";
+import { useSelector } from "react-redux";
+import styled from "styled-components";
+import dayjs from "dayjs";
+import "dayjs/locale/pl";
+import device, {
   queryForTitle,
   queryForText,
   queryForExtra,
-} from '../../../../styles/devices';
-import colors from '../../../../styles/colors';
-import device from '../../../../styles/devices';
+} from "../../../../styles/devices";
+import colors from "../../../../styles/colors";
 
 const HistoryStyle = styled.div`
   margin-top: 3vw;
@@ -19,40 +18,44 @@ const HistoryStyle = styled.div`
 
 const OrdersContainer = styled.div`
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const HistoryTitleStyle = styled.h3`
   ${queryForTitle}
+
   color: ${colors.text.Primary4};
   text-align: center;
 `;
 
 const SubTitleStyle = styled.h4`
   ${queryForText}
+
+  margin-bottom: 10px;
   color: ${colors.text.Primary7};
   text-align: center;
-  margin-bottom: 10px;
 `;
 
 const SingleOrder = styled.div`
   margin: 2vw;
   ${queryForExtra}
-  background-color:${colors.background.Primary4};
-  padding: 2vw;
+
   width: 100%;
+  background-color: ${colors.background.Primary4};
+
   :nth-child(even) {
     background-color: ${colors.background.Primary5};
   }
 `;
 
 const OrderContentStyle = styled.div`
+  display: flex;
+
   ${queryForText}
   ${device.XL} {
     font-size: 1.5vw;
   }
-  display: flex;
 `;
 
 const SingleLine = styled.p`
@@ -63,20 +66,21 @@ const SingleLine = styled.p`
 `;
 
 const SingleBox = styled.div`
+  margin-left: 30%;
+  padding: 2vw;
+  width: 30%;
+  border: solid ${colors.text.Primary1} 1px;
+  border-radius: 2px;
+
   ${queryForText}
   ${device.XL} {
     font-size: 1.5vw;
   }
-  border: solid ${colors.text.Primary1} 1px;
-  border-radius: 2px;
-  padding: 2vw;
-  width: 30%;
-  margin-left: 30%;
 `;
 
 const HistorySection = (key) => {
   const userOrders = useSelector((state) => state.loginReducer.orders);
-  dayjs.locale('pl');
+  dayjs.locale("pl");
 
   const list = userOrders.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 
@@ -87,8 +91,8 @@ const HistorySection = (key) => {
         {list.map((order) => (
           <SingleOrder key={order.createdAt}>
             <SubTitleStyle>
-              <b>Zamówienie z dnia</b>{' '}
-              {dayjs(order.createdAt).locale('pl').format('DD-MM-YYYY HH:mm')}
+              <b>Zamówienie z dnia</b>{" "}
+              {dayjs(order.createdAt).locale("pl").format("DD-MM-YYYY HH:mm")}
             </SubTitleStyle>
             <OrderContentStyle>
               <div>

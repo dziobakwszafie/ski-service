@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
-import { Formik, Form } from 'formik';
-import * as Yup from 'yup';
-import FormikControl from '../../../../components/FormikControl/FormikControl';
-import styled from 'styled-components';
-import axios from 'axios';
-import { Button, Spinner } from '@chakra-ui/core';
-import ReCAPTCHA from 'react-google-recaptcha';
-import { queryForTitle } from '../../../../styles/devices';
-import colors from '../../../../styles/colors';
+import React, { useState } from "react";
+import { Formik, Form } from "formik";
+import * as Yup from "yup";
+import styled from "styled-components";
+import axios from "axios";
 import {
+  Button,
+  Spinner,
   Alert,
   AlertIcon,
   AlertTitle,
   AlertDescription,
-} from '@chakra-ui/core';
-import { SET_LOADING } from '../../../../redux/actionTypes/loginTypes';
-import { useSelector, useDispatch } from 'react-redux';
+} from "@chakra-ui/core";
+import ReCAPTCHA from "react-google-recaptcha";
+import { useSelector, useDispatch } from "react-redux";
+import { queryForTitle } from "../../../../styles/devices";
+import colors from "../../../../styles/colors";
+
+import { SET_LOADING } from "../../../../redux/actionTypes/loginTypes";
+import FormikControl from "../../../../components/FormikControl/FormikControl";
 
 const OrderFormStyles = styled.div`
   display: flex;
@@ -27,6 +29,7 @@ const OrderFormStyles = styled.div`
 
 const OrderformTitleStyle = styled.h3`
   ${queryForTitle}
+
   color: ${colors.text.Primary3};
   text-align: center;
 `;
@@ -51,52 +54,52 @@ const MessageStyles = styled.div`
 
 const OrderForm = () => {
   const sideAngle = [
-    { key: '89', value: '89' },
-    { key: '88', value: '88' },
-    { key: '87', value: '87' },
+    { key: "89", value: "89" },
+    { key: "88", value: "88" },
+    { key: "87", value: "87" },
   ];
   const bottomAngle = [
-    { key: '0,0', value: '0,0' },
-    { key: '0,5', value: '0,5' },
-    { key: '0,7', value: '0,7' },
+    { key: "0,0", value: "0,0" },
+    { key: "0,5", value: "0,5" },
+    { key: "0,7", value: "0,7" },
   ];
   const diamond = [
-    { key: 'Pilniki diamentowe', value: 'pilniki diamentowe' },
-    { key: 'Pilniki stalowe', value: 'pilniki stalowe' },
+    { key: "Pilniki diamentowe", value: "pilniki diamentowe" },
+    { key: "Pilniki stalowe", value: "pilniki stalowe" },
   ];
   const snow = [
-    { key: 'Mokry', value: 'śnieg mokry' },
-    { key: 'Zwykły', value: 'śnieg zwykły' },
-    { key: 'Zmrożony', value: 'śnieg zmrożony' },
+    { key: "Mokry", value: "śnieg mokry" },
+    { key: "Zwykły", value: "śnieg zwykły" },
+    { key: "Zmrożony", value: "śnieg zmrożony" },
   ];
   const fluor = [
-    { key: 'Smar fluorowy', value: 'fluor' },
-    { key: 'Smar hydrokarbonowy', value: 'hydrocarbon' },
+    { key: "Smar fluorowy", value: "fluor" },
+    { key: "Smar hydrokarbonowy", value: "hydrocarbon" },
   ];
 
   const initialValues = {
-    skis: '',
-    length: '',
-    sideAngle: '',
-    bottomAngle: '',
-    diamond: '',
-    snow: '',
-    fluor: '',
+    skis: "",
+    length: "",
+    sideAngle: "",
+    bottomAngle: "",
+    diamond: "",
+    snow: "",
+    fluor: "",
     pickupDate: null,
   };
   const validationSchema = Yup.object({
     skis: Yup.string()
-      .min(6, 'Minimum 6 znaków')
-      .required('Nie może być puste'),
+      .min(6, "Minimum 6 znaków")
+      .required("Nie może być puste"),
     length: Yup.number()
-      .min(40, 'Chyba trochę za mało')
-      .max(250, 'Chyba trochę za dużo')
-      .required('Nie może być puste'),
-    sideAngle: Yup.string().required('Nie może być puste'),
-    bottomAngle: Yup.string().required('Nie może być puste'),
-    diamond: Yup.string().required('Nie może być puste'),
-    snow: Yup.string().required('Nie może być puste'),
-    fluor: Yup.string().required('Nie może być puste'),
+      .min(40, "Chyba trochę za mało")
+      .max(250, "Chyba trochę za dużo")
+      .required("Nie może być puste"),
+    sideAngle: Yup.string().required("Nie może być puste"),
+    bottomAngle: Yup.string().required("Nie może być puste"),
+    diamond: Yup.string().required("Nie może być puste"),
+    snow: Yup.string().required("Nie może być puste"),
+    fluor: Yup.string().required("Nie może być puste"),
     // pickupDate: Yup.date().required("Required").nullable(),
   });
 
@@ -111,7 +114,6 @@ const OrderForm = () => {
 
   const onSubmit = (values) => {
     dispatch({ type: SET_LOADING });
-    console.log('Form data', values);
     const orderData = {
       skis: values.skis,
       length: values.length,
@@ -121,8 +123,7 @@ const OrderForm = () => {
       snow: values.snow,
       fluor: values.fluor,
     };
-    axios.post('/order', orderData).then((res) => {
-      console.log(res.data);
+    axios.post("/order", orderData).then((res) => {
       if (res.data) dispatch({ type: SET_LOADING });
       setMessage(
         (message = res.data ? (

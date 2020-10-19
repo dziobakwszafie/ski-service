@@ -1,15 +1,15 @@
-import React from 'react';
-import { Formik, Form } from 'formik';
-import * as Yup from 'yup';
-import FormikControl from '../../../../components/FormikControl/FormikControl';
-import styled from 'styled-components';
-import { theme, ThemeProvider } from '@chakra-ui/core';
-import { Button, Box, Spinner } from '@chakra-ui/core';
-import { useSelector, useDispatch } from 'react-redux';
-import { SET_LOADING } from '../../../../redux/actionTypes/loginTypes';
-import { login } from '../../../../redux/actions/loginActions';
-import { useHistory } from 'react-router-dom';
-import { queryForTitle } from '../../../../styles/devices';
+import React from "react";
+import { Formik, Form } from "formik";
+import * as Yup from "yup";
+import styled from "styled-components";
+import { theme, ThemeProvider, Button, Box, Spinner } from "@chakra-ui/core";
+
+import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { SET_LOADING } from "../../../../redux/actionTypes/loginTypes";
+import { login } from "../../../../redux/actions/loginActions";
+import FormikControl from "../../../../components/FormikControl/FormikControl";
+import { queryForTitle } from "../../../../styles/devices";
 
 const LoginTitleStyle = styled.h3`
   ${queryForTitle}
@@ -17,12 +17,12 @@ const LoginTitleStyle = styled.h3`
 
 const LoginComponent = () => {
   const initialValues = {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   };
   const validationSchema = Yup.object({
-    email: Yup.string().required('Required'),
-    password: Yup.string().required('Required'),
+    email: Yup.string().required("Required"),
+    password: Yup.string().required("Required"),
   });
 
   const dispatch = useDispatch();
@@ -37,13 +37,11 @@ const LoginComponent = () => {
   );
 
   if (authenticated === true) {
-    history.push('/order');
+    history.push("/order");
   }
 
   let loginData = {};
   const onSubmit = (values) => {
-    console.log('Form data', values);
-    console.log('Saved data', JSON.parse(JSON.stringify(values)));
     loginData = {
       email: values.email,
       password: values.password,

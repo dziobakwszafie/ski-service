@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { queryForTitle, queryForText } from '../../../../../styles/devices';
-import colors from '../../../../../styles/colors';
+import React from "react";
+import styled from "styled-components";
+import { queryForTitle, queryForText } from "../../../../../styles/devices";
+import colors from "../../../../../styles/colors";
 
 const IntroWaxStyles = styled.div`
-  width: 100%;
   padding: 2vw;
+  width: 100%;
 `;
 
 const IntroWaxTitleStyles = styled.h1`
@@ -15,8 +15,9 @@ const IntroWaxTitleStyles = styled.h1`
 `;
 
 const IntroWaxTextStyles = styled.div`
-  line-height: 1.5em;
   margin-bottom: 2vw;
+  line-height: 1.5em;
+
   ul {
     padding: 2vw;
     padding-left: 4vw;

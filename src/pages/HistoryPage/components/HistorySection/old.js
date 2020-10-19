@@ -1,18 +1,18 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-import { useSelector } from 'react-redux';
-import styled from 'styled-components';
-import dayjs from 'dayjs';
-import 'dayjs/locale/pl';
-import { queryForTitle } from '../../../../styles/devices';
-import colors from '../../../../styles/colors';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import Paper from "@material-ui/core/Paper";
+import { useSelector } from "react-redux";
+import styled from "styled-components";
+import dayjs from "dayjs";
+import "dayjs/locale/pl";
+import { queryForTitle } from "../../../../styles/devices";
+import colors from "../../../../styles/colors";
 
 const useStyles = makeStyles({
   table: {
@@ -21,14 +21,15 @@ const useStyles = makeStyles({
 });
 
 const HistoryTableStyle = styled.div`
+  overflow: scroll;
   margin-top: 3vw;
   margin-bottom: 5vw;
   width: 90%;
-  overflow: scroll;
 `;
 
 const HistoryTitleStyle = styled.h3`
   ${queryForTitle}
+
   color: ${colors.text.Primary4};
   text-align: center;
 `;
@@ -36,7 +37,7 @@ const HistoryTitleStyle = styled.h3`
 const HistorySection = (key) => {
   const userOrders = useSelector((state) => state.loginReducer.orders);
   const classes = useStyles();
-  dayjs.locale('pl');
+  dayjs.locale("pl");
 
   const list = userOrders.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 
@@ -62,8 +63,8 @@ const HistorySection = (key) => {
               <TableRow key={order.createdAt}>
                 <TableCell component="th" scope="row">
                   {dayjs(order.createdAt)
-                    .locale('pl')
-                    .format('DD-MM-YYYY HH:mm')}
+                    .locale("pl")
+                    .format("DD-MM-YYYY HH:mm")}
                 </TableCell>
                 <TableCell align="right">{order.skis}</TableCell>
                 <TableCell align="right">{order.length}</TableCell>

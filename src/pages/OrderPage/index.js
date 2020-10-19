@@ -1,23 +1,23 @@
-import React from 'react';
-import Header from '../../components/Header';
-import OrderForm from './components/OrderForm';
-import OrderDesc from './components/OrderDesc';
-import OrderSummary from './components/OrderSummary';
-import Footer from '../../components/Footer';
-import styled from 'styled-components';
-import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-import colors from '../../styles/colors';
-import device from '../../styles/devices';
+import React from "react";
+import styled from "styled-components";
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
+import Header from "../../components/Header";
+import OrderForm from "./components/OrderForm";
+import OrderDesc from "./components/OrderDesc";
+import OrderSummary from "./components/OrderSummary";
+import Footer from "../../components/Footer";
+import colors from "../../styles/colors";
+import device from "../../styles/devices";
 
 const OrderMainSection = styled.div`
   display: grid;
+  border-top: 0.23333vw solid ${colors.background.Primary1};
+  border-bottom: 0.23333vw solid ${colors.background.Primary1};
+  background-color: ${colors.background.Primary1};
   grid-template-columns: 40vw auto;
   grid-template-rows: auto auto;
   grid-gap: 0.2vw;
-  background-color: ${colors.background.Primary1};
-  border-bottom: 0.23333vw solid ${colors.background.Primary1};
-  border-top: 0.23333vw solid ${colors.background.Primary1};
   ${device.M} {
     grid-template-rows: auto auto auto;
     grid-template-columns: auto;
@@ -65,6 +65,7 @@ const Third = styled.div`
 
 const HeaderStyles = styled.div`
   height: 5vw;
+
   @media only screen and (max-width: 1500px) {
     height: 75px;
   }
@@ -78,7 +79,7 @@ const OrderPage = () => {
   );
 
   if (authenticated === false) {
-    history.push('/login');
+    history.push("/login");
   }
 
   return (

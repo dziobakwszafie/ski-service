@@ -1,13 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import device, { queryForTitle } from '../../../../styles/devices';
-import colors from '../../../../styles/colors';
-import typography from '../../../../styles/typography';
-import { Link } from 'react-router-dom';
-import { services } from './Services.table';
-import sharpi from '../../../../assets/sharpi.png';
-import waxi from '../../../../assets/waxi.png';
-import car from '../../../../assets/car.png';
+/* eslint-disable no-nested-ternary */
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import device, { queryForTitle } from "../../../../styles/devices";
+import colors from "../../../../styles/colors";
+import typography from "../../../../styles/typography";
+import services from "./Services.table";
+import sharpi from "../../../../assets/sharpi.png";
+import waxi from "../../../../assets/waxi.png";
+import car from "../../../../assets/car.png";
 
 const FastPricesStyle = styled.div`
   display: flex;
@@ -18,12 +19,14 @@ const FastPricesStyle = styled.div`
 
 const FastPricesTitleStyle = styled.h3`
   ${queryForTitle}
+
   color: ${colors.text.Primary6};
   text-align: center;
 `;
 
 const Wrapper = styled.div`
   position: relative;
+  display: flex;
   margin: 5vw auto;
 `;
 
@@ -32,25 +35,26 @@ const PriceItems = styled.div`
 `;
 
 const ButtonStyles = styled.div`
+  position: relative;
   display: block;
+  margin: auto 10px;
   width: 250px;
   height: 50px;
-  line-height: 50px;
-  font-size: 18px;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: ${colors.text.Primary7};
   border: 2px solid ${colors.text.Primary5};
+  color: ${colors.text.Primary7};
+  font-family: sans-serif;
+  font-size: 18px;
   letter-spacing: 2px;
+  line-height: 50px;
   text-align: center;
-  position: relative;
+  text-decoration: none;
   transition: all 0.35s;
   ${device.S} {
     width: 120px;
     height: 30px;
     font-size: 10px;
-    text-align: center;
     line-height: 30px;
+    text-align: center;
   }
 
   span {
@@ -58,7 +62,7 @@ const ButtonStyles = styled.div`
     z-index: 2;
   }
 
-  :after {
+  ::after {
     position: absolute;
     content: '';
     top: 0;
@@ -74,26 +78,47 @@ const ButtonStyles = styled.div`
     cursor: pointer;
   }
 
-  :hover:after {
+  :hover::after {
     width: 100%;
   }
 `;
 
+const FakeButtonStyles = styled(ButtonStyles)`
+  border: 2px solid ${colors.text.Primary2};
+
+  :hover {
+    background-color: ${colors.background.Primary2};
+    cursor: default;
+  }
+
+  ::after {
+    background-color: ${colors.background.Primary2};
+  }
+  ${device.S} {
+    width: 150px;
+  }
+`;
+
 const SingleServiceStyle = styled.div`
-  width: 25vw;
-  height: 30vw;
-  padding: 2vw;
-  margin: 0 4vw;
-  background-color: ${colors.background.Primary9};
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  position: relative;
+  margin: 0 4vw;
+  padding: 2vw;
+  width: 24vw;
+  height: 30vw;
   border-radius: 5px;
+  background-color: ${colors.background.Primary9};
 `;
 
 const SingleServiceTextStyle = styled.p`
+  padding-top: 1.5vw;
+  border-top: 0.2vw solid black;
+  color: ${colors.text.Primary6};
+  text-align: center;
+
   ${device.XXL} {
     ${typography.body.XS}
   }
@@ -109,10 +134,6 @@ const SingleServiceTextStyle = styled.p`
   ${device.S} {
     ${typography.body.S}
   }
-  color: ${colors.text.Primary6};
-  text-align: center;
-  padding-top: 1.5vw;
-  border-top: 0.2vw solid black;
 `;
 
 const PictureStyle = styled.div`
@@ -133,9 +154,9 @@ const FastPrices = (props = { services }) => {
         {services.map((service) => (
           <SingleServiceStyle>
             <PictureStyle>
-              {service.photo === 'sharpi' ? (
+              {service.photo === "sharpi" ? (
                 <img src={sharpi} alt="pricePic" />
-              ) : service.photo === 'waxi' ? (
+              ) : service.photo === "waxi" ? (
                 <img src={waxi} alt="pricePic" />
               ) : (
                 <img src={car} alt="pricePic" />
@@ -157,10 +178,13 @@ const FastPrices = (props = { services }) => {
 
       <Wrapper>
         <ButtonStyles>
-          <Link to={`/order`}>
+          <Link to="/order">
             <span>Złóż zamówienie</span>
           </Link>
         </ButtonStyles>
+        <FakeButtonStyles>
+          <span>Albooo przesuń niżej</span>
+        </FakeButtonStyles>
       </Wrapper>
     </FastPricesStyle>
   );

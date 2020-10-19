@@ -1,11 +1,11 @@
-import React from 'react';
-import { Field } from 'formik';
+import React from "react";
+import { Field } from "formik";
 import {
   Input,
   FormControl,
   FormLabel,
   FormErrorMessage,
-} from '@chakra-ui/core';
+} from "@chakra-ui/core";
 
 function ChakraInput(props) {
   const { label, name, ...rest } = props;

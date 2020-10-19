@@ -1,12 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import arrow from '../../../../../assets/arrow.png';
-import bricks from '../../../../../assets/bricks.jpg';
-import device from '../../../../../styles/devices';
-import typography from '../../../../../styles/typography';
-import { queryForText } from '../../../../../styles/devices';
-import { specialStyles1 } from '../../../../../styles/typography';
-import colors from '../../../../../styles/colors';
+import React from "react";
+import styled from "styled-components";
+import arrow from "../../../../../assets/arrow.png";
+import bricks from "../../../../../assets/bricks.jpg";
+import device, { queryForText } from "../../../../../styles/devices";
+import typography, { specialStyles1 } from "../../../../../styles/typography";
+
+import colors from "../../../../../styles/colors";
 
 const IntroStyles = styled.div`
   width: 100%;
@@ -14,15 +13,17 @@ const IntroStyles = styled.div`
 
 const Wrapper = styled.div`
   background-image: url('${bricks}');
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 `;
 
 const IntroTitleStyles = styled.h2`
-  color: ${colors.text.Primary5};
   padding-bottom: 1rem;
+  border-bottom: solid 0.33333vw ${colors.text.Primary1};
+  color: ${colors.text.Primary5};
   text-align: center;
+  -webkit-text-stroke: 2px black !important;
   ${device.XXL} {
     ${typography.header.M}
   }
@@ -38,15 +39,13 @@ const IntroTitleStyles = styled.h2`
   ${device.S} {
     ${typography.header.XL}
   }
-  border-bottom: solid 0.33333vw ${colors.text.Primary1};
-  -webkit-text-stroke: 2px black !important;
 `;
 
 const IntroTextStyles = styled.p`
-  padding: 0 2vw 0 2vw;
-  color: ${colors.text.Primary1};
   margin-top: 2vw;
   margin-bottom: 1vw;
+  padding: 0 2vw 0 2vw;
+  color: ${colors.text.Primary1};
   ${queryForText}
 `;
 
@@ -68,8 +67,8 @@ const IntroArrowTitleStyles = styled.h4`
   }
 `;
 const IntroArrowImgStyles = styled.div`
-  width: 100%;
   margin: 4vw;
+  width: 100%;
   ${device.M} {
     width: 60%;
     transform: rotate(120deg);

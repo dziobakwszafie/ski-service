@@ -1,24 +1,25 @@
-import React from 'react';
-import Header from '../../components/Header';
-import Prices from './components/Prices';
-import Descriptions from './components/Descriptions';
-import Footer from '../../components/Footer';
-import styled from 'styled-components';
-import colors from '../../styles/colors';
+import React from "react";
+import styled from "styled-components";
+import Header from "../../components/Header";
+import Prices from "./components/Prices";
+import Descriptions from "./components/Descriptions";
+import Footer from "../../components/Footer";
+import colors from "../../styles/colors";
 
 const PricesPageStyles = styled.div``;
 
 const HeaderStyles = styled.div`
   height: 5vw;
+
   @media only screen and (max-width: 1500px) {
     height: 75px;
   }
 `;
 
 const ContainerStyles = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 const First = styled.div`

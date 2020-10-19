@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import { queryForTitle } from '../../../../../styles/devices';
-import colors from '../../../../../styles/colors';
-import device from '../../../../../styles/devices';
-import typography from '../../../../../styles/typography';
+import React from "react";
+import styled from "styled-components";
+import device, { queryForTitle } from "../../../../../styles/devices";
+import colors from "../../../../../styles/colors";
+
+import typography from "../../../../../styles/typography";
 
 const IntroWaxStyles = styled.div`
-  width: 100%;
   padding: 2vw;
+  width: 100%;
 `;
 
 const IntroWaxTitleStyles = styled.h1`
@@ -17,8 +17,8 @@ const IntroWaxTitleStyles = styled.h1`
 `;
 
 const IntroWaxTextStyles = styled.p`
-  line-height: 1.5em;
   margin-bottom: 2vw;
+  line-height: 1.5em;
 
   ${device.XXL} {
     ${typography.body.XS}
