@@ -163,7 +163,7 @@ const MainHeader = ({ reference, click }) => {
       <VideoContainer>
         <VideoStyles
           data-module-vimeo-player="video-promo"
-          src="https://player.vimeo.com/video/469306200?controls=false&amp;autoplay=1&amp;transparent=false&amp;autopause=false&amp;loop=1&amp;muted=1"
+          src="https://player.vimeo.com/video/472020208?controls=false&amp;autoplay=1&amp;transparent=false&amp;autopause=false&amp;loop=1&amp;muted=1"
           width="1920"
           height="1080"
           data-vimeo-player-autoplay="true"
