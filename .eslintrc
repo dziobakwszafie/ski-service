@@ -21,5 +21,12 @@
     "react/destructuring-assignment":0,
     "prefer-const":0,
     "import/prefer-default-export":0
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
   }
 }
