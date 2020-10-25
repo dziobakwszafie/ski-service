@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/ski-service/static/js/main.868ccae8.chunk.js",
-    "main.js.map": "/ski-service/static/js/main.868ccae8.chunk.js.map",
+    "main.js": "/ski-service/static/js/main.ec2fe4e0.chunk.js",
+    "main.js.map": "/ski-service/static/js/main.ec2fe4e0.chunk.js.map",
     "runtime-main.js": "/ski-service/static/js/runtime-main.d6f484b2.js",
     "runtime-main.js.map": "/ski-service/static/js/runtime-main.d6f484b2.js.map",
     "static/css/2.8d4cdce2.chunk.css": "/ski-service/static/css/2.8d4cdce2.chunk.css",
     "static/js/2.edaff03d.chunk.js": "/ski-service/static/js/2.edaff03d.chunk.js",
     "static/js/2.edaff03d.chunk.js.map": "/ski-service/static/js/2.edaff03d.chunk.js.map",
     "index.html": "/ski-service/index.html",
-    "precache-manifest.05953ec1ce0765120e863c5bb11ca602.js": "/ski-service/precache-manifest.05953ec1ce0765120e863c5bb11ca602.js",
+    "precache-manifest.3d800a93daff3f02d2099cf5c59202fc.js": "/ski-service/precache-manifest.3d800a93daff3f02d2099cf5c59202fc.js",
     "service-worker.js": "/ski-service/service-worker.js",
     "static/css/2.8d4cdce2.chunk.css.map": "/ski-service/static/css/2.8d4cdce2.chunk.css.map",
     "static/js/2.edaff03d.chunk.js.LICENSE.txt": "/ski-service/static/js/2.edaff03d.chunk.js.LICENSE.txt",
@@ -39,6 +39,6 @@
     "static/js/runtime-main.d6f484b2.js",
     "static/css/2.8d4cdce2.chunk.css",
     "static/js/2.edaff03d.chunk.js",
-    "static/js/main.868ccae8.chunk.js"
+    "static/js/main.ec2fe4e0.chunk.js"
   ]
 }
