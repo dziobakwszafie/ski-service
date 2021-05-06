@@ -1,51 +1,60 @@
-# Ski service
 
-Project of ski service app - still under develope, planned release winter 20/21.
 
-[![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://badge.fury.io/gh/tterb%2FHyde)
-[![CodeFactor](https://www.codefactor.io/repository/github/dziobakwszafie/ski-service/badge)](https://www.codefactor.io/repository/github/dziobakwszafie/ski-service)
-![Success](https://img.shields.io/badge/GitHub_Actions-success-success.svg?logo=github&logoColor=white)
-![David](https://img.shields.io/david/dziobakwszafie/ski-service?color=green)
-![GitHub issues](https://img.shields.io/github/issues-raw/dziobakwszafie/ski-service)
-![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/dziobakwszafie/ski-service)
-![GitHub deployments](https://img.shields.io/github/deployments/dziobakwszafie/ski-service/github-pages?label=dh-pages%20deploy)
-![GitHub repo size](https://img.shields.io/github/repo-size/dziobakwszafie/ski-service)
 
-## Project Status
+<h1 align="center"> Ski service</h3>
 
-:heavy_plus_sign: under develope - planned release winter 20/21.
+<div align="center">
 
-## Getting Started
+  [![GitHub Issues](https://img.shields.io/github/issues/dziobakwszafie/readme-template-example)](https://github.com/dziobakwszafie/readme-template-example/issues)
+  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/dziobakwszafie/readme-template-example)](https://github.com/dziobakwszafie/readme-template-example/pulls)
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-Live version you can find here: https://dziobakwszafie.github.io/ski-service/
+</div>
 
-## Server
+## <img width="20px" height="20px" src="https://i.imgur.com/JSD4BhW.png" alt="Content"> Table of Contents
+- [About](#about)
+- [Status](#status)
+- [How to start that app](#start)
+- [Tests](#tests)
+- [Used tools and libs](#tools)
+- [Authors](#authors)
 
-As a server we use Firebase. Server repo you can find here: https://dziobakwszafie.github.io/ski-service-server/
+## <img width="20px" height="20px" src="https://i.imgur.com/hx2bbEi.png" alt="About"> About <a name = "about"></a>
+Project of ski service app , planned release winter 20/21.
 
-### To run it locally
 
-Get the repo
+## <img width="20px" height="20px" src="https://i.imgur.com/ZpOiTNt.png" alt="Status"> Status <a name = "status"></a>
 
-```
-git clone https://dziobakwszafie.github.io/ski-service/
-```
+<img width="225px" height="48px" src="https://i.imgur.com/9uiUlEm.png" alt="Project logo">
 
-or
 
-```
-download ZIP file
-```
 
-Then run npm scripts at root folder
+## <img width="20px" height="20px" src="https://i.imgur.com/Mw1Qnmu.png" alt="Start"> How to start that app <a name = "start"></a>
+
+
+### Download repo. 
+
+### Install dependencies
 
 ```
-npm install
+npm i 
+```
+
+
+### Run app
+
+```
 npm start
 ```
 
-## Built With
 
+
+## <img width="20px" height="20px" src="https://i.imgur.com/IO030X7.png" alt="Tests"> How to run tests <a name = "tests"></a>
+
+
+
+## <img width="20px" height="20px" src="https://i.imgur.com/v3vWn54.png" alt="Tools"> Used tools and libs <a name = "tools"></a>
+### Main tools
 - [React](https://reactjs.org/)
 - [Redux](https://redux.js.org/)
 - [redux-thunk](https://github.com/reduxjs/redux-thunk)
@@ -56,3 +65,12 @@ npm start
 - [Firebase](https://firebase.google.com/)
 - [Express](https://expressjs.com/)
 - [Node.js](https://nodejs.org/en/)
+
+
+
+## <img width="20px" height="20px" src="https://i.imgur.com/VzjoqgO.png" alt="Authors"> Authors <a name = "authors"></a>
+- [@dziobakwszafie](https://github.com/dziobakwszafie) 
+
+
+
+
